@@ -1,0 +1,137 @@
+{
+    "name": "shape_color_passive_block",
+    "trs_per_run": 280,
+    "is_runtime_defined": false,
+    "lr_length": 3.0,
+    "is_block": true,
+    "block_length_trs": 14,
+    "num_orders": 10,
+    "condition_integerizer": {
+        "0": "grey",
+        "1": "uncolored_shape",
+        "2": "colored_shape",
+        "3": "achromatic_shape",
+        "4": "color"
+    },
+    "num_conditions": 5,
+    "base_case_condition": 0,
+    "order_number_definitions": {
+        "0": [
+            0,
+            1,
+            4,
+            2,
+            3
+        ],
+        "1": [
+            1,
+            2,
+            0,
+            3,
+            4
+        ],
+        "2": [
+            2,
+            3,
+            1,
+            4,
+            0
+        ],
+        "3": [
+            3,
+            4,
+            2,
+            0,
+            1
+        ],
+        "4": [
+            4,
+            0,
+            3,
+            1,
+            2
+        ],
+        "5": [
+            3,
+            2,
+            4,
+            1,
+            0
+        ],
+        "6": [
+            4,
+            3,
+            0,
+            2,
+            1
+        ],
+        "7": [
+            0,
+            4,
+            1,
+            3,
+            2
+        ],
+        "8": [
+            1,
+            0,
+            2,
+            4,
+            3
+        ],
+        "9": [
+            2,
+            1,
+            3,
+            0,
+            4
+        ]
+    },
+    "desired_contrasts": [
+        [
+            1.0,
+            0.0,
+            -1.0,
+            0.0
+        ],
+        [
+            0.0,
+            1.0,
+            -1.0,
+            0.0
+        ],
+        [
+            0.0,
+            0.0,
+            -1.0,
+            1.0
+        ],
+        [
+            1.0,
+            0.0,
+            0.0,
+            -1.0
+        ],
+        [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+        ],
+        [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+        ]
+    ],
+    "contrast_descriptions": [
+        "uncolored_minus_achromatic",
+        "colored_minus_achromatic",
+        "color_blob_minus_achromatic",
+        "uncolored_minus_colored_blob",
+        "scp_color",
+        "scp_uncolored_shape"
+    ],
+    "num_runs_included_in_contrast": 0
+}

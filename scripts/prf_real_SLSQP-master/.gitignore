@@ -1,0 +1,5 @@
+old*
+fmri/*
+*.nii.gz
+*.mp4
+*.mat

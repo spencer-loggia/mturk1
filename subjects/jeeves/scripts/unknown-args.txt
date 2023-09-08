@@ -1,0 +1,5 @@
+-subjid
+jeeves
+-autorecon2-wm
+-sd
+/home/ssbeast/Projects/SS/monkey_fmri/MTurk1/subjects/

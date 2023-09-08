@@ -1,3 +1,6 @@
+*.dcm
+*fixation.csv
+*.mat*
 *.nii*
 *.pkl
 !*funtional_target.nii.gz
@@ -19,3 +22,5 @@
 *MOCOparams*
 *encode_params*
 *tmp_glm_cache*
+*pyc*
+*cache*

@@ -1,0 +1,12 @@
+------------------------------
+SUBJECT jeeves
+DATE Wed Aug 16 16:12:32 EDT 2023
+USER ssbeast
+HOST ssbeast
+PROCESSOR x86_64
+OS Linux
+Linux ssbeast 5.15.0-78-generic #85~20.04.1-Ubuntu SMP Mon Jul 17 09:42:39 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux
+7.3.0 (freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89)
+/usr/local/freesurfer/7.3.0//bin/recon-all
+PWD /media/ssbeast/mturk/MTurk1/subjects/jeeves/mri
+CMD mri_fill -a ../scripts/ponscc.cut.log -segmentation aseg.presurf.mgz -ctab /usr/local/freesurfer/7.3.0//SubCorticalMassLUT.txt wm.mgz filled.mgz

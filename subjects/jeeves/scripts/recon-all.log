@@ -1,0 +1,329 @@
+
+Wed Aug 16 16:10:47 EDT 2023
+cd /media/ssbeast/mturk/MTurk1/subjects/jeeves
+setenv SUBJECTS_DIR /media/ssbeast/mturk/MTurk1/subjects
+/usr/local/freesurfer/7.3.0//bin/recon-all -subjid jeeves -autorecon2-wm -sd /home/ssbeast/Projects/SS/monkey_fmri/MTurk1/subjects/
+
+subjid jeeves
+setenv SUBJECTS_DIR /media/ssbeast/mturk/MTurk1/subjects
+FREESURFER_HOME /usr/local/freesurfer/7.3.0/
+Actual FREESURFER_HOME /usr/local/freesurfer/7.3.0
+build-stamp.txt: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89
+Linux ssbeast 5.15.0-78-generic #85~20.04.1-Ubuntu SMP Mon Jul 17 09:42:39 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux
+cputime      unlimited
+filesize     unlimited
+datasize     unlimited
+stacksize    8192 kbytes
+coredumpsize 0 kbytes
+memoryuse    unlimited
+vmemoryuse   unlimited
+descriptors  1024 
+memorylocked unlimited
+maxproc      1030009 
+maxlocks     unlimited
+maxsignal    1030009 
+maxmessage   819200 
+maxnice      40 
+maxrtprio    50 
+maxrttime    unlimited
+
+              total        used        free      shared  buff/cache   available
+Mem:          251Gi        24Gi       189Gi       423Mi        37Gi       224Gi
+Swap:          49Gi        13Gi        36Gi
+
+########################################
+program versions used
+7.3.0 (freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89)
+7.3.0
+
+ProgramName: lta_convert  ProgramArguments: lta_convert -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:47-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_and  ProgramArguments: mri_and -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:47-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_annotation2label  ProgramArguments: mri_annotation2label -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_aparc2aseg  ProgramArguments: mri_aparc2aseg -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_surf2volseg  ProgramArguments: mri_surf2volseg -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_binarize  ProgramArguments: mri_binarize -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_ca_label  ProgramArguments: mri_ca_label -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_ca_normalize  ProgramArguments: mri_ca_normalize -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_ca_register  ProgramArguments: mri_ca_register -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_cc  ProgramArguments: mri_cc -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_compute_overlap  ProgramArguments: mri_compute_overlap -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_compute_seg_overlap  ProgramArguments: mri_compute_seg_overlap -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_concat  ProgramArguments: mri_concat -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_concatenate_lta  ProgramArguments: mri_concatenate_lta -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+mri_convert -all-info 
+ProgramName: mri_convert  ProgramArguments: mri_convert -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_diff  ProgramArguments: mri_diff -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_edit_wm_with_aseg  ProgramArguments: mri_edit_wm_with_aseg -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_em_register  ProgramArguments: mri_em_register -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_fill  ProgramArguments: mri_fill -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_fuse_segmentations  ProgramArguments: mri_fuse_segmentations -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_fwhm  ProgramArguments: mri_fwhm -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_gcut  ProgramArguments: mri_gcut -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_info  ProgramArguments: mri_info -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_label2label  ProgramArguments: mri_label2label -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_label2vol  ProgramArguments: mri_label2vol -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_log_likelihood  ProgramArguments: mri_log_likelihood -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_mask  ProgramArguments: mri_mask -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_matrix_multiply  ProgramArguments: mri_matrix_multiply -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_normalize  ProgramArguments: mri_normalize -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_normalize_tp2  ProgramArguments: mri_normalize_tp2 -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_or  ProgramArguments: mri_or -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_relabel_hypointensities  ProgramArguments: mri_relabel_hypointensities -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_relabel_nonwm_hypos  ProgramArguments: mri_relabel_nonwm_hypos -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_remove_neck  ProgramArguments: mri_remove_neck -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+7.3.0
+
+ProgramName: mri_robust_register  ProgramArguments: mri_robust_register -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+7.3.0
+
+ProgramName: mri_robust_template  ProgramArguments: mri_robust_template -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mris_anatomical_stats  ProgramArguments: mris_anatomical_stats -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mris_ca_label  ProgramArguments: mris_ca_label -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mris_calc  ProgramArguments: mris_calc -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mris_convert  ProgramArguments: mris_convert -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mris_curvature  ProgramArguments: mris_curvature -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mris_curvature_stats  ProgramArguments: mris_curvature_stats -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mris_diff  ProgramArguments: mris_diff -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mris_divide_parcellation  ProgramArguments: mris_divide_parcellation -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_segment  ProgramArguments: mri_segment -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_segstats  ProgramArguments: mri_segstats -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mris_euler_number  ProgramArguments: mris_euler_number -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mris_fix_topology  ProgramArguments: mris_fix_topology -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mris_topo_fixer  ProgramArguments: mris_topo_fixer -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mris_jacobian  ProgramArguments: mris_jacobian -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mris_label2annot  ProgramArguments: mris_label2annot -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mris_left_right_register  ProgramArguments: mris_left_right_register -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mris_place_surface  ProgramArguments: mris_place_surface -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mrisp_paint  ProgramArguments: mrisp_paint -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mris_register  ProgramArguments: mris_register -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mris_smooth  ProgramArguments: mris_smooth -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mris_sphere  ProgramArguments: mris_sphere -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mris_surface_stats  ProgramArguments: mris_surface_stats -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:48-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_stats2seg  ProgramArguments: mri_stats2seg -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:49-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mris_thickness  ProgramArguments: mris_thickness -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:49-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mris_thickness_diff  ProgramArguments: mris_thickness_diff -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:49-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mris_topo_fixer  ProgramArguments: mris_topo_fixer -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:49-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_surf2surf  ProgramArguments: mri_surf2surf -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:49-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_surf2vol  ProgramArguments: mri_surf2vol -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:49-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_surfcluster  ProgramArguments: mri_surfcluster -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:49-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mris_volmask  ProgramArguments: mris_volmask -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:49-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_tessellate  ProgramArguments: mri_tessellate -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:49-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_vol2surf  ProgramArguments: mri_vol2surf -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:49-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_vol2vol  ProgramArguments: mri_vol2vol -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:49-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_voldiff  ProgramArguments: mri_voldiff -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:49-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_watershed  ProgramArguments: mri_watershed -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:49-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: tkregister2  ProgramArguments: tkregister2_cmdl -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:49-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+mri_motion_correct.fsl 7.3.0
+mri_convert -all-info 
+ProgramName: mri_convert  ProgramArguments: mri_convert -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:10:49-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+#######################################
+GCADIR /usr/local/freesurfer/7.3.0//average
+GCA RB_all_2020-01-02.gca
+GCASkull RB_all_withskull_2020_01_02.gca
+AvgCurvTif folding.atlas.acfb40.noaparc.i12.2016-08-02.tif
+GCSDIR /usr/local/freesurfer/7.3.0//average
+GCS DKaparc.atlas.acfb40.noaparc.i12.2016-08-02.gcs
+#######################################
+#--------------------------------------------
+#@# Mask BFS Wed Aug 16 16:10:49 EDT 2023
+/media/ssbeast/mturk/MTurk1/subjects/jeeves/mri
+
+ mri_mask -T 5 brain.mgz brainmask.mgz brain.finalsurfs.mgz 
+
+threshold mask volume at 5
+DoAbs = 0
+Found 0 voxels in mask (pct=  0.00)
+Writing masked volume to brain.finalsurfs.mgz...done.
+@#@FSTIME  2023:08:16:16:10:49 mri_mask N 5 e 5.03 S 0.21 U 4.81 P 99% M 765768 F 0 R 190336 W 0 c 533 w 1 I 0 O 368 L 0.26 3.41 11.26
+@#@FSLOADPOST 2023:08:16:16:10:54 mri_mask N 5 0.32 3.37 11.20
+#--------------------------------------------
+#@# Fill Wed Aug 16 16:10:54 EDT 2023
+/media/ssbeast/mturk/MTurk1/subjects/jeeves/mri
+
+ mri_fill -a ../scripts/ponscc.cut.log -segmentation aseg.presurf.mgz -ctab /usr/local/freesurfer/7.3.0//SubCorticalMassLUT.txt wm.mgz filled.mgz 
+
+logging cutting plane coordinates to ../scripts/ponscc.cut.log...
+using segmentation aseg.presurf.mgz...
+reading input volume...error: mghRead(/media/ssbeast/mturk/MTurk1/subjects/jeeves/mri/wm.mgz, -1): could not open file 
+error: mri_fill: could not read wm.mgz 
+Command exited with non-zero status 255
+@#@FSTIME  2023:08:16:16:10:54 mri_fill N 8 e 0.01 S 0.00 U 0.00 P 23% M 6380 F 4 R 254 W 0 c 0 w 5 I 696 O 8 L 0.32 3.37 11.20
+@#@FSLOADPOST 2023:08:16:16:10:54 mri_fill N 8 0.32 3.37 11.20
+Linux ssbeast 5.15.0-78-generic #85~20.04.1-Ubuntu SMP Mon Jul 17 09:42:39 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux
+
+recon-all -s jeeves exited with ERRORS at Wed Aug 16 16:10:54 EDT 2023
+
+To report a problem, see http://surfer.nmr.mgh.harvard.edu/fswiki/BugReporting
+
+
+
+#New# invocation of recon-all 
+
+
+
+
+Wed Aug 16 16:12:22 EDT 2023
+cd /media/ssbeast/mturk/MTurk1/subjects/jeeves
+setenv SUBJECTS_DIR /media/ssbeast/mturk/MTurk1/subjects
+/usr/local/freesurfer/7.3.0//bin/recon-all -subjid jeeves -autorecon2-wm -sd /home/ssbeast/Projects/SS/monkey_fmri/MTurk1/subjects/
+
+subjid jeeves
+setenv SUBJECTS_DIR /media/ssbeast/mturk/MTurk1/subjects
+FREESURFER_HOME /usr/local/freesurfer/7.3.0/
+Actual FREESURFER_HOME /usr/local/freesurfer/7.3.0
+build-stamp.txt: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89
+Linux ssbeast 5.15.0-78-generic #85~20.04.1-Ubuntu SMP Mon Jul 17 09:42:39 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux
+cputime      unlimited
+filesize     unlimited
+datasize     unlimited
+stacksize    8192 kbytes
+coredumpsize 0 kbytes
+memoryuse    unlimited
+vmemoryuse   unlimited
+descriptors  1024 
+memorylocked unlimited
+maxproc      1030009 
+maxlocks     unlimited
+maxsignal    1030009 
+maxmessage   819200 
+maxnice      40 
+maxrtprio    50 
+maxrttime    unlimited
+
+              total        used        free      shared  buff/cache   available
+Mem:          251Gi        24Gi       189Gi       422Mi        37Gi       224Gi
+Swap:          49Gi        13Gi        36Gi
+
+########################################
+program versions used
+7.3.0 (freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89)
+7.3.0
+
+ProgramName: lta_convert  ProgramArguments: lta_convert -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_and  ProgramArguments: mri_and -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_annotation2label  ProgramArguments: mri_annotation2label -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_aparc2aseg  ProgramArguments: mri_aparc2aseg -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_surf2volseg  ProgramArguments: mri_surf2volseg -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_binarize  ProgramArguments: mri_binarize -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_ca_label  ProgramArguments: mri_ca_label -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_ca_normalize  ProgramArguments: mri_ca_normalize -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_ca_register  ProgramArguments: mri_ca_register -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_cc  ProgramArguments: mri_cc -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_compute_overlap  ProgramArguments: mri_compute_overlap -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_compute_seg_overlap  ProgramArguments: mri_compute_seg_overlap -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_concat  ProgramArguments: mri_concat -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_concatenate_lta  ProgramArguments: mri_concatenate_lta -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+mri_convert -all-info 
+ProgramName: mri_convert  ProgramArguments: mri_convert -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_diff  ProgramArguments: mri_diff -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_edit_wm_with_aseg  ProgramArguments: mri_edit_wm_with_aseg -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_em_register  ProgramArguments: mri_em_register -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_fill  ProgramArguments: mri_fill -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_fuse_segmentations  ProgramArguments: mri_fuse_segmentations -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_fwhm  ProgramArguments: mri_fwhm -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_gcut  ProgramArguments: mri_gcut -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_info  ProgramArguments: mri_info -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_label2label  ProgramArguments: mri_label2label -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_label2vol  ProgramArguments: mri_label2vol -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_log_likelihood  ProgramArguments: mri_log_likelihood -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_mask  ProgramArguments: mri_mask -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_matrix_multiply  ProgramArguments: mri_matrix_multiply -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_normalize  ProgramArguments: mri_normalize -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_normalize_tp2  ProgramArguments: mri_normalize_tp2 -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_or  ProgramArguments: mri_or -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_relabel_hypointensities  ProgramArguments: mri_relabel_hypointensities -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_relabel_nonwm_hypos  ProgramArguments: mri_relabel_nonwm_hypos -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_remove_neck  ProgramArguments: mri_remove_neck -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+7.3.0
+
+ProgramName: mri_robust_register  ProgramArguments: mri_robust_register -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+7.3.0
+
+ProgramName: mri_robust_template  ProgramArguments: mri_robust_template -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mris_anatomical_stats  ProgramArguments: mris_anatomical_stats -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mris_ca_label  ProgramArguments: mris_ca_label -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mris_calc  ProgramArguments: mris_calc -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mris_convert  ProgramArguments: mris_convert -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mris_curvature  ProgramArguments: mris_curvature -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mris_curvature_stats  ProgramArguments: mris_curvature_stats -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mris_diff  ProgramArguments: mris_diff -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mris_divide_parcellation  ProgramArguments: mris_divide_parcellation -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_segment  ProgramArguments: mri_segment -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_segstats  ProgramArguments: mri_segstats -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mris_euler_number  ProgramArguments: mris_euler_number -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mris_fix_topology  ProgramArguments: mris_fix_topology -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mris_topo_fixer  ProgramArguments: mris_topo_fixer -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mris_jacobian  ProgramArguments: mris_jacobian -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mris_label2annot  ProgramArguments: mris_label2annot -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mris_left_right_register  ProgramArguments: mris_left_right_register -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mris_place_surface  ProgramArguments: mris_place_surface -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mrisp_paint  ProgramArguments: mrisp_paint -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mris_register  ProgramArguments: mris_register -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mris_smooth  ProgramArguments: mris_smooth -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mris_sphere  ProgramArguments: mris_sphere -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mris_surface_stats  ProgramArguments: mris_surface_stats -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_stats2seg  ProgramArguments: mri_stats2seg -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mris_thickness  ProgramArguments: mris_thickness -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mris_thickness_diff  ProgramArguments: mris_thickness_diff -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mris_topo_fixer  ProgramArguments: mris_topo_fixer -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_surf2surf  ProgramArguments: mri_surf2surf -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_surf2vol  ProgramArguments: mri_surf2vol -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_surfcluster  ProgramArguments: mri_surfcluster -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mris_volmask  ProgramArguments: mris_volmask -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_tessellate  ProgramArguments: mri_tessellate -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_vol2surf  ProgramArguments: mri_vol2surf -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_vol2vol  ProgramArguments: mri_vol2vol -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_voldiff  ProgramArguments: mri_voldiff -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: mri_watershed  ProgramArguments: mri_watershed -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+ProgramName: tkregister2  ProgramArguments: tkregister2_cmdl -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+mri_motion_correct.fsl 7.3.0
+mri_convert -all-info 
+ProgramName: mri_convert  ProgramArguments: mri_convert -all-info  ProgramVersion: 7.3.0  TimeStamp: 2023/08/16-20:12:22-GMT  BuildTime: Jul 18 2022 00:57:45  BuildStamp: freesurfer-linux-ubuntu20_x86_64-7.3.0-20220718-7725d89  User: ssbeast  Machine: ssbeast  Platform: Linux  PlatformVersion: 5.15.0-78-generic  CompilerName: GCC  CompilerVersion: 8.4.0
+#######################################
+GCADIR /usr/local/freesurfer/7.3.0//average
+GCA RB_all_2020-01-02.gca
+GCASkull RB_all_withskull_2020_01_02.gca
+AvgCurvTif folding.atlas.acfb40.noaparc.i12.2016-08-02.tif
+GCSDIR /usr/local/freesurfer/7.3.0//average
+GCS DKaparc.atlas.acfb40.noaparc.i12.2016-08-02.gcs
+#######################################
+#--------------------------------------------
+#@# Mask BFS Wed Aug 16 16:12:22 EDT 2023
+/media/ssbeast/mturk/MTurk1/subjects/jeeves/mri
+
+ mri_mask -T 5 brain.mgz brainmask.mgz brain.finalsurfs.mgz 
+
+threshold mask volume at 5
+DoAbs = 0
+Found 0 voxels in mask (pct=  0.00)
+Writing masked volume to brain.finalsurfs.mgz...done.
+@#@FSTIME  2023:08:16:16:12:22 mri_mask N 5 e 4.93 S 0.23 U 4.68 P 99% M 765932 F 0 R 190342 W 0 c 498 w 1 I 0 O 368 L 0.21 2.54 10.19
+@#@FSLOADPOST 2023:08:16:16:12:27 mri_mask N 5 0.27 2.52 10.14
+#--------------------------------------------
+#@# Fill Wed Aug 16 16:12:27 EDT 2023
+/media/ssbeast/mturk/MTurk1/subjects/jeeves/mri
+
+ mri_fill -a ../scripts/ponscc.cut.log -segmentation aseg.presurf.mgz -ctab /usr/local/freesurfer/7.3.0//SubCorticalMassLUT.txt wm.mgz filled.mgz 
+
+logging cutting plane coordinates to ../scripts/ponscc.cut.log...
+using segmentation aseg.presurf.mgz...
+reading input volume...done.
+searching for cutting planes...voxel to talairach voxel transform
+ 1.00000   0.00000   0.00000  -0.00002;
+ 0.00000   1.00000   0.00000   0.00000;
+ 0.00000   0.00000   1.00000  -0.00002;
+ 0.00000   0.00000   0.00000   1.00000;
+INFO: volume does not have linear_transform set nor lta is given by option.-xform.
+INFO: use identity matrix as the talairach transform.
+INFO: use src volume parameters for the talairach volume.
+reading segmented volume aseg.presurf.mgz
+error: mghRead(/media/ssbeast/mturk/MTurk1/subjects/jeeves/mri/aseg.presurf.mgz, -1): could not open file 
+error: mri_fill: could not read segmentation from aseg.presurf.mgz 
+Command exited with non-zero status 255
+@#@FSTIME  2023:08:16:16:12:27 mri_fill N 8 e 4.99 S 0.07 U 4.92 P 99% M 152036 F 1 R 72125 W 0 c 504 w 2 I 0 O 8 L 0.27 2.52 10.14
+@#@FSLOADPOST 2023:08:16:16:12:32 mri_fill N 8 0.33 2.49 10.09
+Linux ssbeast 5.15.0-78-generic #85~20.04.1-Ubuntu SMP Mon Jul 17 09:42:39 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux
+
+recon-all -s jeeves exited with ERRORS at Wed Aug 16 16:12:32 EDT 2023
+
+To report a problem, see http://surfer.nmr.mgh.harvard.edu/fswiki/BugReporting

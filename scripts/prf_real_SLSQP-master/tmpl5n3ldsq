@@ -1,0 +1,807 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Dec 17 15:36:42 2021
+
+@author: braunlichkr
+"""
+
+from nilearn.glm.first_level import hemodynamic_models as hrf_mods
+from skimage.transform import resize
+import matplotlib.pyplot as plt
+# import prf_analysis_tools as pat
+# import mPreproc as mp
+import sys
+import glob
+import clarte as cl
+from sklearn.linear_model import LinearRegression
+import itertools as it
+import numpy as np
+import os
+import nibabel as nib
+from tqdm import tqdm
+import pandas as pd
+import nilearn.plotting as nip
+from joblib import Parallel, delayed
+import nilearn.image as nli
+from scipy.optimize import minimize
+from scipy import stats
+np.seterr(divide='ignore')
+from scipy.signal import convolve2d
+
+
+if 'arwin' in sys.platform:
+    expF = '/Volumes/Untitled/macman_align'
+    fsl_b02b0 = '/Applications/fsl/etc/flirtsch/b02b0.cnf'
+else:
+    expF='/media/veracrypt1/macman_align'
+    fsl_b02b0 = '/usr/local/fsl/etc/flirtsch/b02b0.cnf'
+    
+
+humScriptF = os.path.join(expF,'bin','preproc_hum')
+sys.path.append(humScriptF); import hPreproc as hp
+monkScriptF = os.path.join(expF,'bin','preproc_monk_og')
+sys.path.append(monkScriptF); import mPreproc as mp
+prfF = os.path.join(expF,'bin','first_lev','prf')
+sys.path.append(prfF);
+
+#%% setup
+subjs = ['sub-001','sub-003','sub-004','sub-005']
+iSubjToRun = 0
+species=['hum','monk'][0]
+hrfToUse=['vista'][0]
+
+avgRuns=False
+
+derivF= os.path.join(expF,'data',species,'derivatives')
+preprocF = os.path.join(derivF,'preproc')
+
+
+anName = 'slsqp_%s_precompute'%hrfToUse
+prfResF = derivF+'/prf'
+anF = os.path.join(prfResF,anName)
+csvResF = anF+'/csvRes'
+niiResF = anF+'/niiRes'
+fsToCreate = [csvResF,niiResF
+              ]
+for f in fsToCreate:
+    if not os.path.exists(f):
+        os.makedirs(f)
+    
+fsF = os.path.join(derivF,'fs')
+    
+imgCol = 'clean_in_dsFsT1_dilatedRibbonP'
+
+avgF = anF+'/avg_%s'%imgCol
+if not os.path.exists(avgF):
+    os.makedirs(avgF)
+
+#%%  avg all runs
+def correctPs(dfP):
+    cs = [ 
+        # 'rawNiiP', 'rawJsnP', 
+        #     'stcP', 'mcP', 'mnMcP',
+        #     'coregMcToDsFsT1', 'ants_epi_to_dsFsT1P', 'ants_epi_to_fsT1P',
+        #     'ants_epi_to_dsFsavgP', 'ants_epi_to_fsavgP',
+        #     'ants_fsT1_to_fsAvBrainmask',
+        #     'maskedSegP', 'ants_fsT1_to_dsFsavBrainmask', 'noiseP',
+            'clean_in_dsFsT1_dilatedRibbonP',
+            # 'clean_in_dsFsavgP',
+            ]
+    if 'arwin' in sys.platform:
+        rpF='/media/veracrypt1/macman_align'
+    else:
+        rpF = '/Volumes/Untitled/macman_align'
+    for c in cs:
+        for i in dfP.index:
+            newp = dfP.loc[i,c].replace(rpF,expF)
+            assert(os.path.exists(newp))
+            dfP.loc[i,c]  = newp
+    return dfP
+
+if avgRuns:
+    plt.close('all')
+    plt.figure()
+    
+    fwhm=2
+        
+        
+    for subj in subjs:
+        
+        csvF = os.path.join(preprocF,subj,'paths') 
+        bgImg = os.path.join(fsF,subj,'mri','brainmask.mgz')
+        
+        # find sessions
+        ps = glob.glob(os.path.join(preprocF,
+                                    subj,
+                                    '*/*/*_ret_*.nii.gz'))
+        sessions = np.unique([os.path.basename(os.path.split(os.path.split(p)[0])[0]) for p in ps])
+        assert(len(sessions)==1); sessN=sessions[0]
+            
+        csvP = glob.glob(os.path.join(csvF,'%s_%s.csv'%(subj,sessN)))[0]
+        dfP = pd.read_csv(csvP,index_col=0)       
+        idx = ['ret' in v for v in dfP['task']]
+        dfP = dfP.loc[idx,:].reset_index(drop=True)
+        dfP = correctPs(dfP)
+        assert(np.all([os.path.exists(p) for p in dfP[imgCol]]))
+        
+        ribbonMaskP = fsF+'/%s/mri/bi.ribbon.nii.gz'%subj
+        if not os.path.exists(ribbonMaskP):
+            ribbonMaskP = hp.mgz_to_niigz(ribbonMaskP.replace('.nii.gz','.mgz'))
+        # check mask
+        if 0:
+            dat = cl.fmri_data([dfP.loc[0,imgCol]],ribbonMaskP)
+            mn = dat.dat.mean(axis=0)
+            imMn = dat.unmasker(mn)
+            nip.plot_epi(imMn,bg_img=bgImg)
+
+
+        avgP = avgF+'/%s_fwhm%.2d_fullRibbon.nii.gz'%(subj,fwhm)
+        
+        if os.path.exists(avgP):
+            print(os.path.basename(avgP),'exists, skipping')
+        else:
+            # niiPs = np.sort(glob.glob(inImF+'/c*masked.nii.gz'))
+            #s print([os.path.basename(p) for p in niiPs])
+            for i in tqdm(dfP.index,desc='%s: averaging %d runs'%(subj,
+                                                                  len(dfP))):
+                # im = nim.apply_mask(imMask,fwhm=2)
+                # smP = '%s/fwhm%.2d_%s'%(os.path.split(p)[0],fwhm,os.path.split(p)[1])
+                # cl.smooth_within_mask(atlasGreyP,
+                #                       p,
+                #                       fwhm,
+                #                       outP=smP)
+                p = dfP.loc[i,imgCol]
+                dat=cl.fmri_data([p],ribbonMaskP,fwhm=fwhm)
+                plt.clf()
+                plt.hist(dat.dat.flatten(),bins=30)
+                plt.title(os.path.basename(p))
+                plt.pause(.01)
+                if i==0:
+                    mAv = dat.dat
+                else:
+                    mAv += dat.dat
+            mAv /= np.float32(len(dfP))
+            
+            imBold = dat.unmasker(mAv)
+            imBold.to_filename(avgP)
+            import scipy  
+            matP = '%s/runAvg.mat'%os.path.split(p)[0]
+            scipy.io.savemat(matP,{'mAv':mAv})
+            
+            del mAv, imBold, dat
+            
+            
+#%% plot hrfs 
+plt.close('all')
+realSpmHrf_TR2 = np.array([         0, # pulled from spm,not nilearn
+    0.0866,
+    0.3749,
+    0.3849,
+    0.2161,
+    0.0769,
+    0.0016,
+   -0.0306,
+   -0.0373,
+   -0.0308,
+   -0.0205,
+   -0.0116,
+   -0.0058,
+   -0.0026,
+   -0.0011,
+   -0.0004,
+   -0.0001])
+vistaHrf_Tr2P = os.path.join(prfF,'hrf_vista_twogammas_TR2_absarea.csv')
+os.path.exists(vistaHrf_Tr2P)
+vistaHrf = np.loadtxt(open(vistaHrf_Tr2P, "rb"), delimiter=",", skiprows=0)
+plt.plot(stats.zscore(realSpmHrf_TR2))
+plt.plot(stats.zscore(vistaHrf))
+plt.legend(['spm','vista'])
+hrf = [realSpmHrf_TR2,vistaHrf]['vista' in hrfToUse]
+
+
+
+
+# %% resample stim
+'''afni's nii format (from Ed) has dims swapped. To match my code. I swap before writing'''
+print('resampling stim')
+
+swapStimAxes = True
+viewStim = False
+write=False
+d = [100,256][0]
+# og_afniStimP = '/Users/braunlichkr/Desktop/prf_sims/stim/stimMasks144Padded.nii'
+# og_afniStimIm = nib.load(og_afniStimP)
+# mAfni = np.swapaxes( og_afniStimIm.get_fdata(),0,1)
+stimP = os.path.join(expF,'bin','first_lev','prf','PRF_mask_per_TR.npy')
+
+mStim = np.load(stimP)#,0,1)
+
+# previously gnerated 256*256 
+
+newAfniP = os.path.join(expF,'bin','first_lev','prf','stim_256x256.nii')
+showLast=True
+try: 
+    new256 = np.swapaxes( nib.load(newAfniP).get_fdata(),0,1)
+except:
+    showLast=False
+
+nTr = mStim.shape[-1]
+rmStim = np.zeros((d, d, nTr))
+if viewStim:
+    plt.figure()
+for i in range(nTr):
+    im = mStim[:, :, i]
+    rim = np.round(resize(im, (d, d), order=0))
+    if viewStim:
+        plt.subplot(1, 3, 1)
+        plt.imshow(im)
+        plt.title('200x200')
+        plt.subplot(1, 3, 2)
+        plt.imshow(rim)
+        plt.title(rim.shape)
+        if showLast:
+            plt.subplot(1, 3, 3)
+            plt.imshow(new256[:,:,0,i])
+            plt.title('afni space (256*256)\n loaded from file')
+    assert(len(np.unique(rim)) <= 2)
+    rmStim[:, :, i] = rim
+    if viewStim:
+        plt.suptitle(i)
+        plt.pause(.5)
+        plt.clf()
+plt.close('all')
+
+if swapStimAxes:
+    rmStim = np.swapaxes(rmStim,0,1)
+# if write:
+#     srmStim = rmStim#,0,1
+#     dsStimIm = nib.Nifti1Image( np.expand_dims(srmStim,2),og_afniStimIm.affine)
+#     # ndsStimIm = np.expand_dims(rmStim,2)
+#     dsStimIm.to_filename(newAfniP)
+# %%
+
+
+
+
+
+def gen_gauss(x0, y0, sigma, frameRowPix):
+    _x = np.linspace(-1, 1, frameRowPix+1)
+    step = _x[1]-_x[0]
+    xs, ys = np.mgrid[-1:1:step, -1:1:step]
+    pos = np.dstack((xs, ys))
+    mX = pos[:, :, 1]
+    mY = pos[:, :, 0]
+    return np.exp(- ((mX-x0)**2 + (mY-y0)**2) / (2 * sigma**2))
+
+
+def convolve_neural_boldPred(vHrf, mStim2d, nTr, frameRowPix):
+    if len(vHrf.shape) == 1:
+        vHrf = vHrf.reshape(1, len(vHrf))
+        mBold = convolve2d(mStim2d, vHrf)[:, :nTr].reshape(frameRowPix,
+                                                           frameRowPix,
+                                                           nTr)
+
+        return mBold.squeeze().reshape(frameRowPix**2, nTr)
+
+
+def make_param_grid(xs, ys, sgs):
+    lParam = list(it.product(xs, ys, sgs))
+    cols = ['sX', 'sY', 'sSigma']
+    df = pd.DataFrame(index=range(len(lParam)),
+                      data=lParam,
+                      columns=cols)
+    return df
+
+
+reg = LinearRegression(positive=True)
+
+
+def get_hrf(x, y, sigma, mPredBold2d, frameRowPix):
+    imRf = gen_gauss(x, y, sigma, frameRowPix)
+    voxHrfResp = stats.zscore(
+        np.dot(imRf.reshape(frameRowPix**2), mPredBold2d))
+    return voxHrfResp
+
+
+def fitPred(vPred, targHrf,intercept_only=True):
+    reg.fit(
+        targHrf.reshape(len(vPred), -1),
+        vPred.reshape(len(vPred), -1))
+    if intercept_only:
+        return vPred + reg.intercept_[0],reg
+    else:
+        return vPred * reg.coef_[0] + reg.intercept_[0], reg
+
+
+def makePred(vPred,intercept,beta=None):
+    if beta is None:
+        return vPred+intercept
+    else:
+        return vPred*beta+intercept
+    
+# from scipy.signal import butter,filtfilt
+# def butter_lowpass_filter(data, cutoff, fs, order):
+#     nyq = 
+#     normal_cutoff = cutoff / nyq
+#     # Get the filter coefficients 
+#     b, a = butter(order, normal_cutoff, btype='low', analog=False)
+#     y = filtfilt(b, a, data)
+#     return y
+
+def createGridPredictions(dfGrid,mPredBold2d):
+    
+    nTr = rmStim.shape[-1]
+    trCols = ['tr%.3d'%i for i in range(nTr)]
+    dfGridPreds = pd.DataFrame(columns=['x','y','sg']+trCols)
+    frameRowPix = rmStim.shape[0]
+
+    for i in tqdm(dfGrid.index,desc='initial grid search'):
+        x,y,sg = dfGrid.loc[i,['sX', 'sY', 'sSigma']]
+        hrf_ = get_hrf(x, y, sg, mPredBold2d, frameRowPix)
+        dfGridPreds.loc[i,trCols] = hrf_
+        
+        dfGridPreds.loc[i,['x','y','sg']] =  x,y,sg
+    return dfGridPreds
+
+
+def calcSseWithGrid(mGridPreds,voxTs):
+    '''mGridPreds is dfGridPreds[trCols].values'''
+    return np.sum((mGridPreds - voxTs)**2, axis=1)
+
+
+def getGridFinalStartParams(dfGridPreds,voxTs,nKeep):
+    trCols = [c for c in dfGridPreds.columns if 'tr' in c]
+    dfGridPreds['sse'] = calcSseWithGrid(dfGridPreds[trCols].values,
+                                        voxTs)
+    idx = np.argsort( dfGridPreds['sse'])[:nKeep]
+    return dfGridPreds.loc[idx,['x','y','sg','sse']]
+    
+
+
+def fit(mPredBold2d,voxTs,startParams,frameRowPix=100):
+    def loss(params, targHrf=voxTs):
+        x, y, sigma = params
+        hrf_ = get_hrf(x, y, sigma, mPredBold2d, frameRowPix)
+        return np.sum((targHrf-hrf_)**2)*.001
+    
+    bounds = ((-1., 1.),
+              (-1., 1.),
+              (.001, 2.),
+              )
+    def con(params):
+        x,y,_ = params
+        euc = np.linalg.norm([x,y])
+        return float( 1.0-euc)
+    
+    cons = {'type':'ineq','fun':con}
+    
+    res = minimize(loss,
+                   startParams[['x','y','sg']],
+                   bounds=bounds,
+                   method='SLSQP',
+                   options={'disp': False},
+                   constraints=cons,
+                   )
+    return res
+
+
+def fitVoxelWithGridStarts(mPredBold2d,voxTs,dfGridStartParams,frameRowPix=100):
+    dfRes = pd.DataFrame(columns = ['sX','sY','sSg',
+                                    'x','y','sg',
+                                    'sse','R2'])
+    dfRes[['sX','sY','sSg']] = dfGridStartParams[['x','y','sg']].copy()
+    for i in dfGridStartParams.index:
+        res = fit(mPredBold2d,
+                  voxTs,
+                  dfGridStartParams.loc[i,['x','y','sg']],
+                  frameRowPix=frameRowPix)
+        dfRes.loc[i,'sse'] = res.fun
+        dfRes.loc[i,['x','y','sg']] = res.x
+    idxBest = dfRes['sse']==np.min(dfRes['sse'])
+    dfBest = dfRes.loc[idxBest,:].reset_index(drop=True)
+    x,y,sg = dfBest.loc[0,['x','y','sg']]
+    # rf = gen_gauss(x,y,sg)
+    fitHrf = get_hrf(x,y,sg,mPredBold2d,frameRowPix)
+    dfBest.loc[0,'R2'] = stats.pearsonr(voxTs,fitHrf)[0]**2
+    return dfBest.loc[0,:]
+
+# def xy_to_polar(x, y):
+#     return np.arctan2(y, x)
+
+
+# def xy_to_ecc(x, y):
+#     return np.linalg.norm([x, y])
+def polar2matrixCoords(r,theta):
+    '''matrix coords have sign y flipped relative to cartesian.
+    
+     returns x,y'''
+    x = r * np.cos(theta)
+    y = r * np.sin(theta) * -1 # corect for matrix coords 
+    return x,y
+
+def matrixCoords2polar(x,y,returnPosTh=False):
+    '''matrix coords have sign y flipped relative to cartesian.
+    
+     returns ecc, angle'''
+    y *= -1 # corect for matrix coords 
+    z = x + 1j * y
+    ecc, angle = ( np.abs(z), np.angle(z) )
+    if returnPosTh and angle<0:
+        angle += np.pi*2
+        
+    return ecc, angle
+
+
+
+    
+
+# %% setup neural and bold timeseries based on stim and hrf:
+
+
+mStim2d = rmStim.reshape(rmStim.shape[0] * rmStim.shape[1], rmStim.shape[2])
+
+dBoldPred2d = {}
+mPredBold2d = convolve_neural_boldPred(hrf, 
+                                        mStim2d, 
+                                        nTr, 
+                                        frameRowPix=rmStim.shape[0])
+
+
+
+#%%  setup grid search
+gridPredsP = anF+'/stimulusGridPredictions.csv'
+if os.path.exists(gridPredsP) and 1:
+    dfGridPreds = pd.read_csv(gridPredsP,index_col=0)
+    dfGridPreds = dfGridPreds.reset_index(drop=True)
+else:
+    
+    xs, ys = np.linspace(-.95, .95, 9), np.linspace(-.95, .95, 9)
+
+    sgs =  np.arange(.001,1.25,.003)
+    plt.scatter(np.arange(len(sgs))+1,sgs,s=.01)
+    dfGrid = make_param_grid(xs, ys, sgs)
+    lEuc = np.array([np.linalg.norm(dfGrid.loc[i,['sX','sY']] ) for i in dfGrid.index])
+    dfGrid = dfGrid.loc[lEuc<=.95,:]
+    dfGrid = dfGrid.reset_index(drop=True)
+    print('n start params:',dfGrid.shape)
+    dfGridPreds = createGridPredictions(dfGrid,mPredBold2d)
+    dfGridPreds.to_csv(gridPredsP)
+    
+    
+#%% test and time fit for 1 synthetic voxel:
+nKeep=10
+i = np.random.permutation(dfGridPreds.index)[0]
+trCols = [c for c in dfGridPreds if 'tr' in c]
+voxTs = dfGridPreds.loc[i,trCols].values
+ground = dfGridPreds.loc[i,['x', 'y', 'sg']]
+
+def fitVox(voxTs,mPredBold2d=mPredBold2d, dfGridPreds=dfGridPreds,
+           nKeep=nKeep,  frameRowPix=100):
+    
+    dfGridStartParams = getGridFinalStartParams(dfGridPreds,voxTs,nKeep)
+    res= fitVoxelWithGridStarts(mPredBold2d,voxTs,dfGridStartParams,frameRowPix=100)
+    # matrixCoords2polar(res['x'],
+    #                                                             res['y'])
+    return res
+%timeit fitVox(voxTs)
+
+
+
+            
+
+#%% prepare mask
+
+subj = subjs[iSubjToRun]
+fwhm=2
+view=True
+
+avgP = avgF+'/%s_fwhm%.2d_fullRibbon.nii.gz'%(subj,fwhm)
+bg_img = glob.glob(fsF+'/%s/mri/dsT1.nii.gz'%subj)[0]
+
+ribbonMaskP = fsF+'/%s/mri/bi.ribbon.nii.gz'%subj# ribbon_and_subcort.mgz
+
+ribbonMaskP = fsF+'/%s/mri/ribbon_and_subcort.nii.gz'%subj
+if not os.path.exists(ribbonMaskP):
+    ribbonMaskP = hp.mgz_to_niigz(ribbonMaskP.replace('.nii.gz','.mgz'))
+    
+dDesikan = {'cuneus':  {'lh': 1005,'rh':2005},
+            'fusiform' :{'lh': 1007 ,'rh': 2007},
+            'inferiorParietal': {'lh': 1008,'rh': 2008 },
+            'insula':   {'lh': 1035,'rh': 2035},
+            }
+roi = 'cuneus'
+hem = 'lh'
+niiType = 'coregP'
+
+fsSubF = os.path.join(fsF,subj)
+desikanMgzP = glob.glob(fsSubF+'/mri/aparc+aseg.mgz')[0]
+imDes = nib.load(desikanMgzP)
+mDes = imDes.get_fdata()
+mMask = (mDes==dDesikan[roi]['lh']).astype(np.float32)
+mMask += (mDes==dDesikan[roi]['rh']).astype(np.float32)
+imMask = nib.Nifti1Image(mMask,imDes.affine)
+maskP = anF+'/%s_desikan_%s_mask.nii.gz'%(subj, roi)
+imMask.to_filename(maskP)
+# niiP = dfPath[niiType][0]
+# rImMask = nli.resample_to_img(imMask,
+#                             niiP,
+#                             interpolation='nearest')
+hp.freeview([bg_img,maskP])
+
+from subprocess import call
+if 0:
+    # view desikan atlas in subject space:
+    # fsSubF = os.path.join(dP['hum']['fsF'],subj)
+    cmd ='''freeview -v fsSubF/mri/orig.mgz \
+    fsSubF/mri/aparc+aseg.mgz:colormap=lut:opacity=0.4 \
+    -f fsSubF/surf/lh.white:annot=aparc.annot'''
+
+    cmd = cmd.replace('fsSubF',fsSubF)
+    print(cmd)
+    call(cmd,shell=True)
+
+#%% load data
+print('loading %s'%subj)
+dat = cl.fmri_data([avgP],maskP)
+mBold2d = dat.dat.T
+nVox = mBold2d.shape[0]
+print('nVox=%d'%nVox)
+
+mnBold =mBold2d.mean(axis=1)
+imMn = dat.unmasker(mnBold)
+
+nip.plot_stat_map(imMn,bg_img=bg_img)
+cl.freeview([bg_img,maskP])
+
+#%%
+plt.close('all')
+mRes = np.zeros((mBold2d.shape[0],7))
+
+cs = ['x', 'y', 'sg', 'sse','R2','pearsonr',
+              'polarAngle', 'eccentricity',]
+# dfRes = pd.DataFrame(np.zeros((nVox,len(cs))),
+#                      columns=cs)
+# dfRes.values = 
+plt.close('all')
+if view: 
+    plt.figure(figsize=(7,5))
+
+
+#%%
+nKeep=5
+plt.close('all')
+plt.figure(figsize=(7,10))
+# def fitBatch(rows):
+#     # _dfRes = dfRes.loc[rows,:]
+#     _dfRes = pd.DataFrame(index=rows,columns=cs)
+#     for i in tqdm(rows):
+#         voxTs = stats.zscore(mBold2d[i, :])
+#         res = fitVox(voxTs,mPredBold2d=mPredBold2d, dfGridPreds=dfGridPreds,
+#                    nKeep=nKeep,  frameRowPix=100)
+#         _dfRes.loc[i,['x','y','sg','sse','R2']] = res[['x','y','sg','sse','R2']]
+    
+#         _dfRes.loc[i, ['eccentricity','polarAngle' ]] = matrixCoords2polar(res['x'],
+#                                                                        res['y'])
+#     return _dfRes
+
+def preview(imPol,imEcc,imR2,imSg,bg_img=bg_img):
+                
+    plt.clf()
+    ax=plt.subplot(4,1,1)
+    nip.plot_stat_map(imR2,
+                      bg_img=bg_img,
+                      axes=ax,
+                      draw_cross=False,
+                      title='R2')
+    ax=plt.subplot(4,1,2)
+    nip.plot_stat_map(imPol,
+                      bg_img=bg_img,
+                      axes=ax,
+                      draw_cross=False,
+                      title='polar coordinates',
+                      cmap='hsv',
+                      )
+    ax=plt.subplot(4,1,3)
+    nip.plot_stat_map(imEcc,
+                      bg_img=bg_img,
+                      axes=ax,
+                      draw_cross=False,
+                      title='eccentricity')
+    ax=plt.subplot(4,1,4)
+    nip.plot_stat_map(imSg,
+                      bg_img=bg_img,
+                      axes=ax,
+                      cmap='heat_r'
+                      vmax=.1,
+                      draw_cross=False,
+                      title='sigma')
+    
+    
+# dfRes = fitBatch(rows)
+
+rows = np.arange(nVox)
+csvResP = csvResF+'/%s.csv'%subj
+m = np.zeros((len(rows),len(cs)))
+dfRes =  pd.DataFrame(m,index=rows,columns=cs)
+
+
+for row in tqdm(rows,desc='fitting %s'%subj):
+    voxTs = stats.zscore(mBold2d[row, :])
+    try:
+        res = fitVox(voxTs,mPredBold2d=mPredBold2d, dfGridPreds=dfGridPreds,
+                   nKeep=nKeep,  frameRowPix=100)
+        dfRes.loc[row,['x','y','sg','sse','R2']] = res[['x','y','sg','sse','R2']]
+        
+        dfRes.loc[row, ['eccentricity','polarAngle' ]] = matrixCoords2polar(res['x'],
+                                                                   res['y'])
+    except:
+        pass
+    if (row>0) and (np.mod(row,500)==0):
+        print('plottig')
+        preview(dat.unmasker(dfRes['polarAngle'].values.astype(np.float32)),
+             dat.unmasker(dfRes['eccentricity'].values.astype(np.float32)),
+             dat.unmasker(dfRes['R2'].values.astype(np.float32)), #imR2,
+             dat.unmasker(dfRes['sg'].values.astype(np.float32)),
+             bg_img=bg_img)
+        plt.suptitle('%s\n%d vox'%(subj,row))
+        plt.show();plt.pause(.01)
+
+        dfRes.to_csv(csvResP)
+# df values to nii
+cs = ['sse', 'R2', 'pearsonr', 'polarAngle', 'eccentricity']
+for c in cs:
+    im = dat.unmasker(dfRes[c].values.astype(np.float32))
+    fname = niiResF+'/%s_%s.nii.gz'%(subj,c)
+    im.to_filename(fname)
+# n_jobs=6
+# rowss = cl.divideBatch(np.arange(nVox),n_jobs)
+# Parallel(n_jobs=2)(delayed(fitBatch)(rows) for rows in rowss)
+    #%%
+    # mRes[i, :2] = df.loc[i, ['polarAngle', 'eccentricity']]
+
+    # lErr = []
+    # lhrf=[]
+    # lgammaParam = []
+    # for k in dBoldPred2d.keys():
+    #     hrf_tmp = get_hrf(x, y, sigma, dBoldPred2d[k], rmStim.shape[0])
+    #     lhrf.append(hrf_tmp)
+    #     lErr.append(np.sum((voxTs-hrf_tmp)**2)*.001 )
+    #     lgammaParam.append(k)
+    # iErr = np.where(lErr==np.min(lErr))[0][0]
+    # boldPred = lhrf[iErr]
+    # gammaParam = lgammaParam[iErr]
+    # df.loc[i,'gammaParam'] = gammaParam
+    # print('gammaParam:',gammaParam)
+  
+    # try:
+    # if glmFit:
+    #     fitBoldPred = makePred(boldPred,intercept,beta=beta)
+    #     # fitBoldPred,regFit = fitPred(fitBoldPred, voxTs,intercept_only=intercept_only)
+    # else:
+    #     fitBoldPred=boldPred
+    
+    # # check err
+    # errCheck = np.sum((voxTs-fitBoldPred)**2)*.001
+    # print('fitSL err=%.4f, errCheck=%.4f'%(df.loc[i,'err'],errCheck))
+        
+    # if view:
+    #     plt.clf()
+    #     plt.plot(voxTs);plt.plot(boldPred);
+    #     # plt.plot(fitBoldPred) 
+    #     r2s = [stats.pearsonr(voxTs,v)[0]**2 for v in [boldPred]]
+    #     plt.legend(['real','res (r2=%.3f)'%r2s[0]])#,'resGlm (r2=%.3f)'%r2s[1]])
+    #     plt.title('%s: vox %d/%d\ngamma params=%s'%(anN,i,vmask.sum(),gammaParam))
+    #     plt.show()
+    #     plt.pause(.1)
+    # slope, intercept, r_value, p_value, std_err = stats.linregress(fitBoldPred, voxTs)
+    
+    # df.loc[i,'pearsonr'] = stats.pearsonr(boldPred, voxTs)[0]
+    # df.loc[i,'r2'] = stats.pearsonr(fitBoldPred, voxTs)[0]**2
+    
+        
+    # if np.mod(i,10)==0:
+    #     df.to_csv(prfF+'/%s_%s_prfs.csv'%('allRuns',anN))
+        
+    #     # mRes[:i,2] = df.loc[:i,'r2']
+    #     # mRes[:i,3] = df.loc[:i,'pearsonr']
+    #     # # mRes[:i,4] = df.loc[:i,'gammaParam']
+    #     # imPol = dat.unmasker(mRes[:,0])
+    #     # imEcc = dat.unmasker(mRes[:,1])
+    #     # imR2 =  dat.unmasker(mRes[:,2])
+    #     # imRho = dat.unmasker(mRes[:,3])
+    #     # imGamma = dat.unmasker(mRes[:,3])
+    #     # for j,gpn in enumerate(gammaPrmNs):
+    #     #     mRes[:i,4+j] = df.loc[:i,gpn]
+            
+    #     ns = ['polarAngle','eccentricity','R2','pearsonr']+['gamma_%s'%n for n in gammaPrmNs]
+    #     for j,n in enumerate(ns):
+    #         mRes[:i,j] = df.loc[:i,n]
+    #         im = dat.unmasker(mRes[:,j])
+    #         outp = prfF+'/%s_%s.nii.gz'%(anN,n)
+    #         im.to_filename(outp)
+            
+            
+    #%%        
+        # if view:
+            
+        #     plt.clf()
+        #     plt.subplot(2,2,1)
+        #     plt.plot(voxTs)
+        #     plt.plot(fitBoldPred)
+        #     plt.legend(['data %s'%'all', 'fit %s'%'all'])
+        #     plt.title('r2=%.2f'%df.loc[i,'r2'])
+        #     plt.subplot(2,2,2)
+        #     plt.hist(df.loc[:i,'r2'],bins=30)
+        #     plt.title("r2's so far")
+        #     ax=plt.subplot(2,2,3)
+        #     nip.plot_stat_map(imPol,
+        #                       bg_img=anatP,
+        #                       axes=ax,
+        #                       draw_cross=False,
+        #                       title='polar coordinates',
+        #                       cmap='hsv',
+        #                       )
+        #     ax=plt.subplot(2,2,4)
+        #     nip.plot_stat_map(imEcc,
+        #                       bg_img=anatP,
+        #                       axes=ax,
+        #                       draw_cross=False,
+        #                       title='eccentricity')
+        #     plt.suptitle('voxel %d/%d (%d percent)'%(i+1,
+        #                                             dat.dat.shape[1],
+        #                                              (1+i)/dat.dat.shape[1]))
+        #     plt.show();plt.pause(.01)
+            
+    # except: pass
+        
+    
+# #%% split half
+# if 'split' in toRun:
+#     datTr = cl.fmri_data([trIm],imHarvGreyMask)
+#     datTe = cl.fmri_data([teIm],imHarvGreyMask)
+    
+#     d_mbold = {}
+#     d_mbold['tr'] = datTr.dat.T
+#     d_mbold['te'] = datTe.dat.T
+    
+#     dRes = {}
+#     dRes['tr'] = np.zeros((d_mbold['tr'].shape[0], 2))
+#     dRes['te'] = np.zeros((d_mbold['tr'].shape[0], 2))
+    
+#     view = True
+#     glmFit = True
+#     if view:
+#         plt.figure()
+        
+#     dDf = {}
+#     for n in ['tr','te']:
+#         dDf[n] =  pd.DataFrame(columns=['X', 'Y', 'sigma', 'err',
+#                       'polarAngle', 'eccentricity'])
+    
+#     for i in tqdm(range(datTr.dat.shape[1])):
+#         for trte in ['tr','te']:
+#             voxTs = stats.zscore(d_mbold[trte][i, :])
+        
+#             dDf[trte].loc[i, ['X', 'Y', 'sigma', 'err']] = fitSL(mPredBold2d,
+#                                                           voxTs,
+#                                                           frameRowPix=100,
+#                                                           glmFit=glmFit).values
+#             x, y, sigma, err = dDf[trte].loc[i, ['X', 'Y', 'sigma', 'err']]
+#             dDf[trte].loc[i, ['eccentricity','polarAngle', ]] = matrixCoords2polar(x,y) #xy_to_polar(x, y), xy_to_ecc(x, y)
+#             dRes[trte][i, :] = dDf[trte].loc[i, ['polarAngle', 'eccentricity']]
+#             fitBoldPred = get_hrf(x, y, sigma, mPredBold2d, frameRowPix=100)
+#             if glmFit:
+#                 fitBoldPred,regFit = fitPred(fitBoldPred,
+#                                              voxTs,
+#                                              intercept_only=intercept_only)
+        
+#             dDf[trte].to_csv(prfF+'/%s_prfs.csv'%trte)
+            
+#             if view:
+#                 if trte=='tr':
+#                     plt.clf()
+#                 plt.plot(voxTs)
+#                 plt.plot(fitBoldPred)
+#                 plt.legend(['data %s'%trte, 'fit %s'%trte])
+#                 plt.show();plt.pause(.01)

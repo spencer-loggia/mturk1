@@ -1,0 +1,1746 @@
+{
+    "directed": true,
+    "multigraph": false,
+    "graph": {
+        "subject_name": "wooster",
+        "func2anat_nonlinear": true
+    },
+    "nodes": [
+        {
+            "data": "/media/ssbeast/mturk/MTurk1/subjects/wooster_old_helen/analysis/shape_color_attention_decode_stimulus_response_data_key.csv",
+            "complete": null,
+            "bipartite": 0,
+            "generated": true,
+            "modified": "2023-08-29 09:12:23.087324",
+            "id": "end"
+        },
+        {
+            "data": "subjects/wooster/mri/avT1.nii.gz",
+            "type": "volume",
+            "bipartite": 0,
+            "complete": true,
+            "space": "t1_native",
+            "leaf": true,
+            "modified": "2023-05-26 10:53:14.827074",
+            "id": "t1"
+        },
+        {
+            "data": "subjects/wooster/mri/brainmask.nii.gz",
+            "type": "volume",
+            "bipartite": 0,
+            "complete": true,
+            "space": "t1_native",
+            "leaf": true,
+            "modified": "2023-05-26 10:53:14.827074",
+            "id": "t1_mask"
+        },
+        {
+            "data": "subjects/wooster/mri/ds_avT1.nii.gz",
+            "type": "volume",
+            "bipartite": 0,
+            "complete": true,
+            "space": "ds_t1_native",
+            "leaf": true,
+            "modified": "2023-05-31 10:28:27.353768",
+            "id": "ds_t1"
+        },
+        {
+            "data": "subjects/wooster/mri/ds_brainmask.nii.gz",
+            "type": "volume",
+            "bipartite": 0,
+            "complete": true,
+            "space": "ds_t1_native",
+            "leaf": true,
+            "modified": "2023-05-31 10:28:55.833658",
+            "id": "ds_t1_mask"
+        },
+        {
+            "data": "subjects/wooster/mri/masked_ds_avT1.nii.gz",
+            "type": "volume",
+            "bipartite": 0,
+            "complete": true,
+            "space": "ds_t1_native",
+            "leaf": true,
+            "modified": "2023-05-31 10:32:02.734438",
+            "id": "ds_t1_masked"
+        },
+        {
+            "data": "subjects/wooster/mri/dil_ds_brainmask.nii.gz",
+            "type": "volume",
+            "bipartite": 0,
+            "complete": true,
+            "space": "ds_t1_native",
+            "leaf": true,
+            "modified": "2023-05-31 10:29:17.352859",
+            "id": "dil_ds_t1_mask"
+        },
+        {
+            "data": [
+                "subjects/wooster/surf/lh.white",
+                "subjects/wooster/surf/rh.white"
+            ],
+            "type": "surface",
+            "bipartite": 0,
+            "complete": true,
+            "space": "t1_native",
+            "leaf": true,
+            "modified": "2023-06-06 15:40:12.488031",
+            "id": "white_surfs"
+        },
+        {
+            "data": [
+                "sessions/scd_20230327/session_net.json",
+                "sessions/scd_20230303/session_net.json",
+                "sessions/scp_20220321/session_net.json",
+                "sessions/scd_20230821/session_net.json",
+                "sessions/scd_20230213/session_net.json",
+                "sessions/dyloc_20220124_2/session_net.json",
+                "sessions/scd_20230813/session_net.json",
+                "sessions/scp_20220214/session_net.json",
+                "sessions/noah_functional_mri/session_net.json",
+                "sessions/scp_20220307/session_net.json",
+                "sessions/scd_20230406/session_net.json",
+                "sessions/scd_20230330/session_net.json",
+                "sessions/dyloc_20220124_1/session_net.json",
+                "sessions/scp_20220204/session_net.json",
+                "sessions/scd_20230824/session_net.json",
+                "sessions/scd_20230324/session_net.json",
+                "sessions/scp_20220318/session_net.json",
+                "sessions/scd_20230407/session_net.json",
+                "sessions/scd_20230804/session_net.json",
+                "sessions/scd_20230302/session_net.json",
+                "sessions/scp_20220311/session_net.json",
+                "sessions/scd_20230331/session_net.json",
+                "sessions/scd_20230209/session_net.json",
+                "sessions/noah_fmri_practice/session_net.json",
+                "sessions/dyloc_20230818/session_net.json"
+            ],
+            "type": "net_json",
+            "complete": null,
+            "bipartite": 0,
+            "always_show": true,
+            "leaf": true,
+            "modified": "2023-08-29 09:08:36.047311",
+            "id": "sessions"
+        },
+        {
+            "data": "/home/ssbeast/Projects/SS/monkey_fmri/MTurk1/subjects/wooster/mri/functional_target.nii.gz",
+            "type": "volume",
+            "bipartite": 0,
+            "complete": null,
+            "space": "epi_std",
+            "leaf": true,
+            "modified": "2023-06-02 11:52:51.744081",
+            "id": "functional_representative"
+        },
+        {
+            "data": "../../../../home/ssbeast/Projects/SS/monkey_fmri/MTurk1/subjects/wooster/mri/inverse_trans_ds_brainmask.nii.gz",
+            "type": "volume",
+            "bipartite": 0,
+            "complete": null,
+            "space": "epi_std",
+            "leaf": true,
+            "modified": "2023-06-10 15:59:52.691169",
+            "id": "functional_representative_mask"
+        },
+        {
+            "data": "../../../../home/ssbeast/Projects/SS/monkey_fmri/MTurk1/subjects/wooster/mri/masked_functional_target.nii.gz",
+            "type": "volume",
+            "bipartite": 0,
+            "complete": null,
+            "space": "epi_std",
+            "leaf": true,
+            "modified": "2023-06-10 15:59:52.691169",
+            "id": "functional_representative_masked"
+        },
+        {
+            "data": "../../../../home/ssbeast/Projects/SS/monkey_fmri/MTurk1/subjects/wooster/mri/inverse_trans_dil_ds_brainmask.nii.gz",
+            "type": "volume",
+            "bipartite": 0,
+            "complete": null,
+            "space": "epi_std",
+            "leaf": true,
+            "modified": "2023-06-08 11:18:02.249599",
+            "id": "functional_representative_dil_mask"
+        },
+        {
+            "data": "../../../../home/ssbeast/Projects/SS/monkey_fmri/MTurk1/subjects/wooster/mri/itkManual.nii.gz",
+            "type": "volume",
+            "bipartite": 0,
+            "complete": true,
+            "space": "ds_t1_aprox",
+            "modified": "2023-06-06 13:00:47.927653",
+            "id": "manual_reg_epi_rep"
+        },
+        {
+            "data": "../../../../home/ssbeast/Projects/SS/monkey_fmri/MTurk1/subjects/wooster/mri/masked_itkManual.nii.gz",
+            "type": "volume",
+            "bipartite": 0,
+            "complete": true,
+            "space": "ds_t1_aprox",
+            "modified": "2023-06-06 13:00:54.070684",
+            "id": "masked_manual_reg_epi_rep"
+        },
+        {
+            "data": "../../../../home/ssbeast/Projects/SS/monkey_fmri/MTurk1/subjects/wooster/mri/itkManual.txt",
+            "type": "transform",
+            "bipartite": 0,
+            "complete": true,
+            "invertable": true,
+            "space": [
+                "epi_std",
+                "ds_t1_aprox"
+            ],
+            "leaf": true,
+            "modified": "2023-06-06 13:00:47.927653",
+            "id": "manual_transform"
+        },
+        {
+            "data": "../../../../home/ssbeast/Projects/SS/monkey_fmri/MTurk1/subjects/wooster/mri/Composite.h5",
+            "type": "transform",
+            "bipartite": 0,
+            "complete": true,
+            "invertable": false,
+            "space": [
+                "ds_t1_aprox",
+                "ds_t1_native"
+            ],
+            "leaf": true,
+            "modified": "2023-06-08 11:18:02.249599",
+            "id": "auto_composite_transform"
+        },
+        {
+            "data": "../../../../home/ssbeast/Projects/SS/monkey_fmri/MTurk1/subjects/wooster/mri/InverseComposite.h5",
+            "type": "transform",
+            "bipartite": 0,
+            "complete": true,
+            "invertable": false,
+            "space": [
+                "ds_t1_native",
+                "ds_t1_aprox"
+            ],
+            "leaf": true,
+            "modified": "2023-06-08 11:18:02.249599",
+            "id": "inverse_auto_composite_transform"
+        },
+        {
+            "data": true,
+            "complete": null,
+            "bipartite": 0,
+            "leaf": true,
+            "modified": "2023-08-28 12:18:56.078019",
+            "id": "paradigm_complete_checkpoint"
+        },
+        {
+            "data": {
+                "CBRs": "subjects/wooster/rois/CBRs/surf_labels",
+                "local_rois_helen": "subjects/wooster/rois/local_rois_helen/surf_labels",
+                "righthemi": "subjects/wooster_old_helen/rois/righthemi/surf_labels",
+                "righthemi2": "subjects/wooster_old_helen/rois/righthemi2/surf_labels"
+            },
+            "complete": null,
+            "type": "label",
+            "bipartite": 0,
+            "leaf": true,
+            "modified": "2023-08-28 12:57:16.028824",
+            "id": "surface_defined_rois"
+        },
+        {
+            "data": {
+                "CBRs": "subjects/wooster/rois/CBRs/vol_rois",
+                "local_rois_helen": "subjects/wooster/rois/local_rois_helen/vol_rois",
+                "righthemi": "subjects/wooster_old_helen/rois/righthemi/vol_rois",
+                "righthemi2": "subjects/wooster_old_helen/rois/righthemi2/vol_rois"
+            },
+            "complete": null,
+            "type": "volume",
+            "space": "t1_native",
+            "bipartite": 0,
+            "leaf": true,
+            "modified": "2023-08-28 12:57:20.218492",
+            "id": "volume_rois"
+        },
+        {
+            "data": {
+                "CBRs": "subjects/wooster/rois/CBRs/ds_roi_vols",
+                "KarthikROIsJeevesRH": "subjects/wooster/rois/KarthikROIsJeevesRH/ds_vol_rois",
+                "local_rois_helen": "subjects/wooster/rois/local_rois_helen/ds_roi_vols",
+                "righthemi": "subjects/wooster_old_helen/rois/righthemi/ds_roi_vols"
+            },
+            "complete": null,
+            "type": "volume",
+            "space": "ds_t1_native",
+            "bipartite": 0,
+            "leaf": true,
+            "modified": "2023-08-28 12:57:20.218492",
+            "id": "ds_volume_rois"
+        },
+        {
+            "data": {
+                "CBRs": "subjects/wooster/rois/func_space_rois",
+                "local_rois_helen": "subjects/wooster/rois/local_rois_helen/auto_func_space_rois",
+                "righthemi": "subjects/wooster_old_helen/rois/righthemi/auto_func_space_rois"
+            },
+            "complete": null,
+            "type": "volume",
+            "space": "functional_std",
+            "bipartite": 0,
+            "leaf": true,
+            "modified": "2023-08-28 12:57:20.218492",
+            "id": "functional_rois"
+        },
+        {
+            "data": {},
+            "complete": null,
+            "type": "array",
+            "bipartite": 0,
+            "leaf": true,
+            "modified": "2023-08-28 12:57:20.218492",
+            "id": "roi_time_courses"
+        },
+        {
+            "fxn": "support_functions.load_t1_data",
+            "bipartite": 1,
+            "desc": "Accept user input for paths to t1 and t1 mask anatomical volumes. Used for all subject sessions",
+            "modified": "2023-05-26 10:53:14.827074",
+            "id": "load_t1_data"
+        },
+        {
+            "fxn": "support_functions.load_white_surfs",
+            "bipartite": 1,
+            "desc": "Accept user input for paths to white matter and cortical thickness surfaces",
+            "modified": "2023-06-06 15:40:12.488031",
+            "id": "load_white_surfaces"
+        },
+        {
+            "fxn": "support_functions.downsample_anatomical",
+            "bipartite": 1,
+            "desc": "Downsample orginal t1 by a factor of 2 to the working space.",
+            "modified": "2023-05-31 10:28:27.353768",
+            "id": "downsample_t1"
+        },
+        {
+            "fxn": "support_functions.downsample_anatomical",
+            "bipartite": 1,
+            "desc": "Downsample orginal t1 mask by a factor of 2 to the working space.",
+            "modified": "2023-05-31 10:28:55.833658",
+            "id": "downsample_t1_mask"
+        },
+        {
+            "fxn": "support_functions.apply_binary_mask_vol",
+            "bipartite": 1,
+            "desc": "Apply downsampled mask to downsampled t1.",
+            "modified": "2023-05-31 10:32:02.734438",
+            "id": "mask_downsampled_t1"
+        },
+        {
+            "fxn": "support_functions.apply_binary_mask_vol",
+            "bipartite": 1,
+            "desc": "apply a registered mask to the functional image",
+            "modified": "2023-06-06 14:17:38.525709",
+            "id": "create_masked_functional_rep"
+        },
+        {
+            "fxn": "self.create_load_session",
+            "bipartite": 1,
+            "desc": "create preprocessing and basic analysis pipeline for new fmri session.",
+            "modified": "2023-08-29 09:08:36.047311",
+            "id": "create_load_session"
+        },
+        {
+            "fxn": "support_functions.get_functional_target",
+            "bipartite": 1,
+            "desc": "get a masked functional image all sessions will preregister to",
+            "modified": "2023-06-02 11:52:51.744025",
+            "id": "get_functional_representative"
+        },
+        {
+            "fxn": "support_functions.itk_manual",
+            "bipartite": 1,
+            "desc": "Use ITK-Snap to preform a course grain manual registration between the epi std rep volume and the downsampled t1, creating a crude linear mapping between the functional and working space. It is most important that the borders of the cortex closely match, since this map is used for  brain masking the epi rep.",
+            "modified": "2023-06-06 13:00:47.927653",
+            "id": "manual_registration"
+        },
+        {
+            "fxn": "support_functions.apply_binary_mask_vol",
+            "bipartite": 1,
+            "modified": "2023-06-06 13:00:54.070684",
+            "id": "apply_reg_epi_mask"
+        },
+        {
+            "fxn": "support_functions.coreg_wrapper",
+            "bipartite": 1,
+            "desc": "Use ants coregistration to create a fine grained nonlinear mapping from the skull stripped manually aligned std epi rep to the downsampled t1. The manual registration got the brains as overlapping as possible, now this attempts to morph the cortex to correct differences in white matter boundaries due to field warp in epi acquisition.",
+            "argv": true,
+            "modified": "2023-06-08 11:18:02.249599",
+            "id": "automatic_coregistration"
+        },
+        {
+            "fxn": "support_functions.apply_warp_inverse",
+            "bipartite": 1,
+            "desc": "invert the t1 mask to create a masked functional image",
+            "modified": "2023-06-10 15:59:52.691169",
+            "id": "create_functional_representative_mask"
+        },
+        {
+            "fxn": "support_functions.apply_warp_inverse",
+            "bipartite": 1,
+            "desc": "invert the t1 mask to create a masked functional image",
+            "modified": "2023-06-06 14:17:31.629840",
+            "id": "create_dilated_functional_representative_mask"
+        },
+        {
+            "fxn": "support_functions.dilate_mask",
+            "bipartite": 1,
+            "desc": "dilate the downsampled t1 mask",
+            "modified": "2023-05-31 10:29:17.352859",
+            "id": "dilate_ds_t1_mask"
+        },
+        {
+            "fxn": "self.add_paradigm_control_set",
+            "bipartite": 1,
+            "modified": "2023-08-01 13:32:16.489049",
+            "id": "add_new_paradigm"
+        },
+        {
+            "fxn": "support_functions.define_surface_rois",
+            "bipartite": 1,
+            "desc": "Just a placeholder to tell the project manager that you created manual rois, and to provide instructions. You will need to draw and save the rois in freeview.",
+            "modified": "2023-08-28 12:57:16.028824",
+            "id": "manual_surface_rois"
+        },
+        {
+            "fxn": "support_functions.surf_labels_to_vol_mask",
+            "bipartite": 1,
+            "desc": "project ROIs defined on the surface back into the volume.",
+            "modified": "2023-08-28 12:57:20.218492",
+            "id": "volume_rois_from_surface_rois"
+        },
+        {
+            "fxn": "support_functions.get_vol_rois_time_series",
+            "bipartite": 1,
+            "desc": "Combine time series created with different stimuli orderings via block of interest stacking method, then extract the average time course for each volume roi.",
+            "id": "get_vol_rois_time_series"
+        },
+        {
+            "fxn": "support_functions.downsample_vol_rois",
+            "bipartite": 1,
+            "desc": "downsample volume rois by a factor of 2 to the working space.",
+            "modified": "2023-08-28 12:46:06.682697",
+            "id": "downsample_vol_rois"
+        },
+        {
+            "fxn": "support_functions.apply_warp_inverse_vol_roi_dir",
+            "bipartite": 1,
+            "desc": "transform directory of anatomical rois to functional space.",
+            "modified": "2023-08-28 12:46:15.622879",
+            "id": "vol_2_functional_rois"
+        },
+        {
+            "fxn": "support_functions.manual_volume_rois",
+            "bipartite": 1,
+            "modified": "2023-08-24 15:22:40.885344",
+            "id": "manual_volume_rois"
+        },
+        {
+            "fxn": "self.sterilize",
+            "bipartite": 1,
+            "generated": true,
+            "desc": "function that removes intermediate files associated with session. WARNING: This makes it impossible to re-run many intermediate processing steps without starting over.",
+            "id": "sterilize"
+        },
+        {
+            "data": "paradigms/shape_color_attention_decode_experiment_config.json",
+            "complete": null,
+            "bipartite": 0,
+            "type": "json",
+            "generated": true,
+            "modified": "2023-08-01 13:32:16.489049",
+            "leaf": true,
+            "id": "paradigm_shape_color_attention_decode"
+        },
+        {
+            "data": null,
+            "generated": true,
+            "complete": false,
+            "bipartite": 0,
+            "type": "4d_volume",
+            "space": "std_functional",
+            "modified": "2023-08-01 13:32:16.489049",
+            "id": "beta_shape_color_attention_decode"
+        },
+        {
+            "data": null,
+            "complete": false,
+            "generated": true,
+            "bipartite": 0,
+            "type": "model_object",
+            "leaf": true,
+            "modified": "2023-08-01 13:32:16.489049",
+            "id": "glm_shape_color_attention_decode"
+        },
+        {
+            "data": [],
+            "complete": false,
+            "generated": true,
+            "bipartite": 0,
+            "type": "volume",
+            "space": "std_functional",
+            "leaf": true,
+            "modified": "2023-08-01 13:32:16.489049",
+            "id": "contrasts_shape_color_attention_decode"
+        },
+        {
+            "data": [],
+            "complete": false,
+            "generated": true,
+            "bipartite": 0,
+            "type": "volume",
+            "space": "ds_t1_native",
+            "leaf": true,
+            "modified": "2023-08-01 13:32:16.489049",
+            "id": "reg_contrasts_shape_color_attention_decode"
+        },
+        {
+            "data": [],
+            "complete": false,
+            "generated": true,
+            "bipartite": 0,
+            "type": "overlay",
+            "space": "t1_native",
+            "leaf": true,
+            "modified": "2023-08-01 13:32:16.489049",
+            "id": "sigsurfaces_shape_color_attention_decode"
+        },
+        {
+            "data": "/media/ssbeast/mturk/MTurk1/subjects/wooster_old_helen/analysis/shape_color_attention_decode_stimulus_response_data_key.csv",
+            "complete": true,
+            "generated": true,
+            "bipartite": 0,
+            "type": "overlay",
+            "space": "std_functional",
+            "modified": "2023-08-29 09:12:23.087324",
+            "id": "run_beta_logshape_color_attention_decode"
+        },
+        {
+            "generated": true,
+            "bipartite": 1,
+            "fxn": "support_functions.construct_subject_glm",
+            "desc": "Trains a GLM using all promoted runs. The resulting beta matrix is designed to capture the information we care about from this experiment, and satisfies the equation (DesignMatrix * hrf) @ BetaMatrix ~= EpiTimeSeries where * is the convolution operator and @ is matrix multiplication. We store the Betas in the GLM object, which also carries information about experiment design andvariance",
+            "modified": "2023-06-07 17:11:27.925972",
+            "id": "create_shape_color_attention_decode_glm"
+        },
+        {
+            "generated": true,
+            "bipartite": 1,
+            "fxn": "support_functions.create_contrast",
+            "desc": "Generates the contrasts requested in the paradigm definition using the subjet level beta matrix. Contrasts are a useful tool for comparing activation to two conditions or linear combinations of conditions on a per voxel level. Contrast values are interpreted as Z-scores here. ",
+            "modified": "2023-08-01 09:47:58.579558",
+            "id": "create_shape_color_attention_decode_contrasts"
+        },
+        {
+            "generated": true,
+            "bipartite": 1,
+            "fxn": "support_functions.apply_warp",
+            "desc": "registers the contrasts to the anatomical space.",
+            "modified": "2023-08-01 09:49:59.953684",
+            "id": "register_shape_color_attention_decode_contrasts"
+        },
+        {
+            "generated": true,
+            "bipartite": 1,
+            "fxn": "support_functions.generate_subject_overlays",
+            "modified": "2023-08-01 09:50:28.910211",
+            "id": "create_shape_color_attention_decode_sigsurface_overlays"
+        },
+        {
+            "generated": true,
+            "bipartite": 1,
+            "fxn": "support_functions.beta_from_glm",
+            "desc": "gets the beta matrix as a nifti from the GLM",
+            "id": "get_shape_color_attention_decode_subject_betas"
+        },
+        {
+            "generated": true,
+            "bipartite": 1,
+            "fxn": "support_functions.automatic_volume_rois",
+            "id": "automatic_shape_color_attention_decode_volume_rois"
+        },
+        {
+            "generated": true,
+            "bipartite": 1,
+            "fxn": "support_functions.get_run_betas",
+            "modified": "2023-08-29 09:12:23.087324",
+            "id": "create_shape_color_attention_decoderun_betas"
+        },
+        {
+            "generated": true,
+            "bipartite": 1,
+            "fxn": "self.remove_paradigm_control_set",
+            "id": "delete_paradigm_shape_color_attention_decode"
+        },
+        {
+            "data": "paradigms/dyloc_original_experiment_config.json",
+            "complete": null,
+            "bipartite": 0,
+            "type": "json",
+            "generated": true,
+            "modified": "2023-08-01 13:32:16.489049",
+            "leaf": true,
+            "id": "paradigm_dyloc_original"
+        },
+        {
+            "data": null,
+            "generated": true,
+            "complete": false,
+            "bipartite": 0,
+            "type": "4d_volume",
+            "space": "std_functional",
+            "modified": "2023-08-28 11:49:06.536939",
+            "id": "beta_dyloc_original"
+        },
+        {
+            "data": "subjects/wooster_old_helen/analysis/glm_model_496604.pkl",
+            "complete": true,
+            "generated": true,
+            "bipartite": 0,
+            "type": "model_object",
+            "leaf": true,
+            "modified": "2023-08-28 11:49:06.536939",
+            "id": "glm_dyloc_original"
+        },
+        {
+            "data": [
+                "subjects/wooster_old_helen/analysis/bw_minus_colored.nii.gz",
+                "subjects/wooster_old_helen/analysis/faces_minus_scenes.nii.gz",
+                "subjects/wooster_old_helen/analysis/faces_minus_bodies.nii.gz",
+                "subjects/wooster_old_helen/analysis/faces_minus_scrambled.nii.gz",
+                "subjects/wooster_old_helen/analysis/faces_minus_objects.nii.gz",
+                "subjects/wooster_old_helen/analysis/objects_minus_scrambled.nii.gz",
+                "subjects/wooster_old_helen/analysis/objects_minus_scenes.nii.gz",
+                "subjects/wooster_old_helen/analysis/objects_minus_bodies.nii.gz",
+                "subjects/wooster_old_helen/analysis/scenes_minus_scrambled.nii.gz",
+                "subjects/wooster_old_helen/analysis/color_localizer.nii.gz",
+                "subjects/wooster_old_helen/analysis/background.nii.gz"
+            ],
+            "complete": true,
+            "generated": true,
+            "bipartite": 0,
+            "type": "volume",
+            "space": "std_functional",
+            "leaf": true,
+            "modified": "2023-08-28 12:17:47.384903",
+            "id": "contrasts_dyloc_original"
+        },
+        {
+            "data": [
+                "subjects/wooster_old_helen/analysis/reg_bw_minus_colored.nii.gz",
+                "subjects/wooster_old_helen/analysis/reg_faces_minus_scenes.nii.gz",
+                "subjects/wooster_old_helen/analysis/reg_faces_minus_bodies.nii.gz",
+                "subjects/wooster_old_helen/analysis/reg_faces_minus_scrambled.nii.gz",
+                "subjects/wooster_old_helen/analysis/reg_faces_minus_objects.nii.gz",
+                "subjects/wooster_old_helen/analysis/reg_objects_minus_scrambled.nii.gz",
+                "subjects/wooster_old_helen/analysis/reg_objects_minus_scenes.nii.gz",
+                "subjects/wooster_old_helen/analysis/reg_objects_minus_bodies.nii.gz",
+                "subjects/wooster_old_helen/analysis/reg_scenes_minus_scrambled.nii.gz",
+                "subjects/wooster_old_helen/analysis/reg_color_localizer.nii.gz",
+                "subjects/wooster_old_helen/analysis/reg_background.nii.gz"
+            ],
+            "complete": true,
+            "generated": true,
+            "bipartite": 0,
+            "type": "volume",
+            "space": "ds_t1_native",
+            "leaf": true,
+            "modified": "2023-08-28 12:18:04.939872",
+            "id": "reg_contrasts_dyloc_original"
+        },
+        {
+            "data": [
+                "subjects/wooster_old_helen/analysis/sigsurface_lh_reg_bw_minus_colored.mgh",
+                "subjects/wooster_old_helen/analysis/sigsurface_rh_reg_bw_minus_colored.mgh",
+                "subjects/wooster_old_helen/analysis/sigsurface_lh_reg_faces_minus_scenes.mgh",
+                "subjects/wooster_old_helen/analysis/sigsurface_rh_reg_faces_minus_scenes.mgh",
+                "subjects/wooster_old_helen/analysis/sigsurface_lh_reg_faces_minus_bodies.mgh",
+                "subjects/wooster_old_helen/analysis/sigsurface_rh_reg_faces_minus_bodies.mgh",
+                "subjects/wooster_old_helen/analysis/sigsurface_lh_reg_faces_minus_scrambled.mgh",
+                "subjects/wooster_old_helen/analysis/sigsurface_rh_reg_faces_minus_scrambled.mgh",
+                "subjects/wooster_old_helen/analysis/sigsurface_lh_reg_faces_minus_objects.mgh",
+                "subjects/wooster_old_helen/analysis/sigsurface_rh_reg_faces_minus_objects.mgh",
+                "subjects/wooster_old_helen/analysis/sigsurface_lh_reg_objects_minus_scrambled.mgh",
+                "subjects/wooster_old_helen/analysis/sigsurface_rh_reg_objects_minus_scrambled.mgh",
+                "subjects/wooster_old_helen/analysis/sigsurface_lh_reg_objects_minus_scenes.mgh",
+                "subjects/wooster_old_helen/analysis/sigsurface_rh_reg_objects_minus_scenes.mgh",
+                "subjects/wooster_old_helen/analysis/sigsurface_lh_reg_objects_minus_bodies.mgh",
+                "subjects/wooster_old_helen/analysis/sigsurface_rh_reg_objects_minus_bodies.mgh",
+                "subjects/wooster_old_helen/analysis/sigsurface_lh_reg_scenes_minus_scrambled.mgh",
+                "subjects/wooster_old_helen/analysis/sigsurface_rh_reg_scenes_minus_scrambled.mgh",
+                "subjects/wooster_old_helen/analysis/sigsurface_lh_reg_color_localizer.mgh",
+                "subjects/wooster_old_helen/analysis/sigsurface_rh_reg_color_localizer.mgh",
+                "subjects/wooster_old_helen/analysis/sigsurface_lh_reg_background.mgh",
+                "subjects/wooster_old_helen/analysis/sigsurface_rh_reg_background.mgh"
+            ],
+            "complete": true,
+            "generated": true,
+            "bipartite": 0,
+            "type": "overlay",
+            "space": "t1_native",
+            "leaf": true,
+            "modified": "2023-08-28 12:18:56.078019",
+            "id": "sigsurfaces_dyloc_original"
+        },
+        {
+            "data": [],
+            "complete": false,
+            "generated": true,
+            "bipartite": 0,
+            "type": "overlay",
+            "space": "std_functional",
+            "modified": "2023-08-01 13:32:16.489049",
+            "id": "run_beta_logdyloc_original"
+        },
+        {
+            "generated": true,
+            "bipartite": 1,
+            "fxn": "support_functions.construct_subject_glm",
+            "desc": "Trains a GLM using all promoted runs. The resulting beta matrix is designed to capture the information we care about from this experiment, and satisfies the equation (DesignMatrix * hrf) @ BetaMatrix ~= EpiTimeSeries where * is the convolution operator and @ is matrix multiplication. We store the Betas in the GLM object, which also carries information about experiment design andvariance",
+            "modified": "2023-08-28 11:49:06.536939",
+            "id": "create_dyloc_original_glm"
+        },
+        {
+            "generated": true,
+            "bipartite": 1,
+            "fxn": "support_functions.create_contrast",
+            "desc": "Generates the contrasts requested in the paradigm definition using the subjet level beta matrix. Contrasts are a useful tool for comparing activation to two conditions or linear combinations of conditions on a per voxel level. Contrast values are interpreted as Z-scores here. ",
+            "modified": "2023-08-28 12:17:47.384903",
+            "id": "create_dyloc_original_contrasts"
+        },
+        {
+            "generated": true,
+            "bipartite": 1,
+            "fxn": "support_functions.apply_warp",
+            "desc": "registers the contrasts to the anatomical space.",
+            "modified": "2023-08-28 12:18:04.939872",
+            "id": "register_dyloc_original_contrasts"
+        },
+        {
+            "generated": true,
+            "bipartite": 1,
+            "fxn": "support_functions.generate_subject_overlays",
+            "modified": "2023-08-28 12:18:56.078019",
+            "id": "create_dyloc_original_sigsurface_overlays"
+        },
+        {
+            "generated": true,
+            "bipartite": 1,
+            "fxn": "support_functions.beta_from_glm",
+            "desc": "gets the beta matrix as a nifti from the GLM",
+            "id": "get_dyloc_original_subject_betas"
+        },
+        {
+            "generated": true,
+            "bipartite": 1,
+            "fxn": "support_functions.automatic_volume_rois",
+            "id": "automatic_dyloc_original_volume_rois"
+        },
+        {
+            "generated": true,
+            "bipartite": 1,
+            "fxn": "support_functions.get_run_betas",
+            "id": "create_dyloc_originalrun_betas"
+        },
+        {
+            "generated": true,
+            "bipartite": 1,
+            "fxn": "self.remove_paradigm_control_set",
+            "id": "delete_paradigm_dyloc_original"
+        },
+        {
+            "data": "paradigms/shape_color_attention_decode_experiment_config.json",
+            "complete": null,
+            "bipartite": 0,
+            "type": "json",
+            "generated": true,
+            "modified": "2023-08-01 13:32:16.489049",
+            "leaf": true,
+            "id": "paradigm_shape_color_passive_block"
+        },
+        {
+            "data": null,
+            "generated": true,
+            "complete": false,
+            "bipartite": 0,
+            "type": "4d_volume",
+            "space": "std_functional",
+            "modified": "2023-08-01 13:32:16.489049",
+            "id": "beta_shape_color_passive_block"
+        },
+        {
+            "data": null,
+            "complete": false,
+            "generated": true,
+            "bipartite": 0,
+            "type": "model_object",
+            "leaf": true,
+            "modified": "2023-08-01 13:32:16.489049",
+            "id": "glm_shape_color_passive_block"
+        },
+        {
+            "data": [],
+            "complete": false,
+            "generated": true,
+            "bipartite": 0,
+            "type": "volume",
+            "space": "std_functional",
+            "leaf": true,
+            "modified": "2023-08-01 13:32:16.489049",
+            "id": "contrasts_shape_color_passive_block"
+        },
+        {
+            "data": [],
+            "complete": false,
+            "generated": true,
+            "bipartite": 0,
+            "type": "volume",
+            "space": "ds_t1_native",
+            "leaf": true,
+            "modified": "2023-08-01 13:32:16.489049",
+            "id": "reg_contrasts_shape_color_passive_block"
+        },
+        {
+            "data": [],
+            "complete": false,
+            "generated": true,
+            "bipartite": 0,
+            "type": "overlay",
+            "space": "t1_native",
+            "leaf": true,
+            "modified": "2023-08-01 13:32:16.489049",
+            "id": "sigsurfaces_shape_color_passive_block"
+        },
+        {
+            "data": [],
+            "complete": false,
+            "generated": true,
+            "bipartite": 0,
+            "type": "overlay",
+            "space": "std_functional",
+            "modified": "2023-08-01 13:32:16.489049",
+            "id": "run_beta_logshape_color_passive_block"
+        },
+        {
+            "generated": true,
+            "bipartite": 1,
+            "fxn": "support_functions.construct_subject_glm",
+            "desc": "Trains a GLM using all promoted runs. The resulting beta matrix is designed to capture the information we care about from this experiment, and satisfies the equation (DesignMatrix * hrf) @ BetaMatrix ~= EpiTimeSeries where * is the convolution operator and @ is matrix multiplication. We store the Betas in the GLM object, which also carries information about experiment design andvariance",
+            "id": "create_shape_color_passive_block_glm"
+        },
+        {
+            "generated": true,
+            "bipartite": 1,
+            "fxn": "support_functions.create_contrast",
+            "desc": "Generates the contrasts requested in the paradigm definition using the subjet level beta matrix. Contrasts are a useful tool for comparing activation to two conditions or linear combinations of conditions on a per voxel level. Contrast values are interpreted as Z-scores here. ",
+            "id": "create_shape_color_passive_block_contrasts"
+        },
+        {
+            "generated": true,
+            "bipartite": 1,
+            "fxn": "support_functions.apply_warp",
+            "desc": "registers the contrasts to the anatomical space.",
+            "id": "register_shape_color_passive_block_contrasts"
+        },
+        {
+            "generated": true,
+            "bipartite": 1,
+            "fxn": "support_functions.generate_subject_overlays",
+            "id": "create_shape_color_passive_block_sigsurface_overlays"
+        },
+        {
+            "generated": true,
+            "bipartite": 1,
+            "fxn": "support_functions.beta_from_glm",
+            "desc": "gets the beta matrix as a nifti from the GLM",
+            "id": "get_shape_color_passive_block_subject_betas"
+        },
+        {
+            "generated": true,
+            "bipartite": 1,
+            "fxn": "support_functions.automatic_volume_rois",
+            "id": "automatic_shape_color_passive_block_volume_rois"
+        },
+        {
+            "generated": true,
+            "bipartite": 1,
+            "fxn": "support_functions.get_run_betas",
+            "id": "create_shape_color_passive_blockrun_betas"
+        },
+        {
+            "generated": true,
+            "bipartite": 1,
+            "fxn": "self.remove_paradigm_control_set",
+            "id": "delete_paradigm_shape_color_passive_block"
+        },
+        {
+            "generated": true,
+            "bipartite": 1,
+            "fxn": "support_functions.surface_run_betas",
+            "id": "create_shape_color_passive_blockrun_surfaces"
+        },
+        {
+            "generated": true,
+            "bipartite": 1,
+            "fxn": "support_functions.surface_run_betas",
+            "modified": "2023-08-01 22:10:27.857700",
+            "id": "create_shape_color_attention_decoderun_surfaces"
+        }
+    ],
+    "links": [
+        {
+            "order": 0,
+            "source": "t1",
+            "target": "downsample_t1"
+        },
+        {
+            "order": 2,
+            "source": "t1",
+            "target": "volume_rois_from_surface_rois"
+        },
+        {
+            "order": 3,
+            "source": "t1",
+            "target": "create_shape_color_attention_decode_sigsurface_overlays"
+        },
+        {
+            "order": 3,
+            "source": "t1",
+            "target": "create_dyloc_original_sigsurface_overlays"
+        },
+        {
+            "order": 3,
+            "source": "t1",
+            "target": "create_shape_color_passive_block_sigsurface_overlays"
+        },
+        {
+            "order": 2,
+            "source": "t1",
+            "target": "create_shape_color_passive_blockrun_surfaces"
+        },
+        {
+            "order": 2,
+            "source": "t1",
+            "target": "create_shape_color_attention_decoderun_surfaces"
+        },
+        {
+            "order": 0,
+            "source": "t1_mask",
+            "target": "downsample_t1_mask"
+        },
+        {
+            "order": 0,
+            "source": "ds_t1",
+            "target": "mask_downsampled_t1"
+        },
+        {
+            "order": 3,
+            "source": "ds_t1",
+            "target": "volume_rois_from_surface_rois"
+        },
+        {
+            "order": 2,
+            "source": "ds_t1",
+            "target": "downsample_vol_rois"
+        },
+        {
+            "order": 1,
+            "source": "ds_t1",
+            "target": "manual_registration"
+        },
+        {
+            "order": 2,
+            "source": "ds_t1",
+            "target": "get_vol_rois_time_series"
+        },
+        {
+            "order": 0,
+            "source": "ds_t1",
+            "target": "manual_volume_rois"
+        },
+        {
+            "order": 4,
+            "source": "ds_t1",
+            "target": "create_shape_color_attention_decode_sigsurface_overlays"
+        },
+        {
+            "order": 4,
+            "source": "ds_t1",
+            "target": "create_dyloc_original_sigsurface_overlays"
+        },
+        {
+            "order": 4,
+            "source": "ds_t1",
+            "target": "create_shape_color_passive_block_sigsurface_overlays"
+        },
+        {
+            "order": 1,
+            "source": "ds_t1",
+            "target": "create_shape_color_passive_blockrun_surfaces"
+        },
+        {
+            "order": 1,
+            "source": "ds_t1",
+            "target": "create_shape_color_attention_decoderun_surfaces"
+        },
+        {
+            "order": 0,
+            "source": "ds_t1_mask",
+            "target": "dilate_ds_t1_mask"
+        },
+        {
+            "order": 1,
+            "source": "ds_t1_mask",
+            "target": "mask_downsampled_t1"
+        },
+        {
+            "order": 0,
+            "source": "ds_t1_mask",
+            "target": "create_functional_representative_mask"
+        },
+        {
+            "order": 1,
+            "source": "ds_t1_masked",
+            "target": "automatic_coregistration"
+        },
+        {
+            "order": 1,
+            "source": "ds_t1_masked",
+            "target": "register_shape_color_attention_decode_contrasts"
+        },
+        {
+            "order": 1,
+            "source": "ds_t1_masked",
+            "target": "register_dyloc_original_contrasts"
+        },
+        {
+            "order": 1,
+            "source": "ds_t1_masked",
+            "target": "register_shape_color_passive_block_contrasts"
+        },
+        {
+            "order": 1,
+            "source": "dil_ds_t1_mask",
+            "target": "apply_reg_epi_mask"
+        },
+        {
+            "order": 0,
+            "source": "dil_ds_t1_mask",
+            "target": "create_dilated_functional_representative_mask"
+        },
+        {
+            "order": 1,
+            "source": "white_surfs",
+            "target": "volume_rois_from_surface_rois"
+        },
+        {
+            "order": 2,
+            "source": "white_surfs",
+            "target": "create_shape_color_attention_decode_sigsurface_overlays"
+        },
+        {
+            "order": 2,
+            "source": "white_surfs",
+            "target": "create_dyloc_original_sigsurface_overlays"
+        },
+        {
+            "order": 2,
+            "source": "white_surfs",
+            "target": "create_shape_color_passive_block_sigsurface_overlays"
+        },
+        {
+            "order": 6,
+            "source": "white_surfs",
+            "target": "create_shape_color_passive_blockrun_surfaces"
+        },
+        {
+            "order": 6,
+            "source": "white_surfs",
+            "target": "create_shape_color_attention_decoderun_surfaces"
+        },
+        {
+            "order": 4,
+            "source": "sessions",
+            "target": "create_load_session"
+        },
+        {
+            "order": 1,
+            "source": "functional_representative",
+            "target": "vol_2_functional_rois"
+        },
+        {
+            "order": 0,
+            "source": "functional_representative",
+            "target": "manual_registration"
+        },
+        {
+            "order": 1,
+            "source": "functional_representative",
+            "target": "create_functional_representative_mask"
+        },
+        {
+            "order": 1,
+            "source": "functional_representative",
+            "target": "create_dilated_functional_representative_mask"
+        },
+        {
+            "order": 0,
+            "source": "functional_representative",
+            "target": "create_masked_functional_rep"
+        },
+        {
+            "order": 1,
+            "source": "functional_representative_mask",
+            "target": "create_masked_functional_rep"
+        },
+        {
+            "order": 0,
+            "source": "manual_reg_epi_rep",
+            "target": "apply_reg_epi_mask"
+        },
+        {
+            "order": 0,
+            "source": "masked_manual_reg_epi_rep",
+            "target": "automatic_coregistration"
+        },
+        {
+            "order": 2,
+            "source": "manual_transform",
+            "target": "vol_2_functional_rois"
+        },
+        {
+            "order": 2,
+            "source": "manual_transform",
+            "target": "create_functional_representative_mask"
+        },
+        {
+            "order": 2,
+            "source": "manual_transform",
+            "target": "create_dilated_functional_representative_mask"
+        },
+        {
+            "order": 2,
+            "source": "manual_transform",
+            "target": "register_shape_color_attention_decode_contrasts"
+        },
+        {
+            "order": 2,
+            "source": "manual_transform",
+            "target": "register_dyloc_original_contrasts"
+        },
+        {
+            "order": 2,
+            "source": "manual_transform",
+            "target": "register_shape_color_passive_block_contrasts"
+        },
+        {
+            "order": 3,
+            "source": "manual_transform",
+            "target": "create_shape_color_passive_blockrun_surfaces"
+        },
+        {
+            "order": 3,
+            "source": "manual_transform",
+            "target": "create_shape_color_attention_decoderun_surfaces"
+        },
+        {
+            "order": 3,
+            "source": "auto_composite_transform",
+            "target": "register_shape_color_attention_decode_contrasts"
+        },
+        {
+            "order": 3,
+            "source": "auto_composite_transform",
+            "target": "register_dyloc_original_contrasts"
+        },
+        {
+            "order": 3,
+            "source": "auto_composite_transform",
+            "target": "register_shape_color_passive_block_contrasts"
+        },
+        {
+            "order": 4,
+            "source": "auto_composite_transform",
+            "target": "create_shape_color_passive_blockrun_surfaces"
+        },
+        {
+            "order": 4,
+            "source": "auto_composite_transform",
+            "target": "create_shape_color_attention_decoderun_surfaces"
+        },
+        {
+            "order": 3,
+            "source": "inverse_auto_composite_transform",
+            "target": "vol_2_functional_rois"
+        },
+        {
+            "order": 3,
+            "source": "inverse_auto_composite_transform",
+            "target": "create_functional_representative_mask"
+        },
+        {
+            "order": 3,
+            "source": "inverse_auto_composite_transform",
+            "target": "create_dilated_functional_representative_mask"
+        },
+        {
+            "order": 0,
+            "source": "paradigm_complete_checkpoint",
+            "target": "manual_surface_rois"
+        },
+        {
+            "order": 1,
+            "source": "paradigm_complete_checkpoint",
+            "target": "manual_volume_rois"
+        },
+        {
+            "order": 1,
+            "source": "surface_defined_rois",
+            "target": "manual_surface_rois"
+        },
+        {
+            "order": 0,
+            "source": "surface_defined_rois",
+            "target": "volume_rois_from_surface_rois"
+        },
+        {
+            "order": 4,
+            "source": "volume_rois",
+            "target": "volume_rois_from_surface_rois"
+        },
+        {
+            "order": 0,
+            "source": "volume_rois",
+            "target": "downsample_vol_rois"
+        },
+        {
+            "order": 1,
+            "source": "ds_volume_rois",
+            "target": "downsample_vol_rois"
+        },
+        {
+            "order": 0,
+            "source": "ds_volume_rois",
+            "target": "vol_2_functional_rois"
+        },
+        {
+            "order": 0,
+            "source": "ds_volume_rois",
+            "target": "get_vol_rois_time_series"
+        },
+        {
+            "order": 2,
+            "source": "ds_volume_rois",
+            "target": "manual_volume_rois"
+        },
+        {
+            "order": 2,
+            "source": "ds_volume_rois",
+            "target": "automatic_shape_color_attention_decode_volume_rois"
+        },
+        {
+            "order": 2,
+            "source": "ds_volume_rois",
+            "target": "automatic_dyloc_original_volume_rois"
+        },
+        {
+            "order": 2,
+            "source": "ds_volume_rois",
+            "target": "automatic_shape_color_passive_block_volume_rois"
+        },
+        {
+            "order": 4,
+            "source": "functional_rois",
+            "target": "vol_2_functional_rois"
+        },
+        {
+            "order": 1,
+            "source": "roi_time_courses",
+            "target": "get_vol_rois_time_series"
+        },
+        {
+            "order": 0,
+            "source": "load_t1_data",
+            "target": "t1"
+        },
+        {
+            "order": 1,
+            "source": "load_t1_data",
+            "target": "t1_mask"
+        },
+        {
+            "order": 0,
+            "source": "load_white_surfaces",
+            "target": "white_surfs"
+        },
+        {
+            "order": 0,
+            "source": "downsample_t1",
+            "target": "ds_t1"
+        },
+        {
+            "order": 0,
+            "source": "downsample_t1_mask",
+            "target": "ds_t1_mask"
+        },
+        {
+            "order": 0,
+            "source": "mask_downsampled_t1",
+            "target": "ds_t1_masked"
+        },
+        {
+            "order": 0,
+            "source": "create_masked_functional_rep",
+            "target": "functional_representative_masked"
+        },
+        {
+            "order": 0,
+            "source": "create_load_session",
+            "target": "sessions"
+        },
+        {
+            "order": 1,
+            "source": "create_load_session",
+            "target": "end"
+        },
+        {
+            "order": 0,
+            "source": "get_functional_representative",
+            "target": "functional_representative"
+        },
+        {
+            "order": 0,
+            "source": "manual_registration",
+            "target": "manual_transform"
+        },
+        {
+            "order": 1,
+            "source": "manual_registration",
+            "target": "manual_reg_epi_rep"
+        },
+        {
+            "order": 0,
+            "source": "apply_reg_epi_mask",
+            "target": "masked_manual_reg_epi_rep"
+        },
+        {
+            "order": 0,
+            "source": "automatic_coregistration",
+            "target": "auto_composite_transform"
+        },
+        {
+            "order": 1,
+            "source": "automatic_coregistration",
+            "target": "inverse_auto_composite_transform"
+        },
+        {
+            "order": 0,
+            "source": "create_functional_representative_mask",
+            "target": "functional_representative_mask"
+        },
+        {
+            "order": 0,
+            "source": "create_dilated_functional_representative_mask",
+            "target": "functional_representative_dil_mask"
+        },
+        {
+            "order": 0,
+            "source": "dilate_ds_t1_mask",
+            "target": "dil_ds_t1_mask"
+        },
+        {
+            "order": null,
+            "source": "add_new_paradigm",
+            "target": "sessions"
+        },
+        {
+            "order": null,
+            "source": "add_new_paradigm",
+            "target": "paradigm_complete_checkpoint"
+        },
+        {
+            "order": 0,
+            "source": "add_new_paradigm",
+            "target": "paradigm_shape_color_attention_decode"
+        },
+        {
+            "order": 0,
+            "source": "add_new_paradigm",
+            "target": "paradigm_dyloc_original"
+        },
+        {
+            "order": 0,
+            "source": "add_new_paradigm",
+            "target": "paradigm_shape_color_passive_block"
+        },
+        {
+            "order": 0,
+            "source": "manual_surface_rois",
+            "target": "surface_defined_rois"
+        },
+        {
+            "order": 0,
+            "source": "volume_rois_from_surface_rois",
+            "target": "volume_rois"
+        },
+        {
+            "order": 0,
+            "source": "get_vol_rois_time_series",
+            "target": "roi_time_courses"
+        },
+        {
+            "order": 0,
+            "source": "downsample_vol_rois",
+            "target": "ds_volume_rois"
+        },
+        {
+            "order": 2,
+            "source": "vol_2_functional_rois",
+            "target": "functional_rois"
+        },
+        {
+            "order": 0,
+            "source": "manual_volume_rois",
+            "target": "ds_volume_rois"
+        },
+        {
+            "order": 0,
+            "source": "sterilize",
+            "target": "end"
+        },
+        {
+            "order": 0,
+            "source": "paradigm_shape_color_attention_decode",
+            "target": "create_shape_color_attention_decode_glm"
+        },
+        {
+            "order": 0,
+            "source": "paradigm_shape_color_attention_decode",
+            "target": "delete_paradigm_shape_color_attention_decode"
+        },
+        {
+            "order": 1,
+            "source": "paradigm_shape_color_attention_decode",
+            "target": "create_shape_color_attention_decode_contrasts"
+        },
+        {
+            "order": 0,
+            "source": "paradigm_shape_color_attention_decode",
+            "target": "create_shape_color_attention_decode_sigsurface_overlays"
+        },
+        {
+            "order": 0,
+            "source": "paradigm_shape_color_attention_decode",
+            "target": "automatic_shape_color_attention_decode_volume_rois"
+        },
+        {
+            "order": 0,
+            "source": "paradigm_shape_color_attention_decode",
+            "target": "create_shape_color_attention_decoderun_betas"
+        },
+        {
+            "order": 5,
+            "source": "paradigm_shape_color_attention_decode",
+            "target": "create_shape_color_attention_decoderun_surfaces"
+        },
+        {
+            "order": 0,
+            "source": "glm_shape_color_attention_decode",
+            "target": "create_shape_color_attention_decode_contrasts"
+        },
+        {
+            "order": 0,
+            "source": "glm_shape_color_attention_decode",
+            "target": "get_shape_color_attention_decode_subject_betas"
+        },
+        {
+            "order": 0,
+            "source": "contrasts_shape_color_attention_decode",
+            "target": "register_shape_color_attention_decode_contrasts"
+        },
+        {
+            "order": 1,
+            "source": "contrasts_shape_color_attention_decode",
+            "target": "automatic_shape_color_attention_decode_volume_rois"
+        },
+        {
+            "order": 1,
+            "source": "reg_contrasts_shape_color_attention_decode",
+            "target": "create_shape_color_attention_decode_sigsurface_overlays"
+        },
+        {
+            "order": 0,
+            "source": "run_beta_logshape_color_attention_decode",
+            "target": "create_shape_color_attention_decoderun_surfaces"
+        },
+        {
+            "order": 0,
+            "source": "create_shape_color_attention_decode_glm",
+            "target": "glm_shape_color_attention_decode"
+        },
+        {
+            "order": 0,
+            "source": "create_shape_color_attention_decode_contrasts",
+            "target": "contrasts_shape_color_attention_decode"
+        },
+        {
+            "order": 0,
+            "source": "register_shape_color_attention_decode_contrasts",
+            "target": "reg_contrasts_shape_color_attention_decode"
+        },
+        {
+            "order": 0,
+            "source": "create_shape_color_attention_decode_sigsurface_overlays",
+            "target": "sigsurfaces_shape_color_attention_decode"
+        },
+        {
+            "order": 1,
+            "source": "create_shape_color_attention_decode_sigsurface_overlays",
+            "target": "paradigm_complete_checkpoint"
+        },
+        {
+            "source": "get_shape_color_attention_decode_subject_betas",
+            "target": "beta_shape_color_attention_decode"
+        },
+        {
+            "order": 0,
+            "source": "automatic_shape_color_attention_decode_volume_rois",
+            "target": "ds_volume_rois"
+        },
+        {
+            "order": 0,
+            "source": "create_shape_color_attention_decoderun_betas",
+            "target": "run_beta_logshape_color_attention_decode"
+        },
+        {
+            "order": 1,
+            "source": "create_shape_color_attention_decoderun_betas",
+            "target": "end"
+        },
+        {
+            "order": 0,
+            "source": "paradigm_dyloc_original",
+            "target": "create_dyloc_original_glm"
+        },
+        {
+            "order": 0,
+            "source": "paradigm_dyloc_original",
+            "target": "delete_paradigm_dyloc_original"
+        },
+        {
+            "order": 1,
+            "source": "paradigm_dyloc_original",
+            "target": "create_dyloc_original_contrasts"
+        },
+        {
+            "order": 0,
+            "source": "paradigm_dyloc_original",
+            "target": "create_dyloc_original_sigsurface_overlays"
+        },
+        {
+            "order": 0,
+            "source": "paradigm_dyloc_original",
+            "target": "automatic_dyloc_original_volume_rois"
+        },
+        {
+            "order": 0,
+            "source": "paradigm_dyloc_original",
+            "target": "create_dyloc_originalrun_betas"
+        },
+        {
+            "order": 0,
+            "source": "glm_dyloc_original",
+            "target": "create_dyloc_original_contrasts"
+        },
+        {
+            "order": 0,
+            "source": "glm_dyloc_original",
+            "target": "get_dyloc_original_subject_betas"
+        },
+        {
+            "order": 0,
+            "source": "contrasts_dyloc_original",
+            "target": "register_dyloc_original_contrasts"
+        },
+        {
+            "order": 1,
+            "source": "contrasts_dyloc_original",
+            "target": "automatic_dyloc_original_volume_rois"
+        },
+        {
+            "order": 1,
+            "source": "reg_contrasts_dyloc_original",
+            "target": "create_dyloc_original_sigsurface_overlays"
+        },
+        {
+            "order": 0,
+            "source": "create_dyloc_original_glm",
+            "target": "glm_dyloc_original"
+        },
+        {
+            "order": 0,
+            "source": "create_dyloc_original_contrasts",
+            "target": "contrasts_dyloc_original"
+        },
+        {
+            "order": 0,
+            "source": "register_dyloc_original_contrasts",
+            "target": "reg_contrasts_dyloc_original"
+        },
+        {
+            "order": 0,
+            "source": "create_dyloc_original_sigsurface_overlays",
+            "target": "sigsurfaces_dyloc_original"
+        },
+        {
+            "order": 1,
+            "source": "create_dyloc_original_sigsurface_overlays",
+            "target": "paradigm_complete_checkpoint"
+        },
+        {
+            "source": "get_dyloc_original_subject_betas",
+            "target": "beta_dyloc_original"
+        },
+        {
+            "order": 0,
+            "source": "automatic_dyloc_original_volume_rois",
+            "target": "ds_volume_rois"
+        },
+        {
+            "order": 0,
+            "source": "create_dyloc_originalrun_betas",
+            "target": "run_beta_logdyloc_original"
+        },
+        {
+            "order": 1,
+            "source": "create_dyloc_originalrun_betas",
+            "target": "end"
+        },
+        {
+            "order": 0,
+            "source": "paradigm_shape_color_passive_block",
+            "target": "create_shape_color_passive_block_glm"
+        },
+        {
+            "order": 0,
+            "source": "paradigm_shape_color_passive_block",
+            "target": "delete_paradigm_shape_color_passive_block"
+        },
+        {
+            "order": 1,
+            "source": "paradigm_shape_color_passive_block",
+            "target": "create_shape_color_passive_block_contrasts"
+        },
+        {
+            "order": 0,
+            "source": "paradigm_shape_color_passive_block",
+            "target": "create_shape_color_passive_block_sigsurface_overlays"
+        },
+        {
+            "order": 0,
+            "source": "paradigm_shape_color_passive_block",
+            "target": "automatic_shape_color_passive_block_volume_rois"
+        },
+        {
+            "order": 0,
+            "source": "paradigm_shape_color_passive_block",
+            "target": "create_shape_color_passive_blockrun_betas"
+        },
+        {
+            "order": 5,
+            "source": "paradigm_shape_color_passive_block",
+            "target": "create_shape_color_passive_blockrun_surfaces"
+        },
+        {
+            "order": 0,
+            "source": "glm_shape_color_passive_block",
+            "target": "create_shape_color_passive_block_contrasts"
+        },
+        {
+            "order": 0,
+            "source": "glm_shape_color_passive_block",
+            "target": "get_shape_color_passive_block_subject_betas"
+        },
+        {
+            "order": 0,
+            "source": "contrasts_shape_color_passive_block",
+            "target": "register_shape_color_passive_block_contrasts"
+        },
+        {
+            "order": 1,
+            "source": "contrasts_shape_color_passive_block",
+            "target": "automatic_shape_color_passive_block_volume_rois"
+        },
+        {
+            "order": 1,
+            "source": "reg_contrasts_shape_color_passive_block",
+            "target": "create_shape_color_passive_block_sigsurface_overlays"
+        },
+        {
+            "order": 0,
+            "source": "run_beta_logshape_color_passive_block",
+            "target": "create_shape_color_passive_blockrun_surfaces"
+        },
+        {
+            "order": 0,
+            "source": "create_shape_color_passive_block_glm",
+            "target": "glm_shape_color_passive_block"
+        },
+        {
+            "order": 0,
+            "source": "create_shape_color_passive_block_contrasts",
+            "target": "contrasts_shape_color_passive_block"
+        },
+        {
+            "order": 0,
+            "source": "register_shape_color_passive_block_contrasts",
+            "target": "reg_contrasts_shape_color_passive_block"
+        },
+        {
+            "order": 0,
+            "source": "create_shape_color_passive_block_sigsurface_overlays",
+            "target": "sigsurfaces_shape_color_passive_block"
+        },
+        {
+            "order": 1,
+            "source": "create_shape_color_passive_block_sigsurface_overlays",
+            "target": "paradigm_complete_checkpoint"
+        },
+        {
+            "source": "get_shape_color_passive_block_subject_betas",
+            "target": "beta_shape_color_passive_block"
+        },
+        {
+            "order": 0,
+            "source": "automatic_shape_color_passive_block_volume_rois",
+            "target": "ds_volume_rois"
+        },
+        {
+            "order": 0,
+            "source": "create_shape_color_passive_blockrun_betas",
+            "target": "run_beta_logshape_color_passive_block"
+        },
+        {
+            "order": 1,
+            "source": "create_shape_color_passive_blockrun_betas",
+            "target": "end"
+        },
+        {
+            "order": 0,
+            "source": "create_shape_color_passive_blockrun_surfaces",
+            "target": "end"
+        },
+        {
+            "order": 0,
+            "source": "create_shape_color_attention_decoderun_surfaces",
+            "target": "end"
+        }
+    ]
+}
