@@ -1,8 +1,8 @@
 import os
 import pickle
 
-import neurotools
 import torch
+import neurotools
 import numpy as np
 from dataloader import TrialDataLoader
 from decode_policy import MapDecode, LinearDecode
@@ -23,10 +23,10 @@ class NTCompliantWrap:
     def __getitem__(self, item: int):
         if item == 0:
             return self.mt1.batch_iterator(self.abv_map["shape"], resample=self.resample,
-                                           num_train_batches=self.epochs, n_workers=6)
+                                           num_train_batches=self.epochs, n_workers=5)
         if item == 1:
             return self.mt1.batch_iterator(self.abv_map["color"], resample=self.resample,
-                                           num_train_batches=self.epochs, n_workers=6)
+                                           num_train_batches=self.epochs, n_workers=5)
         else:
             raise IndexError
 
@@ -34,11 +34,10 @@ class NTCompliantWrap:
 if __name__ == '__main__':
     LOAD_MODEL = False
     models_to_load = "/home/ssbeast/Projects/SS/monkey_fmri/MTurk1/analysis/decoding/models/lh_20230822_jeeves_complete"
-    BOOTSTRAP_ITER = 100
-
-    # general decoding model parameters
+    BOOTSTRAP_ITER = 25
     LINEAR = True
     CONV = True
+    SET = "4"
 
     if LOAD_MODEL:
         if os.path.isfile(models_to_load):
@@ -52,35 +51,24 @@ if __name__ == '__main__':
             raise RuntimeError
         BOOTSTRAP_ITER = len(models_to_load)
 
-    # Whether to train the model? otherwise just generates plots / stats
     FIT = True
-    # Whether to only train the masks, not the decoding network.
     MASK_ONLY = False
 
     LR = .01
 
-    # kernel size of gaussian smoothing of mask.
     KERNEL = 9
 
 
-    COTENT_ROOT = "/home/ssbeast/Projects/SS/monkey_fmri/MTurk1"
+    COTENT_ROOT = "/home/bizon/Projects/MTurk1/MTurk1"
     USE_CLASSES = [2, 3, 6, 7, 10, 11]
     SUBJECT = "jeeves"
-    FUNC_WM_PATH = "/home/ssbeast/Projects/SS/monkey_fmri/MTurk1/subjects/" + SUBJECT + "/mri/func_wm.nii"
-    BRAIN_MASK = "/home/ssbeast/Projects/SS/monkey_fmri/MTurk1/subjects/" + SUBJECT + "/mri/no_cereb_decode_mask.nii.gz"
-    DATA_KEY_PATH = "/home/ssbeast/Projects/SS/monkey_fmri/MTurk1/subjects/" + SUBJECT + "/analysis/shape_color_attention_decode_stimulus_response_data_key.csv"
-
-    # only fits one hemisphere at a time
-    HEMI = 'rh'
-
-    # irrelevant in latest model, fits both directions at once. But leave in this order for consistency.
+    FUNC_WM_PATH = "/home/bizon/Projects/MTurk1/MTurk1/subjects/" + SUBJECT + "/mri/func_wm.nii"
+    BRAIN_MASK = "/home/bizon/Projects/MTurk1/MTurk1/subjects/" + SUBJECT + "/mri/no_cereb_decode_mask.nii.gz"
+    DATA_KEY_PATH = "/home/bizon/Projects/MTurk1/MTurk1/subjects/" + SUBJECT + "/analysis/shape_color_attention_decode_stimulus_response_data_key.csv"
+    HEMI = 'lh'
     IN_SET = 'shape'
     X_SET = 'color'
-
-    # Training epochs for decoding network for each bootstrap iteration
     EPOCHS = 2000
-
-    # cropping dimmensions for functional data.
     CROP_WOOSTER = [(37, 93), (15, 79), (0, 42)]
     CROP_JEEVES = [(38, 89), (13, 77), (0, 42)]
 
@@ -96,7 +84,6 @@ if __name__ == '__main__':
 
     dev = 'cuda'
 
-    # lists for statistics for each independent model run.
     bootstrap_accuracies = np.empty((2, 2, 0))
     bootstrap_masks = [[list() for _ in range(2)] for _ in range(2)]
     bootstrap_sal = [[list() for _ in range(2)] for _ in range(2)]
@@ -110,7 +97,7 @@ if __name__ == '__main__':
     else:
         raise ValueError
 
-    name = SUBJECT + "_" + HEMI + "_unified_" + mode
+    name = SUBJECT + "_" + HEMI + "_unified_" + mode + "_set_" + str(SET)
 
     if not LOAD_MODEL:
         date = str(datetime.datetime.now().date())
@@ -135,7 +122,6 @@ if __name__ == '__main__':
         brain_mask = torch.from_numpy(MTurk1.crop_volume(brain_mask, cube=True)).float()
         force_mask2 = brain_mask > .25
 
-        # mask to always apply.
         force_mask = torch.logical_and(force_mask2, force_mask)
 
         if HEMI == "rh":
@@ -157,7 +143,6 @@ if __name__ == '__main__':
             # not linear and not conv
             raise NotImplementedError
 
-        # actually create the decoding model
         if LOAD_MODEL:
             out_path = models_to_load[boot]
             with open(models_to_load[boot], "rb") as f:
@@ -190,9 +175,7 @@ if __name__ == '__main__':
         bootstrap_accuracies = np.concatenate([bootstrap_accuracies, accs[:, :, -10:]], axis=2)
 
 
-        x_decoder.plot_loss_curves()
-
-        # compute saliancy (gradient) over input data.
+       # x_decoder.plot_loss_curves()
 
         sal_gens = NTCompliantWrap(MTurk1, 10, resample=True)
 

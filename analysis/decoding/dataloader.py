@@ -26,17 +26,7 @@ class TrialDataLoader:
     one is served.
     """
     def __init__(self, key_path, batch_size, crop=((9, 73), (0, 40), (13, 77)), content_root="./", device="cuda",
-                 ignore_sessions=(), ignore_class=(), seed=4242, binary_target=None, folds=1, use_behavior=True):
-        """
-        @param key_path: path to csv file that maps trials to trial_type, paths to beta files, and what stimulus, and correct/incorrect
-        @param batch_size: how many trials to serve in each batch from each worker
-        @parma crop: where is the actual brain in the image? 
-        @param content_root: root of project directory.
-        @param ignore_sessions: What sessions to ignore?  
-        @param ignore_class: which stimulus classes to ignore? (!!follows fmri_stimuli indexing conventions, not paradigm indexing conventions.)
-        @param binary_target: (not supported by current decoders 0823) pushes data in binary 1vRest balanced batches
-        @use_behavior: whether to only select trials that subject got correct. 
-        """
+                 ignore_sessions=(), ignore_class=(), seed=4242, binary_target=None, folds=1, use_behavior=True, verbose=False):
         self.content_root = content_root
         data = pd.read_csv(key_path)
         data.drop("Unnamed: 0", axis=1, inplace=True)
@@ -50,21 +40,20 @@ class TrialDataLoader:
         self.one_v_rest_target = binary_target
         self.ignore_class = ignore_class
         self.use_behavior = use_behavior
+        self.verbose = verbose
         
         self.current_fold = 0
         self.folds = 1
 
         color_set = self._get_set("colored_blobs", correct_only=use_behavior)
-        self.color_all = color_set #self.color_all = color_set
-        self.color_train = color_set[:int(4 * len(color_set) / 5)] #self.color_train = color_set[:int(4 * len(color_set) / 5)]
-        self.color_test = color_set[int(4 * len(color_set) / 5):] #self.color_test = color_set[int(4 * len(color_set) / 5):]
+        self.color_all = color_set
+        self.color_train = color_set[:int(4 * len(color_set) / 5)]
+        self.color_test = color_set[int(4 * len(color_set) / 5):]
         self.color_cross_dev = color_set[:int(len(color_set) / 2)]
         self.color_cross_test = color_set[int(len(color_set) / 2):]
 
         uncolored_shape_set = self._get_set("uncolored_shapes", correct_only=use_behavior)
         self.uncolored_shape_all = uncolored_shape_set
-        #self.uncolored_shape_train = uncolored_shape_set[int(1 * len(uncolored_shape_set) / 5):] # Helen changed bc she thought the len(color_set) was a typo
-        #self.uncolored_shape_test = uncolored_shape_set[:int(1 * len(uncolored_shape_set) / 5)] # Helen changed
         self.uncolored_shape_train = uncolored_shape_set[:int(3 * len(color_set) / 5)]
         self.uncolored_shape_dev = uncolored_shape_set[int(3 * len(color_set) / 5):int(4 * len(color_set) / 5)]
         self.uncolored_shape_test = uncolored_shape_set[int(4 * len(color_set) / 5):]
@@ -80,11 +69,9 @@ class TrialDataLoader:
 
         self.set_mem = {}
 
-    def _get_set(self, id, balance=False, correct_only=True):
-        """
-        refactors datakey to have desired data and correct indexes.
-        """
+    def _get_set(self, id, correct_only=True):
         data = self.data[self.data["condition_group"] == id]
+        print("")
         if correct_only:
             data = data[data["correct"] == 1].reset_index(drop=True)
         else:
@@ -92,27 +79,6 @@ class TrialDataLoader:
         # vals = sorted(pd.unique(data["condition_integer"]))
         for i, item in enumerate(data["condition_integer"]):
             data.loc[i, "condition_integer"] = val_map[item]
-        if balance:
-            # Find the most represented class
-            max_class_size = data["condition_integer"].value_counts().max()
-
-            # Create an empty dataframe to store the balanced data
-            balanced_data = pd.DataFrame(columns=data.columns)
-
-            # Loop through each unique class
-            for label in data["condition_integer"].unique():
-                # Get the examples with this label
-                examples = data[data["condition_integer"] == label]
-                # If the class has less than the minimum class size, duplicate examples
-                if len(examples) < max_class_size:
-                    duplicates_needed = max_class_size - len(examples)
-                    duplicated_examples = examples.sample(duplicates_needed, replace=True)
-                    examples = pd.concat([examples, duplicated_examples])
-                # Add the balanced examples to the balanced data
-                balanced_data = pd.concat([balanced_data, examples])
-
-            # Shuffle the balanced data
-            data = balanced_data.sample(frac=1).reset_index(drop=True)
         nii = nib.load(os.path.join(self.content_root, eval(data["beta_path"][0])[0]))
         self.full_size = nii.get_fdata().shape
         self.affine = nii.affine
@@ -120,7 +86,6 @@ class TrialDataLoader:
         return data
 
     def to_full(self, data: np.array):
-        # reverses the cropping of stuff by this dataloader.
         full = np.zeros(self.full_size, dtype=float)
         crop_size = self.shape[0]
         crop = []
@@ -196,7 +161,7 @@ class TrialDataLoader:
 
         return translated_volume
 
-    def data_generator(self, dset, noise_frac_var=.2, spatial_translation_var=.67, max_base_examples=4, cube=True):
+    def data_generator(self, dset, noise_frac_var=.2, spatial_translation_var=.67, max_base_examples=3, cube=True):
         """
         Combines some random number of examples from one random class with random weight with some amount of random translation and noise
         Parameters
@@ -211,11 +176,6 @@ class TrialDataLoader:
 
         """
         options = sorted(list(set(range(1, 15)) - set(self.ignore_class)))
-        # range(14) excludes hat and mimics the set of classes specified in the roi_decoder.py
-        # Helen and Karthik made this change 0830 in order to try running it with old wooster again
-        # options = sorted(list(set(range(14)) - set(self.ignore_class)))
-        print("Printing Options:")
-        print(options)
         if self.one_v_rest_target is not None:
             if random.choice([True, False]):
                 example_class = self.one_v_rest_target
@@ -229,12 +189,14 @@ class TrialDataLoader:
             target = options.index(example_class)
         basis_dim = np.random.randint(1, max_base_examples + 1)  # how many real examples to use as basis?
         trajectory = np.random.random((basis_dim, 1, 1, 1, 1))  # weight vector for combining basis
+        trajectory = trajectory / np.sum(trajectory)
         class_dset = dset[dset['condition_integer'] == example_class]
-        print("Printing class_dset")
-        print(class_dset)
+        names = class_dset['condition_name']
         basis_idxs = np.random.randint(0, len(class_dset), size=(basis_dim,))
+        if self.verbose:
+            print("chose class", example_class, "desc", names.iloc[int(basis_idxs[0])], "basis examples", len(class_dset))
+
         data = class_dset.iloc[basis_idxs]
-        #print("Look here for data", data) # Helen print
         beta_coef = []
         for z, path_str in enumerate(data["beta_path"]):
             chan_beta = []
@@ -242,7 +204,6 @@ class TrialDataLoader:
             # ignore the final fir
             for path in paths[1:2]:
                 if path not in self.set_mem:
-                    #print("Look here for path", path) # Helen print
                     beta_nii = nib.load(os.path.join(self.content_root, path))
                     betas = self.crop_volume(beta_nii.get_fdata(), cube=cube)
                     if np.count_nonzero(np.isnan(betas)) > 0:
@@ -262,11 +223,9 @@ class TrialDataLoader:
         var = np.std(beta)
         noise = np.random.normal(0, var * noise_frac_var, beta.shape)
         beta = beta + noise
-        #print("Look here for beta", beta, "target", target) # Helen print
         return beta, target
 
     def get_batch(self, bs, dset, resample=False, cube=True):
-        # runs data_generator bs times to create <bs, channels, x, y, z> data batch. 
         beta_coef = []
         targets = []
         for _ in range(int(bs)):
@@ -286,7 +245,7 @@ class TrialDataLoader:
         while self._processed_ < num_batches:
             beta_coef, targets = self.get_batch(bs, dset, resample=resample, cube=cube)
             if standardize:
-                beta_coef = (beta_coef - mean[None, :2, None, None, None]) / std[None, :2, None, None, None]
+                beta_coef = (beta_coef - mean[None, :, None, None, None]) / std[None, :, None, None, None]
             try:
                 q.put((beta_coef, targets), block=True, timeout=120)
             except queue.Full:
@@ -305,7 +264,6 @@ class TrialDataLoader:
         if standardize:
             mean, std = self.get_pop_stats(data_type)
         dset = dset.sample(frac=1., ignore_index=True)
-        print("printing dset from batch iterator", dset, dset['condition_integer'])
         if return_all:
             bs = len(dset)
         else:

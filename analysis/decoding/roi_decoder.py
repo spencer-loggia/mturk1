@@ -1,7 +1,7 @@
 import os
-import matplotlib
-import pandas as pd
+import sys
 
+import matplotlib
 matplotlib.use("Qt5Agg")
 import matplotlib.pyplot as plt
 
@@ -15,13 +15,12 @@ from sklearn.decomposition import PCA as Embedder
 from sklearn.metrics import ConfusionMatrixDisplay
 
 
-def get_full_set(set_name, resample=True): # Helen look here
-    # hack data loader to produce a single batch of desired amount of data 
+def get_full_set(set_name, resample=True):
     examples = len(eval("MTurk1." + set_name))
     stim_data = []
     targets = []
     MTurk1.batch_size = int(examples / 48)
-    for stim, target in MTurk1.batch_iterator(set_name, num_train_batches=180, resample=resample, n_workers=4, cube=False): #360
+    for stim, target in MTurk1.batch_iterator(set_name, num_train_batches=180, resample=resample, n_workers=1, cube=False, standardize=True): #360
         stim_data.append(stim)
         targets.append(target)
     train_stim_data = np.concatenate(stim_data, axis=0)
@@ -29,70 +28,59 @@ def get_full_set(set_name, resample=True): # Helen look here
     return train_stim_data, train_targets
 
 
-if __name__=='__main__':
+if __name__ == '__main__':
+    ROOT = sys.argv[1]
+    SUBJECT = sys.argv[2]
+    TRAIN_SET = sys.argv[3]
+    ROI_SET_NAME = sys.argv[4]
+    PCA_COMP = int(sys.argv[5])
+    boot_folds = int(sys.argv[6])
+
+    if SUBJECT not in ["wooster", "jeeves"]:
+        raise ValueError("Subject must be either wooster or jeeves")
+
+    if TRAIN_SET == "uncolored":
+        train_set = "uncolored_shape_all"
+        test_set = "color_all"
+    elif TRAIN_SET == "color":
+        train_set = "color_all"
+        test_set = "uncolored_shape_all"
+    else:
+        raise ValueError("Train set must be one of colored, uncolored")
 
     use_binary_target = False
-    COTENT_ROOT = "/home/ssbeast/Projects/SS/monkey_fmri/MTurk1"
+    CONTENT_ROOT = os.path.abspath(ROOT)
     USE_CLASSES = [2, 3, 6, 7, 10, 11]
-    SUBJECT = "jeeves"
-    FUNC_WM_PATH = "/home/ssbeast/Projectsz/SS/monkey_fmri/MTurk1/subjects/" + SUBJECT + "/mri/func_wm.nii"
-    BRAIN_MASK = "/home/ssbeast/Projects/SS/monkey_fmri/MTurk1/subjects/" + SUBJECT + "/mri/no_cereb_decode_mask.nii.gz"
-    DATA_KEY_PATH = "/home/ssbeast/Projects/SS/monkey_fmri/MTurk1/subjects/" + SUBJECT + "/analysis/shape_color_attention_decode_stimulus_response_data_key.csv"
-    # TEST DECODER WITH LINEAR WOOSTER: this path leads to the datakey for the linear backup - it has all sessions up to 0813 with linear
-    # 3d rep to functional target registration. Need to also change root for wherever the betas themselves are loaded, but otherwise should be able to just use this
-    #DATA_KEY_PATH = "/media/ssbeast/DATA/Projects/MTurk1_LinearBackup/subjects/wooster/analysis/shape_color_attention_decode_stimulus_response_data_key.csv"
-    CROP_WOOSTER = [(37, 93), (15, 79), (0, 42)]
+    FUNC_WM_PATH = os.path.join(CONTENT_ROOT, "subjects", SUBJECT, "mri", "func_wn.nii")
+    BRAIN_MASK = os.path.join(CONTENT_ROOT, "subjects", SUBJECT, "mri", "no_cereb_decode_mask.nii.gz")
+    DATA_KEY_PATH = os.path.join(CONTENT_ROOT, "subjects", SUBJECT, "analysis", "shape_color_attention_decode_stimulus_response_data_key.csv")
+
     CROP_JEEVES = [(38, 89), (13, 77), (0, 42)]
+    CROP_WOOSTER = [(37, 93), (15, 79), (0, 42)]
 
-    #all_classes = set(range(1, 15)) # This should be correct but it was the source of Helen's and Spencer's plots not matching up for jeeves
-    all_classes = set(range(14)) # This is what it used to be. When you use this, it fails to take hat data out of the decoder
-    ignore_classes = all_classes - set(USE_CLASSES)
-
-    if SUBJECT == "jeeves":
-        crop = CROP_JEEVES
-    elif SUBJECT == "wooster":
+    if SUBJECT == "wooster":
         crop = CROP_WOOSTER
     else:
-        raise ValueError()
+        crop = CROP_JEEVES
+
+    all_classes = set(range(1, 15))
+    ignore_classes = all_classes - set(USE_CLASSES)
 
     MTurk1 = TrialDataLoader(
         DATA_KEY_PATH,
         250,
-        #content_root="/media/ssbeast/DATA/Projects/MTurk1_LinearBackup", ignore_class=ignore_classes, crop=crop, use_behavior=True) # Wooster linear backup path
-        content_root="/home/ssbeast/Projects/SS/monkey_fmri/MTurk1", ignore_class=ignore_classes, crop=crop, use_behavior=True)
-    print(MTurk1.color_train)
-    print(MTurk1.color_all)
-    print(MTurk1.color_test)
-    print(MTurk1.color_cross_dev)
-    print(MTurk1.color_cross_test)
-    # dir_path = "/home/ssbeast/Projects/SS/monkey_fmri/MTurk1/subjects/wooster/mri/ROIs/functional/DYLOC_REGIONS" # Wooster old regions
-    dir_path = "/home/ssbeast/Projects/SS/monkey_fmri/MTurk1/subjects/jeeves/rois/dyloc_regions/he_func_space_rois"
+        content_root=CONTENT_ROOT, ignore_class=ignore_classes, crop=crop, use_behavior=True, verbose=False)
+
+
+    dir_path = os.path.join(CONTENT_ROOT, "subjects", SUBJECT, "rois", ROI_SET_NAME)
 
     roi_mask_paths = [f for f in os.listdir(dir_path) if ".nii.gz" in f and "~" not in f]
-       
-    # list of pca embedding dimensions to try.
-    comp = [6]
 
-    # number of bootstrap (sorta fake) iterations to preform.  
-    boot_folds = 20
-    
-    # set of data to train model on
-    train_set = "uncolored_shape_all"
-    
-    # set of data that cross decoding is preformed on
-    test_set = "color_all"
+    comp = [PCA_COMP]
 
     roi_train_data = [list() for _ in roi_mask_paths]
     roi_cross_data = [list() for _ in roi_mask_paths]
     roi_names = []
-
-    # Helen added to save values out into csv
-    #df = pd.DataFrame()
-    #df['roi'] = []
-    #df['train_var'] = []
-    #df['cross_var'] = []
-    #df['train_mean'] = []
-    #df['cross_mean'] = []
     for i in range(boot_folds):
         og_train_stim_data, train_targets = get_full_set(train_set, resample=True)
         og_test_stim_data, test_targets = get_full_set(test_set, resample=False)
@@ -112,7 +100,7 @@ if __name__=='__main__':
             all_mask = roi_mask
 
             if use_binary_target:
-                targets = sorted(list(set(range(1, 15)) - set(ignore_classes)))
+                targets = sorted(list(set(range(14)) - set(ignore_classes)))
             else:
                 targets = [None]
             for target_class in targets:
@@ -126,39 +114,34 @@ if __name__=='__main__':
                 # = np.random.normal(0, 1, size=(train_stim_data.shape[0], 200))
 
                 # get test set data
-                test_stim_data = og_test_stim_data[:, :, all_mask] # <trials, channels, voxels_in_roi>
-                test_stim_data = test_stim_data.reshape((test_stim_data.shape[0], -1)) # <trials, channels * voxels_in_roi> 
-                test_stim_data = (test_stim_data - test_stim_data.mean()) / test_stim_data.std() # standardization
+                test_stim_data = og_test_stim_data[:, :, all_mask]
+                test_stim_data = test_stim_data.reshape((test_stim_data.shape[0], -1))
+                test_stim_data = (test_stim_data - test_stim_data.mean()) / test_stim_data.std()
                 # test_stim_data = np.random.normal(0, 1, size=(test_stim_data.shape[0], 200))
                 all_data = np.concatenate([train_stim_data, test_stim_data], axis=0)
                 mean_data = all_data.mean(axis=0)
-                
-                # discard small signal voxels if roi is very large (mb not needed)
-                select_voxels = np.argsort(mean_data)[:min(len(mean_data), 150)] 
+                select_voxels = np.argsort(mean_data)[:min(len(mean_data), 150)] #
                 sel_all_data = all_data[:, select_voxels]
                 sel_train_stim_data = train_stim_data[:, select_voxels]
                 sel_test_stim_data = test_stim_data[:, select_voxels]
-                
                 print("Initial Dim:", all_data.shape[1])
-                
-                # fit and transform train and test data with pca. 
+
                 for c in comp:
-                    pca = Embedder(n_components=c)
-                    pca.fit(sel_all_data) # for prod should be fit on just train data or seperatly for train and test data.
-                    #pca.fit(sel_train_stim_data)
+                    pca = Embedder(n_components=c, whiten=False)
+                    pca.fit(sel_all_data)
                     proj_train_stim_data = pca.transform(sel_train_stim_data)
                     proj_test_stim_data = pca.transform(sel_test_stim_data)
-
+                    # proj_train_stim_data = (proj_train_stim_data - proj_train_stim_data.mean()) / proj_train_stim_data.std()
+                    # proj_test_stim_data = (proj_test_stim_data - proj_test_stim_data.mean()) / proj_test_stim_data.std()
 
                     print("TRAIN: target:", target_class, " examples:", proj_train_stim_data.shape[0], " roi_features:", proj_train_stim_data.shape[1])
-                       
-                    # try with fitting intercept and not.
-                    svc_model = Classifier(max_iter=5000) #, fit_intercept=False
+
+                    svc_model = Classifier(max_iter=5000, fit_intercept=False)
                     svc_model.fit(proj_train_stim_data, train_targets)
 
                     # save out model
-                    out_dir = "/home/ssbeast/Projects/SS/monkey_fmri/MTurk1/subjects/wooster/analysis/single_roi/wooster"
-                    out_name = os.path.join(out_dir, roi_name + "_svc_model.pkl")
+                    out_dir = CONTENT_ROOT + "/analysis/decoding/models/roi_svms"
+                    out_name = os.path.join(out_dir, roi_name + SUBJECT + "_svc_model.pkl")
                     with open(out_name, "wb") as f:
                         pickle.dump(svc_model, f)
 
@@ -191,15 +174,13 @@ if __name__=='__main__':
 
             print(roi_name, " All Cross Accs:", cross_accs)
             print(roi_name, "All Train Accs:", train_accs)
-        print("Done with bootfold", i)
 
     fig, ax = plt.subplots(1)
     roi_train_data = np.array(roi_train_data)
     roi_cross_data = np.array(roi_cross_data)
 
     train_var = roi_train_data.std(axis=1)
-    #cross_var = roi_train_data.std(axis=1)
-    cross_var = roi_cross_data.std(axis=1) # Helen and Karthik changed to cross bc we think it was a typo and said 'roi_train_data' again; this works, keep this
+    cross_var = roi_train_data.std(axis=1)
     roi_train_data = roi_train_data.mean(axis=1)
     roi_cross_data = roi_cross_data.mean(axis=1)
 
@@ -213,14 +194,5 @@ if __name__=='__main__':
 
     ax.set_xticks(np.arange(len(roi_train_data)))
     ax.set_xticklabels(roi_names, visible=True)
+    plt.xticks(rotation=50)
     plt.show()
-    print(train_var)
-    print(cross_var)
-
-    # Helen added to save values out into csv
-    #df['roi'] = roi_names
-    #df['train_var'] = train_var
-    #df['cross_var'] = cross_var
-    #df['train_mean'] = roi_train_data
-    #df['cross_mean'] = roi_cross_data
-    #df.to_csv('/media/ssbeast/DATA/Users/Helen/20230906_jeeves.csv')
