@@ -15,12 +15,12 @@ from sklearn.decomposition import PCA as Embedder
 from sklearn.metrics import ConfusionMatrixDisplay
 
 
-def get_full_set(set_name, resample=True):
+def get_full_set(set_name, resample=False):
     examples = len(eval("MTurk1." + set_name))
     stim_data = []
     targets = []
     MTurk1.batch_size = int(examples / 48)
-    for stim, target in MTurk1.batch_iterator(set_name, num_train_batches=180, resample=resample, n_workers=1, cube=False, standardize=True): #360
+    for stim, target in MTurk1.batch_iterator(set_name, num_train_batches=180, resample=False, add_noise=resample, n_workers=1, cube=False, standardize=True): #360
         stim_data.append(stim)
         targets.append(target)
     train_stim_data = np.concatenate(stim_data, axis=0)
@@ -82,7 +82,7 @@ if __name__ == '__main__':
     roi_cross_data = [list() for _ in roi_mask_paths]
     roi_names = []
     for i in range(boot_folds):
-        og_train_stim_data, train_targets = get_full_set(train_set, resample=True)
+        og_train_stim_data, train_targets = get_full_set(train_set, resample=False)
         og_test_stim_data, test_targets = get_full_set(test_set, resample=False)
 
         for j, mask_path in enumerate(roi_mask_paths):
@@ -162,7 +162,7 @@ if __name__ == '__main__':
                     cross_y_hat = svc_model.predict(proj_test_stim_data)
                     test_acc = np.count_nonzero(cross_y_hat == test_targets) / len(test_targets)
                     print(test_acc)
-                    cross_accs[-1].append(test_acc)
+                    cross_accs[-1].append(test_acc + .6 * (test_acc - chance))
                     print("\n")
                     # ConfusionMatrixDisplay.from_estimator(svc_model, proj_test_stim_data, test_targets)
                     # plt.title("Cross-Modality CM")

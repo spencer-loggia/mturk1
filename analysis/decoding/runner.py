@@ -33,11 +33,11 @@ class NTCompliantWrap:
 
 if __name__ == '__main__':
     LOAD_MODEL = False
-    models_to_load = "/home/ssbeast/Projects/SS/monkey_fmri/MTurk1/analysis/decoding/models/lh_20230822_jeeves_complete"
-    BOOTSTRAP_ITER = 25
+    models_to_load = "/home/bizon/Projects/MTurk1/MTurk1/analysis/decoding/models/jeeves_unified_100_lh"
+    BOOTSTRAP_ITER = 100
     LINEAR = True
     CONV = True
-    SET = "4"
+    SET = "0"
 
     if LOAD_MODEL:
         if os.path.isfile(models_to_load):
@@ -51,7 +51,7 @@ if __name__ == '__main__':
             raise RuntimeError
         BOOTSTRAP_ITER = len(models_to_load)
 
-    FIT = True
+    FIT = False
     MASK_ONLY = False
 
     LR = .01

@@ -225,15 +225,19 @@ class TrialDataLoader:
         beta = beta + noise
         return beta, target
 
-    def get_batch(self, bs, dset, resample=False, cube=True):
+    def get_batch(self, bs, dset, resample=False, add_noise=False, cube=True):
         beta_coef = []
         targets = []
         for _ in range(int(bs)):
+            if add_noise:
+                noise = .2
+            else:
+                noise = 0.0
             if resample:
-                beta, target = self.data_generator(dset, noise_frac_var=.2, spatial_translation_var=0.67,
+                beta, target = self.data_generator(dset, noise_frac_var=noise, spatial_translation_var=0.67,
                                                          max_base_examples=3, cube=cube)
             else:
-                beta, target = self.data_generator(dset, noise_frac_var=0.0, spatial_translation_var=0.0,
+                beta, target = self.data_generator(dset, noise_frac_var=noise, spatial_translation_var=0.0,
                                                          max_base_examples=3, cube=cube)
             beta_coef.append(beta)
             targets.append(target)
@@ -241,9 +245,9 @@ class TrialDataLoader:
         beta_coef = np.stack(beta_coef, axis=0)
         return beta_coef, targets
 
-    def data_queuer(self, dset, bs, num_batches, resample, standardize, mean, std, q, cube=True):
+    def data_queuer(self, dset, bs, num_batches, resample, noise, standardize, mean, std, q, cube=True):
         while self._processed_ < num_batches:
-            beta_coef, targets = self.get_batch(bs, dset, resample=resample, cube=cube)
+            beta_coef, targets = self.get_batch(bs, dset, resample=resample, add_noise=noise, cube=cube)
             if standardize:
                 beta_coef = (beta_coef - mean[None, :, None, None, None]) / std[None, :, None, None, None]
             try:
@@ -254,7 +258,7 @@ class TrialDataLoader:
                 del targets
                 return
 
-    def batch_iterator(self, data_type, num_train_batches=1000, return_all=False, standardize=False, resample=True, n_workers=16, cube=True,):
+    def batch_iterator(self, data_type, num_train_batches=1000, return_all=False, standardize=False, resample=True, add_noise=True, n_workers=16, cube=True,):
         try:
             dset = eval("self." + data_type.strip())
         except AttributeError:
@@ -275,7 +279,7 @@ class TrialDataLoader:
         use_mp = n_workers > 1
         if use_mp:
             for i in range(n_workers):
-                p = context.Process(target=self.data_queuer, args=(dset, bs, num_train_batches, resample, standardize, mean, std, q, cube))
+                p = context.Process(target=self.data_queuer, args=(dset, bs, num_train_batches, resample, add_noise, standardize, mean, std, q, cube))
                 p.start()
                 workers.append(p)
 
