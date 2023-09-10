@@ -47,18 +47,13 @@ class TrialDataLoader:
 
         color_set = self._get_set("colored_blobs", correct_only=use_behavior)
         self.color_all = color_set
-        self.color_train = color_set[:int(4 * len(color_set) / 5)]
-        self.color_test = color_set[int(4 * len(color_set) / 5):]
-        self.color_cross_dev = color_set[:int(len(color_set) / 2)]
-        self.color_cross_test = color_set[int(len(color_set) / 2):]
+        self.color_train = color_set[:int(85 * len(color_set) / 100)]
+        self.color_test = color_set[int(85 * len(color_set) / 100):]
 
         uncolored_shape_set = self._get_set("uncolored_shapes", correct_only=use_behavior)
         self.uncolored_shape_all = uncolored_shape_set
-        self.uncolored_shape_train = uncolored_shape_set[:int(3 * len(color_set) / 5)]
-        self.uncolored_shape_dev = uncolored_shape_set[int(3 * len(color_set) / 5):int(4 * len(color_set) / 5)]
-        self.uncolored_shape_test = uncolored_shape_set[int(4 * len(color_set) / 5):]
-        self.uncolored_shape_cross_dev = uncolored_shape_set[:int(len(color_set) / 2)]
-        self.uncolored_shape_cross_test = uncolored_shape_set[int(len(color_set) / 2):]
+        self.uncolored_shape_train = uncolored_shape_set[:int(85 * len(uncolored_shape_set) / 100)]
+        self.uncolored_shape_test = uncolored_shape_set[int(85 * len(uncolored_shape_set) / 100):]
 
         self.crop = crop
         size = max([t[1] - t[0] for t in crop])

@@ -64,7 +64,7 @@ if __name__ == '__main__':
     SUBJECT = "jeeves"
     FUNC_WM_PATH = "/home/bizon/Projects/MTurk1/MTurk1/subjects/" + SUBJECT + "/mri/func_wm.nii"
     BRAIN_MASK = "/home/bizon/Projects/MTurk1/MTurk1/subjects/" + SUBJECT + "/mri/no_cereb_decode_mask.nii.gz"
-    DATA_KEY_PATH = "/home/bizon/Projects/MTurk1/MTurk1/subjects/" + SUBJECT + "/analysis/shape_color_attention_decode_stimulus_response_data_key.csv"
+    DATA_KEY_PATH = "/home/bizon/Projects/MTurk1/MTurk1/subjects/" + SUBJECT + "/analysis/bkp_shape_color_attention_decode_stimulus_response_data_key.csv"
     HEMI = 'lh'
     IN_SET = 'shape'
     X_SET = 'color'
