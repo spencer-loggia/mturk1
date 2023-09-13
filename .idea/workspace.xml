@@ -4,16 +4,201 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f2f63b6-c06b-447d-b5fe-24a94a8e8748" name="Changes" comment="" />
+    <list default="true" id="51c61c04-fd7f-458d-b1a5-f15eb2a30d72" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis/.idea/._.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis/.idea/._analysis.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis/.idea/._inspectionProfiles" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis/.idea/._modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis/.idea/._vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis/.idea/._workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis/.idea/analysis.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis/.idea/inspectionProfiles/._profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis/decoding/._dataloader.py" beforeDir="false" afterPath="$PROJECT_DIR$/analysis/decoding/._dataloader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis/decoding/._roi_decoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/analysis/decoding/._roi_decoder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis/decoding/._roi_decoder_POA.py" beforeDir="false" afterPath="$PROJECT_DIR$/analysis/decoding/._roi_decoder_POA.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis/decoding/._roi_decoder_POA_8020.py" beforeDir="false" afterPath="$PROJECT_DIR$/analysis/decoding/._roi_decoder_POA_8020.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis/decoding/._runner.py" beforeDir="false" afterPath="$PROJECT_DIR$/analysis/decoding/._runner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis/decoding/dataloader.py" beforeDir="false" afterPath="$PROJECT_DIR$/analysis/decoding/dataloader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis/decoding/dataloader_POA.py" beforeDir="false" afterPath="$PROJECT_DIR$/analysis/decoding/dataloader_POA.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis/decoding/dataloader_POA_8020.py" beforeDir="false" afterPath="$PROJECT_DIR$/analysis/decoding/dataloader_POA_8020.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis/decoding/legacy_add_behavior.py" beforeDir="false" afterPath="$PROJECT_DIR$/analysis/decoding/legacy_add_behavior.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis/decoding/python" beforeDir="false" afterPath="$PROJECT_DIR$/analysis/decoding/python" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis/decoding/roi_decoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/analysis/decoding/roi_decoder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis/decoding/roi_decoder_POA.py" beforeDir="false" afterPath="$PROJECT_DIR$/analysis/decoding/roi_decoder_POA.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis/decoding/roi_decoder_POA_8020.py" beforeDir="false" afterPath="$PROJECT_DIR$/analysis/decoding/roi_decoder_POA_8020.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis/decoding/runner.py" beforeDir="false" afterPath="$PROJECT_DIR$/analysis/decoding/runner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/prf_real_SLSQP-master/hrf_vista_twogammas_TR2_absarea.csv" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/prf_real_SLSQP-master/hrf_vista_twogammas_TR2_absarea.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/SURFER_Jeeves/seg/SegmentationConvergence.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/SURFER_Jeeves/seg/SegmentationConvergence.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/analysis/shape_color_attention_decode_stimulus_response_data_key.csv" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/analysis/shape_color_attention_decode_stimulus_response_data_key.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/mri/bad_Jeeves/seg/SegmentationConvergence.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/mri/bad_Jeeves/seg/SegmentationConvergence.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/mri/func_wm.nii" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/mri/func_wm.nii" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/mri/itkManual.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/mri/itkManual.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/mri/no_cereb_decode_mask.nii.gz" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/mri/no_cereb_decode_mask.nii.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/scripts/build-stamp.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/scripts/build-stamp.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/scripts/lastcall.build-stamp.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/scripts/lastcall.build-stamp.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/scripts/patchdir.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/scripts/patchdir.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/scripts/unknown-args.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/scripts/unknown-args.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/dyloc_20230814/images_other/topup_2_images_movpar.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/dyloc_20230814/images_other/topup_2_images_movpar.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/dyloc_20230814/itkManual.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/dyloc_20230814/itkManual.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/dyloc_20230817/images_other/topup_2_images_movpar.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/dyloc_20230817/images_other/topup_2_images_movpar.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/dyloc_20230817/itkManual.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/dyloc_20230817/itkManual.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230712/images_other/topup_3_images_movpar.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230712/images_other/topup_3_images_movpar.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230712/runlist.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230712/runlist.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230713/images_other/topup_2_images_movpar.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230713/images_other/topup_2_images_movpar.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230713/runlist.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230713/runlist.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230714/SessionEyetraces.csv" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230714/SessionEyetraces.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230714/images_other/topup_2_images_movpar.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230714/images_other/topup_2_images_movpar.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230714/runlist.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230714/runlist.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230716/images_other/topup_2_images_movpar.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230716/images_other/topup_2_images_movpar.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230716/runlist.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230716/runlist.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230717/images_other/topup_2_images_movpar.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230717/images_other/topup_2_images_movpar.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230717/runlist.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230717/runlist.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230718/images_other/topup_2_images_movpar.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230718/images_other/topup_2_images_movpar.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230718/runlist.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230718/runlist.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230720/SessionEyetraces.csv" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230720/SessionEyetraces.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230720/images_other/topup_2_images_movpar.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230720/images_other/topup_2_images_movpar.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230720/itkManual.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230720/itkManual.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230720/runlist.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230720/runlist.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230803/SessionEyetraces.csv" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230803/SessionEyetraces.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230803/images_other/topup_2_images_movpar.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230803/images_other/topup_2_images_movpar.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230803/itkManual.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230803/itkManual.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230803/runlist.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230803/runlist.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230805/SessionEyetraces.csv" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230805/SessionEyetraces.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230805/images_other/topup_2_images_movpar.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230805/images_other/topup_2_images_movpar.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230805/itkManual.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230805/itkManual.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230805/runlist.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230805/runlist.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230806/SessionEyetraces.csv" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230806/SessionEyetraces.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230806/images_other/topup_2_images_movpar.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230806/images_other/topup_2_images_movpar.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230806/itkManual.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230806/itkManual.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230806/runlist.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230806/runlist.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230807/SessionEyetraces.csv" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230807/SessionEyetraces.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230807/images_other/topup_2_images_movpar.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230807/images_other/topup_2_images_movpar.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230807/itkManual.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230807/itkManual.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230807/runlist.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230807/runlist.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230808/SessionEyetraces.csv" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230808/SessionEyetraces.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230808/images_other/topup_2_images_movpar.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230808/images_other/topup_2_images_movpar.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230808/itkManual.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230808/itkManual.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230808/runlist.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230808/runlist.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230810/SessionEyetraces.csv" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230810/SessionEyetraces.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230810/images_other/topup_2_images_movpar.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230810/images_other/topup_2_images_movpar.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230810/itkManual.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230810/itkManual.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230810/runlist.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230810/runlist.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230811/images_other/topup_2_images_movpar.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230811/images_other/topup_2_images_movpar.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230811/itkManual.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230811/itkManual.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230811/runlist.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230811/runlist.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230813/images_other/topup_2_images_movpar.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230813/images_other/topup_2_images_movpar.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230813/itkManual.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230813/itkManual.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230813/runlist.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230813/runlist.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230825/images_other/topup_2_images_movpar.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230825/images_other/topup_2_images_movpar.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230825/itkManual.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230825/itkManual.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230825/runlist.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230825/runlist.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230901/images_other/topup_2_images_movpar.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230901/images_other/topup_2_images_movpar.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230901/itkManual.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/jeeves/sessions/scd_20230901/itkManual.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/analysis/new_key.csv" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/analysis/new_key.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/analysis/old_key.csv" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/analysis/old_key.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/analysis/shape_color_attention_decode_stimulus_response_data_key.csv" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/analysis/shape_color_attention_decode_stimulus_response_data_key.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/mri/atlas_manual_trans.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/mri/atlas_manual_trans.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/mri/func_wm.nii" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/mri/func_wm.nii" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/mri/itkManual.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/mri/itkManual.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/mri/no_cereb_decode_mask.nii.gz" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/mri/no_cereb_decode_mask.nii.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/dyloc_20220124_1/itkManual.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/dyloc_20220124_1/itkManual.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/dyloc_20220124_2/itkManual.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/dyloc_20220124_2/itkManual.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/dyloc_20230815/images_other/topup_2_images_movpar.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/dyloc_20230815/images_other/topup_2_images_movpar.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/dyloc_20230815/itkManual.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/dyloc_20230815/itkManual.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/dyloc_20230818/images_other/topup_2_images_movpar.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/dyloc_20230818/images_other/topup_2_images_movpar.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/dyloc_20230818/itkManual.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/dyloc_20230818/itkManual.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/mm_20220128/itkManual.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/mm_20220128/itkManual.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230209/SessionEyetraces.csv" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230209/SessionEyetraces.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230209/images_other/topup_2_images_movpar.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230209/images_other/topup_2_images_movpar.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230209/runlist.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230209/runlist.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230213/SessionEyetraces.csv" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230213/SessionEyetraces.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230213/images_other/topup_2_images_movpar.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230213/images_other/topup_2_images_movpar.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230213/runlist.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230213/runlist.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230302/DM_ignore.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230302/DM_ignore.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230302/SessionEyetraces.csv" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230302/SessionEyetraces.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230302/itkManual.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230302/itkManual.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230302/runlist.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230302/runlist.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230302/topup_2_images_movpar.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230302/topup_2_images_movpar.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230303/images_other/topup_2_images_movpar.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230303/images_other/topup_2_images_movpar.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230303/itkManual.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230303/itkManual.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230303/runlist.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230303/runlist.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230324/SessionEyetraces.csv" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230324/SessionEyetraces.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230324/images_other/topup_2_images_movpar.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230324/images_other/topup_2_images_movpar.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230324/itkManual.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230324/itkManual.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230324/runlist.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230324/runlist.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230327/SessionEyetraces.csv" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230327/SessionEyetraces.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230327/images_other/topup_2_images_movpar.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230327/images_other/topup_2_images_movpar.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230327/itkManual.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230327/itkManual.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230327/runlist.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230327/runlist.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230330/SessionEyetraces.csv" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230330/SessionEyetraces.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230330/images_other/topup_2_images_movpar.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230330/images_other/topup_2_images_movpar.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230330/itkManual.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230330/itkManual.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230330/runlist.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230330/runlist.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230331/SessionEyetraces.csv" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230331/SessionEyetraces.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230331/images_other/topup_2_images_movpar.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230331/images_other/topup_2_images_movpar.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230331/itkManual.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230331/itkManual.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230331/runlist.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230331/runlist.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230406/SessionEyetraces.csv" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230406/SessionEyetraces.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230406/images_other/topup_2_images_movpar.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230406/images_other/topup_2_images_movpar.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230406/itkManual.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230406/itkManual.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230406/runlist.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230406/runlist.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230407/SessionEyetraces.csv" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230407/SessionEyetraces.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230407/images_other/topup_2_images_movpar.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230407/images_other/topup_2_images_movpar.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230407/itkManual.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230407/itkManual.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230407/runlist.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230407/runlist.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230623/SessionEyetraces.csv" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230623/SessionEyetraces.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230623/images_other/topup_2_images_movpar.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230623/images_other/topup_2_images_movpar.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230623/itkManual.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230623/itkManual.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230804/images_other/topup_2_images_movpar.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230804/images_other/topup_2_images_movpar.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230804/itkManual.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230804/itkManual.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230804/runlist.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230804/runlist.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230806/images_other/topup_2_images_movpar.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230806/images_other/topup_2_images_movpar.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230806/itkManual.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230806/itkManual.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230806/runlist.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230806/runlist.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230813/images_other/topup_2_images_movpar.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230813/images_other/topup_2_images_movpar.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230813/itkManual.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230813/itkManual.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230813/runlist.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230813/runlist.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230821/images_other/topup_2_images_movpar.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230821/images_other/topup_2_images_movpar.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230821/itkManual.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230821/itkManual.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230821/runlist.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230821/runlist.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230824/images_other/topup_2_images_movpar.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230824/images_other/topup_2_images_movpar.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230824/itkManual.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230824/itkManual.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230824/runlist.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scd_20230824/runlist.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scp_20220214/itkManual.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scp_20220214/itkManual.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scp_20220311/itkManual.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scp_20220311/itkManual.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster/sessions/scp_20220318/itkManual.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster/sessions/scp_20220318/itkManual.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster_old_helen/analysis/new_key.csv" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster_old_helen/analysis/new_key.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster_old_helen/analysis/old_key.csv" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster_old_helen/analysis/old_key.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster_old_helen/mri/atlas_manual_trans.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster_old_helen/mri/atlas_manual_trans.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster_old_helen/mri/func_wm.nii" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster_old_helen/mri/func_wm.nii" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster_old_helen/mri/itkManual.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster_old_helen/mri/itkManual.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster_old_helen/mri/no_cereb_decode_mask.nii.gz" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster_old_helen/mri/no_cereb_decode_mask.nii.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster_old_helen/sessions/dyloc_20220124_1/itkManual.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster_old_helen/sessions/dyloc_20220124_1/itkManual.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjects/wooster_old_helen/sessions/dyloc_20220124_2/itkManual.txt" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/wooster_old_helen/sessions/dyloc_20220124_2/itkManual.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/D99/._d99_color_map_mk2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/templates/D99/._d99_color_map_mk2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/D99/D99_v2.0_labels_semicolon.txt" beforeDir="false" afterPath="$PROJECT_DIR$/templates/D99/D99_v2.0_labels_semicolon.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/D99/d99_color_map_mk2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/templates/D99/d99_color_map_mk2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/manual_transform_jeeves.txt" beforeDir="false" afterPath="$PROJECT_DIR$/templates/manual_transform_jeeves.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 1
-}</component>
-  <component name="ProjectId" id="2UMhjaVG90iiuDLK2jewWXUe8s3" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="2VJJaXzoJ9O0oFgQMv7rtzlY95d" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -23,26 +208,23 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/bizon/Projects/MTurk1/MTurk1/analysis/decoding/models/jeeves_unified_100_lh",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/home/bizon/Projects/MTurk1/MTurk1/subjects/jeeves/analysis",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/analysis/decoding/models/jeeves_unified_100_lh" />
-      <recent name="$PROJECT_DIR$/subjects/jeeves" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/subjects/jeeves/rois" />
+      <recent name="$PROJECT_DIR$/subjects/jeeves/analysis" />
+      <recent name="$PROJECT_DIR$/subjects/wooster" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.roi_decoder">
-    <configuration name="roi_decoder" type="PythonConfigurationType" factoryName="Python" singleton="false" nameIsGenerated="true">
+  <component name="RunManager">
+    <configuration name="runner" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="MTurk1" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -51,30 +233,8 @@
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="SDK_NAME" value="ssfmri" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/analysis/decoding/roi_decoder.py" />
-      <option name="PARAMETERS" value="$PROJECT_DIR$ jeeves color sl_rh_dyloc_rois 3 5" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="runner" type="PythonConfigurationType" factoryName="Python" singleton="false" nameIsGenerated="true">
-      <module name="MTurk1" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/analysis/decoding" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
@@ -87,23 +247,16 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <list>
-      <item itemvalue="Python.runner" />
-      <item itemvalue="Python.roi_decoder" />
-    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="6f2f63b6-c06b-447d-b5fe-24a94a8e8748" name="Changes" comment="" />
-      <created>1692755492501</created>
+      <changelist id="51c61c04-fd7f-458d-b1a5-f15eb2a30d72" name="Changes" comment="" />
+      <created>1694548314233</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1692755492501</updated>
-      <workItem from="1692755493516" duration="1863000" />
-      <workItem from="1692757380565" duration="45000" />
-      <workItem from="1692757450250" duration="6348000" />
-      <workItem from="1694187697973" duration="15826000" />
+      <updated>1694548314233</updated>
+      <workItem from="1694548315949" duration="6739000" />
     </task>
     <servers />
   </component>
@@ -111,7 +264,6 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/MTurk1$roi_decoder.coverage" NAME="roi_decoder Coverage Results" MODIFIED="1694204974499" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/MTurk1$runner.coverage" NAME="runner Coverage Results" MODIFIED="1694202715835" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/analysis/decoding" />
+    <SUITE FILE_PATH="coverage/MTurk1$runner.coverage" NAME="runner Coverage Results" MODIFIED="1694574015138" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/analysis/decoding" />
   </component>
 </project>

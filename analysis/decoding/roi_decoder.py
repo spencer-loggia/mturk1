@@ -10,17 +10,19 @@ import nibabel as nib
 import pickle
 import numpy as np
 
-from sklearn.svm import LinearSVC as Classifier
+# from sklearn.ensemble import RandomForestClassifier as Classifier
+from sklearn.svm import SVC as Classifier
+# fro, sklearn.neighbors import K
 from sklearn.decomposition import PCA as Embedder
 from sklearn.metrics import ConfusionMatrixDisplay
 
 
-def get_full_set(set_name, resample=False):
+def get_full_set(set_name, resample=True):
     examples = len(eval("MTurk1." + set_name))
     stim_data = []
     targets = []
     MTurk1.batch_size = int(examples / 48)
-    for stim, target in MTurk1.batch_iterator(set_name, num_train_batches=180, resample=False, add_noise=resample, n_workers=1, cube=False, standardize=True): #360
+    for stim, target in MTurk1.batch_iterator(set_name, num_train_batches=120, resample=False, n_workers=1, cube=False, standardize=False): #360
         stim_data.append(stim)
         targets.append(target)
     train_stim_data = np.concatenate(stim_data, axis=0)
@@ -41,9 +43,13 @@ if __name__ == '__main__':
 
     if TRAIN_SET == "uncolored":
         train_set = "uncolored_shape_all"
+        in_train_set = "uncolored_shape_train"
+        in_test_set = "uncolored_shape_test"
         test_set = "color_all"
     elif TRAIN_SET == "color":
         train_set = "color_all"
+        in_train_set = "color_train"
+        in_test_set = "color_test"
         test_set = "uncolored_shape_all"
     else:
         raise ValueError("Train set must be one of colored, uncolored")
@@ -82,7 +88,11 @@ if __name__ == '__main__':
     roi_cross_data = [list() for _ in roi_mask_paths]
     roi_names = []
     for i in range(boot_folds):
-        og_train_stim_data, train_targets = get_full_set(train_set, resample=False)
+        og_train_stim_data, train_targets = get_full_set(train_set, resample=True)
+        og_in_train_stim_data = og_train_stim_data[:int(85 * len(train_targets) / 100)]
+        in_train_targets = train_targets[:int(85 * len(train_targets) / 100)]
+        og_in_test_stim_data = og_train_stim_data[int(85 * len(train_targets) / 100):]
+        in_test_targets = train_targets[int(85 * len(train_targets) / 100):]
         og_test_stim_data, test_targets = get_full_set(test_set, resample=False)
 
         for j, mask_path in enumerate(roi_mask_paths):
@@ -91,7 +101,7 @@ if __name__ == '__main__':
             roi_name = mask_path.split(".")[0]
             if i == 0:
                 roi_names.append(roi_name)
-            print("PROC. ROI", roi_name)
+            print("\nPROC. ROI", roi_name)
             roi_mask = nib.load(os.path.join(dir_path, mask_path)).get_fdata()
             roi_mask = roi_mask[MTurk1.crop[0][0]:MTurk1.crop[0][1], MTurk1.crop[1][0]:MTurk1.crop[1][1],
                        MTurk1.crop[2][0]:MTurk1.crop[2][1]]
@@ -107,65 +117,79 @@ if __name__ == '__main__':
                 train_accs.append([])
                 cross_accs.append([])
                 MTurk1.one_v_rest_target = target_class
+
                 # get train set data
                 train_stim_data = og_train_stim_data[:, :, all_mask]
                 train_stim_data = train_stim_data.reshape((train_stim_data.shape[0], -1))
                 train_stim_data = (train_stim_data - train_stim_data.mean()) / train_stim_data.std()
-                # = np.random.normal(0, 1, size=(train_stim_data.shape[0], 200))
+
+                # get in train set data
+                in_train_stim_data = og_in_train_stim_data[:, :, all_mask]
+                in_train_stim_data = in_train_stim_data.reshape((in_train_stim_data.shape[0], -1))
+                in_train_stim_data = (in_train_stim_data - in_train_stim_data.mean()) / in_train_stim_data.std()
+
+                # get in  test set data
+                in_test_stim_data = og_in_test_stim_data[:, :, all_mask]
+                in_test_stim_data = in_test_stim_data.reshape((in_test_stim_data.shape[0], -1))
+                in_test_stim_data = (in_test_stim_data - in_test_stim_data.mean()) / in_test_stim_data.std()
 
                 # get test set data
                 test_stim_data = og_test_stim_data[:, :, all_mask]
                 test_stim_data = test_stim_data.reshape((test_stim_data.shape[0], -1))
                 test_stim_data = (test_stim_data - test_stim_data.mean()) / test_stim_data.std()
-                # test_stim_data = np.random.normal(0, 1, size=(test_stim_data.shape[0], 200))
-                all_data = np.concatenate([train_stim_data, test_stim_data], axis=0)
-                mean_data = all_data.mean(axis=0)
-                select_voxels = np.argsort(mean_data)[:min(len(mean_data), 150)] #
-                sel_all_data = all_data[:, select_voxels]
-                sel_train_stim_data = train_stim_data[:, select_voxels]
-                sel_test_stim_data = test_stim_data[:, select_voxels]
-                print("Initial Dim:", all_data.shape[1])
 
-                for c in comp:
-                    pca = Embedder(n_components=c, whiten=False)
-                    pca.fit(sel_all_data)
-                    proj_train_stim_data = pca.transform(sel_train_stim_data)
-                    proj_test_stim_data = pca.transform(sel_test_stim_data)
-                    # proj_train_stim_data = (proj_train_stim_data - proj_train_stim_data.mean()) / proj_train_stim_data.std()
-                    # proj_test_stim_data = (proj_test_stim_data - proj_test_stim_data.mean()) / proj_test_stim_data.std()
 
-                    print("TRAIN: target:", target_class, " examples:", proj_train_stim_data.shape[0], " roi_features:", proj_train_stim_data.shape[1])
+                # all_data = np.concatenate([train_stim_data, test_stim_data], axis=0)
+                # mean_data = all_data.mean(axis=0)
+                # select_voxels = np.argsort(mean_data)[:min(len(mean_data), 150)] #
+                # sel_all_data = all_data[:, select_voxels]
+                # sel_train_stim_data = train_stim_data[:, select_voxels]
+                # sel_test_stim_data = test_stim_data[:, select_voxels]
+                # print("Initial Dim:", all_data.shape[1])
 
-                    svc_model = Classifier(max_iter=5000, fit_intercept=False)
-                    svc_model.fit(proj_train_stim_data, train_targets)
 
-                    # save out model
-                    out_dir = CONTENT_ROOT + "/analysis/decoding/models/roi_svms"
-                    out_name = os.path.join(out_dir, roi_name + SUBJECT + "_svc_model.pkl")
-                    with open(out_name, "wb") as f:
-                        pickle.dump(svc_model, f)
-
+                def fit_transform_svm(x, y, tx, ty):
+                    svc_model = Classifier(max_iter=10000)  # max_iter=5000, fit_intercept=False
+                    svc_model.fit(x, y)
                     chance = 1 / len(USE_CLASSES)
 
                     # train set eval
-                    in_y_hat = svc_model.predict(proj_train_stim_data)
-                    train_acc = np.count_nonzero(in_y_hat == train_targets) / len(train_targets)
-                    train_accs[-1].append(train_acc)
-                    print(train_acc)
-                    # ConfusionMatrixDisplay.from_estimator(svc_model, proj_train_stim_data, train_targets)
-                    #plt.title("In-Modality CM")
-                    # plt.show()
-
-                    print("TEST: n_examples:", proj_test_stim_data.shape[0], " roi_features:", proj_test_stim_data.shape[1])
+                    in_y_hat = svc_model.predict(x)
+                    train_acc = np.count_nonzero(in_y_hat == y) / len(y)
+                    # train_accs[-1].append(train_acc)
+                    print("TRAIN_TRAIN_ACC", train_acc)
 
                     # test set eval
-                    cross_y_hat = svc_model.predict(proj_test_stim_data)
-                    test_acc = np.count_nonzero(cross_y_hat == test_targets) / len(test_targets)
-                    print(test_acc)
-                    cross_accs[-1].append(test_acc + .6 * (test_acc - chance))
-                    print("\n")
-                    # ConfusionMatrixDisplay.from_estimator(svc_model, proj_test_stim_data, test_targets)
-                    # plt.title("Cross-Modality CM")
+                    cross_y_hat = svc_model.predict(tx)
+                    test_acc = np.count_nonzero(cross_y_hat == ty) / len(ty)
+                    print("TRAIN_TEST_ACC", test_acc)
+                    # cross_accs[-1].append(test_acc)
+                    return train_acc, test_acc
+
+
+                for m_c in comp:
+                    c = m_c
+
+                    pca = Embedder(n_components=c, whiten=False)
+                    pca.fit(in_train_stim_data)
+                    proj_train_stim_data = pca.transform(in_train_stim_data)
+                    proj_test_stim_data = pca.transform(in_test_stim_data)
+                    # proj_train_stim_data = (proj_train_stim_data - proj_train_stim_data.mean()) / proj_train_stim_data.std()
+                    # proj_test_stim_data = (proj_test_stim_data - proj_test_stim_data.mean()) / proj_test_stim_data.std()
+
+                    print("IN 2 IN TRAIN: target:", target_class, " examples:", proj_train_stim_data.shape[0], " roi_features:", proj_train_stim_data.shape[1])
+
+                    _, test_acc = fit_transform_svm(proj_train_stim_data, in_train_targets, proj_test_stim_data, in_test_targets)
+                    train_accs[-1].append(test_acc)
+
+                    pca = Embedder(n_components=c, whiten=False)
+                    pca.fit(train_stim_data)
+                    proj_train_stim_data = pca.transform(train_stim_data)
+                    proj_test_stim_data = pca.transform(test_stim_data)
+
+                    print("IN 2 X TRAIN: n_examples:", proj_test_stim_data.shape[0], " roi_features:", proj_test_stim_data.shape[1])
+                    _, test_acc = fit_transform_svm(proj_train_stim_data, train_targets, proj_test_stim_data, test_targets)
+                    cross_accs[-1].append(test_acc)
 
             train_accs = np.array(train_accs)
             cross_accs = np.array(cross_accs)

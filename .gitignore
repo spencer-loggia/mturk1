@@ -1,8 +1,12 @@
 *.dcm
 *fixation.csv
+*SessionEyetraces.csv
 *.mat*
 *.nii*
+*.xml
+*.idea*
 *.pkl
+*topup_2_images_*
 !*funtional_target.nii.gz
 !*func_wm.nii
 !*no_cereb_decode_mask.nii.gz

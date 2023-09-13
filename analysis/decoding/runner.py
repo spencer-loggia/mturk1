@@ -34,10 +34,10 @@ class NTCompliantWrap:
 if __name__ == '__main__':
     LOAD_MODEL = False
     models_to_load = "/home/bizon/Projects/MTurk1/MTurk1/analysis/decoding/models/jeeves_unified_100_lh"
-    BOOTSTRAP_ITER = 100
+    BOOTSTRAP_ITER = 50
     LINEAR = True
     CONV = True
-    SET = "0"
+    SET = "ALL"
 
     if LOAD_MODEL:
         if os.path.isfile(models_to_load):
@@ -51,7 +51,7 @@ if __name__ == '__main__':
             raise RuntimeError
         BOOTSTRAP_ITER = len(models_to_load)
 
-    FIT = False
+    FIT = True
     MASK_ONLY = False
 
     LR = .01
@@ -65,7 +65,7 @@ if __name__ == '__main__':
     FUNC_WM_PATH = "/home/bizon/Projects/MTurk1/MTurk1/subjects/" + SUBJECT + "/mri/func_wm.nii"
     BRAIN_MASK = "/home/bizon/Projects/MTurk1/MTurk1/subjects/" + SUBJECT + "/mri/no_cereb_decode_mask.nii.gz"
     DATA_KEY_PATH = "/home/bizon/Projects/MTurk1/MTurk1/subjects/" + SUBJECT + "/analysis/shape_color_attention_decode_stimulus_response_data_key.csv"
-    HEMI = 'lh'
+    HEMI = 'rh'
     IN_SET = 'shape'
     X_SET = 'color'
     EPOCHS = 2000
@@ -114,7 +114,7 @@ if __name__ == '__main__':
             content_root=COTENT_ROOT, ignore_class=ignore_classes, crop=crop)
 
         func_wm = nib.load(FUNC_WM_PATH).get_fdata()
-        func_wm = torch.from_numpy(MTurk1.crop_volume(func_wm, cube=True)).float()
+        func_wm = torch.from_numpy(MTurk1.crop_volume(func_wm, cube=True)).float() * 0 # get rid of wm mask for now
         force_mask = torch.zeros_like(func_wm)
         force_mask[func_wm < .75] = 1
 
@@ -158,9 +158,11 @@ if __name__ == '__main__':
                     x_decoder.smooth_kernel_size = KERNEL
                     x_decoder.smooth_kernel = x_decoder._create_smoothing_kernel(kernel_size=KERNEL)
         else:
+            out_name = "end_epoch_" + str(EPOCHS) + "_" + str(boot) + "_" + name + ".pkl"
+            out_path = os.path.join(boot_dir, out_name)
             x_decoder = neurotools.decoding.GlobalMultiStepCrossDecoder(decoder=policies, smooth_kernel_size=KERNEL, input_spatial=(64, 64, 64),
                                                                input_channels=2, force_mask=force_mask, name=name,
-                                                               save_dir=boot_dir, lr=LR, n_sets=2)
+                                                               lr=LR, n_sets=2)
 
         gens = NTCompliantWrap(MTurk1, EPOCHS, resample=True)
 
@@ -179,11 +181,11 @@ if __name__ == '__main__':
 
         sal_gens = NTCompliantWrap(MTurk1, 10, resample=True)
 
-        if x_decoder.sal_map is None:
+        if x_decoder.sal_maps is None:
             sal_map = x_decoder.compute_saliancy(sal_gens)
-            x_decoder.sal_map = sal_map
+            x_decoder.sal_maps = sal_map
         else:
-            sal_map = x_decoder.sal_map
+            sal_map = x_decoder.sal_maps
 
         for i in range(2):
             for j in range(2):
@@ -192,11 +194,8 @@ if __name__ == '__main__':
                 sal_m = sal_map[i][j]
                 bootstrap_sal[i][j].append(sal_m)
 
-        if LOAD_MODEL:
-            with open(out_path, "wb") as out:
-                pickle.dump(x_decoder, out)
-        else:
-            x_decoder.save("end_epoch_" + str(len(x_decoder.loss_histories[0][0])))
+        with open(out_path, "wb") as out:
+            pickle.dump(x_decoder, out)
 
         del x_decoder
 
