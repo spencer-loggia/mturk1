@@ -4,7 +4,7 @@ import pickle
 import torch
 import neurotools
 import numpy as np
-from dataloader import TrialDataLoader
+from dataloader_validate_decoder import TrialDataLoader
 from decode_policy import MapDecode, LinearDecode
 import nibabel as nib
 import datetime
@@ -34,7 +34,8 @@ class NTCompliantWrap:
 if __name__ == '__main__':
     LOAD_MODEL = False
     models_to_load = "/home/bizon/Projects/MTurk1/MTurk1/analysis/decoding/models/2023-09-24_jeeves_lh_unified_linconv_set_ALL_50"
-    SUBJECT = "wooster"
+    # SUBJECT = "wooster"
+    SUBJECT = "validate"
     HEMI = 'rh'
     BOOTSTRAP_ITER = 20
     LINEAR = True
@@ -56,29 +57,40 @@ if __name__ == '__main__':
     FIT = True
     MASK_ONLY = False
 
+    # LR = .01
     LR = .01
 
     KERNEL = 6
 
-    COTENT_ROOT = "/home/bizon/Projects/MTurk1/MTurk1"
-    USE_CLASSES = [2, 3, 6, 7, 10, 11]
+    # COTENT_ROOT = "/home/bizon/Projects/MTurk1/MTurk1"
+    COTENT_ROOT = "/home/bizon/shared/MTurk1"
+    # USE_CLASSES = [2, 3, 6, 7, 10, 11]
+    USE_CLASSES = [1, 2]
 
-    FUNC_WM_PATH = "/home/bizon/Projects/MTurk1/MTurk1/subjects/" + SUBJECT + "/mri/func_wm.nii"
-    BRAIN_MASK = "/home/bizon/Projects/MTurk1/MTurk1/subjects/" + SUBJECT + "/mri/no_cereb_decode_mask.nii.gz"
-    DATA_KEY_PATH = "/home/bizon/Projects/MTurk1/MTurk1/subjects/" + SUBJECT + "/analysis/shape_color_attention_decode_stimulus_response_data_key.csv"
+    # FUNC_WM_PATH = "/home/bizon/Projects/MTurk1/MTurk1/subjects/" + SUBJECT + "/mri/func_wm.nii"
+    # BRAIN_MASK = "/home/bizon/Projects/MTurk1/MTurk1/subjects/" + SUBJECT + "/mri/no_cereb_decode_mask.nii.gz"
+    # DATA_KEY_PATH = "/home/bizon/Projects/MTurk1/MTurk1/subjects/" + SUBJECT + "/analysis/shape_color_attention_decode_stimulus_response_data_key.csv"
+    FUNC_WM_PATH = "/home/bizon/shared/MTurk1/subjects/" + SUBJECT + "/mri/func_wm.nii.gz"
+    BRAIN_MASK = "/home/bizon/shared/MTurk1/subjects/" + SUBJECT + "/mri/no_cereb_decode_mask.nii.gz"
+    DATA_KEY_PATH = "/home/bizon/shared/MTurk1/subjects/" + SUBJECT + "/analysis/validate_decoder_stimulus_response_data_key.csv"
     IN_SET = 'shape'
     X_SET = 'color'
-    EPOCHS = 2000
+    # EPOCHS = 2000
+    EPOCHS = 100
     CROP_WOOSTER = [(37, 93), (15, 79), (0, 42)]
     CROP_JEEVES = [(38, 89), (13, 77), (0, 42)]
+    CROP_VALIDATE = [(0, 100), (0, 100), (0, 100)]
     if SUBJECT == 'wooster':
         crop = CROP_WOOSTER
     elif SUBJECT == 'jeeves':
         crop = CROP_JEEVES
+    elif SUBJECT == 'validate':
+        crop = CROP_VALIDATE
     else:
         exit(1)
 
-    all_classes = set(range(1, 15))
+    # all_classes = set(range(1, 15))
+    all_classes = set(range(1, 3))
     ignore_classes = all_classes - set(USE_CLASSES)
 
     dev = 'cuda'
@@ -124,9 +136,11 @@ if __name__ == '__main__':
         force_mask = torch.logical_and(force_mask2, force_mask)
 
         if HEMI == "rh":
-            force_mask[:32, :, :] = 0
+            # force_mask[:32, :, :] = 0
+            force_mask[:50, :, :] = 0
         elif HEMI == 'lh':
-            force_mask[32:, :, :] = 0
+            # force_mask[32:, :, :] = 0
+            force_mask[50:, :, :] = 0
 
         force_mask_full = MTurk1.to_full(force_mask)
         mask_nii = nib.Nifti1Image(force_mask_full, header=MTurk1.header, affine=MTurk1.affine)
@@ -135,9 +149,11 @@ if __name__ == '__main__':
         if LINEAR and not CONV:
             policies = LinearDecode(force_mask, in_channels=2, out=len(USE_CLASSES))
         elif LINEAR and CONV:
-            policies = tuple([MapDecode(shape=(64, 64, 64), dev=dev, out=len(USE_CLASSES), nonlinear=False) for _ in range(2)])
+            # policies = tuple([MapDecode(shape=(64, 64, 64), dev=dev, out=len(USE_CLASSES), nonlinear=False) for _ in range(2)])
+            policies = tuple([MapDecode(shape=(100, 100, 100), dev=dev, out=len(USE_CLASSES), nonlinear=False) for _ in range(2)])
         elif not LINEAR and CONV:
-            policies = tuple([MapDecode(shape=(64, 64, 64), dev=dev, out=len(USE_CLASSES)) for _ in range(2)])
+            # policies = tuple([MapDecode(shape=(64, 64, 64), dev=dev, out=len(USE_CLASSES)) for _ in range(2)])
+            policies = tuple([MapDecode(shape=(100, 100, 100), dev=dev, out=len(USE_CLASSES)) for _ in range(2)])
         else:
             # not linear and not conv
             raise NotImplementedError
@@ -160,9 +176,12 @@ if __name__ == '__main__':
         else:
             out_name = "end_epoch_" + str(EPOCHS) + "_" + str(boot) + "_" + name + ".pkl"
             out_path = os.path.join(boot_dir, out_name)
-            x_decoder = neurotools.decoding.GlobalMultiStepCrossDecoder(decoder=policies, smooth_kernel_size=KERNEL, input_spatial=(64, 64, 64),
-                                                               input_channels=2, force_mask=force_mask, name=name,
-                                                               lr=LR, n_sets=2)
+            # x_decoder = neurotools.decoding.GlobalMultiStepCrossDecoder(decoder=policies, smooth_kernel_size=KERNEL, input_spatial=(64, 64, 64),
+            #                                                    input_channels=2, force_mask=force_mask, name=name,
+            #                                                    lr=LR, n_sets=2)
+            x_decoder = neurotools.decoding.GlobalMultiStepCrossDecoder(decoder=policies, smooth_kernel_size=KERNEL, input_spatial=(100, 100, 100),
+                                                                 input_channels=2, force_mask=force_mask, name=name,
+                                                                 lr=LR, n_sets=2)
 
         gens = NTCompliantWrap(MTurk1, EPOCHS, resample=True)
 

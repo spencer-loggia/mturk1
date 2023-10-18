@@ -13,10 +13,11 @@ from neurotools import util
 import multiprocessing as mp
 from multiprocessing import queues
 
-val_map = {1:2, 2:4, 3:6, 4:8, 5:10, 6:12, 7:14,
-           8:2, 9:4, 10:6, 11:8, 12:10, 13:12, 14:14,
-           15:1, 16:3, 17:5, 18:7, 19:9, 20:11, 21:13,
-           22:1, 23:3, 24:5, 25:7, 26:9, 27:11, 28:13}
+# val_map = {1:2, 2:4, 3:6, 4:8, 5:10, 6:12, 7:14,
+#            8:2, 9:4, 10:6, 11:8, 12:10, 13:12, 14:14,
+#            15:1, 16:3, 17:5, 18:7, 19:9, 20:11, 21:13,
+#            22:1, 23:3, 24:5, 25:7, 26:9, 27:11, 28:13}
+val_map = {1:1, 2:2, 3:1, 4:2}
 
 
 class TrialDataLoader:
@@ -26,20 +27,18 @@ class TrialDataLoader:
     one is served.
     """
     def __init__(self, key_path, batch_size, crop=((9, 73), (0, 40), (13, 77)), content_root="./", device="cuda",
-                 ignore_sessions=(), ignore_class=(), seed=4242, binary_target=None, binary_other=None, folds=1, use_behavior=True, verbose=False):
+                 ignore_sessions=(), ignore_class=(), seed=4242, binary_target=None, folds=1, use_behavior=False, verbose=False):
         self.content_root = content_root
         data = pd.read_csv(key_path)
         data.drop("Unnamed: 0", axis=1, inplace=True)
         for ignore_sess in ignore_sessions:
             data = data[data["session"] != ignore_sess]
-        print(pd.unique(data["session"]))
         self.data = data.sample(frac=1., ignore_index=True, random_state=seed)
         self.batch_size = batch_size
         self.full_size = None
         self.affine = None
         self.header = None
         self.one_v_rest_target = binary_target
-        self.one_v_rest_other = binary_other
         self.ignore_class = ignore_class
         self.use_behavior = use_behavior
         self.verbose = verbose
@@ -73,14 +72,9 @@ class TrialDataLoader:
             data = data[data["correct"] == 1].reset_index(drop=True)
         else:
             data = data.reset_index(drop=True)
-        vals = sorted(pd.unique(data["condition_integer"]))
-        reindexed_data = data.copy()
-        for i, item in enumerate(vals):
-            reindexed_data["condition_integer"].loc[data["condition_integer"] == item] = int(val_map[item])
-        data = reindexed_data
-        options = sorted(list(set(range(1, 15)) - set(self.ignore_class)))
-        for c in options:
-            print("set", id, "class", c, "loaded w/", (data["condition_integer"] == c).sum())
+        # vals = sorted(pd.unique(data["condition_integer"]))
+        for i, item in enumerate(data["condition_integer"]):
+            data.loc[i, "condition_integer"] = val_map[item]
         nii = nib.load(os.path.join(self.content_root, eval(data["beta_path"][0])[0]))
         self.full_size = nii.get_fdata().shape
         self.affine = nii.affine
@@ -112,15 +106,15 @@ class TrialDataLoader:
         for paths_str in data["beta_path"]:
             paths = eval(paths_str)
             chan_beta = []
-            for path in paths[1:]:
+            for path in paths[1:2]:
                 beta_nii = nib.load(os.path.join(self.content_root, path))
                 betas = beta_nii.get_fdata()[self.crop[0][0]:self.crop[0][1], self.crop[1][0]:self.crop[1][1], self.crop[2][0]:self.crop[2][1]]
                 chan_beta.append(betas)
             chan_beta = np.stack(chan_beta, axis=0)
             beta_coef.append(chan_beta)
         beta_coef = np.stack(beta_coef, axis=0)
-        mean = util._pad_to_cube(beta_coef.mean(axis=0), time_axis=0)  # mean across each loc
-        std = util._pad_to_cube(beta_coef.std(axis=0), time_axis=0)  # std across ech loc
+        mean = beta_coef.mean(axis=(0, 2, 3, 4))  # mean across each channel
+        std = beta_coef.std(axis=(0, 2, 3, 4))  # std across ech channel
         return mean, std
 
     def crop_volume(self, input, cube=True):
@@ -163,7 +157,7 @@ class TrialDataLoader:
 
         return translated_volume
 
-    def data_generator(self, dset, noise_frac_var=.2, spatial_translation_var=.67, max_base_examples=1, cube=True):
+    def data_generator(self, dset, noise_frac_var=.2, spatial_translation_var=.67, max_base_examples=3, cube=True):
         """
         Combines some random number of examples from one random class with random weight with some amount of random translation and noise
         Parameters
@@ -177,17 +171,14 @@ class TrialDataLoader:
         -------
 
         """
-        options = sorted(list(set(range(1, 15)) - set(self.ignore_class)))
+        options = sorted(list(set(range(1, 3)) - set(self.ignore_class)))
         if self.one_v_rest_target is not None:
             if random.choice([True, False]):
                 example_class = self.one_v_rest_target
                 target = 0
             else:
-                if self.one_v_rest_other == "all" or self.one_v_rest_other is None:
-                    options = set(options) - {self.one_v_rest_target}
-                    example_class = int(random.choice(list(options)))
-                else:
-                    example_class = self.one_v_rest_other
+                options = set(options) - {self.one_v_rest_target}
+                example_class = int(random.choice(list(options)))
                 target = 1
         else:
             example_class = int(random.choice(options))  # which class will this be?
@@ -207,7 +198,7 @@ class TrialDataLoader:
             chan_beta = []
             paths = eval(path_str)
             # ignore the final fir
-            for path in paths[1:]:
+            for path in paths[1:2]:
                 if path not in self.set_mem:
                     beta_nii = nib.load(os.path.join(self.content_root, path))
                     betas = self.crop_volume(beta_nii.get_fdata(), cube=cube)
@@ -236,10 +227,10 @@ class TrialDataLoader:
         for _ in range(int(bs)):
             if resample:
                 beta, target = self.data_generator(dset, noise_frac_var=.2, spatial_translation_var=0.67,
-                                                         max_base_examples=1, cube=cube)
+                                                         max_base_examples=3, cube=cube)
             else:
                 beta, target = self.data_generator(dset, noise_frac_var=0.0, spatial_translation_var=0.0,
-                                                         max_base_examples=1, cube=cube)
+                                                         max_base_examples=3, cube=cube)
             beta_coef.append(beta)
             targets.append(target)
         targets = np.array(targets, dtype=int)
@@ -250,11 +241,7 @@ class TrialDataLoader:
         while self._processed_ < num_batches:
             beta_coef, targets = self.get_batch(bs, dset, resample=resample, cube=cube)
             if standardize:
-                beta_coef = (beta_coef - mean[None, :, :, :, :]) / std[None, :, :, :, :]
-                beta_coef = np.nan_to_num(beta_coef, nan=0.,
-                                          neginf=0.,
-                                          posinf=0.)
-
+                beta_coef = (beta_coef - mean[None, :, None, None, None]) / std[None, :, None, None, None]
             try:
                 q.put((beta_coef, targets), block=True, timeout=120)
             except queue.Full:
@@ -278,7 +265,7 @@ class TrialDataLoader:
         else:
             bs = self.batch_size
         self._processed_ = 0
-        context = mp.get_context("spawn")
+        context = mp.get_context("fork")
         q = context.Queue(maxsize=self._max_q_size_)
         workers = []
         use_mp = n_workers > 1
