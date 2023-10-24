@@ -16,14 +16,13 @@ from neurotools import util
 import multiprocessing as mp
 from multiprocessing import queues
 
-
 class SimpleValDataLoader:
     """
     generates cross decodable and non-cross docadable 2d rois. Only tests the simple case where cross decodable rois
     directly overlap with their template ROIs
     """
 
-    def __init__(self, spatial=32, epochs=500, mode="simple", motion=True, structured_noise=True, n_classes=6):
+    def __init__(self, spatial=32, epochs=500, mode="simple", motion=True, structured_noise=True, n_classes=4):
         self.spatial = spatial
         # a only, b patterns that appear on a trials, a patterns that appear on b trial, b only
         self.roi_n = [2, 1, 1, 2]
@@ -63,15 +62,15 @@ class SimpleValDataLoader:
             if stim_type == "a":
                 warper = torchvision.transforms.RandomAffine(degrees=(0, 0),
                                                              translate=(.07, .02),
-                                                             scale=(.80, .90),
+                                                             scale=(.75, .90),
                                                              shear=(-2, 3, -2, 4))
                 template += self.a_noise_template * .3
                 if i not in [0, 1, 2]:
                     continue
             elif stim_type == "b":
                 warper = torchvision.transforms.RandomAffine(degrees=(0, 0),
-                                                             translate=(.0, .1),
-                                                             scale=(.85, .93),
+                                                             translate=(.0, .4),
+                                                             scale=(.8, .93),
                                                              shear=(-4, 0, -4, 0))
                 template += self.b_noise_template * .2
                 if i not in [1, 2, 3]:
@@ -80,7 +79,7 @@ class SimpleValDataLoader:
                 def warper(x):
                     return x
             for j, origin in enumerate(type_origins):
-                pattern = self.template_patterns[i][j, class_labels, :, :] * 2
+                pattern = self.template_patterns[i][j, class_labels, :, :] * 2.5
                 if use_pattern:
                     code = pattern
                     if noise > 0:
