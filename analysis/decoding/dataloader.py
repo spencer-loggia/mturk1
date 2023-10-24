@@ -197,7 +197,7 @@ class TrialDataLoader:
             chan_beta = []
             paths = eval(path_str)
             # ignore the final fir
-            for path in paths[1:2]:
+            for path in paths[1:2]: #[1:2]
                 if path not in self.set_mem:
                     beta_nii = nib.load(os.path.join(self.content_root, path))
                     betas = self.crop_volume(beta_nii.get_fdata(), cube=cube)
