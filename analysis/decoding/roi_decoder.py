@@ -66,8 +66,16 @@ if __name__ == "__main__":
 
     use_binary_target = False
     CONTENT_ROOT = os.path.abspath(ROOT)
-    USE_CLASSES = [2, 3, 6, 7, 10, 11]
-    # USE_CLASSES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    if SUBJECT == "wooster":
+        USE_CLASSES = [1, 4, 5, 8, 9, 12]
+        ignore_sessions = ['scd_20230804',
+                           'scd_20230806']  # wooster NIF receive coil sessions
+    else:
+        USE_CLASSES = [2, 3, 6, 7, 10, 11]
+        ignore_sessions = ['scd_20230712', 'scd_20230713', 'scd_20230803',
+                           'scd_20230805', 'scd_20230806',
+                           'scd_20230807']  # jeeves NIF receive coil sessions
+
     FUNC_WM_PATH = os.path.join(CONTENT_ROOT, "subjects", SUBJECT, "mri", "func_wn.nii")
     BRAIN_MASK = os.path.join(
         CONTENT_ROOT, "subjects", SUBJECT, "mri", "no_cereb_decode_mask.nii.gz"
@@ -97,6 +105,7 @@ if __name__ == "__main__":
         250,
         content_root=CONTENT_ROOT,
         ignore_class=ignore_classes,
+        ignore_sessions=ignore_sessions,
         crop=crop,
         use_behavior=True,
         verbose=False,
@@ -327,6 +336,7 @@ if __name__ == "__main__":
 
             print(roi_name, " All Cross Accs:", cross_accs)
             print(roi_name, "All Train Accs:", train_accs)
+        print("Done with bootfold:", i)
 
         # big_cl.append(fold_cl) # these all work
         # big_class_accs.append(fold_class_acc)
@@ -361,3 +371,7 @@ if __name__ == "__main__":
     plt.xticks(rotation=50)
     plt.show()
     fig.savefig(TRAIN_SET + "_roi_decoder_out.svg")
+    results = pd.DataFrame({'roi': roi_names, 'identity_mean': roi_train_data, 'identity_std': train_var,
+                            'cross_mean': roi_cross_data, 'cross_std': cross_var})
+    results.to_csv('/home/ssbeast/Projects/SS/monkey_fmri/MTurk1/subjects/wooster/rois/sl_dyloc_regions_final/he_func_space_rois/hef_edits_1027/trainshape_noNIF_csv.csv')
+

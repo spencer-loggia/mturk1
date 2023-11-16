@@ -13,10 +13,10 @@ from neurotools import util
 import multiprocessing as mp
 from multiprocessing import queues
 
-val_map = {1:2, 2:4, 3:6, 4:8, 5:10, 6:12, 7:14,
-           8:2, 9:4, 10:6, 11:8, 12:10, 13:12, 14:14,
-           15:1, 16:3, 17:5, 18:7, 19:9, 20:11, 21:13,
-           22:1, 23:3, 24:5, 25:7, 26:9, 27:11, 28:13}
+val_map = {1: 2, 2: 4, 3: 6, 4: 8, 5: 10, 6: 12, 7: 14,
+           8: 2, 9: 4, 10: 6, 11: 8, 12: 10, 13: 12, 14: 14,
+           15: 1, 16: 3, 17: 5, 18: 7, 19: 9, 20: 11, 21: 13,
+           22: 1, 23: 3, 24: 5, 25: 7, 26: 9, 27: 11, 28: 13}
 
 
 class TrialDataLoader:
@@ -25,35 +25,39 @@ class TrialDataLoader:
     commands in parallel. That is, multiple batches are prepared and processed (lin combined, translated, etc.), while
     one is served.
     """
+
     def __init__(self, key_path, batch_size, crop=((9, 73), (0, 40), (13, 77)), content_root="./", device="cuda",
-                 ignore_sessions=(), ignore_class=(), seed=4242, binary_target=None, folds=1, use_behavior=True, verbose=False):
+                 ignore_sessions=(), ignore_class=(), seed=4242, binary_target=None, binary_other=None, folds=1,
+                 use_behavior=True, verbose=False):
         self.content_root = content_root
         data = pd.read_csv(key_path)
         data.drop("Unnamed: 0", axis=1, inplace=True)
         for ignore_sess in ignore_sessions:
             data = data[data["session"] != ignore_sess]
+        print(pd.unique(data["session"]))
         self.data = data.sample(frac=1., ignore_index=True, random_state=seed)
         self.batch_size = batch_size
         self.full_size = None
         self.affine = None
         self.header = None
         self.one_v_rest_target = binary_target
+        self.one_v_rest_other = binary_other
         self.ignore_class = ignore_class
         self.use_behavior = use_behavior
         self.verbose = verbose
-        
+
         self.current_fold = 0
         self.folds = 1
 
         color_set = self._get_set("colored_blobs", correct_only=use_behavior)
         self.color_all = color_set
-        self.color_train = color_set[:int(85 * len(color_set) / 100)]
-        self.color_test = color_set[int(85 * len(color_set) / 100):]
+        self.color_train = color_set[:int(80 * len(color_set) / 100)]
+        self.color_test = color_set[int(80 * len(color_set) / 100):]
 
         uncolored_shape_set = self._get_set("uncolored_shapes", correct_only=use_behavior)
         self.uncolored_shape_all = uncolored_shape_set
-        self.uncolored_shape_train = uncolored_shape_set[:int(85 * len(uncolored_shape_set) / 100)]
-        self.uncolored_shape_test = uncolored_shape_set[int(85 * len(uncolored_shape_set) / 100):]
+        self.uncolored_shape_train = uncolored_shape_set[:int(80 * len(uncolored_shape_set) / 100)]
+        self.uncolored_shape_test = uncolored_shape_set[int(80 * len(uncolored_shape_set) / 100):]
 
         self.crop = crop
         size = max([t[1] - t[0] for t in crop])
@@ -65,15 +69,20 @@ class TrialDataLoader:
         self.set_mem = {}
 
     def _get_set(self, id, correct_only=True):
-        data = self.data[self.data["condition_group"] == id]
+        data = self.data[self.data["condition_group"] == id].copy()
         print("")
         if correct_only:
             data = data[data["correct"] == 1].reset_index(drop=True)
         else:
             data = data.reset_index(drop=True)
-        # vals = sorted(pd.unique(data["condition_integer"]))
-        for i, item in enumerate(data["condition_integer"]):
-            data.loc[i, "condition_integer"] = val_map[item]
+        vals = sorted(pd.unique(data["condition_integer"]))
+        reindexed_data = data.copy()
+        for i, item in enumerate(vals):
+            reindexed_data["condition_integer"].loc[data["condition_integer"] == item] = int(val_map[item])
+        data = reindexed_data
+        options = sorted(list(set(range(1, 15)) - set(self.ignore_class)))
+        for c in options:
+            print("set", id, "class", c, "loaded w/", (data["condition_integer"] == c).sum())
         nii = nib.load(os.path.join(self.content_root, eval(data["beta_path"][0])[0]))
         self.full_size = nii.get_fdata().shape
         self.affine = nii.affine
@@ -105,20 +114,21 @@ class TrialDataLoader:
         for paths_str in data["beta_path"]:
             paths = eval(paths_str)
             chan_beta = []
-            for path in paths[1:2]:
+            for path in paths[2:]:
                 beta_nii = nib.load(os.path.join(self.content_root, path))
-                betas = beta_nii.get_fdata()[self.crop[0][0]:self.crop[0][1], self.crop[1][0]:self.crop[1][1], self.crop[2][0]:self.crop[2][1]]
+                betas = beta_nii.get_fdata()[self.crop[0][0]:self.crop[0][1], self.crop[1][0]:self.crop[1][1],
+                        self.crop[2][0]:self.crop[2][1]]
                 chan_beta.append(betas)
             chan_beta = np.stack(chan_beta, axis=0)
             beta_coef.append(chan_beta)
         beta_coef = np.stack(beta_coef, axis=0)
-        mean = beta_coef.mean(axis=(0, 2, 3, 4))  # mean across each channel
-        std = beta_coef.std(axis=(0, 2, 3, 4))  # std across ech channel
+        mean = util._pad_to_cube(beta_coef.mean(axis=0), time_axis=0)  # mean across each loc
+        std = util._pad_to_cube(beta_coef.std(axis=0), time_axis=0)  # std across ech loc
         return mean, std
 
     def crop_volume(self, input, cube=True):
         out = input[self.crop[0][0]:self.crop[0][1], self.crop[1][0]:self.crop[1][1],
-                self.crop[2][0]:self.crop[2][1]]
+              self.crop[2][0]:self.crop[2][1]]
         if cube:
             out = util._pad_to_cube(out)
         return out
@@ -156,7 +166,7 @@ class TrialDataLoader:
 
         return translated_volume
 
-    def data_generator(self, dset, noise_frac_var=.2, spatial_translation_var=.67, max_base_examples=3, cube=True):
+    def data_generator(self, dset, noise_frac_var=.2, spatial_translation_var=.67, max_base_examples=1, cube=True):
         """
         Combines some random number of examples from one random class with random weight with some amount of random translation and noise
         Parameters
@@ -176,8 +186,11 @@ class TrialDataLoader:
                 example_class = self.one_v_rest_target
                 target = 0
             else:
-                options = set(options) - {self.one_v_rest_target}
-                example_class = int(random.choice(list(options)))
+                if self.one_v_rest_other == "all" or self.one_v_rest_other is None:
+                    options = set(options) - {self.one_v_rest_target}
+                    example_class = int(random.choice(list(options)))
+                else:
+                    example_class = self.one_v_rest_other
                 target = 1
         else:
             example_class = int(random.choice(options))  # which class will this be?
@@ -189,7 +202,8 @@ class TrialDataLoader:
         names = class_dset['condition_name']
         basis_idxs = np.random.randint(0, len(class_dset), size=(basis_dim,))
         if self.verbose:
-            print("chose class", example_class, "desc", names.iloc[int(basis_idxs[0])], "basis examples", len(class_dset))
+            print("chose class", example_class, "desc", names.iloc[int(basis_idxs[0])], "basis examples",
+                  len(class_dset))
 
         data = class_dset.iloc[basis_idxs]
         beta_coef = []
@@ -197,7 +211,7 @@ class TrialDataLoader:
             chan_beta = []
             paths = eval(path_str)
             # ignore the final fir
-            for path in paths[1:2]: #[1:2]
+            for path in paths[2:]:
                 if path not in self.set_mem:
                     beta_nii = nib.load(os.path.join(self.content_root, path))
                     betas = self.crop_volume(beta_nii.get_fdata(), cube=cube)
@@ -226,10 +240,10 @@ class TrialDataLoader:
         for _ in range(int(bs)):
             if resample:
                 beta, target = self.data_generator(dset, noise_frac_var=.2, spatial_translation_var=0.67,
-                                                         max_base_examples=3, cube=cube)
+                                                   max_base_examples=1, cube=cube)
             else:
                 beta, target = self.data_generator(dset, noise_frac_var=0.0, spatial_translation_var=0.0,
-                                                         max_base_examples=3, cube=cube)
+                                                   max_base_examples=1, cube=cube)
             beta_coef.append(beta)
             targets.append(target)
         targets = np.array(targets, dtype=int)
@@ -240,7 +254,11 @@ class TrialDataLoader:
         while self._processed_ < num_batches:
             beta_coef, targets = self.get_batch(bs, dset, resample=resample, cube=cube)
             if standardize:
-                beta_coef = (beta_coef - mean[None, :, None, None, None]) / std[None, :, None, None, None]
+                beta_coef = (beta_coef - mean[None, :, :, :, :]) / std[None, :, :, :, :]
+                beta_coef = np.nan_to_num(beta_coef, nan=0.,
+                                          neginf=0.,
+                                          posinf=0.)
+
             try:
                 q.put((beta_coef, targets), block=True, timeout=120)
             except queue.Full:
@@ -249,7 +267,8 @@ class TrialDataLoader:
                 del targets
                 return
 
-    def batch_iterator(self, data_type, num_train_batches=1000, return_all=False, standardize=False, resample=True, n_workers=16, cube=True,):
+    def batch_iterator(self, data_type, num_train_batches=1000, return_all=False, standardize=False, resample=True,
+                       n_workers=16, cube=True, ):
         try:
             dset = eval("self." + data_type.strip())
         except AttributeError:
@@ -264,13 +283,14 @@ class TrialDataLoader:
         else:
             bs = self.batch_size
         self._processed_ = 0
-        context = mp.get_context("fork")
+        context = mp.get_context("spawn")
         q = context.Queue(maxsize=self._max_q_size_)
         workers = []
         use_mp = n_workers > 1
         if use_mp:
             for i in range(n_workers):
-                p = context.Process(target=self.data_queuer, args=(dset, bs, num_train_batches, resample, standardize, mean, std, q, cube))
+                p = context.Process(target=self.data_queuer,
+                                    args=(dset, bs, num_train_batches, resample, standardize, mean, std, q, cube))
                 p.start()
                 workers.append(p)
 
