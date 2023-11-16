@@ -7,6 +7,46 @@ library(dplyr)
 library(tidyr)
 library(ggplot2)
 
+# For POA
+# Same as below but includes a summarising step
+
+# Function to wrangle dataset into necessary format for plotting and then plot it
+for_plot <- function(train_set){
+  # Prep entries for a type_decode column using name of train set
+  if (deparse(substitute(train_set)) == "uncolored") {
+    cross_name = "shape-to-color" 
+    train_name = "shape-to-shape"
+    plot_title = "Decoder trained on shape"
+  } else{
+    cross_name = "color-to-shape" 
+    train_name = "color-to-color"
+    plot_title = "Decoder trained on color"
+  }
+  plot_set <- train_set %>% 
+    # Expand lengthwise in order to separate out cross and within decoding
+    pivot_longer(cols = c(cross_mean, cross_var, train_mean, train_var),
+                 names_to = c("type_decode", "stat"),
+                 values_to = "value",
+                 names_sep = "_") %>% 
+    # Compress again
+    pivot_wider(names_from = stat, values_from = value) %>% 
+    mutate(type_decode = case_when(type_decode == "cross" ~ cross_name,
+                                   type_decode == "train" ~ train_name)) 
+  
+  decode_plot <- ggplot(plot_set, aes(x=roi, y=mean, fill = type_decode)) +
+    geom_bar(stat = "identity", position = "dodge", width = 0.7)+
+    geom_linerange(aes(ymin=mean-var, ymax=mean+var), position = position_dodge(.7)) +
+    geom_hline(yintercept=1/6, linetype = "dashed") +
+    labs(title = plot_title,
+         y = "Decoding accuracy") +    
+    scale_fill_npg() +
+    theme_classic() +
+    theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
+}
+
+# what datasets do you want to plot?
+# what do you want to call them?
+
 
 # This script is chaos right now.
 

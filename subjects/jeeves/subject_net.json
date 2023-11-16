@@ -8,30 +8,34 @@
     "nodes": [
         {
             "data": [
-                "sessions/scd_20230713/session_net.json",
-                "sessions/dyloc_20230817/session_net.json",
-                "sessions/scd_20230805/session_net.json",
-                "sessions/scd_20230813/session_net.json",
-                "sessions/scd_20230720/session_net.json",
-                "sessions/scd_20230803/session_net.json",
-                "sessions/scd_20230808/session_net.json",
-                "sessions/scd_20230825/session_net.json",
-                "sessions/scd_20230811/session_net.json",
+                "sessions/scd_20230918/session_net.json",
                 "sessions/scd_20230717/session_net.json",
-                "sessions/dyloc_20230814/session_net.json",
-                "sessions/scd_20230901/session_net.json",
-                "sessions/scd_20230806/session_net.json",
                 "sessions/scd_20230718/session_net.json",
-                "sessions/scd_20230714/session_net.json",
-                "sessions/scd_20230807/session_net.json",
-                "sessions/scd_20230712/session_net.json",
+                "sessions/scd_20230803/session_net.json",
+                "sessions/mm_20220128/session_net.json",
+                "sessions/scd_20230713/session_net.json",
                 "sessions/scd_20230810/session_net.json",
-                "sessions/scd_20230716/session_net.json"
+                "sessions/scd_20230712/session_net.json",
+                "sessions/scd_20230912/session_net.json",
+                "sessions/scd_20230907/session_net.json",
+                "sessions/dyloc_20230817/session_net.json",
+                "sessions/scd_20230811/session_net.json",
+                "sessions/scd_20230720/session_net.json",
+                "sessions/scd_20230714/session_net.json",
+                "sessions/scd_20230825/session_net.json",
+                "sessions/scd_20230808/session_net.json",
+                "sessions/scd_20230807/session_net.json",
+                "sessions/scd_20230901/session_net.json",
+                "sessions/scd_20230805/session_net.json",
+                "sessions/scd_20230716/session_net.json",
+                "sessions/scd_20230813/session_net.json",
+                "sessions/scd_20230806/session_net.json",
+                "sessions/dyloc_20230814/session_net.json"
             ],
             "complete": null,
             "bipartite": 0,
             "generated": true,
-            "modified": "2023-09-06 01:24:25.508610",
+            "modified": "2023-10-20 10:10:49.518692",
             "id": "end"
         },
         {
@@ -109,32 +113,36 @@
         },
         {
             "data": [
-                "sessions/scd_20230713/session_net.json",
-                "sessions/dyloc_20230817/session_net.json",
-                "sessions/scd_20230805/session_net.json",
-                "sessions/scd_20230813/session_net.json",
-                "sessions/scd_20230720/session_net.json",
-                "sessions/scd_20230803/session_net.json",
-                "sessions/scd_20230808/session_net.json",
-                "sessions/scd_20230825/session_net.json",
-                "sessions/scd_20230811/session_net.json",
+                "sessions/scd_20230918/session_net.json",
                 "sessions/scd_20230717/session_net.json",
-                "sessions/dyloc_20230814/session_net.json",
-                "sessions/scd_20230901/session_net.json",
-                "sessions/scd_20230806/session_net.json",
                 "sessions/scd_20230718/session_net.json",
-                "sessions/scd_20230714/session_net.json",
-                "sessions/scd_20230807/session_net.json",
-                "sessions/scd_20230712/session_net.json",
+                "sessions/scd_20230803/session_net.json",
+                "sessions/mm_20220128/session_net.json",
+                "sessions/scd_20230713/session_net.json",
                 "sessions/scd_20230810/session_net.json",
-                "sessions/scd_20230716/session_net.json"
+                "sessions/scd_20230712/session_net.json",
+                "sessions/scd_20230912/session_net.json",
+                "sessions/scd_20230907/session_net.json",
+                "sessions/dyloc_20230817/session_net.json",
+                "sessions/scd_20230811/session_net.json",
+                "sessions/scd_20230720/session_net.json",
+                "sessions/scd_20230714/session_net.json",
+                "sessions/scd_20230825/session_net.json",
+                "sessions/scd_20230808/session_net.json",
+                "sessions/scd_20230807/session_net.json",
+                "sessions/scd_20230901/session_net.json",
+                "sessions/scd_20230805/session_net.json",
+                "sessions/scd_20230716/session_net.json",
+                "sessions/scd_20230813/session_net.json",
+                "sessions/scd_20230806/session_net.json",
+                "sessions/dyloc_20230814/session_net.json"
             ],
             "type": "net_json",
             "complete": null,
             "bipartite": 0,
             "always_show": true,
             "leaf": true,
-            "modified": "2023-09-06 01:24:25.508610",
+            "modified": "2023-10-20 10:10:49.518692",
             "id": "sessions"
         },
         {
@@ -242,58 +250,66 @@
             "complete": null,
             "bipartite": 0,
             "leaf": true,
-            "modified": "2023-09-06 00:23:43.991390",
+            "modified": "2023-10-29 10:48:26.533572",
             "id": "paradigm_complete_checkpoint"
         },
         {
             "data": {
                 "dyloc_regions": "subjects/jeeves/rois/dyloc_regions/surf_labels",
-                "KarthikROIsJeevesRH": "subjects/jeeves/rois/KarthikROIsJeevesRH/surf_labels"
+                "KarthikROIsJeevesRH": "subjects/jeeves/rois/KarthikROIsJeevesRH/surf_labels",
+                "all_20231016": "subjects/jeeves/rois/all_20231016/surf_labels",
+                "IT-subdivisions": "subjects/jeeves/rois/IT-subdivisions/surf_labels"
             },
             "complete": null,
             "type": "label",
             "bipartite": 0,
             "leaf": true,
-            "modified": "2023-09-06 00:23:43.991390",
+            "modified": "2023-10-30 11:19:31.812549",
             "id": "surface_defined_rois"
         },
         {
             "data": {
                 "dyloc_regions": "subjects/jeeves/rois/dyloc_regions/vol_rois",
-                "KarthikROIsJeevesRH": "subjects/jeeves/rois/KarthikROIsJeevesRH/vol_rois"
+                "KarthikROIsJeevesRH": "subjects/jeeves/rois/KarthikROIsJeevesRH/vol_rois",
+                "all_20231016": "subjects/jeeves/rois/all_20231016/vol_rois",
+                "IT-subdivisions": "subjects/jeeves/rois/IT-subdivisions/vol_rois"
             },
             "complete": null,
             "type": "volume",
             "space": "t1_native",
             "bipartite": 0,
             "leaf": true,
-            "modified": "2023-09-06 00:23:43.991390",
+            "modified": "2023-11-06 22:42:08.934259",
             "id": "volume_rois"
         },
         {
             "data": {
                 "dyloc_regions": "subjects/jeeves/rois/dyloc_regions/ds_roi_vols",
-                "KarthikROIsJeevesRH": "subjects/jeeves/rois/KarthikROIsJeevesRH/ds_roi_vols"
+                "KarthikROIsJeevesRH": "subjects/jeeves/rois/KarthikROIsJeevesRH/ds_roi_vols",
+                "all_20231016": "subjects/jeeves/rois/all_20231016/ds_roi_vols",
+                "IT-subdivisions": "subjects/jeeves/rois/IT-subdivisions/ds_roi_vols"
             },
             "complete": null,
             "type": "volume",
             "space": "ds_t1_native",
             "bipartite": 0,
             "leaf": true,
-            "modified": "2023-09-06 00:23:43.991390",
+            "modified": "2023-11-06 22:43:49.521288",
             "id": "ds_volume_rois"
         },
         {
             "data": {
                 "dyloc_regions": "subjects/jeeves/rois/dyloc_regions/auto_func_space_rois",
-                "KarthikROIsJeevesRH": "subjects/jeeves/rois/KarthikROIsJeevesRH/auto_func_space_rois"
+                "KarthikROIsJeevesRH": "subjects/jeeves/rois/KarthikROIsJeevesRH/auto_func_space_rois",
+                "all_20231016": "subjects/jeeves/rois/all_20231016/auto_func_space_rois",
+                "IT-subdivisions": "subjects/jeeves/rois/IT-subdivisions/auto_func_space_rois"
             },
             "complete": null,
             "type": "volume",
             "space": "functional_std",
             "bipartite": 0,
             "leaf": true,
-            "modified": "2023-09-06 00:23:43.991390",
+            "modified": "2023-11-06 23:12:24.818618",
             "id": "functional_rois"
         },
         {
@@ -302,7 +318,7 @@
             "type": "array",
             "bipartite": 0,
             "leaf": true,
-            "modified": "2023-09-06 00:23:43.991390",
+            "modified": "2023-11-06 22:43:49.521288",
             "id": "roi_time_courses"
         },
         {
@@ -351,7 +367,7 @@
             "fxn": "self.create_load_session",
             "bipartite": 1,
             "desc": "create preprocessing and basic analysis pipeline for new fmri session.",
-            "modified": "2023-09-06 01:24:25.508610",
+            "modified": "2023-10-20 10:10:49.518692",
             "id": "create_load_session"
         },
         {
@@ -413,14 +429,14 @@
             "fxn": "support_functions.define_surface_rois",
             "bipartite": 1,
             "desc": "Just a placeholder to tell the project manager that you created manual rois, and to provide instructions. You will need to draw and save the rois in freeview.",
-            "modified": "2023-08-24 14:24:34.727280",
+            "modified": "2023-10-30 11:19:31.812549",
             "id": "manual_surface_rois"
         },
         {
             "fxn": "support_functions.surf_labels_to_vol_mask",
             "bipartite": 1,
             "desc": "project ROIs defined on the surface back into the volume.",
-            "modified": "2023-08-24 14:25:10.374635",
+            "modified": "2023-11-06 22:42:08.934259",
             "id": "volume_rois_from_surface_rois"
         },
         {
@@ -433,19 +449,20 @@
             "fxn": "support_functions.downsample_vol_rois",
             "bipartite": 1,
             "desc": "downsample volume rois by a factor of 2 to the working space.",
-            "modified": "2023-08-24 15:26:41.689918",
+            "modified": "2023-11-06 22:43:49.521288",
             "id": "downsample_vol_rois"
         },
         {
             "fxn": "support_functions.apply_warp_inverse_vol_roi_dir",
             "bipartite": 1,
             "desc": "transform directory of anatomical rois to functional space.",
-            "modified": "2023-08-24 15:27:49.943557",
+            "modified": "2023-11-06 23:12:24.818618",
             "id": "vol_2_functional_rois"
         },
         {
             "fxn": "support_functions.manual_volume_rois",
             "bipartite": 1,
+            "modified": "2023-10-16 15:53:42.307309",
             "id": "manual_volume_rois"
         },
         {
@@ -457,7 +474,7 @@
             "id": "sterilize"
         },
         {
-            "data": "paradigms/meridian_mapper_experiment_config.json",
+            "data": "paradigms/shape_color_attention_decode_experiment_config.json",
             "complete": null,
             "bipartite": 0,
             "type": "json",
@@ -491,6 +508,10 @@
                 "subjects/jeeves/analysis/probe_colored_circle_minus_gray.nii.gz",
                 "subjects/jeeves/analysis/probe_chromatic_uncolored_minus_gray.nii.gz",
                 "subjects/jeeves/analysis/probe_chromatic_uncolored_minus_colored_circle.nii.gz",
+                "subjects/jeeves/analysis/global_decode/color2shape_all_searchlight_ACC.nii.gz",
+                "subjects/jeeves/analysis/global_decode/shape2color_all_searchlight_ACC.nii.gz",
+                "subjects/jeeves/analysis/global_decode/color2color_all_searchlight_ACC.nii.gz",
+                "subjects/jeeves/analysis/global_decode/shape2shape_all_searchlight_ACC.nii.gz",
                 "subjects/jeeves/analysis/background.nii.gz"
             ],
             "complete": true,
@@ -503,25 +524,51 @@
             "id": "contrasts_shape_color_attention_decode"
         },
         {
-            "data": [],
-            "complete": false,
+            "data": [
+                "subjects/jeeves/analysis/reg_probe_colored_circle_minus_gray.nii.gz",
+                "subjects/jeeves/analysis/reg_probe_chromatic_uncolored_minus_gray.nii.gz",
+                "subjects/jeeves/analysis/reg_probe_chromatic_uncolored_minus_colored_circle.nii.gz",
+                "subjects/jeeves/analysis/global_decode/reg_color2shape_all_searchlight_ACC.nii.gz",
+                "subjects/jeeves/analysis/global_decode/reg_shape2color_all_searchlight_ACC.nii.gz",
+                "subjects/jeeves/analysis/global_decode/reg_color2color_all_searchlight_ACC.nii.gz",
+                "subjects/jeeves/analysis/global_decode/reg_shape2shape_all_searchlight_ACC.nii.gz",
+                "subjects/jeeves/analysis/reg_background.nii.gz"
+            ],
+            "complete": true,
             "generated": true,
             "bipartite": 0,
             "type": "volume",
             "space": "ds_t1_native",
             "leaf": true,
-            "modified": "2023-09-06 00:23:43.991390",
+            "modified": "2023-10-29 10:20:45.106638",
             "id": "reg_contrasts_shape_color_attention_decode"
         },
         {
-            "data": [],
-            "complete": false,
+            "data": [
+                "subjects/jeeves/analysis/sigsurface_lh_reg_probe_colored_circle_minus_gray.mgh",
+                "subjects/jeeves/analysis/sigsurface_rh_reg_probe_colored_circle_minus_gray.mgh",
+                "subjects/jeeves/analysis/sigsurface_lh_reg_probe_chromatic_uncolored_minus_gray.mgh",
+                "subjects/jeeves/analysis/sigsurface_rh_reg_probe_chromatic_uncolored_minus_gray.mgh",
+                "subjects/jeeves/analysis/sigsurface_lh_reg_probe_chromatic_uncolored_minus_colored_circle.mgh",
+                "subjects/jeeves/analysis/sigsurface_rh_reg_probe_chromatic_uncolored_minus_colored_circle.mgh",
+                "subjects/jeeves/analysis/global_decode/sigsurface_lh_reg_color2shape_all_searchlight_ACC.mgh",
+                "subjects/jeeves/analysis/global_decode/sigsurface_rh_reg_color2shape_all_searchlight_ACC.mgh",
+                "subjects/jeeves/analysis/global_decode/sigsurface_lh_reg_shape2color_all_searchlight_ACC.mgh",
+                "subjects/jeeves/analysis/global_decode/sigsurface_rh_reg_shape2color_all_searchlight_ACC.mgh",
+                "subjects/jeeves/analysis/global_decode/sigsurface_lh_reg_color2color_all_searchlight_ACC.mgh",
+                "subjects/jeeves/analysis/global_decode/sigsurface_rh_reg_color2color_all_searchlight_ACC.mgh",
+                "subjects/jeeves/analysis/global_decode/sigsurface_lh_reg_shape2shape_all_searchlight_ACC.mgh",
+                "subjects/jeeves/analysis/global_decode/sigsurface_rh_reg_shape2shape_all_searchlight_ACC.mgh",
+                "subjects/jeeves/analysis/sigsurface_lh_reg_background.mgh",
+                "subjects/jeeves/analysis/sigsurface_rh_reg_background.mgh"
+            ],
+            "complete": true,
             "generated": true,
             "bipartite": 0,
             "type": "overlay",
             "space": "t1_native",
             "leaf": true,
-            "modified": "2023-09-06 00:23:43.991390",
+            "modified": "2023-10-29 10:48:26.533572",
             "id": "sigsurfaces_shape_color_attention_decode"
         },
         {
@@ -531,7 +578,7 @@
             "bipartite": 0,
             "type": "overlay",
             "space": "std_functional",
-            "modified": "2023-09-06 00:23:43.991390",
+            "modified": "2023-10-20 01:11:38.287029",
             "id": "run_beta_logshape_color_attention_decode"
         },
         {
@@ -555,12 +602,14 @@
             "bipartite": 1,
             "fxn": "support_functions.apply_warp",
             "desc": "registers the contrasts to the anatomical space.",
+            "modified": "2023-10-29 10:20:45.106638",
             "id": "register_shape_color_attention_decode_contrasts"
         },
         {
             "generated": true,
             "bipartite": 1,
             "fxn": "support_functions.generate_subject_overlays",
+            "modified": "2023-10-29 10:48:26.533572",
             "id": "create_shape_color_attention_decode_sigsurface_overlays"
         },
         {
@@ -580,7 +629,7 @@
             "generated": true,
             "bipartite": 1,
             "fxn": "support_functions.get_run_betas",
-            "modified": "2023-08-16 13:40:46.474678",
+            "modified": "2023-10-20 01:11:38.287029",
             "id": "create_shape_color_attention_decoderun_betas"
         },
         {
@@ -596,7 +645,7 @@
             "id": "delete_paradigm_shape_color_attention_decode"
         },
         {
-            "data": "paradigms/meridian_mapper_experiment_config.json",
+            "data": "paradigms/dyloc_original_experiment_config.json",
             "complete": null,
             "bipartite": 0,
             "type": "json",
@@ -612,17 +661,17 @@
             "bipartite": 0,
             "type": "4d_volume",
             "space": "std_functional",
-            "modified": "2023-09-06 00:23:43.991390",
+            "modified": "2023-10-16 11:48:52.227799",
             "id": "beta_dyloc_original"
         },
         {
-            "data": "subjects/jeeves/analysis/glm_model_850442.pkl",
+            "data": "subjects/jeeves/analysis/glm_model_154212.pkl",
             "complete": true,
             "generated": true,
             "bipartite": 0,
             "type": "model_object",
             "leaf": true,
-            "modified": "2023-09-06 00:23:43.991390",
+            "modified": "2023-10-16 11:48:52.227799",
             "id": "glm_dyloc_original"
         },
         {
@@ -637,6 +686,13 @@
                 "subjects/jeeves/analysis/objects_minus_bodies.nii.gz",
                 "subjects/jeeves/analysis/scenes_minus_scrambled.nii.gz",
                 "subjects/jeeves/analysis/color_localizer.nii.gz",
+                "subjects/jeeves/analysis/c_faces_minus_c_bodies.nii.gz",
+                "subjects/jeeves/analysis/c_faces_minus_c_objects.nii.gz",
+                "subjects/jeeves/analysis/bw_faces_minus_bw_bodies.nii.gz",
+                "subjects/jeeves/analysis/bw_faces_minus_bw_objects.nii.gz",
+                "subjects/jeeves/analysis/faces_all_minus_bw_bodies.nii.gz",
+                "subjects/jeeves/analysis/faces_minus_bodies_and_objects.nii.gz",
+                "subjects/jeeves/analysis/faces_all_minus_bw_objects.nii.gz",
                 "subjects/jeeves/analysis/background.nii.gz"
             ],
             "complete": true,
@@ -645,7 +701,7 @@
             "type": "volume",
             "space": "std_functional",
             "leaf": true,
-            "modified": "2023-09-06 00:23:43.991390",
+            "modified": "2023-10-20 09:33:22.870477",
             "id": "contrasts_dyloc_original"
         },
         {
@@ -660,6 +716,13 @@
                 "subjects/jeeves/analysis/reg_objects_minus_bodies.nii.gz",
                 "subjects/jeeves/analysis/reg_scenes_minus_scrambled.nii.gz",
                 "subjects/jeeves/analysis/reg_color_localizer.nii.gz",
+                "subjects/jeeves/analysis/reg_c_faces_minus_c_bodies.nii.gz",
+                "subjects/jeeves/analysis/reg_c_faces_minus_c_objects.nii.gz",
+                "subjects/jeeves/analysis/reg_bw_faces_minus_bw_bodies.nii.gz",
+                "subjects/jeeves/analysis/reg_bw_faces_minus_bw_objects.nii.gz",
+                "subjects/jeeves/analysis/reg_faces_all_minus_bw_bodies.nii.gz",
+                "subjects/jeeves/analysis/reg_faces_minus_bodies_and_objects.nii.gz",
+                "subjects/jeeves/analysis/reg_faces_all_minus_bw_objects.nii.gz",
                 "subjects/jeeves/analysis/reg_background.nii.gz"
             ],
             "complete": true,
@@ -668,7 +731,7 @@
             "type": "volume",
             "space": "ds_t1_native",
             "leaf": true,
-            "modified": "2023-09-06 00:23:43.991390",
+            "modified": "2023-10-20 09:35:01.919847",
             "id": "reg_contrasts_dyloc_original"
         },
         {
@@ -693,6 +756,20 @@
                 "subjects/jeeves/analysis/sigsurface_rh_reg_scenes_minus_scrambled.mgh",
                 "subjects/jeeves/analysis/sigsurface_lh_reg_color_localizer.mgh",
                 "subjects/jeeves/analysis/sigsurface_rh_reg_color_localizer.mgh",
+                "subjects/jeeves/analysis/sigsurface_lh_reg_c_faces_minus_c_bodies.mgh",
+                "subjects/jeeves/analysis/sigsurface_rh_reg_c_faces_minus_c_bodies.mgh",
+                "subjects/jeeves/analysis/sigsurface_lh_reg_c_faces_minus_c_objects.mgh",
+                "subjects/jeeves/analysis/sigsurface_rh_reg_c_faces_minus_c_objects.mgh",
+                "subjects/jeeves/analysis/sigsurface_lh_reg_bw_faces_minus_bw_bodies.mgh",
+                "subjects/jeeves/analysis/sigsurface_rh_reg_bw_faces_minus_bw_bodies.mgh",
+                "subjects/jeeves/analysis/sigsurface_lh_reg_bw_faces_minus_bw_objects.mgh",
+                "subjects/jeeves/analysis/sigsurface_rh_reg_bw_faces_minus_bw_objects.mgh",
+                "subjects/jeeves/analysis/sigsurface_lh_reg_faces_all_minus_bw_bodies.mgh",
+                "subjects/jeeves/analysis/sigsurface_rh_reg_faces_all_minus_bw_bodies.mgh",
+                "subjects/jeeves/analysis/sigsurface_lh_reg_faces_minus_bodies_and_objects.mgh",
+                "subjects/jeeves/analysis/sigsurface_rh_reg_faces_minus_bodies_and_objects.mgh",
+                "subjects/jeeves/analysis/sigsurface_lh_reg_faces_all_minus_bw_objects.mgh",
+                "subjects/jeeves/analysis/sigsurface_rh_reg_faces_all_minus_bw_objects.mgh",
                 "subjects/jeeves/analysis/sigsurface_lh_reg_background.mgh",
                 "subjects/jeeves/analysis/sigsurface_rh_reg_background.mgh"
             ],
@@ -702,7 +779,7 @@
             "type": "overlay",
             "space": "t1_native",
             "leaf": true,
-            "modified": "2023-09-06 00:23:43.991390",
+            "modified": "2023-10-23 18:30:56.559275",
             "id": "sigsurfaces_dyloc_original"
         },
         {
@@ -720,7 +797,7 @@
             "bipartite": 1,
             "fxn": "support_functions.construct_subject_glm",
             "desc": "Trains a GLM using all promoted runs. The resulting beta matrix is designed to capture the information we care about from this experiment, and satisfies the equation (DesignMatrix * hrf) @ BetaMatrix ~= EpiTimeSeries where * is the convolution operator and @ is matrix multiplication. We store the Betas in the GLM object, which also carries information about experiment design andvariance",
-            "modified": "2023-08-22 13:44:32.063940",
+            "modified": "2023-10-16 11:48:52.227799",
             "id": "create_dyloc_original_glm"
         },
         {
@@ -728,7 +805,7 @@
             "bipartite": 1,
             "fxn": "support_functions.create_contrast",
             "desc": "Generates the contrasts requested in the paradigm definition using the subjet level beta matrix. Contrasts are a useful tool for comparing activation to two conditions or linear combinations of conditions on a per voxel level. Contrast values are interpreted as Z-scores here. ",
-            "modified": "2023-08-22 13:44:58.606611",
+            "modified": "2023-10-20 09:33:22.870477",
             "id": "create_dyloc_original_contrasts"
         },
         {
@@ -736,14 +813,14 @@
             "bipartite": 1,
             "fxn": "support_functions.apply_warp",
             "desc": "registers the contrasts to the anatomical space.",
-            "modified": "2023-08-22 13:46:08.714957",
+            "modified": "2023-10-20 09:35:01.919847",
             "id": "register_dyloc_original_contrasts"
         },
         {
             "generated": true,
             "bipartite": 1,
             "fxn": "support_functions.generate_subject_overlays",
-            "modified": "2023-08-23 09:37:14.560670",
+            "modified": "2023-10-23 18:30:56.559275",
             "id": "create_dyloc_original_sigsurface_overlays"
         },
         {

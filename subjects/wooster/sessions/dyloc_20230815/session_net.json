@@ -23,12 +23,17 @@
                 "subjects/wooster/sessions/dyloc_20230815/objects_minus_scenes.nii.gz",
                 "subjects/wooster/sessions/dyloc_20230815/objects_minus_bodies.nii.gz",
                 "subjects/wooster/sessions/dyloc_20230815/scenes_minus_scrambled.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/color_localizer.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/c_faces_minus_c_bodies.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/c_faces_minus_c_objects.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/bw_faces_minus_bw_bodies.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/bw_faces_minus_bw_objects.nii.gz",
                 "subjects/wooster/sessions/dyloc_20230815/background.nii.gz"
             ],
             "complete": null,
             "bipartite": 0,
             "generated": true,
-            "modified": "2023-08-16 14:26:31.634895",
+            "modified": "2023-10-09 18:38:41.534482",
             "id": "end"
         },
         {
@@ -373,13 +378,13 @@
             "id": "ima_order_map"
         },
         {
-            "data": "subjects/wooster/sessions/dyloc_20230815/glm_model_179156.pkl",
+            "data": "subjects/wooster/sessions/dyloc_20230815/glm_model_302985.pkl",
             "type": "glm_object",
             "bipartite": 0,
             "complete": true,
             "space": "epi_std",
             "leaf": true,
-            "modified": "2023-08-16 14:26:05.856099",
+            "modified": "2023-10-09 18:38:28.226746",
             "id": "glm_model"
         },
         {
@@ -393,6 +398,11 @@
                 "subjects/wooster/sessions/dyloc_20230815/objects_minus_scenes.nii.gz",
                 "subjects/wooster/sessions/dyloc_20230815/objects_minus_bodies.nii.gz",
                 "subjects/wooster/sessions/dyloc_20230815/scenes_minus_scrambled.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/color_localizer.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/c_faces_minus_c_bodies.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/c_faces_minus_c_objects.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/bw_faces_minus_bw_bodies.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/bw_faces_minus_bw_objects.nii.gz",
                 "subjects/wooster/sessions/dyloc_20230815/background.nii.gz"
             ],
             "type": "volume",
@@ -400,7 +410,7 @@
             "complete": true,
             "space": "epi_std",
             "leaf": true,
-            "modified": "2023-08-16 14:26:31.634895",
+            "modified": "2023-10-09 18:38:41.534482",
             "id": "reg_contrasts"
         },
         {
@@ -409,16 +419,16 @@
             "bipartite": 0,
             "complete": false,
             "space": "",
-            "modified": "2023-08-16 14:26:31.634895",
+            "modified": "2023-10-09 18:38:41.534482",
             "id": "slice_contrast_img"
         },
         {
-            "data": "subjects/wooster/sessions/dyloc_20230815/glm_model_179156.pkl",
+            "data": "subjects/wooster/sessions/dyloc_20230815/glm_model_302985.pkl",
             "type": "ndarray",
             "bipartite": 0,
             "complete": true,
             "space": "",
-            "modified": "2023-08-16 14:26:05.856099",
+            "modified": "2023-10-09 18:38:28.226746",
             "id": "hrf_estimate"
         },
         {
@@ -545,7 +555,7 @@
             "bipartite": 1,
             "argv": true,
             "desc": "Create the size voxels x stimulus_conditions beta matrix from paradigm def and session masked epis. The beta matrix is designed to capture the information we careabout from this experiment, and satisfies the equation (DesignMatrix * hrf) @ BetaMatrix ~= EpiTimeSeries where * is the convolution operator and @ is matrix multiplication.",
-            "modified": "2023-08-16 14:26:05.856099",
+            "modified": "2023-10-09 18:38:28.226746",
             "id": "create_beta_matrix"
         },
         {
@@ -559,7 +569,7 @@
             "fxn": "support_functions.create_contrast",
             "bipartite": 1,
             "desc": "Create contrast volumes from the beta matrix.",
-            "modified": "2023-08-16 14:26:31.634895",
+            "modified": "2023-10-09 18:38:41.534482",
             "id": "create_session_contrast"
         },
         {
@@ -567,7 +577,7 @@
             "fxn": "support_functions.promote_session",
             "bipartite": 1,
             "desc": "This session is marked as complete-ish and will be included by future subject level analysis, and for construction of the subject level beta matrix. Basically its added to the subject config data index.",
-            "modified": "2023-08-16 14:35:43.111646",
+            "modified": "2023-10-09 19:16:52.058143",
             "id": "promote_session"
         },
         {
@@ -575,7 +585,7 @@
             "fxn": "support_functions.demote_session",
             "bipartite": 1,
             "desc": "Removes this session from subject config data index. It will no longer be included in future subject level analysis.",
-            "modified": "2023-08-16 14:55:33.323640",
+            "modified": "2023-10-26 14:33:19.204276",
             "id": "demote_session"
         },
         {

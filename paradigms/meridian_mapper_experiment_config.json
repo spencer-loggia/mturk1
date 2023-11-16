@@ -2,14 +2,14 @@
     "name": "meridian_mapper",
     "trs_per_run": 192,
     "is_runtime_defined": false,
-    "lr_length": 3.0,
+    "tr_length": 3.0,
     "is_block": true,
     "block_length_trs": 12,
     "num_orders": 1,
     "condition_integerizer": {
-        "0": "Gray",
-        "1": "Horizontal",
-        "2": "Vertical"
+        "0": "gray",
+        "1": "horizontal",
+        "2": "vertical"
     },
     "num_conditions": 3,
     "base_case_condition": 0,
@@ -23,25 +23,22 @@
     },
     "desired_contrasts": [
         [
-            0.0,
             1.0,
             -1.0
         ],
         [
-            0.0,
             1.0,
             0.0
         ],
         [
             0.0,
-            0.0,
             1.0
         ]
     ],
     "contrast_descriptions": [
-        "Horizontal_v_Vertical",
-        "Horizontal_v_Gray",
-        "Vertical_v_Gray"
+        "horizontal_minus_vertical",
+        "horizontal_minus_gray",
+        "vertical_minus_gray"
     ],
     "num_runs_included_in_contrast": 0
 }

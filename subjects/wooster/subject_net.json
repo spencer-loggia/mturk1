@@ -8,38 +8,38 @@
     "nodes": [
         {
             "data": [
-                "sessions/scp_20220307/session_net.json",
-                "sessions/scp_20220214/session_net.json",
-                "sessions/scp_20220321/session_net.json",
-                "sessions/scd_20230302/session_net.json",
                 "sessions/scd_20230406/session_net.json",
-                "sessions/scd_20230213/session_net.json",
-                "sessions/dyloc_20220124_1/session_net.json",
-                "sessions/scp_20220204/session_net.json",
-                "sessions/scd_20230821/session_net.json",
-                "sessions/mm_20220128/session_net.json",
                 "sessions/scd_20230804/session_net.json",
-                "sessions/scd_20230623/session_net.json",
-                "sessions/dyloc_20220124_2/session_net.json",
-                "sessions/scd_20230303/session_net.json",
+                "sessions/scd_20230302/session_net.json",
+                "sessions/scp_20220214/session_net.json",
                 "sessions/scd_20230327/session_net.json",
-                "sessions/scd_20230806/session_net.json",
-                "sessions/scd_20230813/session_net.json",
-                "sessions/scd_20230209/session_net.json",
-                "sessions/scd_20230331/session_net.json",
-                "sessions/scp_20220318/session_net.json",
-                "sessions/scd_20230824/session_net.json",
                 "sessions/dyloc_20230818/session_net.json",
-                "sessions/scd_20230407/session_net.json",
-                "sessions/scd_20230324/session_net.json",
+                "sessions/dyloc_20220124_2/session_net.json",
                 "sessions/scp_20220311/session_net.json",
+                "sessions/dyloc_20230815/session_net.json",
+                "sessions/scd_20230806/session_net.json",
+                "sessions/scp_20220307/session_net.json",
+                "sessions/scd_20230324/session_net.json",
+                "sessions/mm_20220128/session_net.json",
+                "sessions/scp_20220204/session_net.json",
                 "sessions/scd_20230330/session_net.json",
-                "sessions/dyloc_20230815/session_net.json"
+                "sessions/scd_20230407/session_net.json",
+                "sessions/scp_20220318/session_net.json",
+                "sessions/scd_20230303/session_net.json",
+                "sessions/scd_20230623/session_net.json",
+                "sessions/scd_20230821/session_net.json",
+                "sessions/dyloc_20220124_1/session_net.json",
+                "sessions/scd_20230813/session_net.json",
+                "sessions/scd_20230824/session_net.json",
+                "sessions/scd_20230331/session_net.json",
+                "sessions/scd_20230209/session_net.json",
+                "sessions/scd_20230213/session_net.json",
+                "sessions/scp_20220321/session_net.json"
             ],
             "complete": null,
             "bipartite": 0,
             "generated": true,
-            "modified": "2023-09-06 01:18:53.476319",
+            "modified": "2023-10-26 14:33:45.681731",
             "id": "end"
         },
         {
@@ -117,40 +117,40 @@
         },
         {
             "data": [
-                "sessions/scp_20220307/session_net.json",
-                "sessions/scp_20220214/session_net.json",
-                "sessions/scp_20220321/session_net.json",
-                "sessions/scd_20230302/session_net.json",
                 "sessions/scd_20230406/session_net.json",
-                "sessions/scd_20230213/session_net.json",
-                "sessions/dyloc_20220124_1/session_net.json",
-                "sessions/scp_20220204/session_net.json",
-                "sessions/scd_20230821/session_net.json",
-                "sessions/mm_20220128/session_net.json",
                 "sessions/scd_20230804/session_net.json",
-                "sessions/scd_20230623/session_net.json",
-                "sessions/dyloc_20220124_2/session_net.json",
-                "sessions/scd_20230303/session_net.json",
+                "sessions/scd_20230302/session_net.json",
+                "sessions/scp_20220214/session_net.json",
                 "sessions/scd_20230327/session_net.json",
-                "sessions/scd_20230806/session_net.json",
-                "sessions/scd_20230813/session_net.json",
-                "sessions/scd_20230209/session_net.json",
-                "sessions/scd_20230331/session_net.json",
-                "sessions/scp_20220318/session_net.json",
-                "sessions/scd_20230824/session_net.json",
                 "sessions/dyloc_20230818/session_net.json",
-                "sessions/scd_20230407/session_net.json",
-                "sessions/scd_20230324/session_net.json",
+                "sessions/dyloc_20220124_2/session_net.json",
                 "sessions/scp_20220311/session_net.json",
+                "sessions/dyloc_20230815/session_net.json",
+                "sessions/scd_20230806/session_net.json",
+                "sessions/scp_20220307/session_net.json",
+                "sessions/scd_20230324/session_net.json",
+                "sessions/mm_20220128/session_net.json",
+                "sessions/scp_20220204/session_net.json",
                 "sessions/scd_20230330/session_net.json",
-                "sessions/dyloc_20230815/session_net.json"
+                "sessions/scd_20230407/session_net.json",
+                "sessions/scp_20220318/session_net.json",
+                "sessions/scd_20230303/session_net.json",
+                "sessions/scd_20230623/session_net.json",
+                "sessions/scd_20230821/session_net.json",
+                "sessions/dyloc_20220124_1/session_net.json",
+                "sessions/scd_20230813/session_net.json",
+                "sessions/scd_20230824/session_net.json",
+                "sessions/scd_20230331/session_net.json",
+                "sessions/scd_20230209/session_net.json",
+                "sessions/scd_20230213/session_net.json",
+                "sessions/scp_20220321/session_net.json"
             ],
             "type": "net_json",
             "complete": null,
             "bipartite": 0,
             "always_show": true,
             "leaf": true,
-            "modified": "2023-09-06 01:18:53.476319",
+            "modified": "2023-10-26 14:33:45.681731",
             "id": "sessions"
         },
         {
@@ -258,59 +258,88 @@
             "complete": null,
             "bipartite": 0,
             "leaf": true,
-            "modified": "2023-09-05 21:58:40.335644",
+            "modified": "2023-10-27 19:52:25.984435",
             "id": "paradigm_complete_checkpoint"
         },
         {
             "data": {
                 "CBRs": "subjects/wooster/rois/CBRs/surf_labels",
-                "local_rois_helen": "subjects/wooster/rois/local_rois_helen/surf_labels"
+                "local_rois_helen": "subjects/wooster/rois/local_rois_helen/surf_labels",
+                "face_patches": "subjects/wooster/rois/face_patches/surf_labels",
+                "kkasi_1021_rh_face": "subjects/wooster/rois/kkasi_1021_rh_face/surf_labels",
+                "karthik_face_rh": "subjects/wooster/rois/karthik_face_rh/surf_labels",
+                "rh_Color_rois_Karthik_1022": "subjects/wooster/rois/rh_Color_rois_Karthik_1022/surf_labels",
+                "rh_shape_areas_karthik_1022": "subjects/wooster/rois/rh_shape_areas_karthik_1022/surf_labels",
+                "sl_dyloc_regions_final": "subjects/wooster/rois/sl_dyloc_regions_final/surf_labels",
+                "xdecode_regions": "subjects/wooster/rois/xdecode_regions/surf_labels",
+                "IT-subdivisions": "subjects/wooster/rois/IT-subdivisions/surf_labels"
             },
             "complete": null,
             "type": "label",
             "bipartite": 0,
             "leaf": true,
-            "modified": "2023-09-05 21:58:40.335644",
+            "modified": "2023-10-30 08:57:24.573845",
             "id": "surface_defined_rois"
         },
         {
             "data": {
                 "CBRs": "subjects/wooster/rois/CBRs/vol_rois",
-                "local_rois_helen": "subjects/wooster/rois/local_rois_helen/vol_rois"
+                "local_rois_helen": "subjects/wooster/rois/local_rois_helen/vol_rois",
+                "face_patches": "subjects/wooster/rois/face_patches/vol_rois",
+                "kkasi_1021_rh_face": "subjects/wooster/rois/kkasi_1021_rh_face/vol_rois",
+                "rh_Color_rois_Karthik_1022": "subjects/wooster/rois/rh_Color_rois_Karthik_1022/vol_rois",
+                "rh_shape_areas_karthik_1022": "subjects/wooster/rois/rh_shape_areas_karthik_1022/vol_rois",
+                "noah_face_patches": "subjects/wooster/rois/noah_face_patches/vol_rois",
+                "sl_dyloc_regions_final": "subjects/wooster/rois/sl_dyloc_regions_final/vol_rois",
+                "IT-subdivisions": "subjects/wooster/rois/IT-subdivisions/vol_rois"
             },
             "complete": null,
             "type": "volume",
             "space": "t1_native",
             "bipartite": 0,
             "leaf": true,
-            "modified": "2023-09-05 21:58:40.335644",
+            "modified": "2023-11-06 10:37:21.375184",
             "id": "volume_rois"
         },
         {
             "data": {
                 "CBRs": "subjects/wooster/rois/CBRs/ds_roi_vols",
                 "KarthikROIsJeevesRH": "subjects/wooster/rois/KarthikROIsJeevesRH/ds_vol_rois",
-                "local_rois_helen": "subjects/wooster/rois/local_rois_helen/ds_roi_vols"
+                "local_rois_helen": "subjects/wooster/rois/local_rois_helen/ds_roi_vols",
+                "face_patches": "subjects/wooster/rois/face_patches/ds_roi_vols",
+                "kkasi_1021_rh_face": "subjects/wooster/rois/kkasi_1021_rh_face/ds_roi_vols",
+                "rh_Color_rois_Karthik_1022": "subjects/wooster/rois/rh_Color_rois_Karthik_1022/ds_roi_vols",
+                "rh_shape_areas_karthik_1022": "subjects/wooster/rois/rh_shape_areas_karthik_1022/ds_roi_vols",
+                "noah_face_patches": "subjects/wooster/rois/noah_face_patches/ds_roi_vols",
+                "sl_dyloc_regions_final": "subjects/wooster/rois/sl_dyloc_regions_final/ds_roi_vols",
+                "IT-subdivisions": "subjects/wooster/rois/IT-subdivisions/ds_roi_vols"
             },
             "complete": null,
             "type": "volume",
             "space": "ds_t1_native",
             "bipartite": 0,
             "leaf": true,
-            "modified": "2023-09-05 21:58:40.335644",
+            "modified": "2023-11-06 10:38:06.208974",
             "id": "ds_volume_rois"
         },
         {
             "data": {
                 "CBRs": "subjects/wooster/rois/func_space_rois",
-                "local_rois_helen": "subjects/wooster/rois/local_rois_helen/auto_func_space_rois"
+                "local_rois_helen": "subjects/wooster/rois/local_rois_helen/auto_func_space_rois",
+                "face_patches": "subjects/wooster/rois/face_patches/auto_func_space_rois",
+                "kkasi_1021_rh_face": "subjects/wooster/rois/kkasi_1021_rh_face/auto_func_space_rois",
+                "rh_Color_rois_Karthik_1022": "subjects/wooster/rois/rh_Color_rois_Karthik_1022/auto_func_space_rois",
+                "rh_shape_areas_karthik_1022": "subjects/wooster/rois/rh_shape_areas_karthik_1022/auto_func_space_rois",
+                "noah_face_patches": "subjects/wooster/rois/noah_face_patches/auto_func_space_rois",
+                "sl_dyloc_regions_final": "subjects/wooster/rois/sl_dyloc_regions_final/auto_func_space_rois",
+                "IT-subdivisions": "subjects/wooster/rois/IT-subdivisions/auto_func_space_rois"
             },
             "complete": null,
             "type": "volume",
             "space": "functional_std",
             "bipartite": 0,
             "leaf": true,
-            "modified": "2023-09-05 21:58:40.335644",
+            "modified": "2023-11-06 10:38:47.484533",
             "id": "functional_rois"
         },
         {
@@ -319,7 +348,7 @@
             "type": "array",
             "bipartite": 0,
             "leaf": true,
-            "modified": "2023-09-05 21:58:40.335644",
+            "modified": "2023-11-06 10:38:06.208974",
             "id": "roi_time_courses"
         },
         {
@@ -368,7 +397,7 @@
             "fxn": "self.create_load_session",
             "bipartite": 1,
             "desc": "create preprocessing and basic analysis pipeline for new fmri session.",
-            "modified": "2023-09-06 01:18:53.476319",
+            "modified": "2023-10-26 14:33:45.681731",
             "id": "create_load_session"
         },
         {
@@ -423,21 +452,21 @@
         {
             "fxn": "self.add_paradigm_control_set",
             "bipartite": 1,
-            "modified": "2023-09-05 21:58:40.335644",
+            "modified": "2023-09-19 09:36:22.961036",
             "id": "add_new_paradigm"
         },
         {
             "fxn": "support_functions.define_surface_rois",
             "bipartite": 1,
             "desc": "Just a placeholder to tell the project manager that you created manual rois, and to provide instructions. You will need to draw and save the rois in freeview.",
-            "modified": "2023-08-25 09:20:13.807180",
+            "modified": "2023-10-30 08:57:24.573845",
             "id": "manual_surface_rois"
         },
         {
             "fxn": "support_functions.surf_labels_to_vol_mask",
             "bipartite": 1,
             "desc": "project ROIs defined on the surface back into the volume.",
-            "modified": "2023-08-25 09:20:48.427794",
+            "modified": "2023-11-06 10:37:21.375184",
             "id": "volume_rois_from_surface_rois"
         },
         {
@@ -450,20 +479,20 @@
             "fxn": "support_functions.downsample_vol_rois",
             "bipartite": 1,
             "desc": "downsample volume rois by a factor of 2 to the working space.",
-            "modified": "2023-08-25 09:21:51.278531",
+            "modified": "2023-11-06 10:38:06.208974",
             "id": "downsample_vol_rois"
         },
         {
             "fxn": "support_functions.apply_warp_inverse_vol_roi_dir",
             "bipartite": 1,
             "desc": "transform directory of anatomical rois to functional space.",
-            "modified": "2023-08-25 09:22:36.444159",
+            "modified": "2023-11-06 10:38:47.484533",
             "id": "vol_2_functional_rois"
         },
         {
             "fxn": "support_functions.manual_volume_rois",
             "bipartite": 1,
-            "modified": "2023-08-24 15:22:40.885344",
+            "modified": "2023-10-23 10:45:11.404904",
             "id": "manual_volume_rois"
         },
         {
@@ -474,12 +503,12 @@
             "id": "sterilize"
         },
         {
-            "data": "paradigms/meridian_mapper_experiment_config.json",
+            "data": "paradigms/shape_color_attention_decode_experiment_config.json",
             "complete": null,
             "bipartite": 0,
             "type": "json",
             "generated": true,
-            "modified": "2023-09-05 21:58:40.335644",
+            "modified": "2023-09-19 09:36:22.961036",
             "leaf": true,
             "id": "paradigm_shape_color_attention_decode"
         },
@@ -490,7 +519,7 @@
             "bipartite": 0,
             "type": "4d_volume",
             "space": "std_functional",
-            "modified": "2023-09-05 21:58:40.335644",
+            "modified": "2023-09-19 09:36:22.961036",
             "id": "beta_shape_color_attention_decode"
         },
         {
@@ -500,40 +529,75 @@
             "bipartite": 0,
             "type": "model_object",
             "leaf": true,
-            "modified": "2023-09-05 21:58:40.335644",
+            "modified": "2023-09-19 09:36:22.961036",
             "id": "glm_shape_color_attention_decode"
         },
         {
-            "data": [],
+            "data": [
+                "subjects/wooster/analysis/global_decode/shape2color_all_searchlight_ACC.nii.gz",
+                "subjects/wooster/analysis/global_decode/color2shape_all_searchlight_ACC.nii.gz",
+                "subjects/wooster/analysis/global_decode/color2color_all_searchlight_ACC.nii.gz",
+                "subjects/wooster/analysis/global_decode/shape2shape_all_searchlight_ACC.nii.gz",
+                "subjects/wooster/analysis/global_decode/shape2color_all_searchlight_CE.nii.gz",
+                "subjects/wooster/analysis/global_decode/color2shape_all_searchlight_CE.nii.gz",
+                "subjects/wooster/analysis/global_decode/color2color_all_searchlight_CE.nii.gz",
+                "subjects/wooster/analysis/global_decode/shape2shape_all_searchlight_CE.nii.gz"
+            ],
             "complete": false,
             "generated": true,
             "bipartite": 0,
             "type": "volume",
             "space": "std_functional",
             "leaf": true,
-            "modified": "2023-09-05 21:58:40.335644",
+            "modified": "2023-09-19 09:36:22.961036",
             "id": "contrasts_shape_color_attention_decode"
         },
         {
-            "data": [],
-            "complete": false,
+            "data": [
+                "subjects/wooster/analysis/global_decode/reg_shape2color_all_searchlight_ACC.nii.gz",
+                "subjects/wooster/analysis/global_decode/reg_color2shape_all_searchlight_ACC.nii.gz",
+                "subjects/wooster/analysis/global_decode/reg_color2color_all_searchlight_ACC.nii.gz",
+                "subjects/wooster/analysis/global_decode/reg_shape2shape_all_searchlight_ACC.nii.gz",
+                "subjects/wooster/analysis/global_decode/reg_shape2color_all_searchlight_CE.nii.gz",
+                "subjects/wooster/analysis/global_decode/reg_color2shape_all_searchlight_CE.nii.gz",
+                "subjects/wooster/analysis/global_decode/reg_color2color_all_searchlight_CE.nii.gz",
+                "subjects/wooster/analysis/global_decode/reg_shape2shape_all_searchlight_CE.nii.gz"
+            ],
+            "complete": true,
             "generated": true,
             "bipartite": 0,
             "type": "volume",
             "space": "ds_t1_native",
             "leaf": true,
-            "modified": "2023-09-05 21:58:40.335644",
+            "modified": "2023-10-27 19:51:18.594015",
             "id": "reg_contrasts_shape_color_attention_decode"
         },
         {
-            "data": [],
-            "complete": false,
+            "data": [
+                "subjects/wooster/analysis/global_decode/sigsurface_lh_reg_shape2color_all_searchlight_ACC.mgh",
+                "subjects/wooster/analysis/global_decode/sigsurface_rh_reg_shape2color_all_searchlight_ACC.mgh",
+                "subjects/wooster/analysis/global_decode/sigsurface_lh_reg_color2shape_all_searchlight_ACC.mgh",
+                "subjects/wooster/analysis/global_decode/sigsurface_rh_reg_color2shape_all_searchlight_ACC.mgh",
+                "subjects/wooster/analysis/global_decode/sigsurface_lh_reg_color2color_all_searchlight_ACC.mgh",
+                "subjects/wooster/analysis/global_decode/sigsurface_rh_reg_color2color_all_searchlight_ACC.mgh",
+                "subjects/wooster/analysis/global_decode/sigsurface_lh_reg_shape2shape_all_searchlight_ACC.mgh",
+                "subjects/wooster/analysis/global_decode/sigsurface_rh_reg_shape2shape_all_searchlight_ACC.mgh",
+                "subjects/wooster/analysis/global_decode/sigsurface_lh_reg_shape2color_all_searchlight_CE.mgh",
+                "subjects/wooster/analysis/global_decode/sigsurface_rh_reg_shape2color_all_searchlight_CE.mgh",
+                "subjects/wooster/analysis/global_decode/sigsurface_lh_reg_color2shape_all_searchlight_CE.mgh",
+                "subjects/wooster/analysis/global_decode/sigsurface_rh_reg_color2shape_all_searchlight_CE.mgh",
+                "subjects/wooster/analysis/global_decode/sigsurface_lh_reg_color2color_all_searchlight_CE.mgh",
+                "subjects/wooster/analysis/global_decode/sigsurface_rh_reg_color2color_all_searchlight_CE.mgh",
+                "subjects/wooster/analysis/global_decode/sigsurface_lh_reg_shape2shape_all_searchlight_CE.mgh",
+                "subjects/wooster/analysis/global_decode/sigsurface_rh_reg_shape2shape_all_searchlight_CE.mgh"
+            ],
+            "complete": true,
             "generated": true,
             "bipartite": 0,
             "type": "overlay",
             "space": "t1_native",
             "leaf": true,
-            "modified": "2023-09-05 21:58:40.335644",
+            "modified": "2023-10-27 19:52:25.984435",
             "id": "sigsurfaces_shape_color_attention_decode"
         },
         {
@@ -543,7 +607,7 @@
             "bipartite": 0,
             "type": "overlay",
             "space": "std_functional",
-            "modified": "2023-09-05 21:58:40.335644",
+            "modified": "2023-10-18 17:30:22.921198",
             "id": "run_beta_logshape_color_attention_decode"
         },
         {
@@ -567,14 +631,14 @@
             "bipartite": 1,
             "fxn": "support_functions.apply_warp",
             "desc": "registers the contrasts to the anatomical space.",
-            "modified": "2023-08-01 09:49:59.953684",
+            "modified": "2023-10-27 19:51:18.594015",
             "id": "register_shape_color_attention_decode_contrasts"
         },
         {
             "generated": true,
             "bipartite": 1,
             "fxn": "support_functions.generate_subject_overlays",
-            "modified": "2023-08-01 09:50:28.910211",
+            "modified": "2023-10-27 19:52:25.984435",
             "id": "create_shape_color_attention_decode_sigsurface_overlays"
         },
         {
@@ -594,7 +658,7 @@
             "generated": true,
             "bipartite": 1,
             "fxn": "support_functions.get_run_betas",
-            "modified": "2023-08-22 20:41:30.522945",
+            "modified": "2023-10-18 17:30:22.921198",
             "id": "create_shape_color_attention_decoderun_betas"
         },
         {
@@ -604,12 +668,12 @@
             "id": "delete_paradigm_shape_color_attention_decode"
         },
         {
-            "data": "paradigms/meridian_mapper_experiment_config.json",
+            "data": "paradigms/dyloc_original_experiment_config.json",
             "complete": null,
             "bipartite": 0,
             "type": "json",
             "generated": true,
-            "modified": "2023-09-05 21:58:40.335644",
+            "modified": "2023-09-19 09:36:22.961036",
             "leaf": true,
             "id": "paradigm_dyloc_original"
         },
@@ -620,17 +684,17 @@
             "bipartite": 0,
             "type": "4d_volume",
             "space": "std_functional",
-            "modified": "2023-09-05 21:58:40.335644",
+            "modified": "2023-10-26 14:38:25.823562",
             "id": "beta_dyloc_original"
         },
         {
-            "data": "subjects/wooster/analysis/glm_model_791572.pkl",
+            "data": "subjects/wooster/analysis/glm_model_433054.pkl",
             "complete": true,
             "generated": true,
             "bipartite": 0,
             "type": "model_object",
             "leaf": true,
-            "modified": "2023-09-05 21:58:40.335644",
+            "modified": "2023-10-26 14:38:25.823562",
             "id": "glm_dyloc_original"
         },
         {
@@ -644,6 +708,14 @@
                 "subjects/wooster/analysis/objects_minus_scenes.nii.gz",
                 "subjects/wooster/analysis/objects_minus_bodies.nii.gz",
                 "subjects/wooster/analysis/scenes_minus_scrambled.nii.gz",
+                "subjects/wooster/analysis/color_localizer.nii.gz",
+                "subjects/wooster/analysis/c_faces_minus_c_bodies.nii.gz",
+                "subjects/wooster/analysis/c_faces_minus_c_objects.nii.gz",
+                "subjects/wooster/analysis/bw_faces_minus_bw_bodies.nii.gz",
+                "subjects/wooster/analysis/bw_faces_minus_bw_objects.nii.gz",
+                "subjects/wooster/analysis/faces_all_minus_bw_bodies.nii.gz",
+                "subjects/wooster/analysis/faces_minus_bodies_and_objects.nii.gz",
+                "subjects/wooster/analysis/faces_all_minus_bw_objects.nii.gz",
                 "subjects/wooster/analysis/background.nii.gz"
             ],
             "complete": true,
@@ -652,7 +724,7 @@
             "type": "volume",
             "space": "std_functional",
             "leaf": true,
-            "modified": "2023-09-05 21:58:40.335644",
+            "modified": "2023-10-26 14:38:55.131857",
             "id": "contrasts_dyloc_original"
         },
         {
@@ -666,6 +738,14 @@
                 "subjects/wooster/analysis/reg_objects_minus_scenes.nii.gz",
                 "subjects/wooster/analysis/reg_objects_minus_bodies.nii.gz",
                 "subjects/wooster/analysis/reg_scenes_minus_scrambled.nii.gz",
+                "subjects/wooster/analysis/reg_color_localizer.nii.gz",
+                "subjects/wooster/analysis/reg_c_faces_minus_c_bodies.nii.gz",
+                "subjects/wooster/analysis/reg_c_faces_minus_c_objects.nii.gz",
+                "subjects/wooster/analysis/reg_bw_faces_minus_bw_bodies.nii.gz",
+                "subjects/wooster/analysis/reg_bw_faces_minus_bw_objects.nii.gz",
+                "subjects/wooster/analysis/reg_faces_all_minus_bw_bodies.nii.gz",
+                "subjects/wooster/analysis/reg_faces_minus_bodies_and_objects.nii.gz",
+                "subjects/wooster/analysis/reg_faces_all_minus_bw_objects.nii.gz",
                 "subjects/wooster/analysis/reg_background.nii.gz"
             ],
             "complete": true,
@@ -674,7 +754,7 @@
             "type": "volume",
             "space": "ds_t1_native",
             "leaf": true,
-            "modified": "2023-09-05 21:58:40.335644",
+            "modified": "2023-10-26 14:40:48.694969",
             "id": "reg_contrasts_dyloc_original"
         },
         {
@@ -697,6 +777,22 @@
                 "subjects/wooster/analysis/sigsurface_rh_reg_objects_minus_bodies.mgh",
                 "subjects/wooster/analysis/sigsurface_lh_reg_scenes_minus_scrambled.mgh",
                 "subjects/wooster/analysis/sigsurface_rh_reg_scenes_minus_scrambled.mgh",
+                "subjects/wooster/analysis/sigsurface_lh_reg_color_localizer.mgh",
+                "subjects/wooster/analysis/sigsurface_rh_reg_color_localizer.mgh",
+                "subjects/wooster/analysis/sigsurface_lh_reg_c_faces_minus_c_bodies.mgh",
+                "subjects/wooster/analysis/sigsurface_rh_reg_c_faces_minus_c_bodies.mgh",
+                "subjects/wooster/analysis/sigsurface_lh_reg_c_faces_minus_c_objects.mgh",
+                "subjects/wooster/analysis/sigsurface_rh_reg_c_faces_minus_c_objects.mgh",
+                "subjects/wooster/analysis/sigsurface_lh_reg_bw_faces_minus_bw_bodies.mgh",
+                "subjects/wooster/analysis/sigsurface_rh_reg_bw_faces_minus_bw_bodies.mgh",
+                "subjects/wooster/analysis/sigsurface_lh_reg_bw_faces_minus_bw_objects.mgh",
+                "subjects/wooster/analysis/sigsurface_rh_reg_bw_faces_minus_bw_objects.mgh",
+                "subjects/wooster/analysis/sigsurface_lh_reg_faces_all_minus_bw_bodies.mgh",
+                "subjects/wooster/analysis/sigsurface_rh_reg_faces_all_minus_bw_bodies.mgh",
+                "subjects/wooster/analysis/sigsurface_lh_reg_faces_minus_bodies_and_objects.mgh",
+                "subjects/wooster/analysis/sigsurface_rh_reg_faces_minus_bodies_and_objects.mgh",
+                "subjects/wooster/analysis/sigsurface_lh_reg_faces_all_minus_bw_objects.mgh",
+                "subjects/wooster/analysis/sigsurface_rh_reg_faces_all_minus_bw_objects.mgh",
                 "subjects/wooster/analysis/sigsurface_lh_reg_background.mgh",
                 "subjects/wooster/analysis/sigsurface_rh_reg_background.mgh"
             ],
@@ -706,7 +802,7 @@
             "type": "overlay",
             "space": "t1_native",
             "leaf": true,
-            "modified": "2023-09-05 21:58:40.335644",
+            "modified": "2023-10-26 14:42:38.515642",
             "id": "sigsurfaces_dyloc_original"
         },
         {
@@ -716,7 +812,7 @@
             "bipartite": 0,
             "type": "overlay",
             "space": "std_functional",
-            "modified": "2023-09-05 21:58:40.335644",
+            "modified": "2023-09-19 09:36:22.961036",
             "id": "run_beta_logdyloc_original"
         },
         {
@@ -724,7 +820,7 @@
             "bipartite": 1,
             "fxn": "support_functions.construct_subject_glm",
             "desc": "Trains a GLM using all promoted runs. The resulting beta matrix is designed to capture the information we care about from this experiment, and satisfies the equation (DesignMatrix * hrf) @ BetaMatrix ~= EpiTimeSeries where * is the convolution operator and @ is matrix multiplication. We store the Betas in the GLM object, which also carries information about experiment design andvariance",
-            "modified": "2023-08-21 14:16:49.255090",
+            "modified": "2023-10-26 14:38:25.823562",
             "id": "create_dyloc_original_glm"
         },
         {
@@ -732,7 +828,7 @@
             "bipartite": 1,
             "fxn": "support_functions.create_contrast",
             "desc": "Generates the contrasts requested in the paradigm definition using the subjet level beta matrix. Contrasts are a useful tool for comparing activation to two conditions or linear combinations of conditions on a per voxel level. Contrast values are interpreted as Z-scores here. ",
-            "modified": "2023-08-21 14:17:36.138645",
+            "modified": "2023-10-26 14:38:55.131857",
             "id": "create_dyloc_original_contrasts"
         },
         {
@@ -740,14 +836,14 @@
             "bipartite": 1,
             "fxn": "support_functions.apply_warp",
             "desc": "registers the contrasts to the anatomical space.",
-            "modified": "2023-08-23 09:31:35.668678",
+            "modified": "2023-10-26 14:40:48.694969",
             "id": "register_dyloc_original_contrasts"
         },
         {
             "generated": true,
             "bipartite": 1,
             "fxn": "support_functions.generate_subject_overlays",
-            "modified": "2023-08-23 09:45:54.137086",
+            "modified": "2023-10-26 14:42:38.515642",
             "id": "create_dyloc_original_sigsurface_overlays"
         },
         {
@@ -781,7 +877,7 @@
             "bipartite": 0,
             "type": "json",
             "generated": true,
-            "modified": "2023-09-05 21:58:40.335644",
+            "modified": "2023-09-19 09:36:22.961036",
             "leaf": true,
             "id": "paradigm_shape_color_passive_block"
         },
@@ -792,7 +888,7 @@
             "bipartite": 0,
             "type": "4d_volume",
             "space": "std_functional",
-            "modified": "2023-09-05 21:58:40.335644",
+            "modified": "2023-09-19 09:36:22.961036",
             "id": "beta_shape_color_passive_block"
         },
         {
@@ -802,7 +898,7 @@
             "bipartite": 0,
             "type": "model_object",
             "leaf": true,
-            "modified": "2023-09-05 21:58:40.335644",
+            "modified": "2023-09-19 09:36:22.961036",
             "id": "glm_shape_color_passive_block"
         },
         {
@@ -813,7 +909,7 @@
             "type": "volume",
             "space": "std_functional",
             "leaf": true,
-            "modified": "2023-09-05 21:58:40.335644",
+            "modified": "2023-09-19 09:36:22.961036",
             "id": "contrasts_shape_color_passive_block"
         },
         {
@@ -824,7 +920,7 @@
             "type": "volume",
             "space": "ds_t1_native",
             "leaf": true,
-            "modified": "2023-09-05 21:58:40.335644",
+            "modified": "2023-09-19 09:36:22.961036",
             "id": "reg_contrasts_shape_color_passive_block"
         },
         {
@@ -835,7 +931,7 @@
             "type": "overlay",
             "space": "t1_native",
             "leaf": true,
-            "modified": "2023-09-05 21:58:40.335644",
+            "modified": "2023-09-19 09:36:22.961036",
             "id": "sigsurfaces_shape_color_passive_block"
         },
         {
@@ -845,7 +941,7 @@
             "bipartite": 0,
             "type": "overlay",
             "space": "std_functional",
-            "modified": "2023-09-05 21:58:40.335644",
+            "modified": "2023-09-19 09:36:22.961036",
             "id": "run_beta_logshape_color_passive_block"
         },
         {
@@ -919,7 +1015,7 @@
             "bipartite": 0,
             "type": "json",
             "generated": true,
-            "modified": "2023-09-05 21:58:40.335644",
+            "modified": "2023-09-19 09:36:22.961036",
             "leaf": true,
             "id": "paradigm_meridian_mapper"
         },
@@ -930,50 +1026,69 @@
             "bipartite": 0,
             "type": "4d_volume",
             "space": "std_functional",
-            "modified": "2023-09-05 21:58:40.335644",
+            "modified": "2023-09-19 09:40:37.994620",
             "id": "beta_meridian_mapper"
         },
         {
-            "data": null,
-            "complete": false,
+            "data": "subjects/wooster/analysis/glm_model_607634.pkl",
+            "complete": true,
             "generated": true,
             "bipartite": 0,
             "type": "model_object",
             "leaf": true,
-            "modified": "2023-09-05 21:58:40.335644",
+            "modified": "2023-09-19 09:40:37.994620",
             "id": "glm_meridian_mapper"
         },
         {
-            "data": [],
-            "complete": false,
+            "data": [
+                "subjects/wooster/analysis/horizontal_minus_vertical.nii.gz",
+                "subjects/wooster/analysis/horizontal_minus_gray.nii.gz",
+                "subjects/wooster/analysis/vertical_minus_gray.nii.gz",
+                "subjects/wooster/analysis/background.nii.gz"
+            ],
+            "complete": true,
             "generated": true,
             "bipartite": 0,
             "type": "volume",
             "space": "std_functional",
             "leaf": true,
-            "modified": "2023-09-05 21:58:40.335644",
+            "modified": "2023-09-19 09:40:50.421321",
             "id": "contrasts_meridian_mapper"
         },
         {
-            "data": [],
-            "complete": false,
+            "data": [
+                "subjects/wooster/analysis/reg_horizontal_minus_vertical.nii.gz",
+                "subjects/wooster/analysis/reg_horizontal_minus_gray.nii.gz",
+                "subjects/wooster/analysis/reg_vertical_minus_gray.nii.gz",
+                "subjects/wooster/analysis/reg_background.nii.gz"
+            ],
+            "complete": true,
             "generated": true,
             "bipartite": 0,
             "type": "volume",
             "space": "ds_t1_native",
             "leaf": true,
-            "modified": "2023-09-05 21:58:40.335644",
+            "modified": "2023-10-20 10:59:21.406894",
             "id": "reg_contrasts_meridian_mapper"
         },
         {
-            "data": [],
-            "complete": false,
+            "data": [
+                "subjects/wooster/analysis/sigsurface_lh_reg_horizontal_minus_vertical.mgh",
+                "subjects/wooster/analysis/sigsurface_rh_reg_horizontal_minus_vertical.mgh",
+                "subjects/wooster/analysis/sigsurface_lh_reg_horizontal_minus_gray.mgh",
+                "subjects/wooster/analysis/sigsurface_rh_reg_horizontal_minus_gray.mgh",
+                "subjects/wooster/analysis/sigsurface_lh_reg_vertical_minus_gray.mgh",
+                "subjects/wooster/analysis/sigsurface_rh_reg_vertical_minus_gray.mgh",
+                "subjects/wooster/analysis/sigsurface_lh_reg_background.mgh",
+                "subjects/wooster/analysis/sigsurface_rh_reg_background.mgh"
+            ],
+            "complete": true,
             "generated": true,
             "bipartite": 0,
             "type": "overlay",
             "space": "t1_native",
             "leaf": true,
-            "modified": "2023-09-05 21:58:40.335644",
+            "modified": "2023-10-20 11:00:01.949172",
             "id": "sigsurfaces_meridian_mapper"
         },
         {
@@ -983,7 +1098,7 @@
             "bipartite": 0,
             "type": "overlay",
             "space": "std_functional",
-            "modified": "2023-09-05 21:58:40.335644",
+            "modified": "2023-09-19 09:36:22.961036",
             "id": "run_beta_logmeridian_mapper"
         },
         {
@@ -991,7 +1106,7 @@
             "bipartite": 1,
             "fxn": "support_functions.construct_subject_glm",
             "desc": "Trains a GLM using all promoted runs. The resulting beta matrix is designed to capture the information we care about from this experiment, and satisfies the equation (DesignMatrix * hrf) @ BetaMatrix ~= EpiTimeSeries where * is the convolution operator and @ is matrix multiplication. We store the Betas in the GLM object, which also carries information about experiment design andvariance",
-            "modified": "2023-09-05 15:33:56.929482",
+            "modified": "2023-09-19 09:40:37.994620",
             "id": "create_meridian_mapper_glm"
         },
         {
@@ -999,6 +1114,7 @@
             "bipartite": 1,
             "fxn": "support_functions.create_contrast",
             "desc": "Generates the contrasts requested in the paradigm definition using the subjet level beta matrix. Contrasts are a useful tool for comparing activation to two conditions or linear combinations of conditions on a per voxel level. Contrast values are interpreted as Z-scores here. ",
+            "modified": "2023-09-19 09:40:50.421321",
             "id": "create_meridian_mapper_contrasts"
         },
         {
@@ -1006,12 +1122,14 @@
             "bipartite": 1,
             "fxn": "support_functions.apply_warp",
             "desc": "registers the contrasts to the anatomical space.",
+            "modified": "2023-10-20 10:59:21.406894",
             "id": "register_meridian_mapper_contrasts"
         },
         {
             "generated": true,
             "bipartite": 1,
             "fxn": "support_functions.generate_subject_overlays",
+            "modified": "2023-10-20 11:00:01.949172",
             "id": "create_meridian_mapper_sigsurface_overlays"
         },
         {

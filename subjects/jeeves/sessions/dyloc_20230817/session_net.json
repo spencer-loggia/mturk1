@@ -24,12 +24,16 @@
                 "subjects/jeeves/sessions/dyloc_20230817/objects_minus_bodies.nii.gz",
                 "subjects/jeeves/sessions/dyloc_20230817/scenes_minus_scrambled.nii.gz",
                 "subjects/jeeves/sessions/dyloc_20230817/color_localizer.nii.gz",
+                "subjects/jeeves/sessions/dyloc_20230817/c_faces_minus_c_bodies.nii.gz",
+                "subjects/jeeves/sessions/dyloc_20230817/c_faces_minus_c_objects.nii.gz",
+                "subjects/jeeves/sessions/dyloc_20230817/bw_faces_minus_bw_bodies.nii.gz",
+                "subjects/jeeves/sessions/dyloc_20230817/bw_faces_minus_bw_objects.nii.gz",
                 "subjects/jeeves/sessions/dyloc_20230817/background.nii.gz"
             ],
             "complete": null,
             "bipartite": 0,
             "generated": true,
-            "modified": "2023-08-22 13:36:46.640355",
+            "modified": "2023-10-09 19:58:13.470850",
             "id": "end"
         },
         {
@@ -203,7 +207,7 @@
             "complete": null,
             "space": "epi_std",
             "leaf": true,
-            "modified": "2023-08-01 09:49:02.168185",
+            "modified": "2023-08-28 08:33:18.572807",
             "id": "functional_std_dil_mask"
         },
         {
@@ -213,7 +217,7 @@
             "complete": null,
             "space": "epi_std",
             "leaf": true,
-            "modified": "2023-08-01 09:48:48.222523",
+            "modified": "2023-08-28 08:32:27.440118",
             "id": "functional_std_mask"
         },
         {
@@ -223,7 +227,7 @@
             "complete": null,
             "space": "epi_std",
             "leaf": true,
-            "modified": "2023-08-09 13:47:04.828635",
+            "modified": "2023-08-28 08:32:37.844201",
             "id": "functional_std_masked"
         },
         {
@@ -242,7 +246,7 @@
             "complete": true,
             "space": "epi_std_aprox",
             "leaf": true,
-            "modified": "2023-08-22 12:52:26.712151",
+            "modified": "2023-08-28 08:33:18.572807",
             "id": "masked_manual_reg_epi_rep"
         },
         {
@@ -270,7 +274,7 @@
                 "epi_std"
             ],
             "leaf": true,
-            "modified": "2023-08-22 13:29:56.643770",
+            "modified": "2023-08-28 08:33:18.572807",
             "id": "auto_composite_transform"
         },
         {
@@ -284,7 +288,7 @@
                 "epi_std_aprox"
             ],
             "leaf": true,
-            "modified": "2023-08-22 13:29:56.643770",
+            "modified": "2023-08-28 08:33:18.572807",
             "id": "inverse_auto_composite_transform"
         },
         {
@@ -305,7 +309,7 @@
             "bipartite": 0,
             "complete": true,
             "space": "epi_native",
-            "modified": "2023-08-22 13:30:50.919970",
+            "modified": "2023-08-28 08:33:18.572807",
             "id": "reg_epi"
         },
         {
@@ -336,7 +340,7 @@
             "bipartite": 0,
             "complete": true,
             "leaf": true,
-            "modified": "2023-08-22 13:32:44.218261",
+            "modified": "2023-08-28 08:33:18.572807",
             "id": "reg_epi_masked"
         },
         {
@@ -354,17 +358,17 @@
             "complete": true,
             "data": "subjects/jeeves/sessions/dyloc_20230817/ima_order_map.json",
             "leaf": true,
-            "modified": "2023-08-22 13:32:44.218261",
+            "modified": "2023-08-28 08:33:18.572807",
             "id": "ima_order_map"
         },
         {
-            "data": "subjects/jeeves/sessions/dyloc_20230817/glm_model_40713.pkl",
+            "data": "subjects/jeeves/sessions/dyloc_20230817/glm_model_309138.pkl",
             "type": "glm_object",
             "bipartite": 0,
             "complete": true,
             "space": "epi_std",
             "leaf": true,
-            "modified": "2023-08-22 13:36:17.259094",
+            "modified": "2023-10-09 19:55:54.389482",
             "id": "glm_model"
         },
         {
@@ -379,6 +383,10 @@
                 "subjects/jeeves/sessions/dyloc_20230817/objects_minus_bodies.nii.gz",
                 "subjects/jeeves/sessions/dyloc_20230817/scenes_minus_scrambled.nii.gz",
                 "subjects/jeeves/sessions/dyloc_20230817/color_localizer.nii.gz",
+                "subjects/jeeves/sessions/dyloc_20230817/c_faces_minus_c_bodies.nii.gz",
+                "subjects/jeeves/sessions/dyloc_20230817/c_faces_minus_c_objects.nii.gz",
+                "subjects/jeeves/sessions/dyloc_20230817/bw_faces_minus_bw_bodies.nii.gz",
+                "subjects/jeeves/sessions/dyloc_20230817/bw_faces_minus_bw_objects.nii.gz",
                 "subjects/jeeves/sessions/dyloc_20230817/background.nii.gz"
             ],
             "type": "volume",
@@ -386,7 +394,7 @@
             "complete": true,
             "space": "epi_std",
             "leaf": true,
-            "modified": "2023-08-22 13:36:46.640355",
+            "modified": "2023-10-09 19:58:13.470850",
             "id": "reg_contrasts"
         },
         {
@@ -395,16 +403,16 @@
             "bipartite": 0,
             "complete": false,
             "space": "",
-            "modified": "2023-08-22 13:36:46.640355",
+            "modified": "2023-10-09 19:58:13.470850",
             "id": "slice_contrast_img"
         },
         {
-            "data": "subjects/jeeves/sessions/dyloc_20230817/glm_model_40713.pkl",
+            "data": "subjects/jeeves/sessions/dyloc_20230817/glm_model_309138.pkl",
             "type": "ndarray",
             "bipartite": 0,
             "complete": true,
             "space": "",
-            "modified": "2023-08-22 13:36:17.259094",
+            "modified": "2023-10-09 19:55:54.389482",
             "id": "hrf_estimate"
         },
         {
@@ -531,7 +539,7 @@
             "bipartite": 1,
             "argv": true,
             "desc": "Create the size voxels x stimulus_conditions beta matrix from paradigm def and session masked epis. The beta matrix is designed to capture the information we careabout from this experiment, and satisfies the equation (DesignMatrix * hrf) @ BetaMatrix ~= EpiTimeSeries where * is the convolution operator and @ is matrix multiplication.",
-            "modified": "2023-08-22 13:36:17.259094",
+            "modified": "2023-10-09 19:55:54.389482",
             "id": "create_beta_matrix"
         },
         {
@@ -545,7 +553,7 @@
             "fxn": "support_functions.create_contrast",
             "bipartite": 1,
             "desc": "Create contrast volumes from the beta matrix.",
-            "modified": "2023-08-22 13:36:46.640355",
+            "modified": "2023-10-09 19:58:13.470850",
             "id": "create_session_contrast"
         },
         {
@@ -553,7 +561,7 @@
             "fxn": "support_functions.promote_session",
             "bipartite": 1,
             "desc": "This session is marked as complete-ish and will be included by future subject level analysis, and for construction of the subject level beta matrix. Basically its added to the subject config data index.",
-            "modified": "2023-08-22 13:42:17.386528",
+            "modified": "2023-10-09 20:16:52.107772",
             "id": "promote_session"
         },
         {

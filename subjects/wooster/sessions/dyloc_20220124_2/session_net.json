@@ -23,12 +23,17 @@
                 "subjects/wooster/sessions/dyloc_20220124_2/objects_minus_scenes.nii.gz",
                 "subjects/wooster/sessions/dyloc_20220124_2/objects_minus_bodies.nii.gz",
                 "subjects/wooster/sessions/dyloc_20220124_2/scenes_minus_scrambled.nii.gz",
+                "subjects/wooster/sessions/dyloc_20220124_2/color_localizer.nii.gz",
+                "subjects/wooster/sessions/dyloc_20220124_2/c_faces_minus_c_bodies.nii.gz",
+                "subjects/wooster/sessions/dyloc_20220124_2/c_faces_minus_c_objects.nii.gz",
+                "subjects/wooster/sessions/dyloc_20220124_2/bw_faces_minus_bw_bodies.nii.gz",
+                "subjects/wooster/sessions/dyloc_20220124_2/bw_faces_minus_bw_objects.nii.gz",
                 "subjects/wooster/sessions/dyloc_20220124_2/background.nii.gz"
             ],
             "complete": null,
             "bipartite": 0,
             "generated": true,
-            "modified": "2023-06-06 15:21:49.028049",
+            "modified": "2023-10-09 18:08:26.856891",
             "id": "end"
         },
         {
@@ -249,7 +254,7 @@
             "complete": true,
             "space": "epi_std_aprox",
             "leaf": true,
-            "modified": "2023-06-06 13:15:04.269853",
+            "modified": "2023-06-08 11:18:02.249599",
             "id": "masked_manual_reg_epi_rep"
         },
         {
@@ -277,7 +282,7 @@
                 "epi_std"
             ],
             "leaf": true,
-            "modified": "2023-06-06 13:33:13.568745",
+            "modified": "2023-06-10 15:59:52.691169",
             "id": "auto_composite_transform"
         },
         {
@@ -291,7 +296,7 @@
                 "epi_std_aprox"
             ],
             "leaf": true,
-            "modified": "2023-06-06 13:33:13.568745",
+            "modified": "2023-06-10 15:59:52.691169",
             "id": "inverse_auto_composite_transform"
         },
         {
@@ -314,7 +319,7 @@
             "bipartite": 0,
             "complete": true,
             "space": "epi_native",
-            "modified": "2023-06-06 13:36:23.286309",
+            "modified": "2023-06-10 15:59:52.691169",
             "id": "reg_epi"
         },
         {
@@ -347,7 +352,7 @@
             "bipartite": 0,
             "complete": true,
             "leaf": true,
-            "modified": "2023-06-06 14:45:54.820981",
+            "modified": "2023-06-10 15:59:52.691169",
             "id": "reg_epi_masked"
         },
         {
@@ -365,17 +370,17 @@
             "complete": true,
             "data": "subjects/wooster/sessions/dyloc_20220124_2/ima_order_map.json",
             "leaf": true,
-            "modified": "2023-06-06 14:46:33.529538",
+            "modified": "2023-06-10 15:59:52.691169",
             "id": "ima_order_map"
         },
         {
-            "data": "subjects/wooster/sessions/dyloc_20220124_2/glm_model_509699.pkl",
+            "data": "subjects/wooster/sessions/dyloc_20220124_2/glm_model_621691.pkl",
             "type": "glm_object",
             "bipartite": 0,
             "complete": true,
             "space": "epi_std",
             "leaf": true,
-            "modified": "2023-06-06 14:47:31.602582",
+            "modified": "2023-10-09 18:05:06.095905",
             "id": "glm_model"
         },
         {
@@ -389,6 +394,11 @@
                 "subjects/wooster/sessions/dyloc_20220124_2/objects_minus_scenes.nii.gz",
                 "subjects/wooster/sessions/dyloc_20220124_2/objects_minus_bodies.nii.gz",
                 "subjects/wooster/sessions/dyloc_20220124_2/scenes_minus_scrambled.nii.gz",
+                "subjects/wooster/sessions/dyloc_20220124_2/color_localizer.nii.gz",
+                "subjects/wooster/sessions/dyloc_20220124_2/c_faces_minus_c_bodies.nii.gz",
+                "subjects/wooster/sessions/dyloc_20220124_2/c_faces_minus_c_objects.nii.gz",
+                "subjects/wooster/sessions/dyloc_20220124_2/bw_faces_minus_bw_bodies.nii.gz",
+                "subjects/wooster/sessions/dyloc_20220124_2/bw_faces_minus_bw_objects.nii.gz",
                 "subjects/wooster/sessions/dyloc_20220124_2/background.nii.gz"
             ],
             "type": "volume",
@@ -396,7 +406,7 @@
             "complete": true,
             "space": "epi_std",
             "leaf": true,
-            "modified": "2023-06-06 15:21:49.028049",
+            "modified": "2023-10-09 18:08:26.856891",
             "id": "reg_contrasts"
         },
         {
@@ -405,16 +415,16 @@
             "bipartite": 0,
             "complete": false,
             "space": "",
-            "modified": "2023-06-06 15:21:49.028049",
+            "modified": "2023-10-09 18:08:26.856891",
             "id": "slice_contrast_img"
         },
         {
-            "data": "subjects/wooster/sessions/dyloc_20220124_2/glm_model_509699.pkl",
+            "data": "subjects/wooster/sessions/dyloc_20220124_2/glm_model_621691.pkl",
             "type": "ndarray",
             "bipartite": 0,
             "complete": true,
             "space": "",
-            "modified": "2023-06-06 14:47:31.602582",
+            "modified": "2023-10-09 18:05:06.095905",
             "id": "hrf_estimate"
         },
         {
@@ -540,7 +550,7 @@
             "bipartite": 1,
             "argv": true,
             "desc": "Create the size voxels x stimulus_conditions beta matrix from paradigm def and session masked epis. The beta matrix is designed to capture the information we careabout from this experiment, and satisfies the equation (DesignMatrix * hrf) @ BetaMatrix ~= EpiTimeSeries where * is the convolution operator and @ is matrix multiplication.",
-            "modified": "2023-06-06 14:47:31.602582",
+            "modified": "2023-10-09 18:05:06.095905",
             "id": "create_beta_matrix"
         },
         {
@@ -554,7 +564,7 @@
             "fxn": "support_functions.create_contrast",
             "bipartite": 1,
             "desc": "Create contrast volumes from the beta matrix.",
-            "modified": "2023-06-06 15:21:49.028049",
+            "modified": "2023-10-09 18:08:26.856891",
             "id": "create_session_contrast"
         },
         {

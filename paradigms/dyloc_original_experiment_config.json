@@ -2,6 +2,7 @@
     "name": "dyloc_original",
     "trs_per_run": 150,
     "is_runtime_defined": false,
+    "tr_length": 3.0,
     "is_block": true,
     "block_length_trs": 6,
     "num_orders": 10,
@@ -113,7 +114,7 @@
             8,
             2,
             6,
-            3,
+            4,
             10,
             0,
             10,
@@ -125,7 +126,7 @@
             3,
             7,
             1,
-            8,
+            9,
             5,
             0
         ],
@@ -412,6 +413,90 @@
             0.25,
             0.25,
             0.0
+        ],
+        [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            -1.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            -1.0
+        ],
+        [
+            1.0,
+            -1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            0.5,
+            -1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.5,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            0.5,
+            -0.25,
+            0.0,
+            0.0,
+            -0.25,
+            0.5,
+            -0.25,
+            0.0,
+            0.0,
+            -0.25
+        ],
+        [
+            0.5,
+            0.0,
+            0.0,
+            0.0,
+            -1.0,
+            0.5,
+            0.0,
+            0.0,
+            0.0,
+            0.0
         ]
     ],
     "contrast_descriptions": [
@@ -424,7 +509,14 @@
         "objects_minus_scenes",
         "objects_minus_bodies",
         "scenes_minus_scrambled",
-        "color_localizer"
+        "color_localizer",
+        "c_faces_minus_c_bodies",
+        "c_faces_minus_c_objects",
+        "bw_faces_minus_bw_bodies",
+        "bw_faces_minus_bw_objects",
+        "faces_all_minus_bw_bodies",
+        "faces_minus_bodies_and_objects",
+        "faces_all_minus_bw_objects"
     ],
     "num_runs_included_in_contrast": 0
 }

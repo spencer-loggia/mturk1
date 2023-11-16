@@ -13,16 +13,11 @@
     },
     "nodes": [
         {
-            "data": [
-                "subjects/jeeves/sessions/scd_20230805/probe_colored_circle_minus_gray.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/probe_chromatic_uncolored_minus_gray.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/probe_chromatic_uncolored_minus_colored_circle.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/background.nii.gz"
-            ],
+            "data": null,
             "complete": null,
             "bipartite": 0,
             "generated": true,
-            "modified": "2023-08-15 12:32:14.320484",
+            "modified": "2023-10-18 15:55:38.178721",
             "id": "end"
         },
         {
@@ -64,25 +59,10 @@
             "id": "raw_epi"
         },
         {
-            "data": [
-                "subjects/jeeves/sessions/scd_20230805/6/f_nordic.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/10/f_nordic.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/5/f_nordic.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/22/f_nordic.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/13/f_nordic.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/15/f_nordic.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/20/f_nordic.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/19/f_nordic.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/8/f_nordic.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/16/f_nordic.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/24/f_nordic.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/11/f_nordic.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/17/f_nordic.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/7/f_nordic.nii.gz"
-            ],
+            "data": null,
             "type": "time_series",
             "bipartite": 0,
-            "complete": true,
+            "complete": false,
             "space": "epi_native",
             "modified": "2023-08-07 10:30:33.476968",
             "id": "nordic_epi"
@@ -113,82 +93,37 @@
             "id": "topup_epi"
         },
         {
-            "data": [
-                "subjects/jeeves/sessions/scd_20230805/6/f_topup_sphinx.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/10/f_topup_sphinx.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/5/f_topup_sphinx.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/22/f_topup_sphinx.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/13/f_topup_sphinx.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/15/f_topup_sphinx.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/20/f_topup_sphinx.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/19/f_topup_sphinx.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/8/f_topup_sphinx.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/16/f_topup_sphinx.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/24/f_topup_sphinx.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/11/f_topup_sphinx.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/17/f_topup_sphinx.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/7/f_topup_sphinx.nii.gz"
-            ],
+            "data": null,
             "type": "time_series",
             "bipartite": 0,
-            "complete": true,
+            "complete": false,
             "space": "epi_native",
             "modified": "2023-08-07 11:10:01.422527",
             "id": "sphinx_epi"
         },
         {
-            "data": [
-                "subjects/jeeves/sessions/scd_20230805/6/moco.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/10/moco.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/5/moco.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/22/moco.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/13/moco.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/15/moco.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/20/moco.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/19/moco.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/8/moco.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/16/moco.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/24/moco.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/11/moco.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/17/moco.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/7/moco.nii.gz"
-            ],
+            "data": null,
             "type": "time_series",
             "bipartite": 0,
-            "complete": true,
+            "complete": false,
             "space": "epi_native",
             "modified": "2023-08-07 11:20:03.900175",
             "id": "moco_epi"
         },
         {
-            "data": [
-                "subjects/jeeves/sessions/scd_20230805/6/slc.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/10/slc.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/5/slc.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/22/slc.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/13/slc.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/15/slc.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/20/slc.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/19/slc.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/8/slc.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/16/slc.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/24/slc.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/11/slc.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/17/slc.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/7/slc.nii.gz"
-            ],
+            "data": null,
             "type": "time_series",
             "bipartite": 0,
-            "complete": true,
+            "complete": false,
             "space": "epi_native",
             "modified": "2023-08-07 10:35:16.226899",
             "id": "slice_time_corrected_epi"
         },
         {
-            "data": "subjects/jeeves/sessions/scd_20230805/3d_epi_rep.nii.gz",
+            "data": null,
             "type": "volume",
             "bipartite": 0,
-            "complete": true,
+            "complete": false,
             "space": "epi_native",
             "modified": "2023-08-07 11:14:51.207515",
             "id": "3d_epi_rep"
@@ -220,7 +155,7 @@
             "complete": null,
             "space": "epi_std",
             "leaf": true,
-            "modified": "2023-08-01 09:49:02.168185",
+            "modified": "2023-08-28 08:33:18.572807",
             "id": "functional_std_dil_mask"
         },
         {
@@ -230,7 +165,7 @@
             "complete": null,
             "space": "epi_std",
             "leaf": true,
-            "modified": "2023-08-01 09:48:48.222523",
+            "modified": "2023-08-28 08:32:27.440118",
             "id": "functional_std_mask"
         },
         {
@@ -240,14 +175,14 @@
             "complete": null,
             "space": "epi_std",
             "leaf": true,
-            "modified": "2023-08-09 13:47:04.828635",
+            "modified": "2023-08-28 08:32:37.844201",
             "id": "functional_std_masked"
         },
         {
-            "data": "subjects/jeeves/sessions/scd_20230805/itkManual.nii.gz",
+            "data": null,
             "type": "volume",
             "bipartite": 0,
-            "complete": true,
+            "complete": false,
             "space": "epi_std_aprox",
             "modified": "2023-08-07 17:25:33.906619",
             "id": "manual_reg_epi_rep"
@@ -305,26 +240,11 @@
             "id": "inverse_auto_composite_transform"
         },
         {
-            "data": [
-                "subjects/jeeves/sessions/scd_20230805/6/reg_moco.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/10/reg_moco.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/5/reg_moco.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/22/reg_moco.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/13/reg_moco.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/15/reg_moco.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/20/reg_moco.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/19/reg_moco.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/8/reg_moco.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/16/reg_moco.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/24/reg_moco.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/11/reg_moco.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/17/reg_moco.nii.gz",
-                "subjects/jeeves/sessions/scd_20230805/7/reg_moco.nii.gz"
-            ],
+            "data": null,
             "fname": null,
             "type": "time_series",
             "bipartite": 0,
-            "complete": true,
+            "complete": false,
             "space": "epi_native",
             "modified": "2023-08-15 12:29:12.851786",
             "id": "reg_epi"
@@ -352,7 +272,7 @@
             "complete": true,
             "leaf": true,
             "space": "time_course",
-            "modified": "2023-08-07 18:38:44.971210",
+            "modified": "2023-10-18 15:55:54.778526",
             "id": "fixation_data"
         },
         {
@@ -433,10 +353,10 @@
             "id": "slice_contrast_img"
         },
         {
-            "data": "subjects/jeeves/sessions/scd_20230805/glm_model_907277.pkl",
+            "data": null,
             "type": "ndarray",
             "bipartite": 0,
-            "complete": true,
+            "complete": false,
             "space": "",
             "modified": "2023-08-15 12:32:07.990288",
             "id": "hrf_estimate"
@@ -453,7 +373,7 @@
             "fxn": "support_functions.get_fixation_csv",
             "bipartite": 1,
             "desc": "",
-            "modified": "2023-08-07 18:38:44.971210",
+            "modified": "2023-10-18 15:55:54.778526",
             "id": "get_fixation_data"
         },
         {
@@ -608,6 +528,7 @@
             "bipartite": 1,
             "generated": true,
             "desc": "function that removes intermediate files associated with session. WARNING: This makes it impossible to re-run many intermediate processing steps without starting over.",
+            "modified": "2023-10-18 15:55:38.178721",
             "id": "sterilize"
         }
     ],

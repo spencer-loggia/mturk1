@@ -1,0 +1,192 @@
+{
+    "name": "validate_decoder",
+    "trs_per_run": 6800,
+    "is_runtime_defined": true,
+    "tr_length": 3.0,
+    "is_block": false,
+    "block_length_trs": 1,
+    "num_orders": [],
+    "condition_integerizer": {
+        "0": "Background",
+        "1": "AColor",
+        "2": "BColor",
+        "3": "AShape",
+        "4": "BShape",
+        "5": "AColor_Choice",
+        "6": "BColor_Choice",
+        "7": "AShape_Choice",
+        "8": "BShape_Choice"
+    },
+    "num_conditions": 9,
+    "base_case_condition": 0,
+    "condition_groups": {
+        "uncolored_shapes": {
+            "conds": [
+                3,
+                4
+            ],
+            "fir": -1
+        },
+        "colored_blobs": {
+            "conds": [
+                1,
+                2
+            ],
+            "fir": -1
+        },
+        "uncolored_shape_choices": {
+            "conds": [
+                7,
+                8
+            ],
+            "fir": null
+        },
+        "colored_blob_choices": {
+            "conds": [
+                5,
+                6
+            ],
+            "fir": null
+        }
+    },
+    "order_number_definitions": {
+        "vd_20230928": {
+            "3": [
+                0,
+                0,
+                0,
+                3,
+                3,
+                3,
+                7,
+                0,
+                0,
+                0,
+                4,
+                4,
+                4,
+                8,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                5,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                5,
+                0,
+                0,
+                0,
+                4,
+                4,
+                4,
+                8,
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                6,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                5,
+                0,
+                0,
+                0,
+                3,
+                3,
+                3,
+                7,
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                6,
+                0,
+                0,
+                0,
+                3,
+                3,
+                3,
+                7,
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                6,
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                6,
+                0,
+                0,
+                0,
+                3,
+                3,
+                3,
+                7,
+                0,
+                0,
+                0,
+                4,
+                4,
+                4,
+                8,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                5,
+                0,
+                0,
+                0
+            ]
+        }
+    },
+    "desired_contrasts": [
+        [
+            0,
+            1,
+            0,
+            0
+        ],
+        [
+            1,
+            0,
+            0,
+            0
+        ],
+        [
+            1,
+            -1,
+            0,
+            0
+        ]
+    ],
+    "contrast_descriptions": [
+        "probe_colored_circle_minus_gray",
+        "probe_chromatic_uncolored_minus_gray",
+        "probe_chromatic_uncolored_minus_colored_circle"
+    ],
+    "num_runs_included_in_contrast": 0
+}

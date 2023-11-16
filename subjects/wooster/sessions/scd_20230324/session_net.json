@@ -13,16 +13,11 @@
     },
     "nodes": [
         {
-            "data": [
-                "subjects/wooster/sessions/scd_20230324/probe_colored_circle_minus_gray.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/probe_chromatic_uncolored_minus_gray.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/probe_chromatic_uncolored_minus_colored_circle.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/background.nii.gz"
-            ],
+            "data": null,
             "complete": null,
             "bipartite": 0,
             "generated": true,
-            "modified": "2023-08-16 13:03:24.610671",
+            "modified": "2023-10-09 20:09:18.970463",
             "id": "end"
         },
         {
@@ -69,30 +64,10 @@
             "id": "raw_epi"
         },
         {
-            "data": [
-                "subjects/wooster/sessions/scd_20230324/23/f_nordic.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/15/f_nordic.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/11/f_nordic.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/21/f_nordic.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/7/f_nordic.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/12/f_nordic.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/13/f_nordic.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/6/f_nordic.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/31/f_nordic.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/26/f_nordic.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/8/f_nordic.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/10/f_nordic.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/25/f_nordic.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/30/f_nordic.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/20/f_nordic.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/29/f_nordic.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/22/f_nordic.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/27/f_nordic.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/14/f_nordic.nii.gz"
-            ],
+            "data": null,
             "type": "time_series",
             "bipartite": 0,
-            "complete": true,
+            "complete": false,
             "space": "epi_native",
             "modified": "2023-06-10 17:27:38.051727",
             "id": "nordic_epi"
@@ -128,97 +103,37 @@
             "id": "topup_epi"
         },
         {
-            "data": [
-                "subjects/wooster/sessions/scd_20230324/23/f_topup_sphinx.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/15/f_topup_sphinx.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/11/f_topup_sphinx.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/21/f_topup_sphinx.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/7/f_topup_sphinx.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/12/f_topup_sphinx.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/13/f_topup_sphinx.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/6/f_topup_sphinx.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/31/f_topup_sphinx.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/26/f_topup_sphinx.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/8/f_topup_sphinx.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/10/f_topup_sphinx.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/25/f_topup_sphinx.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/30/f_topup_sphinx.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/20/f_topup_sphinx.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/29/f_topup_sphinx.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/22/f_topup_sphinx.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/27/f_topup_sphinx.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/14/f_topup_sphinx.nii.gz"
-            ],
+            "data": null,
             "type": "time_series",
             "bipartite": 0,
-            "complete": true,
+            "complete": false,
             "space": "epi_native",
             "modified": "2023-06-14 14:11:36.973700",
             "id": "sphinx_epi"
         },
         {
-            "data": [
-                "subjects/wooster/sessions/scd_20230324/23/moco.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/15/moco.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/11/moco.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/21/moco.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/7/moco.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/12/moco.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/13/moco.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/6/moco.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/31/moco.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/26/moco.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/8/moco.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/10/moco.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/25/moco.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/30/moco.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/20/moco.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/29/moco.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/22/moco.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/27/moco.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/14/moco.nii.gz"
-            ],
+            "data": null,
             "type": "time_series",
             "bipartite": 0,
-            "complete": true,
+            "complete": false,
             "space": "epi_native",
             "modified": "2023-06-14 16:05:18.510625",
             "id": "moco_epi"
         },
         {
-            "data": [
-                "subjects/wooster/sessions/scd_20230324/23/slc.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/15/slc.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/11/slc.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/21/slc.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/7/slc.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/12/slc.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/13/slc.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/6/slc.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/31/slc.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/26/slc.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/8/slc.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/10/slc.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/25/slc.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/30/slc.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/20/slc.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/29/slc.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/22/slc.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/27/slc.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/14/slc.nii.gz"
-            ],
+            "data": null,
             "type": "time_series",
             "bipartite": 0,
-            "complete": true,
+            "complete": false,
             "space": "epi_native",
             "modified": "2023-06-14 12:35:09.671004",
             "id": "slice_time_corrected_epi"
         },
         {
-            "data": "subjects/wooster/sessions/scd_20230324/3d_epi_rep.nii.gz",
+            "data": null,
             "type": "volume",
             "bipartite": 0,
-            "complete": true,
+            "complete": false,
             "space": "epi_native",
             "modified": "2023-06-14 14:09:00.956305",
             "id": "3d_epi_rep"
@@ -274,10 +189,10 @@
             "id": "functional_std_masked"
         },
         {
-            "data": "subjects/wooster/sessions/scd_20230324/itkManual.nii.gz",
+            "data": null,
             "type": "volume",
             "bipartite": 0,
-            "complete": true,
+            "complete": false,
             "space": "epi_std_aprox",
             "modified": "2023-06-15 09:00:31.851678",
             "id": "manual_reg_epi_rep"
@@ -335,31 +250,11 @@
             "id": "inverse_auto_composite_transform"
         },
         {
-            "data": [
-                "subjects/wooster/sessions/scd_20230324/23/reg_moco.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/15/reg_moco.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/11/reg_moco.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/21/reg_moco.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/7/reg_moco.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/12/reg_moco.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/13/reg_moco.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/6/reg_moco.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/31/reg_moco.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/26/reg_moco.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/8/reg_moco.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/10/reg_moco.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/25/reg_moco.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/30/reg_moco.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/20/reg_moco.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/29/reg_moco.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/22/reg_moco.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/27/reg_moco.nii.gz",
-                "subjects/wooster/sessions/scd_20230324/14/reg_moco.nii.gz"
-            ],
+            "data": null,
             "fname": null,
             "type": "time_series",
             "bipartite": 0,
-            "complete": true,
+            "complete": false,
             "space": "epi_native",
             "modified": "2023-08-16 12:44:55.247964",
             "id": "reg_epi"
@@ -392,7 +287,7 @@
             "complete": true,
             "leaf": true,
             "space": "time_course",
-            "modified": "2023-06-15 10:22:14.528752",
+            "modified": "2023-10-18 09:09:23.746181",
             "id": "fixation_data"
         },
         {
@@ -478,10 +373,10 @@
             "id": "slice_contrast_img"
         },
         {
-            "data": "subjects/wooster/sessions/scd_20230324/glm_model_355636.pkl",
+            "data": null,
             "type": "ndarray",
             "bipartite": 0,
-            "complete": true,
+            "complete": false,
             "space": "",
             "modified": "2023-08-16 13:02:43.628220",
             "id": "hrf_estimate"
@@ -498,7 +393,7 @@
             "fxn": "support_functions.get_fixation_csv",
             "bipartite": 1,
             "desc": "",
-            "modified": "2023-06-15 10:22:14.528752",
+            "modified": "2023-10-18 09:09:23.746181",
             "id": "get_fixation_data"
         },
         {
@@ -653,6 +548,7 @@
             "bipartite": 1,
             "generated": true,
             "desc": "function that removes intermediate files associated with session. WARNING: This makes it impossible to re-run many intermediate processing steps without starting over.",
+            "modified": "2023-10-09 20:09:18.970463",
             "id": "sterilize"
         }
     ],

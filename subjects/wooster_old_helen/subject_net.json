@@ -7,11 +7,38 @@
     },
     "nodes": [
         {
-            "data": "/media/ssbeast/mturk/MTurk1/subjects/wooster_old_helen/analysis/shape_color_attention_decode_stimulus_response_data_key.csv",
+            "data": [
+                "sessions/scd_20230824/session_net.json",
+                "sessions/scd_20230302/session_net.json",
+                "sessions/scp_20220204/session_net.json",
+                "sessions/dyloc_20220124_2/session_net.json",
+                "sessions/scd_20230407/session_net.json",
+                "sessions/scd_20230213/session_net.json",
+                "sessions/scd_20230327/session_net.json",
+                "sessions/scd_20230804/session_net.json",
+                "sessions/scd_20230813/session_net.json",
+                "sessions/scp_20220214/session_net.json",
+                "sessions/scp_20220307/session_net.json",
+                "sessions/scp_20220311/session_net.json",
+                "sessions/noah_functional_mri/session_net.json",
+                "sessions/dyloc_20230818/session_net.json",
+                "sessions/scd_20230331/session_net.json",
+                "sessions/scd_20230209/session_net.json",
+                "sessions/scd_20230324/session_net.json",
+                "sessions/scd_20230406/session_net.json",
+                "sessions/scp_20220321/session_net.json",
+                "sessions/noah_fmri_practice/session_net.json",
+                "sessions/scd_20230303/session_net.json",
+                "sessions/dyloc_20220124_1/session_net.json",
+                "sessions/scd_20230330/session_net.json",
+                "sessions/scd_20230821/session_net.json",
+                "sessions/scp_20220318/session_net.json",
+                "sessions/dyloc_20230815/session_net.json"
+            ],
             "complete": null,
             "bipartite": 0,
             "generated": true,
-            "modified": "2023-08-29 09:12:23.087324",
+            "modified": "2023-10-03 17:18:39.284705",
             "id": "end"
         },
         {
@@ -89,38 +116,39 @@
         },
         {
             "data": [
-                "sessions/scd_20230327/session_net.json",
-                "sessions/scd_20230303/session_net.json",
-                "sessions/scp_20220321/session_net.json",
-                "sessions/scd_20230821/session_net.json",
-                "sessions/scd_20230213/session_net.json",
+                "sessions/scd_20230824/session_net.json",
+                "sessions/scd_20230302/session_net.json",
+                "sessions/scp_20220204/session_net.json",
                 "sessions/dyloc_20220124_2/session_net.json",
+                "sessions/scd_20230407/session_net.json",
+                "sessions/scd_20230213/session_net.json",
+                "sessions/scd_20230327/session_net.json",
+                "sessions/scd_20230804/session_net.json",
                 "sessions/scd_20230813/session_net.json",
                 "sessions/scp_20220214/session_net.json",
-                "sessions/noah_functional_mri/session_net.json",
                 "sessions/scp_20220307/session_net.json",
-                "sessions/scd_20230406/session_net.json",
-                "sessions/scd_20230330/session_net.json",
-                "sessions/dyloc_20220124_1/session_net.json",
-                "sessions/scp_20220204/session_net.json",
-                "sessions/scd_20230824/session_net.json",
-                "sessions/scd_20230324/session_net.json",
-                "sessions/scp_20220318/session_net.json",
-                "sessions/scd_20230407/session_net.json",
-                "sessions/scd_20230804/session_net.json",
-                "sessions/scd_20230302/session_net.json",
                 "sessions/scp_20220311/session_net.json",
+                "sessions/noah_functional_mri/session_net.json",
+                "sessions/dyloc_20230818/session_net.json",
                 "sessions/scd_20230331/session_net.json",
                 "sessions/scd_20230209/session_net.json",
+                "sessions/scd_20230324/session_net.json",
+                "sessions/scd_20230406/session_net.json",
+                "sessions/scp_20220321/session_net.json",
                 "sessions/noah_fmri_practice/session_net.json",
-                "sessions/dyloc_20230818/session_net.json"
+                "sessions/scd_20230303/session_net.json",
+                "sessions/dyloc_20220124_1/session_net.json",
+                "sessions/scd_20230330/session_net.json",
+                "sessions/scd_20230821/session_net.json",
+                "sessions/scp_20220318/session_net.json",
+                "sessions/dyloc_20230815/session_net.json"
             ],
             "type": "net_json",
             "complete": null,
             "bipartite": 0,
             "always_show": true,
             "leaf": true,
-            "modified": "2023-08-29 09:08:36.047311",
+            "modified": "2023-10-03 17:18:39.284705",
             "id": "sessions"
         },
         {
@@ -228,7 +256,7 @@
             "complete": null,
             "bipartite": 0,
             "leaf": true,
-            "modified": "2023-08-28 12:18:56.078019",
+            "modified": "2023-10-10 09:05:00.422857",
             "id": "paradigm_complete_checkpoint"
         },
         {
@@ -236,13 +264,15 @@
                 "CBRs": "subjects/wooster/rois/CBRs/surf_labels",
                 "local_rois_helen": "subjects/wooster/rois/local_rois_helen/surf_labels",
                 "righthemi": "subjects/wooster_old_helen/rois/righthemi/surf_labels",
-                "righthemi2": "subjects/wooster_old_helen/rois/righthemi2/surf_labels"
+                "righthemi2": "subjects/wooster_old_helen/rois/righthemi2/surf_labels",
+                "rh_01241": "subjects/wooster_old_helen/rois/rh_01241/surf_labels",
+                "lh_01241": "subjects/wooster_old_helen/rois/lh_01241/surf_labels"
             },
             "complete": null,
             "type": "label",
             "bipartite": 0,
             "leaf": true,
-            "modified": "2023-08-28 12:57:16.028824",
+            "modified": "2023-10-10 09:05:00.422857",
             "id": "surface_defined_rois"
         },
         {
@@ -250,14 +280,16 @@
                 "CBRs": "subjects/wooster/rois/CBRs/vol_rois",
                 "local_rois_helen": "subjects/wooster/rois/local_rois_helen/vol_rois",
                 "righthemi": "subjects/wooster_old_helen/rois/righthemi/vol_rois",
-                "righthemi2": "subjects/wooster_old_helen/rois/righthemi2/vol_rois"
+                "righthemi2": "subjects/wooster_old_helen/rois/righthemi2/vol_rois",
+                "rh_01241": "subjects/wooster_old_helen/rois/rh_01241/vol_rois",
+                "lh_01241": "subjects/wooster_old_helen/rois/lh_01241/vol_rois"
             },
             "complete": null,
             "type": "volume",
             "space": "t1_native",
             "bipartite": 0,
             "leaf": true,
-            "modified": "2023-08-28 12:57:20.218492",
+            "modified": "2023-10-10 09:05:00.422857",
             "id": "volume_rois"
         },
         {
@@ -265,28 +297,32 @@
                 "CBRs": "subjects/wooster/rois/CBRs/ds_roi_vols",
                 "KarthikROIsJeevesRH": "subjects/wooster/rois/KarthikROIsJeevesRH/ds_vol_rois",
                 "local_rois_helen": "subjects/wooster/rois/local_rois_helen/ds_roi_vols",
-                "righthemi": "subjects/wooster_old_helen/rois/righthemi/ds_roi_vols"
+                "righthemi": "subjects/wooster_old_helen/rois/righthemi/ds_roi_vols",
+                "rh_01241": "subjects/wooster_old_helen/rois/rh_01241/ds_roi_vols",
+                "lh_01241": "subjects/wooster_old_helen/rois/lh_01241/ds_roi_vols"
             },
             "complete": null,
             "type": "volume",
             "space": "ds_t1_native",
             "bipartite": 0,
             "leaf": true,
-            "modified": "2023-08-28 12:57:20.218492",
+            "modified": "2023-10-10 09:05:00.422857",
             "id": "ds_volume_rois"
         },
         {
             "data": {
                 "CBRs": "subjects/wooster/rois/func_space_rois",
                 "local_rois_helen": "subjects/wooster/rois/local_rois_helen/auto_func_space_rois",
-                "righthemi": "subjects/wooster_old_helen/rois/righthemi/auto_func_space_rois"
+                "righthemi": "subjects/wooster_old_helen/rois/righthemi/auto_func_space_rois",
+                "rh_01241": "subjects/wooster_old_helen/rois/rh_01241/auto_func_space_rois",
+                "lh_01241": "subjects/wooster_old_helen/rois/lh_01241/auto_func_space_rois"
             },
             "complete": null,
             "type": "volume",
             "space": "functional_std",
             "bipartite": 0,
             "leaf": true,
-            "modified": "2023-08-28 12:57:20.218492",
+            "modified": "2023-10-10 09:05:00.422857",
             "id": "functional_rois"
         },
         {
@@ -295,7 +331,7 @@
             "type": "array",
             "bipartite": 0,
             "leaf": true,
-            "modified": "2023-08-28 12:57:20.218492",
+            "modified": "2023-10-10 09:05:00.422857",
             "id": "roi_time_courses"
         },
         {
@@ -344,7 +380,7 @@
             "fxn": "self.create_load_session",
             "bipartite": 1,
             "desc": "create preprocessing and basic analysis pipeline for new fmri session.",
-            "modified": "2023-08-29 09:08:36.047311",
+            "modified": "2023-10-03 17:18:39.284705",
             "id": "create_load_session"
         },
         {
@@ -406,14 +442,14 @@
             "fxn": "support_functions.define_surface_rois",
             "bipartite": 1,
             "desc": "Just a placeholder to tell the project manager that you created manual rois, and to provide instructions. You will need to draw and save the rois in freeview.",
-            "modified": "2023-08-28 12:57:16.028824",
+            "modified": "2023-10-03 12:51:02.293494",
             "id": "manual_surface_rois"
         },
         {
             "fxn": "support_functions.surf_labels_to_vol_mask",
             "bipartite": 1,
             "desc": "project ROIs defined on the surface back into the volume.",
-            "modified": "2023-08-28 12:57:20.218492",
+            "modified": "2023-10-03 12:51:22.359405",
             "id": "volume_rois_from_surface_rois"
         },
         {
@@ -426,14 +462,14 @@
             "fxn": "support_functions.downsample_vol_rois",
             "bipartite": 1,
             "desc": "downsample volume rois by a factor of 2 to the working space.",
-            "modified": "2023-08-28 12:46:06.682697",
+            "modified": "2023-10-03 12:52:43.426039",
             "id": "downsample_vol_rois"
         },
         {
             "fxn": "support_functions.apply_warp_inverse_vol_roi_dir",
             "bipartite": 1,
             "desc": "transform directory of anatomical rois to functional space.",
-            "modified": "2023-08-28 12:46:15.622879",
+            "modified": "2023-10-03 12:53:03.209110",
             "id": "vol_2_functional_rois"
         },
         {
@@ -600,7 +636,7 @@
             "id": "beta_dyloc_original"
         },
         {
-            "data": "subjects/wooster_old_helen/analysis/glm_model_496604.pkl",
+            "data": "/media/data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/glm_model_867348.pkl",
             "complete": true,
             "generated": true,
             "bipartite": 0,
@@ -611,17 +647,21 @@
         },
         {
             "data": [
-                "subjects/wooster_old_helen/analysis/bw_minus_colored.nii.gz",
-                "subjects/wooster_old_helen/analysis/faces_minus_scenes.nii.gz",
-                "subjects/wooster_old_helen/analysis/faces_minus_bodies.nii.gz",
-                "subjects/wooster_old_helen/analysis/faces_minus_scrambled.nii.gz",
-                "subjects/wooster_old_helen/analysis/faces_minus_objects.nii.gz",
-                "subjects/wooster_old_helen/analysis/objects_minus_scrambled.nii.gz",
-                "subjects/wooster_old_helen/analysis/objects_minus_scenes.nii.gz",
-                "subjects/wooster_old_helen/analysis/objects_minus_bodies.nii.gz",
-                "subjects/wooster_old_helen/analysis/scenes_minus_scrambled.nii.gz",
-                "subjects/wooster_old_helen/analysis/color_localizer.nii.gz",
-                "subjects/wooster_old_helen/analysis/background.nii.gz"
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/bw_minus_colored.nii.gz",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/faces_minus_scenes.nii.gz",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/faces_minus_bodies.nii.gz",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/faces_minus_scrambled.nii.gz",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/faces_minus_objects.nii.gz",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/objects_minus_scrambled.nii.gz",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/objects_minus_scenes.nii.gz",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/objects_minus_bodies.nii.gz",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/scenes_minus_scrambled.nii.gz",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/color_localizer.nii.gz",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/c_faces_minus_c_bodies.nii.gz",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/c_faces_minus_c_objects.nii.gz",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/bw_faces_minus_bw_bodies.nii.gz",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/bw_faces_minus_bw_objects.nii.gz",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/background.nii.gz"
             ],
             "complete": true,
             "generated": true,
@@ -629,22 +669,26 @@
             "type": "volume",
             "space": "std_functional",
             "leaf": true,
-            "modified": "2023-08-28 12:17:47.384903",
+            "modified": "2023-10-10 09:03:03.447255",
             "id": "contrasts_dyloc_original"
         },
         {
             "data": [
-                "subjects/wooster_old_helen/analysis/reg_bw_minus_colored.nii.gz",
-                "subjects/wooster_old_helen/analysis/reg_faces_minus_scenes.nii.gz",
-                "subjects/wooster_old_helen/analysis/reg_faces_minus_bodies.nii.gz",
-                "subjects/wooster_old_helen/analysis/reg_faces_minus_scrambled.nii.gz",
-                "subjects/wooster_old_helen/analysis/reg_faces_minus_objects.nii.gz",
-                "subjects/wooster_old_helen/analysis/reg_objects_minus_scrambled.nii.gz",
-                "subjects/wooster_old_helen/analysis/reg_objects_minus_scenes.nii.gz",
-                "subjects/wooster_old_helen/analysis/reg_objects_minus_bodies.nii.gz",
-                "subjects/wooster_old_helen/analysis/reg_scenes_minus_scrambled.nii.gz",
-                "subjects/wooster_old_helen/analysis/reg_color_localizer.nii.gz",
-                "subjects/wooster_old_helen/analysis/reg_background.nii.gz"
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/reg_bw_minus_colored.nii.gz",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/reg_faces_minus_scenes.nii.gz",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/reg_faces_minus_bodies.nii.gz",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/reg_faces_minus_scrambled.nii.gz",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/reg_faces_minus_objects.nii.gz",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/reg_objects_minus_scrambled.nii.gz",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/reg_objects_minus_scenes.nii.gz",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/reg_objects_minus_bodies.nii.gz",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/reg_scenes_minus_scrambled.nii.gz",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/reg_color_localizer.nii.gz",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/reg_c_faces_minus_c_bodies.nii.gz",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/reg_c_faces_minus_c_objects.nii.gz",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/reg_bw_faces_minus_bw_bodies.nii.gz",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/reg_bw_faces_minus_bw_objects.nii.gz",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/reg_background.nii.gz"
             ],
             "complete": true,
             "generated": true,
@@ -652,33 +696,41 @@
             "type": "volume",
             "space": "ds_t1_native",
             "leaf": true,
-            "modified": "2023-08-28 12:18:04.939872",
+            "modified": "2023-10-10 09:03:33.874962",
             "id": "reg_contrasts_dyloc_original"
         },
         {
             "data": [
-                "subjects/wooster_old_helen/analysis/sigsurface_lh_reg_bw_minus_colored.mgh",
-                "subjects/wooster_old_helen/analysis/sigsurface_rh_reg_bw_minus_colored.mgh",
-                "subjects/wooster_old_helen/analysis/sigsurface_lh_reg_faces_minus_scenes.mgh",
-                "subjects/wooster_old_helen/analysis/sigsurface_rh_reg_faces_minus_scenes.mgh",
-                "subjects/wooster_old_helen/analysis/sigsurface_lh_reg_faces_minus_bodies.mgh",
-                "subjects/wooster_old_helen/analysis/sigsurface_rh_reg_faces_minus_bodies.mgh",
-                "subjects/wooster_old_helen/analysis/sigsurface_lh_reg_faces_minus_scrambled.mgh",
-                "subjects/wooster_old_helen/analysis/sigsurface_rh_reg_faces_minus_scrambled.mgh",
-                "subjects/wooster_old_helen/analysis/sigsurface_lh_reg_faces_minus_objects.mgh",
-                "subjects/wooster_old_helen/analysis/sigsurface_rh_reg_faces_minus_objects.mgh",
-                "subjects/wooster_old_helen/analysis/sigsurface_lh_reg_objects_minus_scrambled.mgh",
-                "subjects/wooster_old_helen/analysis/sigsurface_rh_reg_objects_minus_scrambled.mgh",
-                "subjects/wooster_old_helen/analysis/sigsurface_lh_reg_objects_minus_scenes.mgh",
-                "subjects/wooster_old_helen/analysis/sigsurface_rh_reg_objects_minus_scenes.mgh",
-                "subjects/wooster_old_helen/analysis/sigsurface_lh_reg_objects_minus_bodies.mgh",
-                "subjects/wooster_old_helen/analysis/sigsurface_rh_reg_objects_minus_bodies.mgh",
-                "subjects/wooster_old_helen/analysis/sigsurface_lh_reg_scenes_minus_scrambled.mgh",
-                "subjects/wooster_old_helen/analysis/sigsurface_rh_reg_scenes_minus_scrambled.mgh",
-                "subjects/wooster_old_helen/analysis/sigsurface_lh_reg_color_localizer.mgh",
-                "subjects/wooster_old_helen/analysis/sigsurface_rh_reg_color_localizer.mgh",
-                "subjects/wooster_old_helen/analysis/sigsurface_lh_reg_background.mgh",
-                "subjects/wooster_old_helen/analysis/sigsurface_rh_reg_background.mgh"
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/sigsurface_lh_reg_bw_minus_colored.mgh",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/sigsurface_rh_reg_bw_minus_colored.mgh",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/sigsurface_lh_reg_faces_minus_scenes.mgh",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/sigsurface_rh_reg_faces_minus_scenes.mgh",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/sigsurface_lh_reg_faces_minus_bodies.mgh",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/sigsurface_rh_reg_faces_minus_bodies.mgh",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/sigsurface_lh_reg_faces_minus_scrambled.mgh",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/sigsurface_rh_reg_faces_minus_scrambled.mgh",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/sigsurface_lh_reg_faces_minus_objects.mgh",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/sigsurface_rh_reg_faces_minus_objects.mgh",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/sigsurface_lh_reg_objects_minus_scrambled.mgh",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/sigsurface_rh_reg_objects_minus_scrambled.mgh",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/sigsurface_lh_reg_objects_minus_scenes.mgh",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/sigsurface_rh_reg_objects_minus_scenes.mgh",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/sigsurface_lh_reg_objects_minus_bodies.mgh",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/sigsurface_rh_reg_objects_minus_bodies.mgh",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/sigsurface_lh_reg_scenes_minus_scrambled.mgh",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/sigsurface_rh_reg_scenes_minus_scrambled.mgh",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/sigsurface_lh_reg_color_localizer.mgh",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/sigsurface_rh_reg_color_localizer.mgh",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/sigsurface_lh_reg_c_faces_minus_c_bodies.mgh",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/sigsurface_rh_reg_c_faces_minus_c_bodies.mgh",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/sigsurface_lh_reg_c_faces_minus_c_objects.mgh",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/sigsurface_rh_reg_c_faces_minus_c_objects.mgh",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/sigsurface_lh_reg_bw_faces_minus_bw_bodies.mgh",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/sigsurface_rh_reg_bw_faces_minus_bw_bodies.mgh",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/sigsurface_lh_reg_bw_faces_minus_bw_objects.mgh",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/sigsurface_rh_reg_bw_faces_minus_bw_objects.mgh",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/sigsurface_lh_reg_background.mgh",
+                "../../../data/Users/Helen/stashed_glms_wooster_dyloc_sessions/dyloc_20220124_1/sigsurface_rh_reg_background.mgh"
             ],
             "complete": true,
             "generated": true,
@@ -686,7 +738,7 @@
             "type": "overlay",
             "space": "t1_native",
             "leaf": true,
-            "modified": "2023-08-28 12:18:56.078019",
+            "modified": "2023-10-10 09:05:00.422857",
             "id": "sigsurfaces_dyloc_original"
         },
         {
@@ -712,7 +764,7 @@
             "bipartite": 1,
             "fxn": "support_functions.create_contrast",
             "desc": "Generates the contrasts requested in the paradigm definition using the subjet level beta matrix. Contrasts are a useful tool for comparing activation to two conditions or linear combinations of conditions on a per voxel level. Contrast values are interpreted as Z-scores here. ",
-            "modified": "2023-08-28 12:17:47.384903",
+            "modified": "2023-10-10 09:03:03.447255",
             "id": "create_dyloc_original_contrasts"
         },
         {
@@ -720,14 +772,14 @@
             "bipartite": 1,
             "fxn": "support_functions.apply_warp",
             "desc": "registers the contrasts to the anatomical space.",
-            "modified": "2023-08-28 12:18:04.939872",
+            "modified": "2023-10-10 09:03:33.874962",
             "id": "register_dyloc_original_contrasts"
         },
         {
             "generated": true,
             "bipartite": 1,
             "fxn": "support_functions.generate_subject_overlays",
-            "modified": "2023-08-28 12:18:56.078019",
+            "modified": "2023-10-10 09:05:00.422857",
             "id": "create_dyloc_original_sigsurface_overlays"
         },
         {

@@ -13,11 +13,16 @@
     },
     "nodes": [
         {
-            "data": null,
+            "data": [
+                "subjects/wooster/sessions/mm_20220128/horizontal_minus_vertical.nii.gz",
+                "subjects/wooster/sessions/mm_20220128/horizontal_minus_gray.nii.gz",
+                "subjects/wooster/sessions/mm_20220128/vertical_minus_gray.nii.gz",
+                "subjects/wooster/sessions/mm_20220128/background.nii.gz"
+            ],
             "complete": null,
             "bipartite": 0,
             "generated": true,
-            "modified": "2023-09-06 16:03:28.305099",
+            "modified": "2023-09-19 09:38:00.168487",
             "id": "end"
         },
         {
@@ -393,7 +398,7 @@
             "bipartite": 0,
             "complete": true,
             "leaf": true,
-            "modified": "2023-09-05 22:10:48.511003",
+            "modified": "2023-09-19 09:36:43.258669",
             "id": "paradigm"
         },
         {
@@ -406,23 +411,28 @@
             "id": "ima_order_map"
         },
         {
-            "data": "subjects/wooster/sessions/mm_20220128/glm_model_274229.pkl",
+            "data": "subjects/wooster/sessions/mm_20220128/glm_model_29850.pkl",
             "type": "glm_object",
             "bipartite": 0,
             "complete": true,
             "space": "epi_std",
             "leaf": true,
-            "modified": "2023-09-06 16:03:28.305099",
+            "modified": "2023-09-19 09:37:50.780180",
             "id": "glm_model"
         },
         {
-            "data": [],
+            "data": [
+                "subjects/wooster/sessions/mm_20220128/horizontal_minus_vertical.nii.gz",
+                "subjects/wooster/sessions/mm_20220128/horizontal_minus_gray.nii.gz",
+                "subjects/wooster/sessions/mm_20220128/vertical_minus_gray.nii.gz",
+                "subjects/wooster/sessions/mm_20220128/background.nii.gz"
+            ],
             "type": "volume",
             "bipartite": 0,
-            "complete": false,
+            "complete": true,
             "space": "epi_std",
             "leaf": true,
-            "modified": "2023-09-06 16:03:28.305099",
+            "modified": "2023-09-19 09:38:00.168487",
             "id": "reg_contrasts"
         },
         {
@@ -431,16 +441,16 @@
             "bipartite": 0,
             "complete": false,
             "space": "",
-            "modified": "2023-09-06 16:03:28.305099",
+            "modified": "2023-09-19 09:38:00.168487",
             "id": "slice_contrast_img"
         },
         {
-            "data": "subjects/wooster/sessions/mm_20220128/glm_model_274229.pkl",
+            "data": "subjects/wooster/sessions/mm_20220128/glm_model_29850.pkl",
             "type": "ndarray",
             "bipartite": 0,
             "complete": true,
             "space": "",
-            "modified": "2023-09-06 16:03:28.305099",
+            "modified": "2023-09-19 09:37:50.780180",
             "id": "hrf_estimate"
         },
         {
@@ -551,7 +561,7 @@
             "fxn": "support_functions.create_load_paradigm",
             "bipartite": 1,
             "desc": "Either load an existing stimuli paradigm json config file, or use the prompt to create a new one.",
-            "modified": "2023-09-05 22:10:48.511003",
+            "modified": "2023-09-19 09:36:43.258669",
             "id": "load_paradigm"
         },
         {
@@ -566,7 +576,7 @@
             "bipartite": 1,
             "argv": true,
             "desc": "Create the size voxels x stimulus_conditions beta matrix from paradigm def and session masked epis. The beta matrix is designed to capture the information we careabout from this experiment, and satisfies the equation (DesignMatrix * hrf) @ BetaMatrix ~= EpiTimeSeries where * is the convolution operator and @ is matrix multiplication.",
-            "modified": "2023-09-06 16:03:28.305099",
+            "modified": "2023-09-19 09:37:50.780180",
             "id": "create_beta_matrix"
         },
         {
@@ -580,6 +590,7 @@
             "fxn": "support_functions.create_contrast",
             "bipartite": 1,
             "desc": "Create contrast volumes from the beta matrix.",
+            "modified": "2023-09-19 09:38:00.168487",
             "id": "create_session_contrast"
         },
         {
@@ -587,6 +598,7 @@
             "fxn": "support_functions.promote_session",
             "bipartite": 1,
             "desc": "This session is marked as complete-ish and will be included by future subject level analysis, and for construction of the subject level beta matrix. Basically its added to the subject config data index.",
+            "modified": "2023-09-19 09:39:15.956599",
             "id": "promote_session"
         },
         {

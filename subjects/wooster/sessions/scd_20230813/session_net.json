@@ -483,6 +483,7 @@
                 "subjects/wooster/sessions/scd_20230813/35/fixation.csv",
                 "subjects/wooster/sessions/scd_20230813/7/fixation.csv",
                 "subjects/wooster/sessions/scd_20230813/10/fixation.csv",
+                "subjects/wooster/sessions/scd_20230813/16/fixation.csv",
                 "subjects/wooster/sessions/scd_20230813/37/fixation.csv",
                 "subjects/wooster/sessions/scd_20230813/38/fixation.csv",
                 "subjects/wooster/sessions/scd_20230813/27/fixation.csv",
@@ -511,7 +512,7 @@
             "complete": true,
             "leaf": true,
             "space": "time_course",
-            "modified": "2023-08-16 13:16:16.663017",
+            "modified": "2023-10-18 09:22:32.798711",
             "id": "fixation_data"
         },
         {
@@ -632,7 +633,7 @@
             "fxn": "support_functions.get_fixation_csv",
             "bipartite": 1,
             "desc": "",
-            "modified": "2023-08-16 13:16:16.663017",
+            "modified": "2023-10-18 09:22:32.798711",
             "id": "get_fixation_data"
         },
         {

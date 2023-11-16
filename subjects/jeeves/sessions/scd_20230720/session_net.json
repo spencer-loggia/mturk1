@@ -13,16 +13,11 @@
     },
     "nodes": [
         {
-            "data": [
-                "subjects/jeeves/sessions/scd_20230720/probe_colored_circle_minus_gray.nii.gz",
-                "subjects/jeeves/sessions/scd_20230720/probe_chromatic_uncolored_minus_gray.nii.gz",
-                "subjects/jeeves/sessions/scd_20230720/probe_chromatic_uncolored_minus_colored_circle.nii.gz",
-                "subjects/jeeves/sessions/scd_20230720/background.nii.gz"
-            ],
+            "data": null,
             "complete": null,
             "bipartite": 0,
             "generated": true,
-            "modified": "2023-08-15 12:41:22.680633",
+            "modified": "2023-09-30 14:29:55.420663",
             "id": "end"
         },
         {
@@ -165,7 +160,7 @@
             "complete": null,
             "space": "epi_std",
             "leaf": true,
-            "modified": "2023-08-01 09:49:02.168185",
+            "modified": "2023-08-28 08:33:18.572807",
             "id": "functional_std_dil_mask"
         },
         {
@@ -175,7 +170,7 @@
             "complete": null,
             "space": "epi_std",
             "leaf": true,
-            "modified": "2023-08-01 09:48:48.222523",
+            "modified": "2023-08-28 08:32:27.440118",
             "id": "functional_std_mask"
         },
         {
@@ -185,7 +180,7 @@
             "complete": null,
             "space": "epi_std",
             "leaf": true,
-            "modified": "2023-08-09 13:47:04.828635",
+            "modified": "2023-08-28 08:32:37.844201",
             "id": "functional_std_masked"
         },
         {
@@ -536,6 +531,7 @@
             "bipartite": 1,
             "generated": true,
             "desc": "function that removes intermediate files associated with session. WARNING: This makes it impossible to re-run many intermediate processing steps without starting over.",
+            "modified": "2023-09-30 14:29:55.420663",
             "id": "sterilize"
         }
     ],

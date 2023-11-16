@@ -13,11 +13,16 @@
     },
     "nodes": [
         {
-            "data": null,
+            "data": [
+                "subjects/jeeves/sessions/scd_20230901/probe_colored_circle_minus_gray.nii.gz",
+                "subjects/jeeves/sessions/scd_20230901/probe_chromatic_uncolored_minus_gray.nii.gz",
+                "subjects/jeeves/sessions/scd_20230901/probe_chromatic_uncolored_minus_colored_circle.nii.gz",
+                "subjects/jeeves/sessions/scd_20230901/background.nii.gz"
+            ],
             "complete": null,
             "bipartite": 0,
             "generated": true,
-            "modified": "2023-09-03 23:38:38.076529",
+            "modified": "2023-09-28 10:10:44.553425",
             "id": "end"
         },
         {
@@ -278,98 +283,153 @@
             "id": "manual_transform"
         },
         {
-            "data": null,
+            "data": "subjects/jeeves/sessions/scd_20230901/Composite.h5",
             "type": "transform",
             "bipartite": 0,
-            "complete": false,
+            "complete": true,
             "invertable": false,
             "space": [
                 "epi_std_aprox",
                 "epi_std"
             ],
             "leaf": true,
-            "modified": "2023-09-03 23:38:38.076529",
+            "modified": "2023-09-28 09:06:03.325566",
             "id": "auto_composite_transform"
         },
         {
-            "data": null,
+            "data": "subjects/jeeves/sessions/scd_20230901/InverseComposite.h5",
             "type": "transform",
             "bipartite": 0,
-            "complete": false,
+            "complete": true,
             "invertable": false,
             "space": [
                 "epi_std",
                 "epi_std_aprox"
             ],
             "leaf": true,
-            "modified": "2023-09-03 23:38:38.076529",
+            "modified": "2023-09-28 09:06:03.325566",
             "id": "inverse_auto_composite_transform"
         },
         {
-            "data": [],
+            "data": [
+                "subjects/jeeves/sessions/scd_20230901/20/reg_moco.nii.gz",
+                "subjects/jeeves/sessions/scd_20230901/5/reg_moco.nii.gz",
+                "subjects/jeeves/sessions/scd_20230901/18/reg_moco.nii.gz",
+                "subjects/jeeves/sessions/scd_20230901/7/reg_moco.nii.gz",
+                "subjects/jeeves/sessions/scd_20230901/17/reg_moco.nii.gz",
+                "subjects/jeeves/sessions/scd_20230901/14/reg_moco.nii.gz",
+                "subjects/jeeves/sessions/scd_20230901/11/reg_moco.nii.gz",
+                "subjects/jeeves/sessions/scd_20230901/12/reg_moco.nii.gz",
+                "subjects/jeeves/sessions/scd_20230901/6/reg_moco.nii.gz",
+                "subjects/jeeves/sessions/scd_20230901/23/reg_moco.nii.gz",
+                "subjects/jeeves/sessions/scd_20230901/8/reg_moco.nii.gz",
+                "subjects/jeeves/sessions/scd_20230901/10/reg_moco.nii.gz",
+                "subjects/jeeves/sessions/scd_20230901/9/reg_moco.nii.gz",
+                "subjects/jeeves/sessions/scd_20230901/22/reg_moco.nii.gz",
+                "subjects/jeeves/sessions/scd_20230901/4/reg_moco.nii.gz"
+            ],
             "fname": null,
             "type": "time_series",
             "bipartite": 0,
-            "complete": false,
+            "complete": true,
             "space": "epi_native",
-            "modified": "2023-09-03 23:38:38.076529",
+            "modified": "2023-09-28 09:12:36.357553",
             "id": "reg_epi"
         },
         {
-            "data": [],
+            "data": [
+                "subjects/jeeves/sessions/scd_20230901/20/fixation.csv",
+                "subjects/jeeves/sessions/scd_20230901/5/fixation.csv",
+                "subjects/jeeves/sessions/scd_20230901/18/fixation.csv",
+                "subjects/jeeves/sessions/scd_20230901/7/fixation.csv",
+                "subjects/jeeves/sessions/scd_20230901/17/fixation.csv",
+                "subjects/jeeves/sessions/scd_20230901/14/fixation.csv",
+                "subjects/jeeves/sessions/scd_20230901/11/fixation.csv",
+                "subjects/jeeves/sessions/scd_20230901/12/fixation.csv",
+                "subjects/jeeves/sessions/scd_20230901/6/fixation.csv",
+                "subjects/jeeves/sessions/scd_20230901/23/fixation.csv",
+                "subjects/jeeves/sessions/scd_20230901/8/fixation.csv",
+                "subjects/jeeves/sessions/scd_20230901/10/fixation.csv",
+                "subjects/jeeves/sessions/scd_20230901/9/fixation.csv",
+                "subjects/jeeves/sessions/scd_20230901/22/fixation.csv",
+                "subjects/jeeves/sessions/scd_20230901/4/fixation.csv"
+            ],
             "fname": null,
             "type": "csv",
             "bipartite": 0,
-            "complete": false,
+            "complete": true,
             "leaf": true,
             "space": "time_course",
+            "modified": "2023-10-18 12:00:54.745848",
             "id": "fixation_data"
         },
         {
-            "data": [],
+            "data": [
+                "subjects/jeeves/sessions/scd_20230901/20/epi_masked.nii.gz",
+                "subjects/jeeves/sessions/scd_20230901/5/epi_masked.nii.gz",
+                "subjects/jeeves/sessions/scd_20230901/18/epi_masked.nii.gz",
+                "subjects/jeeves/sessions/scd_20230901/7/epi_masked.nii.gz",
+                "subjects/jeeves/sessions/scd_20230901/17/epi_masked.nii.gz",
+                "subjects/jeeves/sessions/scd_20230901/14/epi_masked.nii.gz",
+                "subjects/jeeves/sessions/scd_20230901/11/epi_masked.nii.gz",
+                "subjects/jeeves/sessions/scd_20230901/12/epi_masked.nii.gz",
+                "subjects/jeeves/sessions/scd_20230901/6/epi_masked.nii.gz",
+                "subjects/jeeves/sessions/scd_20230901/23/epi_masked.nii.gz",
+                "subjects/jeeves/sessions/scd_20230901/8/epi_masked.nii.gz",
+                "subjects/jeeves/sessions/scd_20230901/10/epi_masked.nii.gz",
+                "subjects/jeeves/sessions/scd_20230901/9/epi_masked.nii.gz",
+                "subjects/jeeves/sessions/scd_20230901/22/epi_masked.nii.gz",
+                "subjects/jeeves/sessions/scd_20230901/4/epi_masked.nii.gz"
+            ],
             "fname": null,
             "type": "time_series",
             "bipartite": 0,
-            "complete": false,
+            "complete": true,
             "leaf": true,
-            "modified": "2023-09-03 23:38:38.076529",
+            "modified": "2023-09-28 09:14:17.448318",
             "id": "reg_epi_masked"
         },
         {
-            "data": null,
+            "data": "paradigms/shape_color_attention_decode_experiment_config.json",
             "type": "json",
             "bipartite": 0,
-            "complete": false,
+            "complete": true,
             "leaf": true,
+            "modified": "2023-09-28 09:08:13.562571",
             "id": "paradigm"
         },
         {
             "type": "json",
             "bipartite": 0,
-            "complete": false,
-            "data": null,
+            "complete": true,
+            "data": "subjects/jeeves/sessions/scd_20230901/ima_order_map.json",
             "leaf": true,
-            "modified": "2023-09-03 23:38:38.076529",
+            "modified": "2023-09-28 09:15:07.796335",
             "id": "ima_order_map"
         },
         {
-            "data": [],
+            "data": "subjects/jeeves/sessions/scd_20230901/glm_model_598460.pkl",
             "type": "glm_object",
             "bipartite": 0,
-            "complete": false,
+            "complete": true,
             "space": "epi_std",
             "leaf": true,
-            "modified": "2023-09-03 23:38:38.076529",
+            "modified": "2023-09-28 10:10:33.877318",
             "id": "glm_model"
         },
         {
-            "data": [],
+            "data": [
+                "subjects/jeeves/sessions/scd_20230901/probe_colored_circle_minus_gray.nii.gz",
+                "subjects/jeeves/sessions/scd_20230901/probe_chromatic_uncolored_minus_gray.nii.gz",
+                "subjects/jeeves/sessions/scd_20230901/probe_chromatic_uncolored_minus_colored_circle.nii.gz",
+                "subjects/jeeves/sessions/scd_20230901/background.nii.gz"
+            ],
             "type": "volume",
             "bipartite": 0,
-            "complete": false,
+            "complete": true,
             "space": "epi_std",
             "leaf": true,
-            "modified": "2023-09-03 23:38:38.076529",
+            "modified": "2023-09-28 10:10:44.553425",
             "id": "reg_contrasts"
         },
         {
@@ -378,16 +438,16 @@
             "bipartite": 0,
             "complete": false,
             "space": "",
-            "modified": "2023-09-03 23:38:38.076529",
+            "modified": "2023-09-28 10:10:44.553425",
             "id": "slice_contrast_img"
         },
         {
-            "data": null,
+            "data": "subjects/jeeves/sessions/scd_20230901/glm_model_598460.pkl",
             "type": "ndarray",
             "bipartite": 0,
-            "complete": false,
+            "complete": true,
             "space": "",
-            "modified": "2023-09-03 23:38:38.076529",
+            "modified": "2023-09-28 10:10:33.877318",
             "id": "hrf_estimate"
         },
         {
@@ -402,6 +462,7 @@
             "fxn": "support_functions.get_fixation_csv",
             "bipartite": 1,
             "desc": "",
+            "modified": "2023-10-18 12:00:54.745848",
             "id": "get_fixation_data"
         },
         {
@@ -478,6 +539,7 @@
             "bipartite": 1,
             "desc": "Use ants coregistration to create a fine grained nonlinear mapping from the skull stripped manually aligned epi rep to the downsampled t1. The manual registration got the brains as overlapping as possible, now this attempts to morph the cortex to correct differences in white matter boundaries due to field warp in epi acquisition.",
             "argv": true,
+            "modified": "2023-09-28 09:06:03.325566",
             "id": "automatic_coregistration"
         },
         {
@@ -491,18 +553,21 @@
             "fxn": "support_functions.apply_binary_mask_functional",
             "bipartite": 1,
             "desc": "Applys the functional std space mask to the session epis warped to the standard functional space",
+            "modified": "2023-09-28 09:14:17.448318",
             "id": "apply_functional_mask"
         },
         {
             "fxn": "support_functions.create_load_paradigm",
             "bipartite": 1,
             "desc": "Either load an existing stimuli paradigm json config file, or use the prompt to create a new one.",
+            "modified": "2023-09-28 09:08:13.562571",
             "id": "load_paradigm"
         },
         {
             "fxn": "support_functions.create_load_ima_order_map",
             "bipartite": 1,
             "desc": "Map each epi ima number to a corresponding stimuli paradigm order number.",
+            "modified": "2023-09-28 09:15:07.796335",
             "id": "create_load_ima_order_map"
         },
         {
@@ -510,18 +575,21 @@
             "bipartite": 1,
             "argv": true,
             "desc": "Create the size voxels x stimulus_conditions beta matrix from paradigm def and session masked epis. The beta matrix is designed to capture the information we careabout from this experiment, and satisfies the equation (DesignMatrix * hrf) @ BetaMatrix ~= EpiTimeSeries where * is the convolution operator and @ is matrix multiplication.",
+            "modified": "2023-09-28 10:10:33.877318",
             "id": "create_beta_matrix"
         },
         {
             "fxn": "support_functions.apply_warp_4d_refactor",
             "bipartite": 1,
             "desc": "Use the functional -> working space transform to take the functional data to the working space. ",
+            "modified": "2023-09-28 09:12:36.357553",
             "id": "register_epis"
         },
         {
             "fxn": "support_functions.create_contrast",
             "bipartite": 1,
             "desc": "Create contrast volumes from the beta matrix.",
+            "modified": "2023-09-28 10:10:44.553425",
             "id": "create_session_contrast"
         },
         {
@@ -529,6 +597,7 @@
             "fxn": "support_functions.promote_session",
             "bipartite": 1,
             "desc": "This session is marked as complete-ish and will be included by future subject level analysis, and for construction of the subject level beta matrix. Basically its added to the subject config data index.",
+            "modified": "2023-09-28 10:12:02.594651",
             "id": "promote_session"
         },
         {

@@ -4,12 +4,19 @@
         "shape_color_attention_decode": "paradigms/shape_color_attention_decode_experiment_config.json",
         "dyloc_original": "paradigms/dyloc_original_experiment_config.json",
         "shape_color_passive_block": "paradigms/shape_color_passive_block_experiment_config.json",
-        "meridian_mapper": "paradigms/meridian_mapper_experiment_config.json"
+        "meridian_mapper": "paradigms/meridian_mapper_experiment_config.json",
+        "simulation_4_blocks": "paradigms/simulation_4_blocks_experiment_config.json",
+        "validate_decoder": "paradigms/validate_decoder_experiment_config.json"
     },
     "subjects": [
         "wooster",
         "jeeves",
-        "wooster_old_helen"
+        "wooster_old_helen",
+        "validate",
+        "jeeves_for_ind_dyloc",
+        "Validate",
+        "Geo_Sim",
+        "Geo_Sim_TD"
     ],
     "data_map": {
         "shape_color_attention_decode": {
@@ -747,9 +754,103 @@
                     "session_net": "subjects/jeeves/sessions/scd_20230825/session_net.json",
                     "ima_order_map": "subjects/jeeves/sessions/scd_20230825/ima_order_map.json",
                     "beta_file": "subjects/jeeves/sessions/scd_20230825/glm_model_926917.pkl"
+                },
+                "scd_20230912": {
+                    "imas_used": [
+                        "8",
+                        "10",
+                        "13",
+                        "18",
+                        "11",
+                        "20",
+                        "12",
+                        "17",
+                        "9"
+                    ],
+                    "session_net": "subjects/jeeves/sessions/scd_20230912/session_net.json",
+                    "ima_order_map": "subjects/jeeves/sessions/scd_20230912/ima_order_map.json",
+                    "beta_file": "subjects/jeeves/sessions/scd_20230912/glm_model_754385.pkl"
+                },
+                "scd_20230901": {
+                    "imas_used": [
+                        "20",
+                        "5",
+                        "18",
+                        "7",
+                        "17",
+                        "14",
+                        "11",
+                        "12",
+                        "6",
+                        "23",
+                        "8",
+                        "10",
+                        "9",
+                        "22",
+                        "4"
+                    ],
+                    "session_net": "subjects/jeeves/sessions/scd_20230901/session_net.json",
+                    "ima_order_map": "subjects/jeeves/sessions/scd_20230901/ima_order_map.json",
+                    "beta_file": "subjects/jeeves/sessions/scd_20230901/glm_model_598460.pkl"
+                },
+                "scd_20230907": {
+                    "imas_used": [
+                        "10",
+                        "7",
+                        "9",
+                        "5",
+                        "4",
+                        "6",
+                        "8"
+                    ],
+                    "session_net": "subjects/jeeves/sessions/scd_20230907/session_net.json",
+                    "ima_order_map": "subjects/jeeves/sessions/scd_20230907/ima_order_map.json",
+                    "beta_file": "subjects/jeeves/sessions/scd_20230907/glm_model_688188.pkl"
+                },
+                "scd_20230918": {
+                    "imas_used": [
+                        "17",
+                        "6",
+                        "16",
+                        "12",
+                        "5",
+                        "7",
+                        "4",
+                        "11",
+                        "8",
+                        "13"
+                    ],
+                    "session_net": "subjects/jeeves/sessions/scd_20230918/session_net.json",
+                    "ima_order_map": "subjects/jeeves/sessions/scd_20230918/ima_order_map.json",
+                    "beta_file": "subjects/jeeves/sessions/scd_20230918/glm_model_845956.pkl"
+                },
+                "scd_20230919": {
+                    "imas_used": [
+                        "4",
+                        "15",
+                        "17",
+                        "10",
+                        "9",
+                        "13",
+                        "11",
+                        "16",
+                        "19",
+                        "6",
+                        "12",
+                        "14"
+                    ],
+                    "session_net": "subjects/jeeves/sessions/scd_20230919/session_net.json",
+                    "ima_order_map": "subjects/jeeves/sessions/scd_20230919/ima_order_map.json",
+                    "beta_file": "subjects/jeeves/sessions/scd_20230919/glm_model_748299.pkl"
                 }
             },
-            "wooster_old_helen": {}
+            "wooster_old_helen": {},
+            "Simulation": {},
+            "validate": {},
+            "jeeves_for_ind_dyloc": {},
+            "Validate": {},
+            "Geo_Sim": {},
+            "Geo_Sim_TD": {}
         },
         "dyloc_original": {
             "wooster": {
@@ -789,28 +890,6 @@
                     "session_net": "subjects/wooster/sessions/dyloc_20220124_2/session_net.json",
                     "ima_order_map": "subjects/wooster/sessions/dyloc_20220124_2/ima_order_map.json",
                     "beta_file": "subjects/wooster/sessions/dyloc_20220124_2/glm_model_509699.pkl"
-                },
-                "dyloc_20230818": {
-                    "imas_used": [
-                        "16",
-                        "6",
-                        "14",
-                        "18",
-                        "19",
-                        "17",
-                        "12",
-                        "13",
-                        "10",
-                        "11",
-                        "9",
-                        "15",
-                        "20",
-                        "8",
-                        "7"
-                    ],
-                    "session_net": "subjects/wooster/sessions/dyloc_20230818/session_net.json",
-                    "ima_order_map": "subjects/wooster/sessions/dyloc_20230818/ima_order_map.json",
-                    "beta_file": "subjects/wooster/sessions/dyloc_20230818/glm_model_271088.pkl"
                 }
             },
             "jeeves": {
@@ -835,7 +914,7 @@
                     ],
                     "session_net": "subjects/jeeves/sessions/dyloc_20230814/session_net.json",
                     "ima_order_map": "subjects/jeeves/sessions/dyloc_20230814/ima_order_map.json",
-                    "beta_file": "subjects/jeeves/sessions/dyloc_20230814/glm_model_572440.pkl"
+                    "beta_file": "subjects/jeeves/sessions/dyloc_20230814/glm_model_78555.pkl"
                 },
                 "dyloc_20230817": {
                     "imas_used": [
@@ -852,10 +931,16 @@
                     ],
                     "session_net": "subjects/jeeves/sessions/dyloc_20230817/session_net.json",
                     "ima_order_map": "subjects/jeeves/sessions/dyloc_20230817/ima_order_map.json",
-                    "beta_file": "subjects/jeeves/sessions/dyloc_20230817/glm_model_40713.pkl"
+                    "beta_file": "subjects/jeeves/sessions/dyloc_20230817/glm_model_309138.pkl"
                 }
             },
-            "wooster_old_helen": {}
+            "wooster_old_helen": {},
+            "Simulation": {},
+            "validate": {},
+            "jeeves_for_ind_dyloc": {},
+            "Validate": {},
+            "Geo_Sim": {},
+            "Geo_Sim_TD": {}
         },
         "shape_color_passive_block": {
             "wooster": {
@@ -949,12 +1034,110 @@
                 }
             },
             "jeeves": {},
-            "wooster_old_helen": {}
+            "wooster_old_helen": {},
+            "Simulation": {},
+            "validate": {},
+            "jeeves_for_ind_dyloc": {},
+            "Validate": {},
+            "Geo_Sim": {},
+            "Geo_Sim_TD": {}
         },
         "meridian_mapper": {
+            "wooster": {
+                "mm_20220128": {
+                    "imas_used": [
+                        "7",
+                        "9",
+                        "6",
+                        "13",
+                        "19",
+                        "12",
+                        "14",
+                        "4",
+                        "10",
+                        "2",
+                        "15",
+                        "11",
+                        "16",
+                        "5",
+                        "8",
+                        "3",
+                        "17",
+                        "18"
+                    ],
+                    "session_net": "subjects/wooster/sessions/mm_20220128/session_net.json",
+                    "ima_order_map": "subjects/wooster/sessions/mm_20220128/ima_order_map.json",
+                    "beta_file": "subjects/wooster/sessions/mm_20220128/glm_model_29850.pkl"
+                }
+            },
+            "jeeves": {},
+            "wooster_old_helen": {},
+            "Simulation": {},
+            "validate": {},
+            "jeeves_for_ind_dyloc": {},
+            "Validate": {},
+            "Geo_Sim": {},
+            "Geo_Sim_TD": {}
+        },
+        "Sim_4_Block": {
             "wooster": {},
             "jeeves": {},
-            "wooster_old_helen": {}
+            "wooster_old_helen": {},
+            "Simulation": {},
+            "validate": {},
+            "jeeves_for_ind_dyloc": {},
+            "Validate": {},
+            "Geo_Sim": {},
+            "Geo_Sim_TD": {}
+        },
+        "simulation_4_block": {
+            "wooster": {},
+            "jeeves": {},
+            "wooster_old_helen": {},
+            "Simulation": {},
+            "validate": {},
+            "jeeves_for_ind_dyloc": {},
+            "Validate": {},
+            "Geo_Sim": {},
+            "Geo_Sim_TD": {}
+        },
+        "simulation_4_blocks": {
+            "wooster": {},
+            "jeeves": {},
+            "wooster_old_helen": {},
+            "validate": {},
+            "jeeves_for_ind_dyloc": {},
+            "Validate": {},
+            "Geo_Sim": {},
+            "Geo_Sim_TD": {}
+        },
+        "validate_decoder": {
+            "wooster": {},
+            "jeeves": {},
+            "wooster_old_helen": {},
+            "validate": {
+                "vd_20230928": {
+                    "imas_used": [
+                        "3"
+                    ],
+                    "session_net": "subjects/validate/sessions/vd_20230928/session_net.json",
+                    "ima_order_map": "subjects/validate/sessions/vd_20230928/ima_order_map.json",
+                    "beta_file": "subjects/validate/sessions/vd_20230928/glm_model_431938.pkl"
+                }
+            },
+            "jeeves_for_ind_dyloc": {},
+            "Validate": {},
+            "Geo_Sim": {},
+            "Geo_Sim_TD": {
+                "3D_10242023": {
+                    "imas_used": [
+                        "1"
+                    ],
+                    "session_net": "subjects/Geo_Sim_TD/sessions/3D_10242023/session_net.json",
+                    "ima_order_map": "subjects/Geo_Sim_TD/sessions/3D_10242023/ima_order_map.json",
+                    "beta_file": "subjects/Geo_Sim_TD/sessions/3D_10242023/glm_model_334306.pkl"
+                }
+            }
         }
     },
     "reg_settings": {

@@ -22,7 +22,7 @@
             "complete": null,
             "bipartite": 0,
             "generated": true,
-            "modified": "2023-08-16 12:40:15.147908",
+            "modified": "2023-09-16 15:10:28.726399",
             "id": "end"
         },
         {
@@ -399,13 +399,13 @@
             "id": "ima_order_map"
         },
         {
-            "data": "subjects/wooster/sessions/scd_20230330/glm_model_206442.pkl",
+            "data": "subjects/wooster/sessions/scd_20230330/glm_model_389175.pkl",
             "type": "glm_object",
             "bipartite": 0,
             "complete": true,
             "space": "epi_std",
             "leaf": true,
-            "modified": "2023-08-16 12:38:08.664716",
+            "modified": "2023-09-16 15:10:22.711819",
             "id": "glm_model"
         },
         {
@@ -420,7 +420,7 @@
             "complete": true,
             "space": "epi_std",
             "leaf": true,
-            "modified": "2023-08-16 12:40:15.147908",
+            "modified": "2023-09-16 15:10:28.726399",
             "id": "reg_contrasts"
         },
         {
@@ -429,16 +429,16 @@
             "bipartite": 0,
             "complete": false,
             "space": "",
-            "modified": "2023-08-16 12:40:15.147908",
+            "modified": "2023-09-16 15:10:28.726399",
             "id": "slice_contrast_img"
         },
         {
-            "data": "subjects/wooster/sessions/scd_20230330/glm_model_206442.pkl",
+            "data": "subjects/wooster/sessions/scd_20230330/glm_model_389175.pkl",
             "type": "ndarray",
             "bipartite": 0,
             "complete": true,
             "space": "",
-            "modified": "2023-08-16 12:38:08.664716",
+            "modified": "2023-09-16 15:10:22.711819",
             "id": "hrf_estimate"
         },
         {
@@ -566,7 +566,7 @@
             "bipartite": 1,
             "argv": true,
             "desc": "Create the size voxels x stimulus_conditions beta matrix from paradigm def and session masked epis. The beta matrix is designed to capture the information we careabout from this experiment, and satisfies the equation (DesignMatrix * hrf) @ BetaMatrix ~= EpiTimeSeries where * is the convolution operator and @ is matrix multiplication.",
-            "modified": "2023-08-16 12:38:08.664716",
+            "modified": "2023-09-16 15:10:22.711819",
             "id": "create_beta_matrix"
         },
         {
@@ -580,7 +580,7 @@
             "fxn": "support_functions.create_contrast",
             "bipartite": 1,
             "desc": "Create contrast volumes from the beta matrix.",
-            "modified": "2023-08-16 12:40:15.147908",
+            "modified": "2023-09-16 15:10:28.726399",
             "id": "create_session_contrast"
         },
         {

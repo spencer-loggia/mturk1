@@ -1,0 +1,895 @@
+{
+    "directed": true,
+    "multigraph": false,
+    "graph": {
+        "session_id": "dyloc_20230815",
+        "is_mion": true,
+        "scan_pos": "HFP",
+        "reg_settings": {
+            "nonlinear_moco": false,
+            "nonlinear_session_2_functional_rep": false,
+            "topup": true
+        }
+    },
+    "nodes": [
+        {
+            "data": [
+                "subjects/wooster_old_helen/sessions/dyloc_20230815/bw_minus_colored.nii.gz",
+                "subjects/wooster_old_helen/sessions/dyloc_20230815/faces_minus_scenes.nii.gz",
+                "subjects/wooster_old_helen/sessions/dyloc_20230815/faces_minus_bodies.nii.gz",
+                "subjects/wooster_old_helen/sessions/dyloc_20230815/faces_minus_scrambled.nii.gz",
+                "subjects/wooster_old_helen/sessions/dyloc_20230815/faces_minus_objects.nii.gz",
+                "subjects/wooster_old_helen/sessions/dyloc_20230815/objects_minus_scrambled.nii.gz",
+                "subjects/wooster_old_helen/sessions/dyloc_20230815/objects_minus_scenes.nii.gz",
+                "subjects/wooster_old_helen/sessions/dyloc_20230815/objects_minus_bodies.nii.gz",
+                "subjects/wooster_old_helen/sessions/dyloc_20230815/scenes_minus_scrambled.nii.gz",
+                "subjects/wooster_old_helen/sessions/dyloc_20230815/color_localizer.nii.gz",
+                "subjects/wooster_old_helen/sessions/dyloc_20230815/background.nii.gz"
+            ],
+            "complete": null,
+            "bipartite": 0,
+            "generated": true,
+            "modified": "2023-10-03 17:16:50.145798",
+            "id": "end"
+        },
+        {
+            "data": [
+                "10_ep2d_se_p2_1.2mm_TOPUP_HF",
+                "11_ep2d_se_p2_1.2mm_TOPUP_FH"
+            ],
+            "type": "volume",
+            "bipartite": 0,
+            "complete": true,
+            "space": "epi_native",
+            "leaf": true,
+            "modified": "2023-08-16 12:12:59.772205",
+            "id": "other_images"
+        },
+        {
+            "data": [
+                "subjects/wooster/sessions/dyloc_20230815/20/f.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/24/f.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/17/f.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/18/f.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/25/f.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/14/f.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/27/f.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/13/f.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/19/f.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/23/f.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/15/f.nii.gz"
+            ],
+            "type": "time_series",
+            "bipartite": 0,
+            "complete": true,
+            "space": "epi_native",
+            "leaf": true,
+            "modified": "2023-08-16 10:59:52.876942",
+            "id": "raw_epi"
+        },
+        {
+            "data": [
+                "subjects/wooster/sessions/dyloc_20230815/20/f_nordic.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/24/f_nordic.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/17/f_nordic.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/18/f_nordic.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/25/f_nordic.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/14/f_nordic.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/27/f_nordic.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/13/f_nordic.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/19/f_nordic.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/23/f_nordic.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/15/f_nordic.nii.gz"
+            ],
+            "type": "time_series",
+            "bipartite": 0,
+            "complete": true,
+            "space": "epi_native",
+            "modified": "2023-08-16 11:43:26.671263",
+            "id": "nordic_epi"
+        },
+        {
+            "data": [
+                "subjects/wooster/sessions/dyloc_20230815/20/f_topup.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/24/f_topup.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/17/f_topup.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/18/f_topup.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/25/f_topup.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/14/f_topup.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/27/f_topup.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/13/f_topup.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/19/f_topup.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/23/f_topup.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/15/f_topup.nii.gz"
+            ],
+            "type": "time_series",
+            "bipartite": 0,
+            "complete": true,
+            "space": "epi_native",
+            "leaf": true,
+            "modified": "2023-08-16 12:32:25.661251",
+            "id": "topup_epi"
+        },
+        {
+            "data": [
+                "subjects/wooster/sessions/dyloc_20230815/20/f_topup_sphinx.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/24/f_topup_sphinx.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/17/f_topup_sphinx.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/18/f_topup_sphinx.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/25/f_topup_sphinx.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/14/f_topup_sphinx.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/27/f_topup_sphinx.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/13/f_topup_sphinx.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/19/f_topup_sphinx.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/23/f_topup_sphinx.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/15/f_topup_sphinx.nii.gz"
+            ],
+            "type": "time_series",
+            "bipartite": 0,
+            "complete": true,
+            "space": "epi_native",
+            "modified": "2023-08-16 12:45:26.448386",
+            "id": "sphinx_epi"
+        },
+        {
+            "data": [
+                "subjects/wooster/sessions/dyloc_20230815/20/moco.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/24/moco.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/17/moco.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/18/moco.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/25/moco.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/14/moco.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/27/moco.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/13/moco.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/19/moco.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/23/moco.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/15/moco.nii.gz"
+            ],
+            "type": "time_series",
+            "bipartite": 0,
+            "complete": true,
+            "space": "epi_native",
+            "modified": "2023-08-16 12:52:44.746804",
+            "id": "moco_epi"
+        },
+        {
+            "data": [
+                "subjects/wooster/sessions/dyloc_20230815/20/slc.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/24/slc.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/17/slc.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/18/slc.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/25/slc.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/14/slc.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/27/slc.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/13/slc.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/19/slc.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/23/slc.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/15/slc.nii.gz"
+            ],
+            "type": "time_series",
+            "bipartite": 0,
+            "complete": true,
+            "space": "epi_native",
+            "modified": "2023-08-16 11:49:04.075011",
+            "id": "slice_time_corrected_epi"
+        },
+        {
+            "data": "subjects/wooster/sessions/dyloc_20230815/3d_epi_rep.nii.gz",
+            "type": "volume",
+            "bipartite": 0,
+            "complete": true,
+            "space": "epi_native",
+            "modified": "2023-08-16 12:47:27.845665",
+            "id": "3d_epi_rep"
+        },
+        {
+            "data": "../../../../../../media/ssbeast/mturk/MTurk1/subjects/wooster/sessions/dyloc_20230815/3d_epi_rep_sphinx.nii.gz",
+            "type": "volume",
+            "bipartite": 0,
+            "complete": true,
+            "space": "epi_native",
+            "leaf": true,
+            "modified": "2023-08-16 12:48:17.515446",
+            "id": "3d_epi_rep_sphinx"
+        },
+        {
+            "data": "/home/ssbeast/Projects/SS/monkey_fmri/MTurk1/subjects/wooster/mri/functional_target.nii.gz",
+            "type": "volume",
+            "bipartite": 0,
+            "complete": null,
+            "space": "epi_std",
+            "leaf": true,
+            "modified": "2023-06-02 11:52:51.744081",
+            "id": "functional_std"
+        },
+        {
+            "data": "../../../../home/ssbeast/Projects/SS/monkey_fmri/MTurk1/subjects/wooster/mri/inverse_trans_dil_ds_brainmask.nii.gz",
+            "type": "volume",
+            "bipartite": 0,
+            "complete": null,
+            "space": "epi_std",
+            "leaf": true,
+            "modified": "2023-06-08 11:18:02.249599",
+            "id": "functional_std_dil_mask"
+        },
+        {
+            "data": "../../../../home/ssbeast/Projects/SS/monkey_fmri/MTurk1/subjects/wooster/mri/inverse_trans_ds_brainmask.nii.gz",
+            "type": "volume",
+            "bipartite": 0,
+            "complete": null,
+            "space": "epi_std",
+            "leaf": true,
+            "modified": "2023-06-10 15:59:52.691169",
+            "id": "functional_std_mask"
+        },
+        {
+            "data": "../../../../home/ssbeast/Projects/SS/monkey_fmri/MTurk1/subjects/wooster/mri/masked_functional_target.nii.gz",
+            "type": "volume",
+            "bipartite": 0,
+            "complete": null,
+            "space": "epi_std",
+            "leaf": true,
+            "modified": "2023-06-10 15:59:52.691169",
+            "id": "functional_std_masked"
+        },
+        {
+            "data": "subjects/wooster/sessions/dyloc_20230815/itkManual.nii.gz",
+            "type": "volume",
+            "bipartite": 0,
+            "complete": true,
+            "space": "epi_std_aprox",
+            "modified": "2023-08-16 13:24:33.019531",
+            "id": "manual_reg_epi_rep"
+        },
+        {
+            "data": "subjects/wooster/sessions/dyloc_20230815/masked_itkManual.nii.gz",
+            "type": "volume",
+            "bipartite": 0,
+            "complete": true,
+            "space": "epi_std_aprox",
+            "leaf": true,
+            "modified": "2023-08-16 13:24:34.549346",
+            "id": "masked_manual_reg_epi_rep"
+        },
+        {
+            "data": "subjects/wooster/sessions/dyloc_20230815/itkManual.txt",
+            "type": "transform",
+            "bipartite": 0,
+            "complete": true,
+            "invertable": true,
+            "space": [
+                "epi_native",
+                "epi_std_aprox"
+            ],
+            "leaf": true,
+            "modified": "2023-08-16 13:24:33.019531",
+            "id": "manual_transform"
+        },
+        {
+            "data": "subjects/wooster/sessions/dyloc_20230815/Composite.h5",
+            "type": "transform",
+            "bipartite": 0,
+            "complete": true,
+            "invertable": false,
+            "space": [
+                "epi_std_aprox",
+                "epi_std"
+            ],
+            "leaf": true,
+            "modified": "2023-08-16 14:19:19.501691",
+            "id": "auto_composite_transform"
+        },
+        {
+            "data": "subjects/wooster/sessions/dyloc_20230815/InverseComposite.h5",
+            "type": "transform",
+            "bipartite": 0,
+            "complete": true,
+            "invertable": false,
+            "space": [
+                "epi_std",
+                "epi_std_aprox"
+            ],
+            "leaf": true,
+            "modified": "2023-08-16 14:19:19.501691",
+            "id": "inverse_auto_composite_transform"
+        },
+        {
+            "data": [
+                "subjects/wooster/sessions/dyloc_20230815/20/reg_moco.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/24/reg_moco.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/17/reg_moco.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/18/reg_moco.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/25/reg_moco.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/14/reg_moco.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/27/reg_moco.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/13/reg_moco.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/19/reg_moco.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/23/reg_moco.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/15/reg_moco.nii.gz"
+            ],
+            "fname": null,
+            "type": "time_series",
+            "bipartite": 0,
+            "complete": true,
+            "space": "epi_native",
+            "modified": "2023-08-16 14:22:46.017224",
+            "id": "reg_epi"
+        },
+        {
+            "data": [],
+            "fname": null,
+            "type": "csv",
+            "bipartite": 0,
+            "complete": false,
+            "leaf": true,
+            "space": "time_course",
+            "id": "fixation_data"
+        },
+        {
+            "data": [
+                "subjects/wooster/sessions/dyloc_20230815/20/epi_masked.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/24/epi_masked.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/17/epi_masked.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/18/epi_masked.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/25/epi_masked.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/14/epi_masked.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/27/epi_masked.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/13/epi_masked.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/19/epi_masked.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/23/epi_masked.nii.gz",
+                "subjects/wooster/sessions/dyloc_20230815/15/epi_masked.nii.gz"
+            ],
+            "fname": null,
+            "type": "time_series",
+            "bipartite": 0,
+            "complete": true,
+            "leaf": true,
+            "modified": "2023-08-16 14:24:36.985679",
+            "id": "reg_epi_masked"
+        },
+        {
+            "data": "paradigms/dyloc_original_experiment_config.json",
+            "type": "json",
+            "bipartite": 0,
+            "complete": true,
+            "leaf": true,
+            "modified": "2023-08-16 14:09:09.141869",
+            "id": "paradigm"
+        },
+        {
+            "type": "json",
+            "bipartite": 0,
+            "complete": true,
+            "data": "subjects/wooster/sessions/dyloc_20230815/ima_order_map.json",
+            "leaf": true,
+            "modified": "2023-10-03 17:13:23.535947",
+            "id": "ima_order_map"
+        },
+        {
+            "data": "subjects/wooster_old_helen/sessions/dyloc_20230815/glm_model_38796.pkl",
+            "type": "glm_object",
+            "bipartite": 0,
+            "complete": true,
+            "space": "epi_std",
+            "leaf": true,
+            "modified": "2023-10-03 17:14:41.972859",
+            "id": "glm_model"
+        },
+        {
+            "data": [
+                "subjects/wooster_old_helen/sessions/dyloc_20230815/bw_minus_colored.nii.gz",
+                "subjects/wooster_old_helen/sessions/dyloc_20230815/faces_minus_scenes.nii.gz",
+                "subjects/wooster_old_helen/sessions/dyloc_20230815/faces_minus_bodies.nii.gz",
+                "subjects/wooster_old_helen/sessions/dyloc_20230815/faces_minus_scrambled.nii.gz",
+                "subjects/wooster_old_helen/sessions/dyloc_20230815/faces_minus_objects.nii.gz",
+                "subjects/wooster_old_helen/sessions/dyloc_20230815/objects_minus_scrambled.nii.gz",
+                "subjects/wooster_old_helen/sessions/dyloc_20230815/objects_minus_scenes.nii.gz",
+                "subjects/wooster_old_helen/sessions/dyloc_20230815/objects_minus_bodies.nii.gz",
+                "subjects/wooster_old_helen/sessions/dyloc_20230815/scenes_minus_scrambled.nii.gz",
+                "subjects/wooster_old_helen/sessions/dyloc_20230815/color_localizer.nii.gz",
+                "subjects/wooster_old_helen/sessions/dyloc_20230815/background.nii.gz"
+            ],
+            "type": "volume",
+            "bipartite": 0,
+            "complete": true,
+            "space": "epi_std",
+            "leaf": true,
+            "modified": "2023-10-03 17:16:50.145798",
+            "id": "reg_contrasts"
+        },
+        {
+            "data": null,
+            "type": "std_image",
+            "bipartite": 0,
+            "complete": false,
+            "space": "",
+            "modified": "2023-10-03 17:16:50.145798",
+            "id": "slice_contrast_img"
+        },
+        {
+            "data": "subjects/wooster_old_helen/sessions/dyloc_20230815/glm_model_38796.pkl",
+            "type": "ndarray",
+            "bipartite": 0,
+            "complete": true,
+            "space": "",
+            "modified": "2023-10-03 17:14:41.972859",
+            "id": "hrf_estimate"
+        },
+        {
+            "argv": "dyloc_20230815",
+            "fxn": "support_functions.get_images",
+            "bipartite": 1,
+            "desc": "Accept user input for path to session directory, load images into a dump exp",
+            "modified": "2023-08-16 12:12:59.772205",
+            "id": "get_images"
+        },
+        {
+            "fxn": "support_functions.get_fixation_csv",
+            "bipartite": 1,
+            "desc": "",
+            "id": "get_fixation_data"
+        },
+        {
+            "argv": "dyloc_20230815",
+            "fxn": "support_functions.get_epis",
+            "bipartite": 1,
+            "desc": "Accept user input for path to session directory containing directories of dicoms or a nifti, and load the data into project format (freesurfer convention)",
+            "modified": "2023-08-16 10:59:52.876942",
+            "id": "get_epi"
+        },
+        {
+            "fxn": "support_functions.nordic_correction_wrapper",
+            "bipartite": 1,
+            "desc": "Apply Steen Moeller of UMN 's very nice thermal noise correction matlab script to our raw epis. Need to provide a thermal noise image path, ideally collected in the same session or otherwise a close of one as possible. Must have cloned the SteenMoeller/NORDIC_raw github and added it to matlab path.",
+            "modified": "2023-08-16 11:43:26.671263",
+            "id": "noise_correct"
+        },
+        {
+            "fxn": "support_functions.topup_wrapper",
+            "bipartite": 1,
+            "desc": "Use two reverse phase encoded Spin-Echo images to correct the magnetic field distortions in the functional image. ",
+            "modified": "2023-08-16 12:32:25.661251",
+            "argv": true,
+            "id": "topup"
+        },
+        {
+            "fxn": "preprocess.convert_to_sphinx",
+            "bipartite": 1,
+            "desc": "Preform Sphinx orientation correction on the 4d raw epi data",
+            "modified": "2023-08-16 12:45:26.448386",
+            "argv": "HFP",
+            "id": "sphinx_correct"
+        },
+        {
+            "fxn": "support_functions.motion_correction_wrapper",
+            "bipartite": 1,
+            "desc": "Linear motion correction to target 3D rep image. All frames in whole session are affine aligned to this target, using mutual information cost. Uses either FSL MCFLIRT or ANTs motion correction under the hood depending on package availability. FSL is preferred due to faster runtimes with similar results. If multiple targets are provided,returns motion correction that resulted in lowest displacement",
+            "modified": "2023-08-16 12:52:44.746804",
+            "argv": false,
+            "id": "motion_correction"
+        },
+        {
+            "fxn": "preprocess.slice_time_correction",
+            "bipartite": 1,
+            "desc": "Preforms slice timing correction on motion corrected functional data. Uses slice 0 as reference. In current version assumes axial slices and interleaved acquisition.",
+            "modified": "2023-08-16 11:49:04.075011",
+            "id": "slice_timing_correction"
+        },
+        {
+            "fxn": "support_functions.get_3d_rep",
+            "bipartite": 1,
+            "argv": true,
+            "desc": "Selects a frame from the middle of the run to use as the functional 3d representative volume. This volume defines the functional space. Each session has a unique functional space, though they likely are very similar",
+            "modified": "2023-08-16 12:47:27.845665",
+            "id": "select_3d_rep"
+        },
+        {
+            "fxn": "support_functions.convert_to_sphinx_vol_wrap",
+            "bipartite": 1,
+            "desc": "Preform sphinx orientaion correction on the representative epi volume.",
+            "modified": "2023-08-16 12:48:17.515446",
+            "argv": "HFP",
+            "id": "sphinx_correct_3d_rep"
+        },
+        {
+            "fxn": "support_functions.itk_manual",
+            "bipartite": 1,
+            "desc": "Use ITK-Snap to preform a course grain manual registration between the epi rep volume and the downsampled t1, creating a crude linear mapping between the functional and working space. It is most important that the borders of the cortex closely match, since this map is used for  brain masking the epi rep.",
+            "modified": "2023-08-16 13:24:33.019531",
+            "id": "manual_registration"
+        },
+        {
+            "fxn": "support_functions.coreg_wrapper",
+            "bipartite": 1,
+            "desc": "Use ants coregistration to create a fine grained nonlinear mapping from the skull stripped manually aligned epi rep to the downsampled t1. The manual registration got the brains as overlapping as possible, now this attempts to morph the cortex to correct differences in white matter boundaries due to field warp in epi acquisition.",
+            "argv": false,
+            "modified": "2023-08-16 14:19:19.501691",
+            "id": "automatic_coregistration"
+        },
+        {
+            "fxn": "support_functions.apply_binary_mask_vol",
+            "bipartite": 1,
+            "desc": "Applys the downsampled t1 mask to the epi rep thats been manually registered to the ds t1, so that the epi can be nonlinear coregistered to the t1 without intereference from the skull",
+            "modified": "2023-08-16 13:24:34.549346",
+            "id": "apply_reg_epi_mask"
+        },
+        {
+            "fxn": "support_functions.apply_binary_mask_functional",
+            "bipartite": 1,
+            "desc": "Applys the functional std space mask to the session epis warped to the standard functional space",
+            "modified": "2023-08-16 14:24:36.985679",
+            "id": "apply_functional_mask"
+        },
+        {
+            "fxn": "support_functions.create_load_paradigm",
+            "bipartite": 1,
+            "desc": "Either load an existing stimuli paradigm json config file, or use the prompt to create a new one.",
+            "modified": "2023-08-16 14:09:09.141869",
+            "id": "load_paradigm"
+        },
+        {
+            "fxn": "support_functions.create_load_ima_order_map",
+            "bipartite": 1,
+            "desc": "Map each epi ima number to a corresponding stimuli paradigm order number.",
+            "modified": "2023-10-03 17:13:23.535947",
+            "id": "create_load_ima_order_map"
+        },
+        {
+            "fxn": "support_functions.get_beta_matrix",
+            "bipartite": 1,
+            "argv": true,
+            "desc": "Create the size voxels x stimulus_conditions beta matrix from paradigm def and session masked epis. The beta matrix is designed to capture the information we careabout from this experiment, and satisfies the equation (DesignMatrix * hrf) @ BetaMatrix ~= EpiTimeSeries where * is the convolution operator and @ is matrix multiplication.",
+            "modified": "2023-10-03 17:14:41.972859",
+            "id": "create_beta_matrix"
+        },
+        {
+            "fxn": "support_functions.apply_warp_4d_refactor",
+            "bipartite": 1,
+            "desc": "Use the functional -> working space transform to take the functional data to the working space. ",
+            "modified": "2023-08-16 14:22:46.017224",
+            "id": "register_epis"
+        },
+        {
+            "fxn": "support_functions.create_contrast",
+            "bipartite": 1,
+            "desc": "Create contrast volumes from the beta matrix.",
+            "modified": "2023-10-03 17:16:50.145798",
+            "id": "create_session_contrast"
+        },
+        {
+            "argv": "dyloc_20230815",
+            "fxn": "support_functions.promote_session",
+            "bipartite": 1,
+            "desc": "This session is marked as complete-ish and will be included by future subject level analysis, and for construction of the subject level beta matrix. Basically its added to the subject config data index.",
+            "modified": "2023-08-16 14:35:43.111646",
+            "id": "promote_session"
+        },
+        {
+            "argv": "dyloc_20230815",
+            "fxn": "support_functions.demote_session",
+            "bipartite": 1,
+            "desc": "Removes this session from subject config data index. It will no longer be included in future subject level analysis.",
+            "modified": "2023-08-16 14:55:33.323640",
+            "id": "demote_session"
+        },
+        {
+            "fxn": "support_functions.create_slice_overlays",
+            "bipartite": 1,
+            "id": "contrast_slice_overlay"
+        },
+        {
+            "fxn": "self.sterilize",
+            "bipartite": 1,
+            "generated": true,
+            "desc": "function that removes intermediate files associated with session. WARNING: This makes it impossible to re-run many intermediate processing steps without starting over.",
+            "id": "sterilize"
+        }
+    ],
+    "links": [
+        {
+            "order": 0,
+            "source": "raw_epi",
+            "target": "get_images"
+        },
+        {
+            "order": 0,
+            "source": "raw_epi",
+            "target": "get_fixation_data"
+        },
+        {
+            "order": 0,
+            "source": "raw_epi",
+            "target": "noise_correct"
+        },
+        {
+            "order": 0,
+            "source": "nordic_epi",
+            "target": "slice_timing_correction"
+        },
+        {
+            "order": 0,
+            "source": "topup_epi",
+            "target": "sphinx_correct"
+        },
+        {
+            "order": 0,
+            "source": "topup_epi",
+            "target": "select_3d_rep"
+        },
+        {
+            "order": 0,
+            "source": "sphinx_epi",
+            "target": "motion_correction"
+        },
+        {
+            "order": 0,
+            "source": "moco_epi",
+            "target": "register_epis"
+        },
+        {
+            "order": 0,
+            "source": "slice_time_corrected_epi",
+            "target": "topup"
+        },
+        {
+            "order": 0,
+            "source": "3d_epi_rep",
+            "target": "sphinx_correct_3d_rep"
+        },
+        {
+            "order": 1,
+            "source": "3d_epi_rep_sphinx",
+            "target": "motion_correction"
+        },
+        {
+            "order": 0,
+            "source": "3d_epi_rep_sphinx",
+            "target": "manual_registration"
+        },
+        {
+            "order": 1,
+            "source": "functional_std",
+            "target": "manual_registration"
+        },
+        {
+            "order": 1,
+            "source": "functional_std",
+            "target": "register_epis"
+        },
+        {
+            "order": 1,
+            "source": "functional_std_dil_mask",
+            "target": "apply_reg_epi_mask"
+        },
+        {
+            "order": 1,
+            "source": "functional_std_mask",
+            "target": "apply_functional_mask"
+        },
+        {
+            "order": 1,
+            "source": "functional_std_masked",
+            "target": "automatic_coregistration"
+        },
+        {
+            "order": 1,
+            "source": "functional_std_masked",
+            "target": "contrast_slice_overlay"
+        },
+        {
+            "order": 0,
+            "source": "manual_reg_epi_rep",
+            "target": "apply_reg_epi_mask"
+        },
+        {
+            "order": 0,
+            "source": "masked_manual_reg_epi_rep",
+            "target": "automatic_coregistration"
+        },
+        {
+            "order": 2,
+            "source": "manual_transform",
+            "target": "register_epis"
+        },
+        {
+            "order": 3,
+            "source": "auto_composite_transform",
+            "target": "register_epis"
+        },
+        {
+            "order": 0,
+            "source": "reg_epi",
+            "target": "apply_functional_mask"
+        },
+        {
+            "order": 0,
+            "source": "reg_epi_masked",
+            "target": "create_load_ima_order_map"
+        },
+        {
+            "order": 0,
+            "source": "reg_epi_masked",
+            "target": "create_beta_matrix"
+        },
+        {
+            "order": 2,
+            "source": "reg_epi_masked",
+            "target": "promote_session"
+        },
+        {
+            "order": 0,
+            "source": "reg_epi_masked",
+            "target": "contrast_slice_overlay"
+        },
+        {
+            "order": 1,
+            "source": "paradigm",
+            "target": "create_beta_matrix"
+        },
+        {
+            "order": 1,
+            "source": "paradigm",
+            "target": "promote_session"
+        },
+        {
+            "order": 0,
+            "source": "paradigm",
+            "target": "demote_session"
+        },
+        {
+            "order": 1,
+            "source": "paradigm",
+            "target": "create_session_contrast"
+        },
+        {
+            "order": 2,
+            "source": "ima_order_map",
+            "target": "create_beta_matrix"
+        },
+        {
+            "order": 3,
+            "source": "ima_order_map",
+            "target": "promote_session"
+        },
+        {
+            "order": 0,
+            "source": "glm_model",
+            "target": "promote_session"
+        },
+        {
+            "order": 0,
+            "source": "glm_model",
+            "target": "create_session_contrast"
+        },
+        {
+            "order": 2,
+            "source": "reg_contrasts",
+            "target": "contrast_slice_overlay"
+        },
+        {
+            "order": 0,
+            "source": "get_images",
+            "target": "other_images"
+        },
+        {
+            "order": 0,
+            "source": "get_fixation_data",
+            "target": "fixation_data"
+        },
+        {
+            "order": 0,
+            "source": "get_epi",
+            "target": "raw_epi"
+        },
+        {
+            "order": 0,
+            "source": "noise_correct",
+            "target": "nordic_epi"
+        },
+        {
+            "order": 0,
+            "source": "topup",
+            "target": "topup_epi"
+        },
+        {
+            "order": 0,
+            "source": "sphinx_correct",
+            "target": "sphinx_epi"
+        },
+        {
+            "order": 0,
+            "source": "motion_correction",
+            "target": "moco_epi"
+        },
+        {
+            "order": 0,
+            "source": "slice_timing_correction",
+            "target": "slice_time_corrected_epi"
+        },
+        {
+            "order": 0,
+            "source": "select_3d_rep",
+            "target": "3d_epi_rep"
+        },
+        {
+            "order": 0,
+            "source": "sphinx_correct_3d_rep",
+            "target": "3d_epi_rep_sphinx"
+        },
+        {
+            "order": 0,
+            "source": "manual_registration",
+            "target": "manual_transform"
+        },
+        {
+            "order": 1,
+            "source": "manual_registration",
+            "target": "manual_reg_epi_rep"
+        },
+        {
+            "order": 0,
+            "source": "automatic_coregistration",
+            "target": "auto_composite_transform"
+        },
+        {
+            "order": 1,
+            "source": "automatic_coregistration",
+            "target": "inverse_auto_composite_transform"
+        },
+        {
+            "order": 0,
+            "source": "apply_reg_epi_mask",
+            "target": "masked_manual_reg_epi_rep"
+        },
+        {
+            "order": 0,
+            "source": "apply_functional_mask",
+            "target": "reg_epi_masked"
+        },
+        {
+            "order": 0,
+            "source": "load_paradigm",
+            "target": "paradigm"
+        },
+        {
+            "order": 0,
+            "source": "create_load_ima_order_map",
+            "target": "ima_order_map"
+        },
+        {
+            "order": 0,
+            "source": "create_beta_matrix",
+            "target": "glm_model"
+        },
+        {
+            "order": 1,
+            "source": "create_beta_matrix",
+            "target": "hrf_estimate"
+        },
+        {
+            "order": 0,
+            "source": "register_epis",
+            "target": "reg_epi"
+        },
+        {
+            "order": 0,
+            "source": "create_session_contrast",
+            "target": "reg_contrasts"
+        },
+        {
+            "order": 1,
+            "source": "create_session_contrast",
+            "target": "end"
+        },
+        {
+            "order": 0,
+            "source": "contrast_slice_overlay",
+            "target": "slice_contrast_img"
+        },
+        {
+            "order": 0,
+            "source": "sterilize",
+            "target": "end"
+        }
+    ]
+}

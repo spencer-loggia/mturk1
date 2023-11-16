@@ -1,0 +1,1051 @@
+{
+    "directed": true,
+    "multigraph": false,
+    "graph": {
+        "subject_name": "Geo_Sim",
+        "func2anat_nonlinear": true
+    },
+    "nodes": [
+        {
+            "data": null,
+            "complete": null,
+            "bipartite": 0,
+            "generated": true,
+            "modified": "2023-10-20 11:37:06.914584",
+            "id": "end"
+        },
+        {
+            "data": "subjects/Geo_Sim/mri/100Mask.nii.gz",
+            "type": "volume",
+            "bipartite": 0,
+            "complete": true,
+            "space": "t1_native",
+            "leaf": true,
+            "modified": "2023-10-20 11:32:38.944978",
+            "id": "t1"
+        },
+        {
+            "data": "subjects/Geo_Sim/mri/100Mask.nii.gz",
+            "type": "volume",
+            "bipartite": 0,
+            "complete": true,
+            "space": "t1_native",
+            "leaf": true,
+            "modified": "2023-10-20 11:32:38.944978",
+            "id": "t1_mask"
+        },
+        {
+            "data": "subjects/Geo_Sim/mri/ds_100Mask.nii.gz",
+            "type": "volume",
+            "bipartite": 0,
+            "complete": true,
+            "space": "ds_t1_native",
+            "leaf": true,
+            "modified": "2023-10-20 11:33:03.383209",
+            "id": "ds_t1"
+        },
+        {
+            "data": "subjects/Geo_Sim/mri/ds_100Mask.nii.gz",
+            "type": "volume",
+            "bipartite": 0,
+            "complete": true,
+            "space": "ds_t1_native",
+            "leaf": true,
+            "modified": "2023-10-20 11:33:32.200658",
+            "id": "ds_t1_mask"
+        },
+        {
+            "data": "subjects/Geo_Sim/mri/masked_ds_100Mask.nii.gz",
+            "type": "volume",
+            "bipartite": 0,
+            "complete": true,
+            "space": "ds_t1_native",
+            "leaf": true,
+            "modified": "2023-10-20 11:34:35.396760",
+            "id": "ds_t1_masked"
+        },
+        {
+            "data": "subjects/Geo_Sim/mri/dil_ds_100Mask.nii.gz",
+            "type": "volume",
+            "bipartite": 0,
+            "complete": true,
+            "space": "ds_t1_native",
+            "leaf": true,
+            "modified": "2023-10-20 11:34:26.462593",
+            "id": "dil_ds_t1_mask"
+        },
+        {
+            "data": [],
+            "type": "surface",
+            "bipartite": 0,
+            "complete": false,
+            "space": "t1_native",
+            "leaf": true,
+            "id": "white_surfs"
+        },
+        {
+            "data": [],
+            "type": "net_json",
+            "complete": null,
+            "bipartite": 0,
+            "always_show": true,
+            "leaf": true,
+            "id": "sessions"
+        },
+        {
+            "data": "/home/ssbeast/Projects/SS/monkey_fmri/MTurk1/subjects/Geo_Sim/mri/functional_target.nii.gz",
+            "type": "volume",
+            "bipartite": 0,
+            "complete": null,
+            "space": "epi_std",
+            "leaf": true,
+            "modified": "2023-10-20 11:31:51.165167",
+            "id": "functional_representative"
+        },
+        {
+            "data": null,
+            "type": "volume",
+            "bipartite": 0,
+            "complete": null,
+            "space": "epi_std",
+            "leaf": true,
+            "modified": "2023-10-20 11:37:06.914584",
+            "id": "functional_representative_mask"
+        },
+        {
+            "data": null,
+            "type": "volume",
+            "bipartite": 0,
+            "complete": null,
+            "space": "epi_std",
+            "leaf": true,
+            "modified": "2023-10-20 11:37:06.914584",
+            "id": "functional_representative_masked"
+        },
+        {
+            "data": null,
+            "type": "volume",
+            "bipartite": 0,
+            "complete": null,
+            "space": "epi_std",
+            "leaf": true,
+            "modified": "2023-10-20 11:37:06.914584",
+            "id": "functional_representative_dil_mask"
+        },
+        {
+            "data": "../../../../home/ssbeast/Projects/SS/monkey_fmri/MTurk1/subjects/Geo_Sim/mri/itkManual.nii.gz",
+            "type": "volume",
+            "bipartite": 0,
+            "complete": true,
+            "space": "ds_t1_aprox",
+            "modified": "2023-10-20 11:36:10.518174",
+            "id": "manual_reg_epi_rep"
+        },
+        {
+            "data": "../../../../home/ssbeast/Projects/SS/monkey_fmri/MTurk1/subjects/Geo_Sim/mri/masked_itkManual.nii.gz",
+            "type": "volume",
+            "bipartite": 0,
+            "complete": true,
+            "space": "ds_t1_aprox",
+            "modified": "2023-10-20 11:36:25.107941",
+            "id": "masked_manual_reg_epi_rep"
+        },
+        {
+            "data": "../../../../home/ssbeast/Projects/SS/monkey_fmri/MTurk1/subjects/Geo_Sim/mri/itkManual.txt",
+            "type": "transform",
+            "bipartite": 0,
+            "complete": true,
+            "invertable": true,
+            "space": [
+                "epi_std",
+                "ds_t1_aprox"
+            ],
+            "leaf": true,
+            "modified": "2023-10-20 11:36:10.518174",
+            "id": "manual_transform"
+        },
+        {
+            "data": "../../../../home/ssbeast/Projects/SS/monkey_fmri/MTurk1/subjects/Geo_Sim/mri/Composite.h5",
+            "type": "transform",
+            "bipartite": 0,
+            "complete": true,
+            "invertable": false,
+            "space": [
+                "ds_t1_aprox",
+                "ds_t1_native"
+            ],
+            "leaf": true,
+            "modified": "2023-10-20 11:37:06.914584",
+            "id": "auto_composite_transform"
+        },
+        {
+            "data": "../../../../home/ssbeast/Projects/SS/monkey_fmri/MTurk1/subjects/Geo_Sim/mri/InverseComposite.h5",
+            "type": "transform",
+            "bipartite": 0,
+            "complete": true,
+            "invertable": false,
+            "space": [
+                "ds_t1_native",
+                "ds_t1_aprox"
+            ],
+            "leaf": true,
+            "modified": "2023-10-20 11:37:06.914584",
+            "id": "inverse_auto_composite_transform"
+        },
+        {
+            "data": null,
+            "complete": null,
+            "bipartite": 0,
+            "leaf": true,
+            "modified": "2023-10-20 11:37:06.914584",
+            "id": "paradigm_complete_checkpoint"
+        },
+        {
+            "data": {},
+            "complete": null,
+            "type": "label",
+            "bipartite": 0,
+            "leaf": true,
+            "modified": "2023-10-20 11:37:06.914584",
+            "id": "surface_defined_rois"
+        },
+        {
+            "data": {},
+            "complete": null,
+            "type": "volume",
+            "space": "t1_native",
+            "bipartite": 0,
+            "leaf": true,
+            "modified": "2023-10-20 11:37:06.914584",
+            "id": "volume_rois"
+        },
+        {
+            "data": {},
+            "complete": null,
+            "type": "volume",
+            "space": "ds_t1_native",
+            "bipartite": 0,
+            "leaf": true,
+            "modified": "2023-10-20 11:37:06.914584",
+            "id": "ds_volume_rois"
+        },
+        {
+            "data": {},
+            "complete": null,
+            "type": "volume",
+            "space": "functional_std",
+            "bipartite": 0,
+            "leaf": true,
+            "modified": "2023-10-20 11:37:06.914584",
+            "id": "functional_rois"
+        },
+        {
+            "data": {},
+            "complete": null,
+            "type": "array",
+            "bipartite": 0,
+            "leaf": true,
+            "modified": "2023-10-20 11:37:06.914584",
+            "id": "roi_time_courses"
+        },
+        {
+            "fxn": "support_functions.load_t1_data",
+            "bipartite": 1,
+            "desc": "Accept user input for paths to t1 and t1 mask anatomical volumes. Used for all subject sessions",
+            "modified": "2023-10-20 11:32:38.944978",
+            "id": "load_t1_data"
+        },
+        {
+            "fxn": "support_functions.load_white_surfs",
+            "bipartite": 1,
+            "desc": "Accept user input for paths to white matter and cortical thickness surfaces",
+            "id": "load_white_surfaces"
+        },
+        {
+            "fxn": "support_functions.downsample_anatomical",
+            "bipartite": 1,
+            "desc": "Downsample orginal t1 by a factor of 2 to the working space.",
+            "modified": "2023-10-20 11:33:03.383209",
+            "id": "downsample_t1"
+        },
+        {
+            "fxn": "support_functions.downsample_anatomical",
+            "bipartite": 1,
+            "desc": "Downsample orginal t1 mask by a factor of 2 to the working space.",
+            "modified": "2023-10-20 11:33:32.200658",
+            "id": "downsample_t1_mask"
+        },
+        {
+            "fxn": "support_functions.apply_binary_mask_vol",
+            "bipartite": 1,
+            "desc": "Apply downsampled mask to downsampled t1.",
+            "modified": "2023-10-20 11:34:35.396760",
+            "id": "mask_downsampled_t1"
+        },
+        {
+            "fxn": "support_functions.apply_binary_mask_vol",
+            "bipartite": 1,
+            "desc": "apply a registered mask to the functional image",
+            "id": "create_masked_functional_rep"
+        },
+        {
+            "fxn": "self.create_load_session",
+            "bipartite": 1,
+            "desc": "create preprocessing and basic analysis pipeline for new fmri session.",
+            "id": "create_load_session"
+        },
+        {
+            "fxn": "support_functions.get_functional_target",
+            "bipartite": 1,
+            "desc": "get a masked functional image all sessions will preregister to",
+            "modified": "2023-10-20 11:31:51.165167",
+            "id": "get_functional_representative"
+        },
+        {
+            "fxn": "support_functions.itk_manual",
+            "bipartite": 1,
+            "desc": "Use ITK-Snap to preform a course grain manual registration between the epi std rep volume and the downsampled t1, creating a crude linear mapping between the functional and working space. It is most important that the borders of the cortex closely match, since this map is used for  brain masking the epi rep.",
+            "modified": "2023-10-20 11:36:10.518174",
+            "id": "manual_registration"
+        },
+        {
+            "fxn": "support_functions.apply_binary_mask_vol",
+            "bipartite": 1,
+            "modified": "2023-10-20 11:36:25.107941",
+            "id": "apply_reg_epi_mask"
+        },
+        {
+            "fxn": "support_functions.coreg_wrapper",
+            "bipartite": 1,
+            "desc": "Use ants coregistration to create a fine grained nonlinear mapping from the skull stripped manually aligned std epi rep to the downsampled t1. The manual registration got the brains as overlapping as possible, now this attempts to morph the cortex to correct differences in white matter boundaries due to field warp in epi acquisition.",
+            "argv": true,
+            "modified": "2023-10-20 11:37:06.914584",
+            "id": "automatic_coregistration"
+        },
+        {
+            "fxn": "support_functions.apply_warp_inverse",
+            "bipartite": 1,
+            "desc": "invert the t1 mask to create a masked functional image",
+            "id": "create_functional_representative_mask"
+        },
+        {
+            "fxn": "support_functions.apply_warp_inverse",
+            "bipartite": 1,
+            "desc": "invert the t1 mask to create a masked functional image",
+            "id": "create_dilated_functional_representative_mask"
+        },
+        {
+            "fxn": "support_functions.dilate_mask",
+            "bipartite": 1,
+            "desc": "dilate the downsampled t1 mask",
+            "modified": "2023-10-20 11:34:26.462593",
+            "id": "dilate_ds_t1_mask"
+        },
+        {
+            "fxn": "self.add_paradigm_control_set",
+            "bipartite": 1,
+            "modified": "2023-10-20 11:30:11.484006",
+            "id": "add_new_paradigm"
+        },
+        {
+            "fxn": "support_functions.define_surface_rois",
+            "bipartite": 1,
+            "desc": "Just a placeholder to tell the project manager that you created manual rois, and to provide instructions. You will need to draw and save the rois in freeview.",
+            "id": "manual_surface_rois"
+        },
+        {
+            "fxn": "support_functions.surf_labels_to_vol_mask",
+            "bipartite": 1,
+            "desc": "project ROIs defined on the surface back into the volume.",
+            "id": "volume_rois_from_surface_rois"
+        },
+        {
+            "fxn": "support_functions.get_vol_rois_time_series",
+            "bipartite": 1,
+            "desc": "Combine time series created with different stimuli orderings via block of interest stacking method, then extract the average time course for each volume roi.",
+            "id": "get_vol_rois_time_series"
+        },
+        {
+            "fxn": "support_functions.downsample_vol_rois",
+            "bipartite": 1,
+            "desc": "downsample volume rois by a factor of 2 to the working space.",
+            "id": "downsample_vol_rois"
+        },
+        {
+            "fxn": "support_functions.apply_warp_inverse_vol_roi_dir",
+            "bipartite": 1,
+            "desc": "transform directory of anatomical rois to functional space.",
+            "id": "vol_2_functional_rois"
+        },
+        {
+            "fxn": "support_functions.manual_volume_rois",
+            "bipartite": 1,
+            "id": "manual_volume_rois"
+        },
+        {
+            "fxn": "self.sterilize",
+            "bipartite": 1,
+            "generated": true,
+            "desc": "function that removes intermediate files associated with session. WARNING: This makes it impossible to re-run many intermediate processing steps without starting over.",
+            "id": "sterilize"
+        },
+        {
+            "data": "paradigms/validate_decoder_experiment_config.json",
+            "complete": null,
+            "bipartite": 0,
+            "type": "json",
+            "generated": true,
+            "modified": "2023-10-20 11:30:11.481912",
+            "leaf": true,
+            "id": "paradigm_validate_decoder"
+        },
+        {
+            "data": null,
+            "generated": true,
+            "complete": false,
+            "bipartite": 0,
+            "type": "4d_volume",
+            "space": "std_functional",
+            "id": "beta_validate_decoder"
+        },
+        {
+            "data": null,
+            "complete": false,
+            "generated": true,
+            "bipartite": 0,
+            "type": "model_object",
+            "leaf": true,
+            "id": "glm_validate_decoder"
+        },
+        {
+            "data": [],
+            "complete": false,
+            "generated": true,
+            "bipartite": 0,
+            "type": "volume",
+            "space": "std_functional",
+            "leaf": true,
+            "id": "contrasts_validate_decoder"
+        },
+        {
+            "data": [],
+            "complete": false,
+            "generated": true,
+            "bipartite": 0,
+            "type": "volume",
+            "space": "ds_t1_native",
+            "leaf": true,
+            "modified": "2023-10-20 11:37:06.914584",
+            "id": "reg_contrasts_validate_decoder"
+        },
+        {
+            "data": [],
+            "complete": false,
+            "generated": true,
+            "bipartite": 0,
+            "type": "overlay",
+            "space": "t1_native",
+            "leaf": true,
+            "modified": "2023-10-20 11:37:06.914584",
+            "id": "sigsurfaces_validate_decoder"
+        },
+        {
+            "data": [],
+            "complete": false,
+            "generated": true,
+            "bipartite": 0,
+            "type": "overlay",
+            "space": "std_functional",
+            "id": "run_beta_logvalidate_decoder"
+        },
+        {
+            "generated": true,
+            "bipartite": 1,
+            "fxn": "support_functions.construct_subject_glm",
+            "desc": "Trains a GLM using all promoted runs. The resulting beta matrix is designed to capture the information we care about from this experiment, and satisfies the equation (DesignMatrix * hrf) @ BetaMatrix ~= EpiTimeSeries where * is the convolution operator and @ is matrix multiplication. We store the Betas in the GLM object, which also carries information about experiment design andvariance",
+            "id": "create_validate_decoder_glm"
+        },
+        {
+            "generated": true,
+            "bipartite": 1,
+            "fxn": "support_functions.create_contrast",
+            "desc": "Generates the contrasts requested in the paradigm definition using the subjet level beta matrix. Contrasts are a useful tool for comparing activation to two conditions or linear combinations of conditions on a per voxel level. Contrast values are interpreted as Z-scores here. ",
+            "id": "create_validate_decoder_contrasts"
+        },
+        {
+            "generated": true,
+            "bipartite": 1,
+            "fxn": "support_functions.apply_warp",
+            "desc": "registers the contrasts to the anatomical space.",
+            "id": "register_validate_decoder_contrasts"
+        },
+        {
+            "generated": true,
+            "bipartite": 1,
+            "fxn": "support_functions.generate_subject_overlays",
+            "id": "create_validate_decoder_sigsurface_overlays"
+        },
+        {
+            "generated": true,
+            "bipartite": 1,
+            "fxn": "support_functions.beta_from_glm",
+            "desc": "gets the beta matrix as a nifti from the GLM",
+            "id": "get_validate_decoder_subject_betas"
+        },
+        {
+            "generated": true,
+            "bipartite": 1,
+            "fxn": "support_functions.automatic_volume_rois",
+            "id": "automatic_validate_decoder_volume_rois"
+        },
+        {
+            "generated": true,
+            "bipartite": 1,
+            "fxn": "support_functions.get_run_betas",
+            "id": "create_validate_decoderrun_betas"
+        },
+        {
+            "generated": true,
+            "bipartite": 1,
+            "fxn": "support_functions.surface_run_betas",
+            "id": "create_validate_decoderrun_surfaces"
+        },
+        {
+            "generated": true,
+            "bipartite": 1,
+            "fxn": "self.remove_paradigm_control_set",
+            "id": "delete_paradigm_validate_decoder"
+        }
+    ],
+    "links": [
+        {
+            "order": 0,
+            "source": "t1",
+            "target": "downsample_t1"
+        },
+        {
+            "order": 2,
+            "source": "t1",
+            "target": "volume_rois_from_surface_rois"
+        },
+        {
+            "order": 3,
+            "source": "t1",
+            "target": "create_validate_decoder_sigsurface_overlays"
+        },
+        {
+            "order": 2,
+            "source": "t1",
+            "target": "create_validate_decoderrun_surfaces"
+        },
+        {
+            "order": 0,
+            "source": "t1_mask",
+            "target": "downsample_t1_mask"
+        },
+        {
+            "order": 0,
+            "source": "ds_t1",
+            "target": "mask_downsampled_t1"
+        },
+        {
+            "order": 3,
+            "source": "ds_t1",
+            "target": "volume_rois_from_surface_rois"
+        },
+        {
+            "order": 2,
+            "source": "ds_t1",
+            "target": "downsample_vol_rois"
+        },
+        {
+            "order": 1,
+            "source": "ds_t1",
+            "target": "manual_registration"
+        },
+        {
+            "order": 2,
+            "source": "ds_t1",
+            "target": "get_vol_rois_time_series"
+        },
+        {
+            "order": 0,
+            "source": "ds_t1",
+            "target": "manual_volume_rois"
+        },
+        {
+            "order": 4,
+            "source": "ds_t1",
+            "target": "create_validate_decoder_sigsurface_overlays"
+        },
+        {
+            "order": 1,
+            "source": "ds_t1",
+            "target": "create_validate_decoderrun_surfaces"
+        },
+        {
+            "order": 0,
+            "source": "ds_t1_mask",
+            "target": "dilate_ds_t1_mask"
+        },
+        {
+            "order": 1,
+            "source": "ds_t1_mask",
+            "target": "mask_downsampled_t1"
+        },
+        {
+            "order": 0,
+            "source": "ds_t1_mask",
+            "target": "create_functional_representative_mask"
+        },
+        {
+            "order": 1,
+            "source": "ds_t1_masked",
+            "target": "automatic_coregistration"
+        },
+        {
+            "order": 1,
+            "source": "ds_t1_masked",
+            "target": "register_validate_decoder_contrasts"
+        },
+        {
+            "order": 1,
+            "source": "dil_ds_t1_mask",
+            "target": "apply_reg_epi_mask"
+        },
+        {
+            "order": 0,
+            "source": "dil_ds_t1_mask",
+            "target": "create_dilated_functional_representative_mask"
+        },
+        {
+            "order": 1,
+            "source": "white_surfs",
+            "target": "volume_rois_from_surface_rois"
+        },
+        {
+            "order": 2,
+            "source": "white_surfs",
+            "target": "create_validate_decoder_sigsurface_overlays"
+        },
+        {
+            "order": 6,
+            "source": "white_surfs",
+            "target": "create_validate_decoderrun_surfaces"
+        },
+        {
+            "order": 4,
+            "source": "sessions",
+            "target": "create_load_session"
+        },
+        {
+            "order": 1,
+            "source": "functional_representative",
+            "target": "vol_2_functional_rois"
+        },
+        {
+            "order": 0,
+            "source": "functional_representative",
+            "target": "manual_registration"
+        },
+        {
+            "order": 1,
+            "source": "functional_representative",
+            "target": "create_functional_representative_mask"
+        },
+        {
+            "order": 1,
+            "source": "functional_representative",
+            "target": "create_dilated_functional_representative_mask"
+        },
+        {
+            "order": 0,
+            "source": "functional_representative",
+            "target": "create_masked_functional_rep"
+        },
+        {
+            "order": 1,
+            "source": "functional_representative_mask",
+            "target": "create_masked_functional_rep"
+        },
+        {
+            "order": 0,
+            "source": "manual_reg_epi_rep",
+            "target": "apply_reg_epi_mask"
+        },
+        {
+            "order": 0,
+            "source": "masked_manual_reg_epi_rep",
+            "target": "automatic_coregistration"
+        },
+        {
+            "order": 2,
+            "source": "manual_transform",
+            "target": "vol_2_functional_rois"
+        },
+        {
+            "order": 2,
+            "source": "manual_transform",
+            "target": "create_functional_representative_mask"
+        },
+        {
+            "order": 2,
+            "source": "manual_transform",
+            "target": "create_dilated_functional_representative_mask"
+        },
+        {
+            "order": 2,
+            "source": "manual_transform",
+            "target": "register_validate_decoder_contrasts"
+        },
+        {
+            "order": 3,
+            "source": "manual_transform",
+            "target": "create_validate_decoderrun_surfaces"
+        },
+        {
+            "order": 3,
+            "source": "auto_composite_transform",
+            "target": "register_validate_decoder_contrasts"
+        },
+        {
+            "order": 4,
+            "source": "auto_composite_transform",
+            "target": "create_validate_decoderrun_surfaces"
+        },
+        {
+            "order": 3,
+            "source": "inverse_auto_composite_transform",
+            "target": "vol_2_functional_rois"
+        },
+        {
+            "order": 3,
+            "source": "inverse_auto_composite_transform",
+            "target": "create_functional_representative_mask"
+        },
+        {
+            "order": 3,
+            "source": "inverse_auto_composite_transform",
+            "target": "create_dilated_functional_representative_mask"
+        },
+        {
+            "order": 0,
+            "source": "paradigm_complete_checkpoint",
+            "target": "manual_surface_rois"
+        },
+        {
+            "order": 1,
+            "source": "paradigm_complete_checkpoint",
+            "target": "manual_volume_rois"
+        },
+        {
+            "order": 1,
+            "source": "surface_defined_rois",
+            "target": "manual_surface_rois"
+        },
+        {
+            "order": 0,
+            "source": "surface_defined_rois",
+            "target": "volume_rois_from_surface_rois"
+        },
+        {
+            "order": 4,
+            "source": "volume_rois",
+            "target": "volume_rois_from_surface_rois"
+        },
+        {
+            "order": 0,
+            "source": "volume_rois",
+            "target": "downsample_vol_rois"
+        },
+        {
+            "order": 1,
+            "source": "ds_volume_rois",
+            "target": "downsample_vol_rois"
+        },
+        {
+            "order": 0,
+            "source": "ds_volume_rois",
+            "target": "vol_2_functional_rois"
+        },
+        {
+            "order": 0,
+            "source": "ds_volume_rois",
+            "target": "get_vol_rois_time_series"
+        },
+        {
+            "order": 2,
+            "source": "ds_volume_rois",
+            "target": "manual_volume_rois"
+        },
+        {
+            "order": 2,
+            "source": "ds_volume_rois",
+            "target": "automatic_validate_decoder_volume_rois"
+        },
+        {
+            "order": 4,
+            "source": "functional_rois",
+            "target": "vol_2_functional_rois"
+        },
+        {
+            "order": 1,
+            "source": "roi_time_courses",
+            "target": "get_vol_rois_time_series"
+        },
+        {
+            "order": 0,
+            "source": "load_t1_data",
+            "target": "t1"
+        },
+        {
+            "order": 1,
+            "source": "load_t1_data",
+            "target": "t1_mask"
+        },
+        {
+            "order": 0,
+            "source": "load_white_surfaces",
+            "target": "white_surfs"
+        },
+        {
+            "order": 0,
+            "source": "downsample_t1",
+            "target": "ds_t1"
+        },
+        {
+            "order": 0,
+            "source": "downsample_t1_mask",
+            "target": "ds_t1_mask"
+        },
+        {
+            "order": 0,
+            "source": "mask_downsampled_t1",
+            "target": "ds_t1_masked"
+        },
+        {
+            "order": 0,
+            "source": "create_masked_functional_rep",
+            "target": "functional_representative_masked"
+        },
+        {
+            "order": 0,
+            "source": "create_load_session",
+            "target": "sessions"
+        },
+        {
+            "order": 1,
+            "source": "create_load_session",
+            "target": "end"
+        },
+        {
+            "order": 0,
+            "source": "get_functional_representative",
+            "target": "functional_representative"
+        },
+        {
+            "order": 0,
+            "source": "manual_registration",
+            "target": "manual_transform"
+        },
+        {
+            "order": 1,
+            "source": "manual_registration",
+            "target": "manual_reg_epi_rep"
+        },
+        {
+            "order": 0,
+            "source": "apply_reg_epi_mask",
+            "target": "masked_manual_reg_epi_rep"
+        },
+        {
+            "order": 0,
+            "source": "automatic_coregistration",
+            "target": "auto_composite_transform"
+        },
+        {
+            "order": 1,
+            "source": "automatic_coregistration",
+            "target": "inverse_auto_composite_transform"
+        },
+        {
+            "order": 0,
+            "source": "create_functional_representative_mask",
+            "target": "functional_representative_mask"
+        },
+        {
+            "order": 0,
+            "source": "create_dilated_functional_representative_mask",
+            "target": "functional_representative_dil_mask"
+        },
+        {
+            "order": 0,
+            "source": "dilate_ds_t1_mask",
+            "target": "dil_ds_t1_mask"
+        },
+        {
+            "order": null,
+            "source": "add_new_paradigm",
+            "target": "sessions"
+        },
+        {
+            "order": null,
+            "source": "add_new_paradigm",
+            "target": "paradigm_complete_checkpoint"
+        },
+        {
+            "order": 0,
+            "source": "add_new_paradigm",
+            "target": "paradigm_validate_decoder"
+        },
+        {
+            "order": 0,
+            "source": "manual_surface_rois",
+            "target": "surface_defined_rois"
+        },
+        {
+            "order": 0,
+            "source": "volume_rois_from_surface_rois",
+            "target": "volume_rois"
+        },
+        {
+            "order": 0,
+            "source": "get_vol_rois_time_series",
+            "target": "roi_time_courses"
+        },
+        {
+            "order": 0,
+            "source": "downsample_vol_rois",
+            "target": "ds_volume_rois"
+        },
+        {
+            "order": 2,
+            "source": "vol_2_functional_rois",
+            "target": "functional_rois"
+        },
+        {
+            "order": 0,
+            "source": "manual_volume_rois",
+            "target": "ds_volume_rois"
+        },
+        {
+            "order": 0,
+            "source": "sterilize",
+            "target": "end"
+        },
+        {
+            "order": 0,
+            "source": "paradigm_validate_decoder",
+            "target": "create_validate_decoder_glm"
+        },
+        {
+            "order": 0,
+            "source": "paradigm_validate_decoder",
+            "target": "delete_paradigm_validate_decoder"
+        },
+        {
+            "order": 1,
+            "source": "paradigm_validate_decoder",
+            "target": "create_validate_decoder_contrasts"
+        },
+        {
+            "order": 0,
+            "source": "paradigm_validate_decoder",
+            "target": "create_validate_decoder_sigsurface_overlays"
+        },
+        {
+            "order": 0,
+            "source": "paradigm_validate_decoder",
+            "target": "automatic_validate_decoder_volume_rois"
+        },
+        {
+            "order": 0,
+            "source": "paradigm_validate_decoder",
+            "target": "create_validate_decoderrun_betas"
+        },
+        {
+            "order": 5,
+            "source": "paradigm_validate_decoder",
+            "target": "create_validate_decoderrun_surfaces"
+        },
+        {
+            "order": 0,
+            "source": "glm_validate_decoder",
+            "target": "create_validate_decoder_contrasts"
+        },
+        {
+            "order": 0,
+            "source": "glm_validate_decoder",
+            "target": "get_validate_decoder_subject_betas"
+        },
+        {
+            "order": 0,
+            "source": "contrasts_validate_decoder",
+            "target": "register_validate_decoder_contrasts"
+        },
+        {
+            "order": 1,
+            "source": "contrasts_validate_decoder",
+            "target": "automatic_validate_decoder_volume_rois"
+        },
+        {
+            "order": 1,
+            "source": "reg_contrasts_validate_decoder",
+            "target": "create_validate_decoder_sigsurface_overlays"
+        },
+        {
+            "order": 0,
+            "source": "run_beta_logvalidate_decoder",
+            "target": "create_validate_decoderrun_surfaces"
+        },
+        {
+            "order": 0,
+            "source": "create_validate_decoder_glm",
+            "target": "glm_validate_decoder"
+        },
+        {
+            "order": 0,
+            "source": "create_validate_decoder_contrasts",
+            "target": "contrasts_validate_decoder"
+        },
+        {
+            "order": 0,
+            "source": "register_validate_decoder_contrasts",
+            "target": "reg_contrasts_validate_decoder"
+        },
+        {
+            "order": 0,
+            "source": "create_validate_decoder_sigsurface_overlays",
+            "target": "sigsurfaces_validate_decoder"
+        },
+        {
+            "order": 1,
+            "source": "create_validate_decoder_sigsurface_overlays",
+            "target": "paradigm_complete_checkpoint"
+        },
+        {
+            "source": "get_validate_decoder_subject_betas",
+            "target": "beta_validate_decoder"
+        },
+        {
+            "order": 0,
+            "source": "automatic_validate_decoder_volume_rois",
+            "target": "ds_volume_rois"
+        },
+        {
+            "order": 0,
+            "source": "create_validate_decoderrun_betas",
+            "target": "run_beta_logvalidate_decoder"
+        },
+        {
+            "order": 1,
+            "source": "create_validate_decoderrun_betas",
+            "target": "end"
+        },
+        {
+            "order": 0,
+            "source": "create_validate_decoderrun_surfaces",
+            "target": "end"
+        }
+    ]
+}
